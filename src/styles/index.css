@@ -1,8 +1,16 @@
+:root {
+  --main-color: rgba(20, 152, 154, 1);
+}
+
 body {
   margin: 16px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 71%,
+    var(--main-color) 100%
+  );
+
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
