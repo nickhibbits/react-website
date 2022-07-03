@@ -1,0 +1,17 @@
+.socials-component {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  grid-area: 5 / 1 / 5 / 5;
+}
+
+.social-link {
+  color: black;
+  margin: 2px;
+  transition: 0.5s ease;
+}
+
+.social-link:hover {
+  cursor: pointer;
+  color: white;
+}

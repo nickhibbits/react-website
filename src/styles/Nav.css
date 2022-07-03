@@ -4,6 +4,7 @@
   grid-area: 1 / 1 / 1 / 5;
   border-bottom: solid 2px white;
   padding-bottom: 10px;
+  position: sticky;
 }
 
 .icon-wrapper {
