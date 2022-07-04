@@ -1,4 +1,5 @@
 .projects-component {
   color: white;
-  border: solid 2px green;
+  border: solid 2px lightgreen;
+  grid-area: 2 / 1 / 4 / 5;
 }

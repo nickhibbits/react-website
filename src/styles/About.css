@@ -1,4 +1,5 @@
 .about-component {
   color: white;
   border: solid 2px green;
+  grid-area: 2 / 1 / 4 / 5;
 }

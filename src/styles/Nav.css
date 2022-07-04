@@ -9,7 +9,7 @@
 
 .nav-component-menu-open {
   display: grid;
-  grid-template-rows: 35px 80vh;
+  grid-template-rows: 35px 75vh;
   justify-content: space-between;
   grid-area: 1 / 1 / 4 / 5;
   padding-bottom: 10px;
@@ -31,13 +31,16 @@
   flex-direction: column;
   /* position: fixed; */
   align-items: center;
-  grid-area: 2 / 3 / 2 / 5;
+  justify-content: center;
+  font-size: 3rem;
+  grid-area: 2 / 1 / 2 / 5;
   border: solid 2px white;
   border-right: none;
   border-top: none;
-  transform: translate3d(-1vw, 0, 0);
+  transform: translate3d(0vw, 0, 0);
   transition: transform 2s cubic-bezier(0, 1, 0, 1);
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.95);
 }
 
 .dropdown-link {
