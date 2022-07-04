@@ -5,11 +5,17 @@ import Socials from "./Socials";
 import Home from "./Home";
 import About from "./About";
 import Projects from "./Projects";
+import { useState } from "react";
 
 function App() {
+  const [navMenuOpen, setNavMenuOpen] = useState(false);
+
   return (
     <div className="app-component">
-      <Nav />
+      <Nav
+        navMenuOpen={navMenuOpen}
+        setNavMenuOpen={() => setNavMenuOpen(!navMenuOpen)}
+      />
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/about" exact element={<About />} />
