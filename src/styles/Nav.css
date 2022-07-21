@@ -37,8 +37,8 @@
   border: solid 2px white;
   border-right: none;
   border-top: none;
-  transform: translate3d(0vw, 0, 0);
-  transition: transform 2s cubic-bezier(0, 1, 0, 1);
+  transform: translate3d(-10px, 0, 0);
+  transition: transform 2s;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.95);
 }

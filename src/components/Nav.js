@@ -28,9 +28,6 @@ function Nav({ navMenuOpen, setNavMenuOpen }) {
           >
             Projects
           </Link>
-          {/* <Link className="dropdown-link" to="">
-            Connect
-          </Link> */}
         </div>
       </div>
     );

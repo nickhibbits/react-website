@@ -1,7 +1,7 @@
 .app-component {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 35px repeat(4, 25vh);
+  grid-template-rows: 8vh repeat(4, 19.5vh);
   grid-gap: 16px;
   min-height: 100vh;
 }
