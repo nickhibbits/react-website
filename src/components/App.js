@@ -13,12 +13,11 @@ function App() {
 
   return (
     <Fragment className="app-component">
-      <div className="nav-socials-wrapper">
+      <div className="nav-wrapper">
         <Nav
           navMenuOpen={navMenuOpen}
           setNavMenuOpen={() => setNavMenuOpen(!navMenuOpen)}
         />
-        <Socials />
       </div>
       <div className="app-wrapper">
         <Home />

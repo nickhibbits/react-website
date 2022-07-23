@@ -2,20 +2,20 @@
   display: flex;
   justify-content: space-between;
   grid-area: 1 / 1 / 1 / 5;
-  border-bottom: solid 2px white;
-  padding-bottom: 10px;
-  position: sticky;
+  border: solid 2px white;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 10px;
 }
 
 .nav-component-menu-open {
   display: grid;
   grid-template-rows: 35px 75vh;
   justify-content: space-between;
-  grid-area: 1 / 1 / 4 / 5;
+  grid-area: 1 / 1 / 1 / 5;
   padding-bottom: 10px;
   /* border: solid 2px green; */
   color: white;
-  position: sticky;
 }
 
 .navbar-top {
