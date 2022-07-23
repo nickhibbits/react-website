@@ -16,6 +16,7 @@
 .headline {
   font-weight: bold;
   margin: 10px;
+  color: var(--main-color);
 }
 
 .subline {

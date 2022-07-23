@@ -9,16 +9,16 @@ function Socials() {
         href="https://www.linkedin.com/in/nicholas-hibbits/"
         className="social-link"
       >
-        <IoLogoLinkedin size={40} />
+        <IoLogoLinkedin size={30} />
       </a>
       <a href="https://github.com/nickhibbits" className="social-link">
-        <IoLogoGithub size={37} />
+        <IoLogoGithub size={27} />
       </a>
       <a href="https://instagram.com/nhibit" className="social-link">
-        <IoLogoInstagram size={40} />
+        <IoLogoInstagram size={30} />
       </a>
       <a href="mailto:nicholashibbits@gmail.com" className="social-link">
-        <IoMailOutline size={40} />
+        <IoMailOutline size={30} />
       </a>
     </div>
   );

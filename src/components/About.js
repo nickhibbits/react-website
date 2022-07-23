@@ -1,10 +1,14 @@
 import "../styles/About.css";
+import Socials from "./Socials";
 export function About() {
   return (
     <div className="about-component">
-      <div className="profile">Profile</div>
-      <div className="skills-wrapper">
-        <div className="skills-title">Skills</div>
+      <div className="title-socials-wrapper">
+        <div className="profile">Profile</div>
+        <Socials />
+      </div>
+      <div className="profile-wrapper">
+        <div className="profile-title">Skills</div>
         <ul className="skills-list">
           <li className="skill-item">
             <div className="skill-title">Front-end</div>
@@ -39,6 +43,14 @@ export function About() {
             </ul>
           </li>
         </ul>
+      </div>
+      <div className="profile-wrapper">
+        <div className="profile-title">About</div>
+        <div className="profile-description">
+          I'm a front-end focused developer with experience working at a startup
+          as well as performing ecommerce managment in a small business context.
+          Check out my work and let's connect.
+        </div>
       </div>
     </div>
   );

@@ -7,18 +7,16 @@
 .profile {
   font-size: 45px;
   margin-bottom: 10px;
+  color: var(--main-color);
 }
 
-.skills-wrapper {
+.profile-wrapper {
   display: flex;
   flex-direction: column;
-  border: solid 2px rgb(82, 82, 82);
-  padding: 15px;
-  border-radius: 10px;
-  /* background-color: rgb(31, 31, 31); */
+  padding: 20px;
 }
 
-.skills-title {
+.profile-title {
   font-size: 30px;
   font-style: italic;
 }
@@ -36,5 +34,8 @@
   padding: 15px;
   border-bottom: solid 2px white;
   display: flex;
-  /* justify-content: center; */
+}
+
+.profile-description {
+  padding: 15px;
 }
