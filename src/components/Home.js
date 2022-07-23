@@ -6,7 +6,7 @@ export function Home() {
     <main className="home-component">
       <div className="headline-wrapper">
         <div className="headline">Hi I'm Nick</div>
-        <div className="subline">Front-End Developer</div>
+        <div className="subline">Web Developer</div>
       </div>
       <div className="image-wrapper">
         <img src={nick} alt="nick-hibbits"></img>

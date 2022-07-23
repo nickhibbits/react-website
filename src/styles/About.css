@@ -1,5 +1,40 @@
 .about-component {
   color: white;
-  border: solid 2px green;
+
   grid-area: 2 / 1 / 3 / 5;
+}
+
+.profile {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: solid 2px rgb(82, 82, 82);
+  padding: 15px;
+  border-radius: 10px;
+  /* background-color: rgb(31, 31, 31); */
+}
+
+.skills-title {
+  font-size: 30px;
+  font-style: italic;
+}
+
+.skill-title {
+  font-size: 18px;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skill-item {
+  padding: 15px;
+  border-bottom: solid 2px white;
+  display: flex;
+  /* justify-content: center; */
 }
