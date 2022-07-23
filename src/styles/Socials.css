@@ -2,16 +2,15 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  grid-area: 5 / 1 / 5 / 5;
 }
 
 .social-link {
-  color: black;
+  color: white;
   margin: 0 2px;
   transition: 0.5s ease;
 }
 
 .social-link:hover {
   cursor: pointer;
-  color: white;
+  color: var(--main-color);
 }
