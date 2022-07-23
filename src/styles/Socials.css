@@ -1,8 +1,6 @@
 .socials-component {
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
-  position: sticky;
 }
 
 .social-link {

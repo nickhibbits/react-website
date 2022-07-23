@@ -1,11 +1,15 @@
 import "../styles/Home.css";
+import nick from "../images/nick-professional.jpg";
 
 export function Home() {
   return (
     <main className="home-component">
-      <div className="headline">Hi I'm Nick</div>
-      <div className="subline">
-        I'm a Front-End Developer who likes building sleek digital experiences.
+      <div className="headline-wrapper">
+        <div className="headline">Hi I'm Nick</div>
+        <div className="subline">Front-End Developer</div>
+      </div>
+      <div className="image-wrapper">
+        <img src={nick} alt="nick-hibbits"></img>
       </div>
     </main>
   );
