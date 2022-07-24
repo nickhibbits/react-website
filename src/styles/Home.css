@@ -1,6 +1,6 @@
 .home-component {
   display: grid;
-  grid-template-rows: 80vh 70vh;
+  grid-template-rows: 90vh 70vh;
   font-size: var(--title-size);
   color: white;
   grid-area: 1 / 1 / 2 / 5;
