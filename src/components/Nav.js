@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import { Link } from "react-router-dom";
+
 import "../styles/Nav.css";
 
 function Nav({ navMenuOpen, setNavMenuOpen }) {
@@ -14,21 +13,17 @@ function Nav({ navMenuOpen, setNavMenuOpen }) {
             <IoClose size={25} color="white" />
           </div>
         </div>
-        <div className="navbar-dropdown">
-          <Link onClick={setNavMenuOpen} className="dropdown-link" to="/">
+        <ul className="navbar-dropdown">
+          <li onClick={setNavMenuOpen} className="dropdown-link" to="/">
             Home
-          </Link>
-          <Link onClick={setNavMenuOpen} className="dropdown-link" to="/about">
-            About
-          </Link>
-          <Link
-            onClick={setNavMenuOpen}
-            className="dropdown-link"
-            to="/projects"
-          >
+          </li>
+          <li onClick={setNavMenuOpen} className="dropdown-link" to="/about">
+            Profile
+          </li>
+          <li onClick={setNavMenuOpen} className="dropdown-link" to="/projects">
             Projects
-          </Link>
-        </div>
+          </li>
+        </ul>
       </div>
     );
   }

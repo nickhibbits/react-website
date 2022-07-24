@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 170vh 135vh 250vh 20px;
-  grid-gap: 16px;
   min-height: 100vh;
+  margin: 16px;
 }
 
 .title-socials-wrapper {
@@ -14,7 +14,6 @@
 
 .nav-wrapper {
   position: sticky;
-  top: 5px;
+  top: 0px;
   background: rgba(0, 0, 0, 0.9);
-  border-radius: 10px;
 }

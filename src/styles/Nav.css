@@ -2,20 +2,15 @@
   display: flex;
   justify-content: space-between;
   grid-area: 1 / 1 / 1 / 5;
-  border: solid 2px white;
-  padding: 8px;
-  margin-bottom: 5px;
-  border-radius: 10px;
+  border-bottom: solid 2px white;
+  padding: 8px 16px;
 }
 
 .nav-component-menu-open {
-  display: grid;
-  grid-template-rows: 35px 75vh;
+  display: flex;
   justify-content: space-between;
   grid-area: 1 / 1 / 1 / 5;
   padding-bottom: 10px;
-  /* border: solid 2px green; */
-  color: white;
 }
 
 .navbar-top {
@@ -29,7 +24,6 @@
 .navbar-dropdown {
   display: flex;
   flex-direction: column;
-  /* position: fixed; */
   align-items: center;
   justify-content: center;
   font-size: 3rem;
