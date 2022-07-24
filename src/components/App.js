@@ -1,10 +1,9 @@
 import { Fragment, useState } from "react";
 
 import Nav from "./Nav";
-import Socials from "./Socials";
 import Home from "./Home";
 import About from "./About";
-import Projects from "./Projects";
+import Work from "./Work";
 
 import "../styles/App.css";
 
@@ -22,7 +21,7 @@ function App() {
       <div className="app-wrapper">
         <Home />
         <About />
-        <Projects />
+        <Work />
       </div>
     </Fragment>
   );

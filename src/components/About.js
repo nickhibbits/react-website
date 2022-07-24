@@ -48,8 +48,9 @@ export function About() {
         <div className="profile-title">About</div>
         <div className="profile-description">
           I'm a front-end focused developer with experience working at a startup
-          as well as performing ecommerce managment in a small business context.
-          Check out my work and let's connect.
+          as well as performing ecommerce managment for a small business.
+          <br />
+          <br /> Check out my work and let's connect.
         </div>
       </div>
     </div>
