@@ -29,7 +29,7 @@
   padding: 0;
 }
 
-.skill-item {
+.skill-component {
   padding: 15px;
   border-bottom: solid 2px white;
   display: flex;
