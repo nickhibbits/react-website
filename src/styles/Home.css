@@ -1,4 +1,4 @@
-.home-component {
+#home-component {
   display: grid;
   grid-template-rows: 90vh 70vh;
   font-size: var(--title-size);

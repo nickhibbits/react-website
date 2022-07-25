@@ -3,7 +3,7 @@ import { IoClose } from "react-icons/io5";
 
 import "../styles/Nav.css";
 
-function Nav({ navMenuOpen, setNavMenuOpen }) {
+function Nav({ navMenuOpen, setNavMenuOpen, srcollToSection }) {
   if (navMenuOpen) {
     return (
       <div className="nav-component-menu-open">
@@ -14,13 +14,16 @@ function Nav({ navMenuOpen, setNavMenuOpen }) {
           </div>
         </div>
         <ul className="navbar-dropdown">
-          <li onClick={setNavMenuOpen} className="dropdown-link" to="/">
+          <li onClick={() => srcollToSection("home")} className="dropdown-link">
             Home
           </li>
-          <li onClick={setNavMenuOpen} className="dropdown-link" to="/about">
+          <li
+            onClick={() => srcollToSection("about")}
+            className="dropdown-link"
+          >
             Profile
           </li>
-          <li onClick={setNavMenuOpen} className="dropdown-link" to="/projects">
+          <li onClick={() => srcollToSection("work")} className="dropdown-link">
             Projects
           </li>
         </ul>

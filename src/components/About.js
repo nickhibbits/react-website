@@ -1,9 +1,11 @@
 import "../styles/About.css";
 import Socials from "./Socials";
 import Skill from "./Skill";
-export function About() {
+import React from "react";
+
+const About = () => {
   return (
-    <div className="about-component">
+    <main id="about-component">
       <div className="title-socials-wrapper">
         <div className="profile">Profile</div>
         <Socials />
@@ -13,14 +15,14 @@ export function About() {
         <ul className="skills-list">
           <Skill
             title={"Front-End"}
-            skills={["React", "Svelte", "HTML + CSS"]}
+            skills={["React", "Svelte", "HTML", "CSS/Sass"]}
           />
           <Skill title={"Back-End"} skills={["Firebase", "Node"]} />
           <Skill
             title={"Other Tools"}
             skills={["REST APIs", "Git", "TypeScript", "Redux", "Jest"]}
           />
-          <Skill title={"Misc"} skills={["E-Commerce Management", "SEO"]} />
+          <Skill title={"Misc"} skills={["E-Commerce", "SEO"]} />
         </ul>
       </div>
       <div className="profile-wrapper">
@@ -32,8 +34,8 @@ export function About() {
           <br /> Check out my work and let's connect.
         </div>
       </div>
-    </div>
+    </main>
   );
-}
+};
 
 export default About;

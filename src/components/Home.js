@@ -1,9 +1,10 @@
 import "../styles/Home.css";
 import nick from "../images/nick-professional.jpg";
+import React from "react";
 
-export function Home() {
+export const Home = () => {
   return (
-    <main className="home-component">
+    <main id="home-component">
       <div className="headline-wrapper">
         <div className="headline">Hi I'm Nick</div>
         <div className="subline">Web Developer</div>
@@ -13,6 +14,6 @@ export function Home() {
       </div>
     </main>
   );
-}
+};
 
 export default Home;

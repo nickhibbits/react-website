@@ -1,4 +1,4 @@
-.about-component {
+#about-component {
   color: white;
   grid-area: 2 / 1 / 3 / 5;
 }
@@ -30,9 +30,10 @@
 }
 
 .skill-component {
+  display: grid;
+  grid-template-columns: 40% 60%;
   padding: 15px;
   border-bottom: solid 2px white;
-  display: flex;
 }
 
 .profile-description {

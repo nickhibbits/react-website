@@ -1,10 +1,10 @@
+import React from "react";
 import "../styles/Work.css";
-import ProjectCard from "./ProjectCard";
 import ProjectSet from "./ProjectSet";
 
-function Work() {
+const Work = () => {
   return (
-    <div className="work-component">
+    <div id="work-component">
       <div className="work-title">Work</div>
       <div className="projects-wrapper">
         <ProjectSet name={"Professional"} />
@@ -12,6 +12,6 @@ function Work() {
       </div>
     </div>
   );
-}
+};
 
 export default Work;

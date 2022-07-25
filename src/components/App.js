@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import React, { useState } from "react";
 
 import Nav from "./Nav";
 import Home from "./Home";
@@ -10,12 +10,47 @@ import "../styles/App.css";
 function App() {
   const [navMenuOpen, setNavMenuOpen] = useState(false);
 
+  const srcollToSection = (section) => {
+    const behavior = "smooth";
+
+    const homeSection = document.getElementById("home-component");
+    const aboutSection = document.getElementById("about-component");
+    const workSection = document.getElementById("work-component");
+
+    console.log("here");
+    console.log("section", section);
+
+    switch (section) {
+      case "home":
+        window.scrollTo({
+          top: homeSection.offsetTop,
+          behavior: behavior,
+        });
+        break;
+      case "about":
+        window.scrollTo({
+          top: aboutSection.offsetTop,
+          behavior: behavior,
+        });
+        break;
+      case "work":
+        window.scrollTo({
+          top: workSection.offsetTop,
+          behavior: behavior,
+        });
+        break;
+      default:
+        console.log(`ERROR with ref`);
+    }
+  };
+
   return (
-    <Fragment className="app-component">
+    <main className="app-component">
       <div className="nav-wrapper">
         <Nav
           navMenuOpen={navMenuOpen}
           setNavMenuOpen={() => setNavMenuOpen(!navMenuOpen)}
+          srcollToSection={srcollToSection}
         />
       </div>
       <div className="app-wrapper">
@@ -23,7 +58,7 @@ function App() {
         <About />
         <Work />
       </div>
-    </Fragment>
+    </main>
   );
 }
 
