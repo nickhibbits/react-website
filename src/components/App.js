@@ -12,18 +12,13 @@ function App() {
 
   const srcollToSection = (section) => {
     const behavior = "smooth";
-
-    const homeSection = document.getElementById("home-component");
     const aboutSection = document.getElementById("about-component");
     const workSection = document.getElementById("work-component");
-
-    console.log("here");
-    console.log("section", section);
 
     switch (section) {
       case "home":
         window.scrollTo({
-          top: homeSection.offsetTop,
+          top: 100,
           behavior: behavior,
         });
         break;

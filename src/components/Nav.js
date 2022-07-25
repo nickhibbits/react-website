@@ -4,6 +4,10 @@ import { IoClose } from "react-icons/io5";
 import "../styles/Nav.css";
 
 function Nav({ navMenuOpen, setNavMenuOpen, srcollToSection }) {
+  const handleClick = (section) => {
+    srcollToSection(section);
+    setNavMenuOpen();
+  };
   if (navMenuOpen) {
     return (
       <div className="nav-component-menu-open">
@@ -14,16 +18,13 @@ function Nav({ navMenuOpen, setNavMenuOpen, srcollToSection }) {
           </div>
         </div>
         <ul className="navbar-dropdown">
-          <li onClick={() => srcollToSection("home")} className="dropdown-link">
+          <li onClick={() => handleClick("home")} className="dropdown-link">
             Home
           </li>
-          <li
-            onClick={() => srcollToSection("about")}
-            className="dropdown-link"
-          >
+          <li onClick={() => handleClick("about")} className="dropdown-link">
             Profile
           </li>
-          <li onClick={() => srcollToSection("work")} className="dropdown-link">
+          <li onClick={() => handleClick("work")} className="dropdown-link">
             Projects
           </li>
         </ul>
