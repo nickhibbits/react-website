@@ -1,9 +1,8 @@
 .app-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 175vh 148vh 280vh 20px;
+  grid-template-rows: 175vh 138vh 310vh 30px;
   min-height: 100vh;
-  margin: 16px;
 }
 
 .title-socials-wrapper {

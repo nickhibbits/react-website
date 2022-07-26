@@ -1,7 +1,8 @@
-import "../styles/About.css";
 import Socials from "./Socials";
 import Skill from "./Skill";
 import React from "react";
+
+import "../styles/About.css";
 
 const About = () => {
   return (

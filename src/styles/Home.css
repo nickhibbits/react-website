@@ -4,6 +4,7 @@
   font-size: var(--title-size);
   color: white;
   grid-area: 1 / 1 / 2 / 5;
+  margin: 0 var(--mobile-margin);
 }
 
 .headline-wrapper {

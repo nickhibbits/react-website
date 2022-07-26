@@ -1,6 +1,7 @@
 #about-component {
   color: white;
   grid-area: 2 / 1 / 3 / 5;
+  margin: 0 var(--mobile-margin);
 }
 
 .profile {

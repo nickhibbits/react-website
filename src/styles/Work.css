@@ -1,6 +1,11 @@
 #work-component {
   color: black;
   grid-area: 3 / 1 / 4 / 5;
+  background-color: var(--main-color);
+}
+
+.work-wrapper {
+  margin: 35px var(--mobile-margin);
 }
 
 .work-title {
