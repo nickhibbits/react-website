@@ -54,7 +54,7 @@
   width: 100%;
 }
 
-.image-wrapper {
+._image-wrapper {
   display: flex;
   justify-content: center;
   grid-area: 1 / 1 / 2 / 2;

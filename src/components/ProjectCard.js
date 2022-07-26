@@ -16,7 +16,7 @@ function ProjectCard({ title, description, imgSrc, imgAlt }) {
           </Fragment>
         ) : (
           <Fragment>
-            <div className="image-wrapper">
+            <div className="_image-wrapper">
               <img className="project-image" src={imgSrc} alt={imgAlt} />
             </div>
             <div className="project-title">{title} </div>
