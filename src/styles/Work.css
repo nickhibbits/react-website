@@ -5,12 +5,11 @@
 }
 
 .work-wrapper {
-  margin: 35px var(--mobile-margin);
+  margin: 60px var(--mobile-margin);
 }
 
 .work-title {
   font-size: var(--title-size);
-  /* color: var(--main-color); */
 }
 
 .project-set-title {
