@@ -31,7 +31,7 @@
 
 .project-image-wrapper {
   display: grid;
-  grid-template-rows: 28vh;
+  grid-template-rows: 30vh 10vh;
   grid-area: 1 / 1 / 2 / 2;
   border-bottom: solid 1px white;
 }
@@ -40,6 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: 1 / 1 / 2 / 2;
 }
 .zoomies-logo {
   height: 90%;
@@ -47,11 +48,25 @@
   /* border: solid 1px red; */
 }
 
+.project-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
 .project-title {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 8px;
   font-size: 1.5rem;
+  grid-area: 2 / 1 / 3 / 2;
 }
 
 .project-description {

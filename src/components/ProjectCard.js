@@ -1,6 +1,7 @@
 import { Fragment } from "react";
-import "../styles/Work.css";
 import { ReactComponent as ZoomiesLogo } from "../ZoomiesLogo.svg";
+
+import "../styles/Work.css";
 
 function ProjectCard({ title, description, imgSrc, imgAlt }) {
   return (
@@ -15,7 +16,9 @@ function ProjectCard({ title, description, imgSrc, imgAlt }) {
           </Fragment>
         ) : (
           <Fragment>
-            <img src={imgSrc} alt={imgAlt} />
+            <div className="image-wrapper">
+              <img className="project-image" src={imgSrc} alt={imgAlt} />
+            </div>
             <div className="project-title">{title} </div>
           </Fragment>
         )}
