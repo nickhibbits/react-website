@@ -28,7 +28,7 @@ function ProjectSet({ name }) {
     pollApp: {
       title: "Employee Poll App",
       description:
-        "Mock comppany polling app, allowing users to vote on questions asked by other employees or create their own, as well as even see stats about questions and users.",
+        "Mock comppany polling app, allowing users to vote on questions asked by other employees or create their own, as well as see stats about questions and users.",
       imgAlt: "Employee Poll App",
       imgSrc: pollPhoto,
       link: "https://github.com/nickhibbits/employee-poll-react-app",
@@ -36,7 +36,7 @@ function ProjectSet({ name }) {
     bookApp: {
       title: "My Reads App",
       description:
-        "Book tracking app, allowing users to organize books on different shelves as well as add new ones, as they progress in reading. .",
+        "Book tracking app, allowing users to organize books on different shelves as well as add new ones, as they progress in reading.",
       imgAlt: "My Reads Ap",
       imgSrc: bookPhoto,
       link: "https://github.com/nickhibbits/my-reads-react-app",

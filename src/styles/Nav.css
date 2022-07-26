@@ -16,17 +16,19 @@
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
-  border-bottom: solid 1px white;
   background: var(--nav-background);
   width: 100vw;
+  /* transform: translateY(1em);
+  transition: transform 1s ease;
+  border-bottom: solid 2px white; */
 }
 
 .navbar-top {
   display: flex;
   justify-content: space-between;
   grid-area: 1 / 1 / 1 / 5;
-  border-bottom: solid 2px white;
   padding: 8px 16px;
+  border-bottom: solid 1px white;
 }
 
 .navbar-dropdown {
