@@ -18,7 +18,7 @@ function App() {
     switch (section) {
       case "home":
         window.scrollTo({
-          top: 100,
+          top: 0,
           behavior: behavior,
         });
         break;

@@ -1,8 +1,13 @@
 .nav-component {
+  border-bottom: solid 2px white;
+  position: absolute;
+  width: 100vw;
+  background: var(--nav-background);
+}
+
+.nav-component-wrapper {
   display: flex;
   justify-content: space-between;
-  grid-area: 1 / 1 / 1 / 5;
-  border-bottom: solid 2px white;
   padding: 8px 16px;
 }
 
@@ -10,7 +15,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  grid-area: 1 / 1 / 1 / 5;
+  position: absolute;
+  border-bottom: solid 1px white;
+  background: var(--nav-background);
+  width: 100vw;
 }
 
 .navbar-top {
