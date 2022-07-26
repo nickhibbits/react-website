@@ -34,7 +34,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 1.5rem;
   grid-area: 2 / 1 / 2 / 5;
   list-style: none;
 }

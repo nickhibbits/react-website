@@ -20,30 +20,44 @@
 
 .project-card-component {
   display: grid;
-  grid-template-rows: 65% 35%;
+  grid-template-rows: 72%;
   border: solid 2px black;
   border-radius: 10px;
-  min-height: 50vh;
+  min-height: 56vh;
   margin-bottom: 20px;
   background: rgba(0, 0, 0, 0.7);
   color: white;
 }
 
 .project-image-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 28vh;
   grid-area: 1 / 1 / 2 / 2;
   border-bottom: solid 1px white;
 }
 
+.zoomies-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .zoomies-logo {
-  height: 80%;
+  height: 90%;
+  width: 100%;
+  /* border: solid 1px red; */
+}
+
+.project-title {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  font-size: 1.5rem;
 }
 
 .project-description {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10px;
+  justify-content: flex-start;
+  text-align: center;
   grid-area: 2 / 1 / 3 / 2;
 }
