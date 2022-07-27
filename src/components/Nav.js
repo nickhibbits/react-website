@@ -8,39 +8,42 @@ function Nav({ navMenuOpen, setNavMenuOpen, srcollToSection }) {
     srcollToSection(section);
     setNavMenuOpen();
   };
-  if (navMenuOpen) {
-    return (
-      <div className="nav-component-menu-open">
-        <div className="nav-menu-open-wrapper">
-          <div className="navbar-top">
-            <div className="N">NH</div>
-            <div className="icon-wrapper" onClick={setNavMenuOpen}>
-              <IoClose size={25} color="white" />
-            </div>
-          </div>
-          <ul className="navbar-dropdown">
-            <li onClick={() => handleClick("home")} className="dropdown-link">
-              Home
-            </li>
-            <li onClick={() => handleClick("about")} className="dropdown-link">
-              Profile
-            </li>
-            <li onClick={() => handleClick("work")} className="dropdown-link">
-              Projects
-            </li>
-          </ul>
-        </div>
-      </div>
-    );
-  }
 
+  console.log("navMenuOpen", navMenuOpen);
   return (
-    <div className="nav-component">
-      <div className="nav-component-wrapper">
-        <div className="N">NH</div>
-        <div className="icon-wrapper" onClick={setNavMenuOpen}>
-          <HiOutlineMenuAlt3 size={25} color="white" />
+    <div className="nav-component-menu-open">
+      <div className="nav-menu-open-wrapper">
+        <div className="navbar-top">
+          <div className="N">NH</div>
+          <div className="icon-wrapper" onClick={setNavMenuOpen}>
+            {navMenuOpen ? (
+              <IoClose size={25} color="white" />
+            ) : (
+              <HiOutlineMenuAlt3 size={25} color="white" />
+            )}
+          </div>
         </div>
+        {/* <div className="navbar-dropdown-wrapper" */}
+        <ul
+          className="navbar-dropdown"
+          style={{
+            transform: navMenuOpen
+              ? `translateY(${0}px)`
+              : `translateY(${-200}px)`,
+            transition: "transform 1s ease",
+          }}
+        >
+          {/* <ul className={navMenuOpen ? "navbar-dropdown" : "hide-navbar"}> */}
+          <li onClick={() => handleClick("home")} className="dropdown-link">
+            Home
+          </li>
+          <li onClick={() => handleClick("about")} className="dropdown-link">
+            Profile
+          </li>
+          <li onClick={() => handleClick("work")} className="dropdown-link">
+            Projects
+          </li>
+        </ul>
       </div>
     </div>
   );
