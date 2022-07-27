@@ -1,17 +1,4 @@
 .nav-component {
-  border-bottom: solid 2px white;
-  position: absolute;
-  width: 100vw;
-  background: var(--nav-background);
-}
-
-.nav-component-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 16px;
-}
-
-.nav-component-menu-open {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,7 +14,13 @@
   grid-area: 1 / 1 / 1 / 5;
   padding: 8px 16px;
   border-bottom: solid 1px white;
+  z-index: 10;
+  background: var(--nav-background);
 }
+
+/* .navbar-dropdown-wrapper {
+  border: solid 2px red;
+} */
 
 .navbar-dropdown {
   display: flex;
@@ -38,9 +31,8 @@
   font-size: 1.5rem;
   grid-area: 2 / 1 / 2 / 5;
   list-style: none;
-  transform: translateY(0px);
-  transition: all 0.5s ease;
-  border: solid 2px green;
+  /* border: solid 2px green; */
+  z-index: 2;
 }
 
 .hide-navbar {
