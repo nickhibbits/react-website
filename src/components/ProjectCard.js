@@ -23,7 +23,7 @@ function ProjectCard({ title, description, imgSrc, imgAlt }) {
           </Fragment>
         )}
       </div>
-      <div className="project-description">{description}</div>
+      {/* <div className="project-description">{description}</div> */}
     </div>
   );
 }
