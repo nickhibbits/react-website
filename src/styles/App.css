@@ -1,7 +1,7 @@
 .app-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 190vh 185vh 310vh 30px;
+  grid-template-rows: 110vh 200vh 310vh 30px;
   min-height: 100vh;
 }
 

@@ -1,6 +1,6 @@
 #home-component {
   display: grid;
-  grid-template-rows: 95vh 85vh;
+  grid-template-rows: 105vh;
   font-size: var(--title-size);
   color: white;
   grid-area: 1 / 1 / 2 / 5;
@@ -17,28 +17,19 @@
 .headline {
   font-weight: bold;
   font-size: 3rem;
-  margin: 10px;
   color: var(--text-light-two);
 }
 
 .subline {
   text-align: center;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-family: var(--font-family-two);
   color: var(--text-light);
 }
 
-.image-wrapper {
-  display: flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-img {
-  height: 400px;
-  width: 300px;
+#nick-image {
+  height: 90px;
+  width: 90px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 50%;
 }
