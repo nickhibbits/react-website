@@ -1,15 +1,13 @@
-import { Fragment } from "react";
 import { ReactComponent as ZoomiesLogo } from "../ZoomiesLogo.svg";
 
 import "../styles/Work.css";
 
 function ProjectCard({ title, description, imgSrc, imgAlt }) {
-  console.log(imgSrc);
   return (
     <div
       className="project-card-component"
       style={{
-        background: title == "Studio Zoomies" ? `black` : ` url(${imgSrc})`,
+        background: title === "Studio Zoomies" ? `black` : ` url(${imgSrc})`,
         backgroundSize: "contain",
       }}
     >

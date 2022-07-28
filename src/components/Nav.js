@@ -45,7 +45,7 @@ function Nav({ navMenuOpen, setNavMenuOpen, srcollToSection }) {
               Profile
             </li>
             <li onClick={() => handleClick("work")} className="dropdown-link">
-              Projects
+              Work
             </li>
           </ul>
         </div>
