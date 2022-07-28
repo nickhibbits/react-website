@@ -8,7 +8,11 @@ function ProjectCard({ title, description, imgSrc, imgAlt }) {
       className="project-card-component"
       style={{
         background: title === "Studio Zoomies" ? `black` : ` url(${imgSrc})`,
-        backgroundSize: "contain",
+        backgroundSize:
+          title === "Employee Poll App" || title === "My Reads App"
+            ? "325px 190px"
+            : "contain",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="project-image-wrapper">
