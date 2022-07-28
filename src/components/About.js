@@ -30,11 +30,14 @@ const About = () => {
         <div className="profile-wrapper">
           <div className="profile-title">About</div>
           <div className="profile-description">
-            I'm a front-end focused developer with experience working at a
-            startup as well as performing ecommerce managment for a small
+            Hi I'm Nick!
+            <br />
+            <br />A front-end focused developer with experience working at a
+            startup as well as performing e-commerce managment for a small
             business.
             <br />
-            <br /> Check out my work and let's connect.
+            <br /> Welcome to my website and personal playground. Check out my
+            work and let's connect.
           </div>
         </div>
       </div>

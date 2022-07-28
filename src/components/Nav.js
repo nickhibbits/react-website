@@ -9,7 +9,6 @@ function Nav({ navMenuOpen, setNavMenuOpen, srcollToSection }) {
     setNavMenuOpen();
   };
 
-  console.log("navMenuOpen", navMenuOpen);
   return (
     <div className="nav-component">
       <div className="nav-component-wrapper">

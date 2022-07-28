@@ -4,26 +4,29 @@ import { ReactComponent as ZoomiesLogo } from "../ZoomiesLogo.svg";
 import "../styles/Work.css";
 
 function ProjectCard({ title, description, imgSrc, imgAlt }) {
+  console.log(imgSrc);
   return (
-    <div className="project-card-component">
+    <div
+      className="project-card-component"
+      style={{
+        background: title == "Studio Zoomies" ? `black` : ` url(${imgSrc})`,
+        backgroundSize: "contain",
+      }}
+    >
       <div className="project-image-wrapper">
         {title === "Studio Zoomies" ? (
-          <Fragment>
-            <div className="zoomies-logo-wrapper">
+          <div className="zoomies-logo-wrapper">
+            <div className="logo-wrapper">
               <ZoomiesLogo />
             </div>
-            <div className="project-title">{title} </div>
-          </Fragment>
-        ) : (
-          <Fragment>
-            <div className="_image-wrapper">
-              <img className="project-image" src={imgSrc} alt={imgAlt} />
+            <div className="zoomies-project-title-wrapper">
+              <div className="zoomies-project-title">{title} </div>
             </div>
-            <div className="project-title">{title} </div>
-          </Fragment>
+          </div>
+        ) : (
+          <div className="project-title">{title} </div>
         )}
       </div>
-      {/* <div className="project-description">{description}</div> */}
     </div>
   );
 }

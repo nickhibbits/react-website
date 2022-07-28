@@ -6,6 +6,7 @@
   background: var(--nav-background);
   width: 100vw;
   border-bottom: solid 0.5px white;
+  z-index: 5;
 }
 
 .navbar-top {
