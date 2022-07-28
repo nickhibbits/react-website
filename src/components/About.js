@@ -2,7 +2,7 @@ import Socials from "./Socials";
 import Skill from "./Skill";
 import React from "react";
 
-import "../styles/About.css";
+import "../styles/About.scss";
 
 const About = () => {
   return (

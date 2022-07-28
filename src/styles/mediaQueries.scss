@@ -4,7 +4,7 @@ $desktop-width: 1024px;
 $large-screen-width: 1400px;
 
 @mixin small-screen {
-  @media (min-width: $small-device-width-width) and (max-width: #{$tablet-width - 1px}) {
+  @media (min-width: $small-device-width) and (max-width: #{$tablet-width - 1px}) {
     @content;
   }
 }

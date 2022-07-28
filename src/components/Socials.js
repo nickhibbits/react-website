@@ -1,4 +1,4 @@
-import "../styles/Socials.css";
+import "../styles/Socials.scss";
 import { IoLogoLinkedin, IoLogoInstagram, IoLogoGithub } from "react-icons/io";
 import { IoMailOutline } from "react-icons/io5";
 

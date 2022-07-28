@@ -1,7 +1,7 @@
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 
-import "../styles/Nav.css";
+import "../styles/Nav.scss";
 
 function Nav({ navMenuOpen, setNavMenuOpen, srcollToSection }) {
   const handleClick = (section) => {

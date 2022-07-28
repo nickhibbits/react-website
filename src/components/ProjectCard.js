@@ -1,6 +1,6 @@
 import { ReactComponent as ZoomiesLogo } from "../ZoomiesLogo.svg";
 
-import "../styles/Work.css";
+import "../styles/Work.scss";
 
 function ProjectCard({ title, description, imgSrc, imgAlt }) {
   return (

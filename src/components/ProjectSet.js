@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import ProjectCard from "./ProjectCard";
 import projects from "../projects";
 
-import "../styles/Projects.css";
+import "../styles/Projects.scss";
 
 function ProjectSet({ name }) {
   return (

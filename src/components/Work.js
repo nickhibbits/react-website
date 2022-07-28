@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectSet from "./ProjectSet";
 
-import "../styles/Work.css";
+import "../styles/Work.scss";
 
 const Work = () => {
   return (

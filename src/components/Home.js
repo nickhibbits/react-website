@@ -1,7 +1,7 @@
 import nick from "../images/nick-professional.jpg";
 import React from "react";
 
-import "../styles/Home.css";
+import "../styles/Home.scss";
 
 export const Home = () => {
   return (
