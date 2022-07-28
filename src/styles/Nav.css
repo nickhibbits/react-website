@@ -18,21 +18,16 @@
   background: var(--nav-background);
 }
 
-/* .navbar-dropdown-wrapper {
-  border: solid 2px red;
-} */
-
 .navbar-dropdown {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: flex-start; */
   justify-content: center;
   font-size: 1.5rem;
   grid-area: 2 / 1 / 2 / 5;
   list-style: none;
-  /* border: solid 2px green; */
   z-index: 2;
+  font-family: var(--font-family-two);
 }
 
 .hide-navbar {

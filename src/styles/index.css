@@ -1,18 +1,24 @@
 :root {
-  --main-color: rgb(226, 57, 57);
+  --color-red: #ff0035;
+  --background-dark: #0e131f;
+  --background-light: #dccca3;
+  --text-light: #fdfdfd;
+  --text-light-two: #aad3ff;
   --title-size: 50px;
   --sub-section-title: 30px;
   --mobile-margin: 16px;
   --nav-background: rgba(0, 0, 0, 0.9);
+  --font-family-one: "Racing Sans One", cursive;
+  /* --font-family-one: "Big Shoulders Text", cursive; */
+  --font-family-two: "Baloo Thambi 2", cursive;
+  /* --font-family-two: "Farro", sans-serif; */
 }
 
 body {
-  background: rgba(53, 18, 91, 0.9);
+  background: var(--background-dark);
   margin: 0px;
 
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: var(--font-family-one);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -10,7 +10,7 @@
 
 .profile {
   font-size: var(--title-size);
-  color: var(--main-color);
+  color: var(--text-light-two);
 }
 
 .profile-wrapper {
@@ -21,7 +21,9 @@
 
 .profile-title {
   font-size: var(--sub-section-title);
-  font-style: italic;
+  /* font-style: italic; */
+  font-family: var(--font-family-two);
+  color: var(--text-light);
 }
 
 .skill-title {
@@ -30,16 +32,26 @@
 
 .skills-list {
   list-style-type: none;
-  padding: 0;
+  padding: 15px;
+  font-family: var(--font-family-two);
+  border: solid 2px var(--text-light);
+  border-radius: 10px;
+  box-shadow: 8px 15px var(--background-light);
+  margin: 10px 0px;
 }
 
 .skill-component {
   display: grid;
   grid-template-columns: 40% 60%;
   padding: 15px;
-  border-bottom: solid 2px white;
+  /* border-bottom: solid 2px white; */
 }
 
 .profile-description {
   padding: 15px;
+  font-family: var(--font-family-two);
+  border: solid 2px var(--text-light);
+  border-radius: 10px;
+  box-shadow: -8px 15px var(--background-light);
+  margin: 10px 0px;
 }

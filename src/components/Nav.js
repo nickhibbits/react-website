@@ -26,20 +26,19 @@ function Nav({ navMenuOpen, setNavMenuOpen, srcollToSection }) {
         <div
           className="navbar-dropdown-wrapper"
           style={{
-            height: navMenuOpen ? "25vh" : "0vh",
+            height: navMenuOpen ? "30vh" : "0vh",
             transform: navMenuOpen
               ? `translateY(${0}px)`
-              : `translateY(${-200}px)`,
-            transition: "all 1s ease",
+              : `translateY(${-190}px)`,
+            transition: "all .7s ease",
           }}
         >
           <ul
             className="navbar-dropdown"
             style={{
-              margin: navMenuOpen ? "20px" : "0px",
+              margin: navMenuOpen ? "10px 0px 0px 0px" : "0px",
             }}
           >
-            {/* <ul className={navMenuOpen ? "navbar-dropdown" : "hide-navbar"}> */}
             <li onClick={() => handleClick("home")} className="dropdown-link">
               Home
             </li>

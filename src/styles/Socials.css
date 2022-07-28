@@ -1,6 +1,7 @@
 .socials-component {
   display: flex;
   justify-content: flex-start;
+  padding-top: 17px;
 }
 
 .social-link {
