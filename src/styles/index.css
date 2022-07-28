@@ -15,7 +15,6 @@
 body {
   background: var(--background-dark);
   margin: 0px;
-
   font-family: var(--font-family-one);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -1,0 +1,28 @@
+$small-device-width: 500px;
+$tablet-width: 700px;
+$desktop-width: 1024px;
+$large-screen-width: 1400px;
+
+@mixin small-screen {
+  @media (min-width: $small-device-width-width) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) and (max-width: #{$large-screen-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media (min-width: $large-screen-width) {
+    @content;
+  }
+}
