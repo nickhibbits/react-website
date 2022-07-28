@@ -20,13 +20,19 @@
   color: var(--background-dark);
 }
 
+.anchor-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .project-card-component {
   border: solid 2px var(--background-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  min-height: 35vh;
+  min-height: 183px;
+  min-width: 325px;
   margin-bottom: 20px;
   color: var(--text-light);
   font-family: var(--font-family-two);
@@ -46,7 +52,7 @@
 
 .zoomies-logo {
   height: 100%;
-  width: 80%;
+  width: 75%;
 }
 
 .zoomies-project-title-wrapper {
