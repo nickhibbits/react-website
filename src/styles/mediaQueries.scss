@@ -1,7 +1,13 @@
 $small-device-width: 500px;
-$tablet-width: 700px;
+$tablet-width: 600px;
 $desktop-width: 1024px;
 $large-screen-width: 1400px;
+
+@mixin notMobile {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
 
 @mixin small-screen {
   @media (min-width: $small-device-width) and (max-width: #{$tablet-width - 1px}) {

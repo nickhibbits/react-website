@@ -20,6 +20,9 @@
   font-weight: bold;
   font-size: 3rem;
   color: var(--text-light-two);
+  @include notMobile {
+    font-size: 5rem;
+  }
 }
 
 .subline {
@@ -27,6 +30,9 @@
   font-size: 1.2rem;
   font-family: var(--font-family-two);
   color: var(--text-light);
+  @include notMobile {
+    font-size: 2.5rem;
+  }
 }
 
 #nick-image {
@@ -34,4 +40,8 @@
   width: 90px;
   object-fit: cover;
   border-radius: 50%;
+  @include notMobile {
+    height: 120px;
+    width: 120px;
+  }
 }
