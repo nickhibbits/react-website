@@ -9,9 +9,11 @@
   margin: 60px var(--mobile-margin);
   @include desktopAndUp {
     margin: 60px var(--desktop-margin);
+    margin-right: 0;
   }
   @include tablet {
     margin: 60px var(--tablet-margin);
+    margin-right: 0;
   }
 }
 

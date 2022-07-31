@@ -6,9 +6,12 @@
   grid-template-rows: 110vh 205vh 225vh 30px;
   min-height: 100vh;
   @include tablet {
-    grid-template-rows: 100vh 200vh 160vh 30px;
+    grid-template-rows: 100vh 200vh 200vh 30px;
   }
-  @include desktopAndUp {
+  @include desktop {
+    grid-template-rows: 100vh 100vh 120vh 30px;
+  }
+  @include large-screen {
     grid-template-rows: 100vh 83vh 120vh 30px;
   }
 }
