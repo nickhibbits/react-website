@@ -22,7 +22,6 @@ function ProjectSet({ name }) {
                 <ProjectCard
                   title={projects.zoomies.title}
                   description={projects.zoomies.description}
-                  imgAlt={projects.zoomies.imgAlt}
                   imgSrc={null}
                 />
               </a>
@@ -37,7 +36,6 @@ function ProjectSet({ name }) {
                 <ProjectCard
                   title={projects.bearsDen.title}
                   description={projects.bearsDen.description}
-                  imgAlt={projects.bearsDen.imgAlt}
                   imgSrc={projects.bearsDen.imgSrc}
                 />
               </a>
@@ -55,7 +53,6 @@ function ProjectSet({ name }) {
                 <ProjectCard
                   title={projects.pollApp.title}
                   description={projects.pollApp.description}
-                  imgAlt={projects.pollApp.imgAlt}
                   imgSrc={projects.pollApp.imgSrc}
                 />
               </a>
@@ -70,7 +67,6 @@ function ProjectSet({ name }) {
                 <ProjectCard
                   title={projects.bookApp.title}
                   description={projects.bookApp.description}
-                  imgAlt={projects.bookApp.imgAlt}
                   imgSrc={projects.bookApp.imgSrc}
                 />
               </a>

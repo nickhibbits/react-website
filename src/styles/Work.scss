@@ -37,4 +37,11 @@
   @include tabletAndUp {
     margin-right: 20px;
   }
+  transition: 0.8s ease;
+  @include desktopAndUp {
+    &:hover {
+      box-shadow: 8px 15px var(--background-dark);
+      transition: 0.6s ease;
+    }
+  }
 }

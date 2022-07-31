@@ -36,7 +36,7 @@
 
 .profile-title {
   font-size: var(--sub-section-title);
-  /* font-style: italic; */
+
   font-family: var(--font-family-two);
   color: var(--text-light);
 }
@@ -63,7 +63,6 @@
     grid-template-columns: 20% 80%;
     padding: 7.5px;
   }
-  /* border-bottom: solid 2px white; */
 }
 
 .skill-description {
