@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 import ProjectCard from "./ProjectCard";
 import projects from "../projects";
 
@@ -11,7 +9,7 @@ function ProjectSet({ name }) {
       <div className="project-set-wrapper">
         <div className="project-set-title">{name}</div>
         {name === "Professional" ? (
-          <Fragment>
+          <div className="project-card-container">
             <div className="anchor-wrapper">
               <a
                 style={{
@@ -44,9 +42,9 @@ function ProjectSet({ name }) {
                 />
               </a>
             </div>
-          </Fragment>
+          </div>
         ) : (
-          <Fragment>
+          <div className="project-card-container">
             <div className="anchor-wrapper">
               <a
                 style={{ textDecoration: "none" }}
@@ -77,7 +75,7 @@ function ProjectSet({ name }) {
                 />
               </a>
             </div>
-          </Fragment>
+          </div>
         )}
       </div>
     </div>

@@ -66,6 +66,13 @@
   border-radius: 10px;
 }
 
+.project-card-container {
+  @include tabletAndUp {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .project-description {
   display: flex;
   padding: 10px;

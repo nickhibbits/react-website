@@ -14,8 +14,8 @@ $large-screen-width: 1400px;
   }
 }
 
-@mixin notMobile {
-  @media (min-width: 500px) {
+@mixin tabletAndUp {
+  @media (min-width: $tablet-width) {
     @content;
   }
 }
