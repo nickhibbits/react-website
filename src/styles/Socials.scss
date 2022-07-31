@@ -3,6 +3,11 @@
 .socials-component {
   display: flex;
   justify-content: flex-start;
+}
+
+.socials-component-add-padding {
+  display: flex;
+  justify-content: flex-start;
   padding-top: 17px;
 }
 
@@ -10,9 +15,8 @@
   color: white;
   margin: 0 2px;
   transition: 0.5s ease;
-}
-
-.social-link:hover {
-  cursor: pointer;
-  color: var(--main-color);
+  &:hover {
+    color: var(--background-light);
+    cursor: pointer;
+  }
 }

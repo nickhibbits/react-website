@@ -1,10 +1,13 @@
 import "../styles/Socials.scss";
 import { IoLogoLinkedin, IoLogoInstagram, IoLogoGithub } from "react-icons/io";
-import { IoMailOutline } from "react-icons/io5";
 
-function Socials() {
+function Socials({ addPadding }) {
   return (
-    <div className="socials-component">
+    <div
+      className={
+        addPadding ? "socials-component-add-padding" : "socials-component"
+      }
+    >
       <a
         href="https://www.linkedin.com/in/nicholas-hibbits/"
         className="social-link"
@@ -17,9 +20,9 @@ function Socials() {
       <a href="https://instagram.com/nhibit" className="social-link">
         <IoLogoInstagram size={30} />
       </a>
-      <a href="mailto:nicholashibbits@gmail.com" className="social-link">
+      {/* <a href="mailto:nicholashibbits@gmail.com" className="social-link">
         <IoMailOutline size={30} />
-      </a>
+      </a> */}
     </div>
   );
 }

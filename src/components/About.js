@@ -10,7 +10,7 @@ const About = () => {
       <div className="about-wrapper">
         <div className="title-socials-wrapper">
           <div className="profile">Profile</div>
-          <Socials />
+          <Socials addPadding={true} />
         </div>
         <div className="profile-wrapper">
           <div className="profile-title">Skills</div>

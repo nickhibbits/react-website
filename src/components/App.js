@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Nav from "./Nav";
 import Home from "./Home";
@@ -9,6 +9,16 @@ import "../styles/App.scss";
 
 function App() {
   const [navMenuOpen, setNavMenuOpen] = useState(false);
+  const [notSmallScreen, setNotSmallScreen] = useState(window.innerWidth > 800);
+
+  const updateMedia = () => {
+    setNotSmallScreen(window.innerWidth > 800);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
 
   const srcollToSection = (section) => {
     const behavior = "smooth";
@@ -46,6 +56,7 @@ function App() {
           navMenuOpen={navMenuOpen}
           setNavMenuOpen={() => setNavMenuOpen(!navMenuOpen)}
           srcollToSection={srcollToSection}
+          notSmallScreen={notSmallScreen}
         />
       </div>
       <div className="app-wrapper">
