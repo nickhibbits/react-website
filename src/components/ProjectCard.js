@@ -8,7 +8,7 @@ function ProjectCard({ title, description, imgSrc }) {
   console.log("showDescription", showDescription);
 
   useEffect(() => {
-    showDescription.current = false;
+    return () => (showDescription.current = false);
   });
 
   return (
