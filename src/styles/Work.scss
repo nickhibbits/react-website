@@ -7,6 +7,12 @@
 
 .work-wrapper {
   margin: 60px var(--mobile-margin);
+  @include desktopAndUp {
+    margin: 60px var(--desktop-margin);
+  }
+  @include tablet {
+    margin: 60px var(--tablet-margin);
+  }
 }
 
 .work-title {

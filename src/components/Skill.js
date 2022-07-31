@@ -4,7 +4,11 @@ function Skill({ title, skills }) {
       <div className="skill-title">{title}</div>
       <ul className="skill-description">
         {skills.map((skill) => {
-          return <li key={skill}>{skill}</li>;
+          return (
+            <li className="skill-item" key={skill}>
+              {skill}
+            </li>
+          );
         })}
       </ul>
     </li>

@@ -7,6 +7,12 @@
   color: white;
   grid-area: 1 / 1 / 2 / 5;
   margin: 0 var(--mobile-margin);
+  @include desktopAndUp {
+    margin: 0px var(--desktop-margin);
+  }
+  @include tablet {
+    margin: 0px var(--tablet-margin);
+  }
 }
 
 .headline-wrapper {

@@ -5,9 +5,9 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 110vh 210vh 225vh 30px;
   min-height: 100vh;
-  // @include small-screen {
-  //   background-color: red;
-  // }
+  @include desktopAndUp {
+    grid-template-rows: 100vh 83vh 140vh 30px;
+  }
 }
 
 .title-socials-wrapper {

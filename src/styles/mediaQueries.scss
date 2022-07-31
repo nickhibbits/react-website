@@ -8,6 +8,17 @@ $large-screen-width: 1400px;
     @content;
   }
 }
+@mixin desktopAndUp {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin notMobile {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
 
 @mixin small-screen {
   @media (min-width: $small-device-width) and (max-width: #{$tablet-width - 1px}) {
