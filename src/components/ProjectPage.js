@@ -23,9 +23,19 @@ function ProjectPage(props) {
   console.log("project", project);
   return (
     <main className="project-page-component">
-      <img src={project.imgSrc} className="project-page-image" />
-      <div className="project-page-title">{projectTitle}</div>
-      <div className="project-page-description">{project.description}</div>
+      <div className="project-page-container">
+        <div className="project-image-wrapper">
+          <img
+            src={project.imgSrc}
+            className="project-page-image"
+            alt={project.imgAlt}
+          />
+        </div>
+        <div className="project-page-profile">
+          <div className="project-page-title">{projectTitle}</div>
+          <div className="project-page-description">{project.description}</div>
+        </div>
+      </div>
     </main>
   );
 }
