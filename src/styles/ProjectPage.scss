@@ -1,0 +1,28 @@
+@import "../styles/mediaQueries.scss";
+
+.project-page-component {
+  color: var(--text-light);
+  margin: var(--mobile-margin);
+  @include tablet {
+    margin: var(--tablet-margin);
+  }
+  height: 80vh;
+
+  .project-page-title {
+    font-size: var(--title-size);
+  }
+
+  .project-page-description {
+    font-family: var(--font-family-two);
+  }
+
+  @include desktopAndUp {
+    margin: 0px var(--desktop-margin);
+  }
+
+  .project-page-image {
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+  }
+}

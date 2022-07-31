@@ -11,65 +11,35 @@ function ProjectSet({ name }) {
         {name === "Professional" ? (
           <div className="project-card-container">
             <div className="anchor-wrapper">
-              <a
-                style={{
-                  textDecoration: "none",
-                }}
-                href={projects.zoomies.link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ProjectCard
-                  title={projects.zoomies.title}
-                  description={projects.zoomies.description}
-                  imgSrc={null}
-                />
-              </a>
+              <ProjectCard
+                title={projects.zoomies.title}
+                description={projects.zoomies.description}
+                imgSrc={null}
+              />
             </div>
             <div className="anchor-wrapper">
-              <a
-                style={{ textDecoration: "none" }}
-                href={projects.bearsDen.link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ProjectCard
-                  title={projects.bearsDen.title}
-                  description={projects.bearsDen.description}
-                  imgSrc={projects.bearsDen.imgSrc}
-                />
-              </a>
+              <ProjectCard
+                title={projects.bearsDen.title}
+                description={projects.bearsDen.description}
+                imgSrc={projects.bearsDen.imgSrc}
+              />
             </div>
           </div>
         ) : (
           <div className="project-card-container">
             <div className="anchor-wrapper">
-              <a
-                style={{ textDecoration: "none" }}
-                href={projects.pollApp.link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ProjectCard
-                  title={projects.pollApp.title}
-                  description={projects.pollApp.description}
-                  imgSrc={projects.pollApp.imgSrc}
-                />
-              </a>
+              <ProjectCard
+                title={projects.pollApp.title}
+                description={projects.pollApp.description}
+                imgSrc={projects.pollApp.imgSrc}
+              />
             </div>
             <div className="anchor-wrapper">
-              <a
-                style={{ textDecoration: "none" }}
-                href={projects.bookApp.link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ProjectCard
-                  title={projects.bookApp.title}
-                  description={projects.bookApp.description}
-                  imgSrc={projects.bookApp.imgSrc}
-                />
-              </a>
+              <ProjectCard
+                title={projects.bookApp.title}
+                description={projects.bookApp.description}
+                imgSrc={projects.bookApp.imgSrc}
+              />
             </div>
           </div>
         )}
