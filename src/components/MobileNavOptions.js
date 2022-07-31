@@ -20,7 +20,7 @@ function NavOptionsMobile({ setNavMenuOpen, navMenuOpen, handleClick }) {
         <div
           className="navbar-dropdown-wrapper"
           style={{
-            height: navMenuOpen ? "23vh" : "0vh",
+            height: navMenuOpen ? "28vh" : "0vh",
             transform: navMenuOpen
               ? `translateY(${0}px)`
               : `translateY(${-200}px)`,
