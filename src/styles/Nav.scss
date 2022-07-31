@@ -35,7 +35,7 @@
 
 .nav-options-wrapper {
   display: grid;
-  grid-template-columns: 40vw 23vw 35vw;
+  grid-template-columns: 40vw 22vw 35vw;
   padding: 8px 16px;
 }
 
@@ -95,5 +95,6 @@
   align-items: center;
   @include notMobile {
     font-size: 2rem;
+    margin-left: 2%;
   }
 }
