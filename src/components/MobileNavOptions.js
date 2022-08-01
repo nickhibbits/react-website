@@ -24,7 +24,7 @@ function NavOptionsMobile({ setNavMenuOpen, navMenuOpen, handleClick }) {
             transform: navMenuOpen
               ? `translateY(${0}px)`
               : `translateY(${-200}px)`,
-            transition: "all .7s ease",
+            transition: "all .4s ease",
           }}
         >
           <ul

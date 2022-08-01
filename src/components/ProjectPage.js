@@ -24,7 +24,7 @@ function ProjectPage(props) {
   return (
     <main className="project-page-component">
       <div className="project-page-container">
-        <div className="project-image-wrapper">
+        <div className="project-page-image-wrapper">
           <img
             src={project.imgSrc}
             className="project-page-image"

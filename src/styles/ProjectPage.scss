@@ -7,18 +7,24 @@
     margin: var(--tablet-margin);
   }
   @include desktopAndUp {
-    margin: 50px var(--desktop-margin);
-    height: 90vh;
+    margin: 0px var(--desktop-margin);
+    height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    // border: solid 2px red;
   }
-  height: 80vh;
+  height: 100vh;
 }
 
 .project-page-container {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  height: 100vh;
   @include desktopAndUp {
-    display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    height: auto;
   }
 }
 
@@ -27,22 +33,37 @@
 }
 
 .project-page-profile {
+  padding: 5% 8%;
   @include desktopAndUp {
     padding: 15%;
+    padding-right: 0px;
   }
 }
 
 .project-page-description {
   font-family: var(--font-family-two);
+  padding-top: 3%;
 }
 
-.project-image-wrapper {
+.project-page-image-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+  box-shadow: -8px 5px var(--background-light);
+  border-radius: 10px;
+  border: solid 2px var(--text-light);
+  // @include tablet {
+  //   height: 80%;
+  //   width: 80%;
+  // }
 }
 
 .project-page-image {
   width: 100%;
   height: 100%;
+  @include tablet {
+    width: 70%;
+    // height: 80%;
+  }
   border-radius: 10px;
 }
