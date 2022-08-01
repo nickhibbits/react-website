@@ -33,7 +33,10 @@
 }
 
 .project-page-profile {
-  padding: 5% 8%;
+  padding: 3% 3%;
+  @include tablet {
+    padding: 5% 8%;
+  }
   @include desktopAndUp {
     padding: 15%;
     padding-right: 0px;
@@ -49,9 +52,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: -8px 5px var(--background-light);
-  border-radius: 10px;
-  border: solid 2px var(--text-light);
+  padding: 3%;
+  @include desktopAndUp {
+    padding: 0px;
+  }
   // @include tablet {
   //   height: 80%;
   //   width: 80%;
@@ -60,6 +64,9 @@
 
 .project-page-image {
   width: 100%;
+  box-shadow: -8px 5px var(--background-light);
+  border-radius: 10px;
+  border: solid 2px var(--text-light);
   height: 100%;
   @include tablet {
     width: 70%;
