@@ -78,11 +78,14 @@
   border-radius: 10px;
 }
 
-.see-more-link {
+.links-wrapper {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  padding: 3% 3% 3% 1%;
+}
+
+.project-page-link {
   color: var(--text-light-two);
-  padding: 3%;
   transition: all 0.4s ease;
   &:hover {
     cursor: pointer;

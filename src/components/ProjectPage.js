@@ -1,4 +1,4 @@
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import projects from "../projects";
 
 import "../styles/ProjectPage.scss";
@@ -34,9 +34,14 @@ function ProjectPage(props) {
         <div className="project-page-profile">
           <div className="project-page-title">{projectTitle}</div>
           <div className="project-page-description">{project.description}</div>
-          <a href={project.link} className="see-more-link">
-            See more
-          </a>
+          <div className="links-wrapper">
+            <Link className="project-page-link" to={"/"}>
+              Go back
+            </Link>
+            <a href={project.link} className="project-page-link">
+              See more
+            </a>
+          </div>
         </div>
       </div>
     </main>
