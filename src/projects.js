@@ -14,7 +14,7 @@ const projects = {
   bearsDen: {
     title: "The Bear's Den",
     description:
-      "Built e-commerce, studied SEO, performed cross-platform integration with social media for a small business.",
+      "The Bear's Den is a chainsaw carving shop in South Lake Tahoe. Starting out as a carver, I began speaking with the owner about taking the business more online. Soon I was managing e-commerce for the business.\n\n My experience has entailed building a website with a CMS, creating and maintaing an Etsy shop and social media channels, studying SEO and performing cross-platform integration to expand reach.",
     imgAlt: "The Bear's Den",
     imgSrc: bearsDen,
     link: "https://thebearsdentahoe.com",
@@ -22,7 +22,7 @@ const projects = {
   pollApp: {
     title: "Employee Poll App",
     description:
-      "Mock comppany polling app, allowing users to vote on questions asked by other employees or create their own, as well as see stats about questions and users.",
+      "Mock company polling app, allowing users to vote on questions asked by other employees or create their own, as well as see stats about questions and users.",
     imgAlt: "Employee Poll App",
     imgSrc: pollPhoto,
     link: "https://github.com/nickhibbits/employee-poll-react-app",

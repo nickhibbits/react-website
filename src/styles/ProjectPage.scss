@@ -2,9 +2,9 @@
 
 .project-page-component {
   color: var(--text-light);
-  margin: var(--mobile-margin);
+  margin: 0px var(--mobile-margin);
   @include tablet {
-    margin: var(--tablet-margin);
+    margin: 0px var(--tablet-margin);
   }
   @include desktopAndUp {
     margin: 0px var(--desktop-margin);
@@ -18,10 +18,14 @@
 }
 
 .project-page-container {
-  display: grid;
-  grid-template-rows: 50% 50%;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--mobile-margin);
+  @include tablet {
+    padding-top: 0%;
+  }
   @include desktopAndUp {
+    display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
     height: auto;
@@ -33,9 +37,9 @@
 }
 
 .project-page-profile {
-  padding: 3% 3%;
+  padding: 0px 3%;
   @include tablet {
-    padding: 5% 8%;
+    padding: 0px 8%;
   }
   @include desktopAndUp {
     padding: 15%;
@@ -45,7 +49,7 @@
 
 .project-page-description {
   font-family: var(--font-family-two);
-  padding-top: 3%;
+  padding-top: 1%;
 }
 
 .project-page-image-wrapper {
@@ -56,21 +60,20 @@
   @include desktopAndUp {
     padding: 0px;
   }
-  // @include tablet {
-  //   height: 80%;
-  //   width: 80%;
-  // }
 }
 
 .project-page-image {
   width: 100%;
+  height: auto;
   box-shadow: -8px 5px var(--background-light);
   border-radius: 10px;
   border: solid 2px var(--text-light);
-  height: 100%;
   @include tablet {
-    width: 70%;
-    // height: 80%;
+    width: 90%;
+    height: auto;
+  }
+  @include desktopAndUp {
+    height: auto;
   }
   border-radius: 10px;
 }
