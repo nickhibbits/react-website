@@ -39,7 +39,7 @@
 .project-page-profile {
   padding: 0px 3%;
   @include tablet {
-    padding: 0px 8%;
+    padding: 0px 8% 20px 8%;
   }
   @include desktopAndUp {
     padding: 15%;
@@ -76,4 +76,16 @@
     height: auto;
   }
   border-radius: 10px;
+}
+
+.see-more-link {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--text-light-two);
+  transition: all 0.4s ease;
+  &:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+    transition: all 0.3s ease-in;
+  }
 }

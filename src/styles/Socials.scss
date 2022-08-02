@@ -14,9 +14,9 @@
 .social-link {
   color: white;
   margin: 0 2px;
-  transition: 0.5s ease;
+  transition: 0.4s ease;
   &:hover {
-    color: var(--background-light);
+    color: var(--hover-color);
     cursor: pointer;
   }
 }

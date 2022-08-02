@@ -34,6 +34,9 @@ function ProjectPage(props) {
         <div className="project-page-profile">
           <div className="project-page-title">{projectTitle}</div>
           <div className="project-page-description">{project.description}</div>
+          <a href={project.link} className="see-more-link">
+            See more
+          </a>
         </div>
       </div>
     </main>
