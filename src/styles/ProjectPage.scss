@@ -93,3 +93,12 @@
     transition: all 0.3s ease-in;
   }
 }
+
+.project-page-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  box-shadow: -8px 5px var(--background-light);
+  border-radius: 10px;
+  border: solid 2px var(--text-light);
+  padding: 8%;
+}

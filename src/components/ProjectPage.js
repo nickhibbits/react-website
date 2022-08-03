@@ -1,6 +1,8 @@
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import projects from "../projects";
 
+import { ReactComponent as ZoomiesLogo } from "../ZoomiesLogo.svg";
+
 import "../styles/ProjectPage.scss";
 
 const withRouter = (Component) => {
@@ -25,11 +27,17 @@ function ProjectPage(props) {
     <main className="project-page-component">
       <div className="project-page-container">
         <div className="project-page-image-wrapper">
-          <img
-            src={project.imgSrc}
-            className="project-page-image"
-            alt={project.imgAlt}
-          />
+          {project.title === "Studio Zoomies" ? (
+            <div className="project-page-logo-wrapper">
+              <ZoomiesLogo />
+            </div>
+          ) : (
+            <img
+              src={project.imgSrc}
+              className="project-page-image"
+              alt={project.imgAlt}
+            />
+          )}
         </div>
         <div className="project-page-profile">
           <div className="project-page-title">{projectTitle}</div>
