@@ -37,8 +37,9 @@ const About = () => {
               <br />
               <br /> Welcome to my website and personal playground. Built using
               React and SCSS, I use this space to try new techniques and refine
-              my understanding of various concepts I've learned. Check out my
-              work and let's connect.
+              my understanding of various concepts I've learned.
+              <br />
+              <br /> Check out my work and let's connect!
             </div>
           </div>
         </div>

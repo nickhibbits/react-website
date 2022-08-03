@@ -47,7 +47,7 @@ function ProjectPage(props) {
               Go back
             </Link>
             <a href={project.link} className="project-page-link">
-              See more
+              {project.type === "personal" ? "Visit repository" : "See more"}
             </a>
           </div>
         </div>
