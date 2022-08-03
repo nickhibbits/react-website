@@ -1,7 +1,7 @@
-import nick from "../images/nick-professional.jpg";
 import React from "react";
-
 import "../styles/Home.scss";
+
+const nick = require("../assets/images/nick-professional.jpg");
 
 export const Home = () => {
   return (
