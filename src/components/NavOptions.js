@@ -1,5 +1,6 @@
 import Socials from "./Socials";
 import "../styles/Nav.scss";
+const resume = require("../assets/Nick_Hibbits_Resume.pdf");
 
 function NavOptions({ handleClick }) {
   return (
@@ -18,6 +19,9 @@ function NavOptions({ handleClick }) {
               <li onClick={() => handleClick("work")} className="nav-link">
                 Work
               </li>
+              <a href={resume}>
+                <li className="nav-link">Resume</li>
+              </a>
             </ul>
             <Socials addPadding={false} />
           </div>
