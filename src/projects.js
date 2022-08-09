@@ -21,7 +21,7 @@ const projects = {
     link: "https://thebearsdentahoe.com",
     type: "professional",
     basicDescription:
-      "The Bear's Den is a chainsaw carving shop I helped to establish e-commerce",
+      "The Bear's Den is a chainsaw carving shop that I established e-commerce for. I also learned to handle a chainsaw!",
   },
   pollApp: {
     title: "Employee Poll App",
@@ -31,15 +31,19 @@ const projects = {
     imgSrc: pollPhoto,
     link: "https://github.com/nickhibbits/employee-poll-react-app",
     type: "personal",
+    basicDescription:
+      "This app mimics an internal company polling program. Built with React, uses Redux for state management.",
   },
   bookApp: {
     title: "My Reads App",
     description:
       "Book tracking app, allowing users to organize books on different shelves as well as add new ones, as they progress in reading. Uses React.",
-    imgAlt: "My Reads Ap",
+    imgAlt: "My Reads App",
     imgSrc: bookPhoto,
     link: "https://github.com/nickhibbits/my-reads-react-app",
     type: "personal",
+    basicDescription:
+      "A React application for tracking the progress of the books one's reading",
   },
 };
 

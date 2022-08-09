@@ -35,9 +35,16 @@ function ProjectCard({ title, imgSrc, basicDescription }) {
           </div>
         </div>
       </Link>
-      <div className="basic-description-wrapper">
-        <div className="project-card-basic-description">{basicDescription}</div>
-      </div>
+      <Link
+        to={`/projects/${title}`}
+        style={{ textDecoration: "none", height: "100%" }}
+      >
+        <div className="basic-description-wrapper">
+          <div className="project-card-basic-description">
+            {basicDescription}
+          </div>
+        </div>
+      </Link>
     </div>
   );
 }

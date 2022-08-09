@@ -35,12 +35,6 @@
   justify-content: center;
 }
 
-.project-card-component {
-  @include tabletAndUp {
-    margin-right: 20px;
-  }
-}
-
 .project-card-image-description-wrapper {
   font-family: var(--font-family-two);
   display: flex;

@@ -13,6 +13,10 @@
   color: var(--text-light);
   font-family: var(--font-family-two);
   background-color: var(--background-dark);
+  @include tabletAndUp {
+    margin-right: 20px;
+  }
+  border-bottom: solid 0.5px black;
 }
 
 .anchor-wrapper {
