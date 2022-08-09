@@ -75,6 +75,10 @@
 .skill-item {
   @include desktopAndUp {
     margin-right: 5px;
+    list-style: none;
+    &::before {
+      content: "- ";
+    }
   }
 }
 

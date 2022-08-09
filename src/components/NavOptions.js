@@ -1,6 +1,6 @@
 import Socials from "./Socials";
 import "../styles/Nav.scss";
-const resume = require("../assets/Nick_Hibbits_Resume.pdf");
+const resume = require("../assets/Nick_Hibbits_Resume_01.pdf");
 
 function NavOptions({ handleClick }) {
   return (

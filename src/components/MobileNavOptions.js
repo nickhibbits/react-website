@@ -2,7 +2,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import "../styles/Nav.scss";
 
-const resume = require("../assets/Nick_Hibbits_Resume.pdf");
+const resume = require("../assets/Nick_Hibbits_Resume_01.pdf");
 
 function NavOptionsMobile({ setNavMenuOpen, navMenuOpen, handleClick }) {
   return (
