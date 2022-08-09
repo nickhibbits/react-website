@@ -3,7 +3,7 @@
 .app-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100vh 200vh 180vh 30px;
+  grid-template-rows: 100vh 205vh 180vh 30px;
   min-height: 100vh;
   @include tablet {
     grid-template-rows: 100vh 180vh 180vh 30px;
