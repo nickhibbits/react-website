@@ -10,6 +10,8 @@ const projects = {
     imgSrc: null,
     link: "https://studiozoomies.com",
     type: "professional",
+    basicDescription:
+      "Studio Zoomies is a CRM web-application for photographers. Click to read more about my first job in tech as a Junior Software Developer. ",
   },
   bearsDen: {
     title: "The Bear's Den",
@@ -18,6 +20,8 @@ const projects = {
     imgSrc: bearsDen,
     link: "https://thebearsdentahoe.com",
     type: "professional",
+    basicDescription:
+      "The Bear's Den is a chainsaw carving shop I helped to establish e-commerce",
   },
   pollApp: {
     title: "Employee Poll App",

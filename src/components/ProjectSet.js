@@ -15,6 +15,7 @@ function ProjectSet({ name }) {
                 title={projects.zoomies.title}
                 description={projects.zoomies.description}
                 imgSrc={null}
+                basicDescription={projects.zoomies.basicDescription}
               />
             </div>
             <div className="anchor-wrapper">
@@ -22,6 +23,7 @@ function ProjectSet({ name }) {
                 title={projects.bearsDen.title}
                 description={projects.bearsDen.description}
                 imgSrc={projects.bearsDen.imgSrc}
+                basicDescription={projects.bearsDen.basicDescription}
               />
             </div>
           </div>
@@ -32,6 +34,7 @@ function ProjectSet({ name }) {
                 title={projects.pollApp.title}
                 description={projects.pollApp.description}
                 imgSrc={projects.pollApp.imgSrc}
+                basicDescription={projects.pollApp.basicDescription}
               />
             </div>
             <div className="anchor-wrapper">
@@ -39,6 +42,7 @@ function ProjectSet({ name }) {
                 title={projects.bookApp.title}
                 description={projects.bookApp.description}
                 imgSrc={projects.bookApp.imgSrc}
+                basicDescription={projects.bookApp.basicDescription}
               />
             </div>
           </div>

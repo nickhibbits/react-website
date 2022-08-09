@@ -1,17 +1,22 @@
 @import "./mediaQueries.scss";
 
 .project-card-component {
-  border: solid 2px var(--background-dark);
+  border-bottom: none;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
   min-height: 183px;
   min-width: 325px;
-  margin-bottom: 20px;
   color: var(--text-light);
   font-family: var(--font-family-two);
   background-color: var(--background-dark);
+}
+
+.anchor-wrapper {
+  margin-bottom: 10px;
 }
 
 .zoomies-logo-wrapper {
