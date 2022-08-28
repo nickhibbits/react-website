@@ -3,6 +3,12 @@ $tablet-width: 600px;
 $desktop-width: 1024px;
 $large-screen-width: 1250px;
 
+@mixin customQuery($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
 @mixin notMobile {
   @media (min-width: 500px) {
     @content;
