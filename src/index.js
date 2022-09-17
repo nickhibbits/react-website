@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./components/App";
-import ProjectPage from "./components/ProjectPage";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./styles/index.scss";
 
@@ -11,7 +11,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" exact element={<App />} />
-      <Route path="/projects/:name" element={<ProjectPage />} />
+      {/* <Route path="/projects/:name" element={<ProjectPage />} /> */}
     </Routes>
   </BrowserRouter>
 );

@@ -1,29 +1,34 @@
-@import "./mediaQueries.scss";
+@use "./index.scss";
 
-.app-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100vh 205vh 250vh 30px;
-  min-height: 100vh;
-  @include tablet {
-    grid-template-rows: 100vh 150vh 210vh 30px;
-  }
-  @include desktop {
-    grid-template-rows: 100vh 100vh 150vh 30px;
-  }
-  @include large-screen {
-    grid-template-rows: 100vh 72vh 130vh 30px;
-  }
-}
+// .app-wrapper {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   grid-template-rows: 100vh 205vh 250vh 30px;
+//   min-height: 100vh;
+//   @include tablet {
+//     grid-template-rows: 100vh 150vh 210vh 30px;
+//   }
+//   @include desktop {
+//     grid-template-rows: 100vh 100vh 150vh 30px;
+//   }
+//   @include large-screen {
+//     grid-template-rows: 100vh 72vh 130vh 30px;
+//   }
+// }
 
-.title-socials-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+// .title-socials-wrapper {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
 
-.nav-wrapper {
-  position: sticky;
-  top: 0px;
-  background: var(--nav-background);
+// .nav-wrapper {
+//   position: sticky;
+//   top: 0px;
+//   background: var(--nav-background);
+// }
+
+.app-component {
+  border: solid 2px red;
+  margin: 0 13.125rem;
 }

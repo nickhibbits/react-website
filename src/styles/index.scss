@@ -1,26 +1,43 @@
-@import "./mediaQueries.scss";
+// @import "./mediaQueries.scss";
 
-:root {
-  --color-red: #ff0035;
-  --background-dark: #0e131f;
-  --background-light: #dccca3;
-  --text-light: #fdfdfd;
-  --text-light-two: #aad3ff;
-  --title-size: 50px;
-  --sub-section-title: 30px;
-  --mobile-margin: 16px;
-  --tablet-margin: 32px;
-  --desktop-margin: 180px;
-  --nav-background: rgba(0, 0, 0, 0.9);
-  --font-family-one: "Racing Sans One", cursive;
-  --font-family-two: "Baloo Thambi 2", cursive;
-  --hover-color: rgb(0, 152, 119);
+$font-family-main: "Righteous", "cursive";
+$font-family-secondary: "Padauk", sans-serif;
+$font-size-main: 7.5rem;
+$font-size-secondary: 1.5rem;
+$bg-blue: #0200ab;
+$bg-green: #046d31;
+
+@mixin font-main {
+  font-family: $font-family-main;
+  font-size: $font-size-main;
 }
 
+@mixin font-secondary {
+  font-family: $font-family-secondary;
+  font-size: $font-size-secondary;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+section,
+p {
+  margin: 0%;
+}
+
+h1 {
+  @include font-main;
+}
+
+p {
+  @include font-secondary;
+}
 body {
-  background: var(--background-dark);
-  margin: 0px;
-  font-family: var(--font-family-one);
+  // margin: ;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,9 +48,4 @@ a {
 
 img {
   image-rendering: crisp-edges;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
