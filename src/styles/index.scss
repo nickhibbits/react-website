@@ -6,6 +6,8 @@ $font-size-main: 7.5rem;
 $font-size-secondary: 1.5rem;
 $bg-blue: #0200ab;
 $bg-green: #046d31;
+$clr-light: #fff;
+$clr-dark: #000000;
 
 @mixin font-main {
   font-family: $font-family-main;
@@ -37,7 +39,7 @@ p {
   @include font-secondary;
 }
 body {
-  // margin: ;
+  margin: 0%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
