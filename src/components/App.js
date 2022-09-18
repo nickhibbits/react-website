@@ -12,6 +12,7 @@ function App() {
   return (
     <main className="app-component">
       <section className="home-container">
+        <Home />
         <div className="box-fade">
           <ul className="icon-nav">
             <li>
@@ -26,9 +27,8 @@ function App() {
           </ul>
         </div>
         <div className="box-trees">
-          <img src={trees} alt="overhead shot of forest" />
+          <img className="img" src={trees} alt="overhead shot of forest" />
         </div>
-        <Home />
       </section>
     </main>
   );

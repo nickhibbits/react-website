@@ -1,4 +1,5 @@
 @use "./index.scss";
+@use "./mediaQueries.scss";
 
 .app-component {
   display: grid;
@@ -9,37 +10,50 @@
 
 .home-container {
   display: grid;
-  grid-template-columns: 45vw 55vw;
-  grid-template-rows: 100%;
+  @include mediaQueries.desktop {
+    grid-template-columns: 45vw 55vw;
+    grid-template-rows: 100%;
+  }
   position: relative;
   grid-column: 1 / 13;
 }
 
-img {
-  object-fit: fill;
-  max-width: 100%;
-  min-height: 100vh;
+.box-fade {
+  display: none;
+  @include mediaQueries.desktop {
+    background: linear-gradient(
+      135.68deg,
+      index.$bg-blue 0.74%,
+      index.$clr-dark 34.34%
+    );
+    display: grid;
+    grid-template-rows: 75% 25%;
+  }
 }
 
-.box-fade {
-  background: linear-gradient(
-    135.68deg,
-    index.$bg-blue 0.74%,
-    index.$clr-dark 34.34%
-  );
-  display: grid;
-  grid-template-rows: 80% 20%;
+.box-trees {
+  display: none;
+  @include mediaQueries.desktop {
+    display: block;
+  }
+}
+
+.img {
+  object-fit: fill;
+  min-height: 100vh;
 }
 
 .home-component {
-  color: index.$clr-light;
-  position: absolute;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(3.5rem, 5rem));
-  gap: 1.25rem;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0 13.125rem;
+  @include mediaQueries.desktop {
+    color: index.$clr-light;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(3.5rem, 5rem));
+    gap: 1.25rem;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 13.125rem;
+  }
   // border: solid 2px green;
 }
 

@@ -9,16 +9,6 @@ $bg-green: #046d31;
 $clr-light: #fff;
 $clr-dark: #000000;
 
-@mixin font-main {
-  font-family: $font-family-main;
-  font-size: $font-size-main;
-}
-
-@mixin font-secondary {
-  font-family: $font-family-secondary;
-  font-size: $font-size-secondary;
-}
-
 *,
 *::before,
 *::after {
@@ -32,18 +22,21 @@ p {
 }
 
 h1 {
-  @include font-main;
+  font-family: $font-family-main;
+  font-size: clamp(3.5rem, 15vw, $font-size-main);
 }
 
 p {
-  @include font-secondary;
+  font-family: $font-family-secondary;
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 ul {
   list-style: none;
 }
+
 body {
-  margin: 0%;
+  margin: 1em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -54,4 +47,5 @@ a {
 
 img {
   image-rendering: crisp-edges;
+  max-width: 100%;
 }
