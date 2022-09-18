@@ -3,7 +3,7 @@ import React from "react";
 function Work() {
   return (
     <section className="container work-container">
-      <div className="work-component">
+      <div className="component work-component">
         <section className="info-wrapper">
           <h1>Work</h1>
           <p>
