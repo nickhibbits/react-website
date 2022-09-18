@@ -1,7 +1,6 @@
 @use "./index.scss";
 
 .app-component {
-  border: solid 2px red;
   display: grid;
   grid-template-rows: repeat(4, 100vh);
   grid-template-columns: repeat(12, 1fr);
@@ -10,33 +9,48 @@
 
 .home-container {
   display: grid;
-  // grid-template-columns: 30% 70%;
-  // grid-template-rows: 100%;
+  grid-template-columns: 45vw 55vw;
+  grid-template-rows: 100%;
   position: relative;
   grid-column: 1 / 13;
 }
 
-.box-trees {
-  // border: solid 2px light blue;
-  min-width: 30rem;
+img {
+  object-fit: fill;
+  max-width: 100%;
+  min-height: 100vh;
 }
 
-.home-wrapper {
-  display: absolute;
-  border: solid 2px yellow;
+.box-fade {
+  background: linear-gradient(
+    135.68deg,
+    index.$bg-blue 0.74%,
+    index.$clr-dark 34.34%
+  );
+  display: grid;
+  grid-template-rows: 80% 20%;
 }
 
 .home-component {
+  color: index.$clr-light;
+  position: absolute;
   display: grid;
   grid-template-columns: repeat(12, minmax(3.5rem, 5rem));
   gap: 1.25rem;
   align-items: center;
   min-height: 100vh;
   margin: 0 13.125rem;
-  border: solid 2px green;
+  // border: solid 2px green;
 }
 
 .info-wrapper {
-  border: solid 1px orange;
+  // border: solid 1px orange;
   grid-column: 1 / 10;
+}
+
+.icon-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-row: 2 / 3;
 }

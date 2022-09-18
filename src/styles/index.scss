@@ -38,6 +38,10 @@ h1 {
 p {
   @include font-secondary;
 }
+
+ul {
+  list-style: none;
+}
 body {
   margin: 0%;
   -webkit-font-smoothing: antialiased;
