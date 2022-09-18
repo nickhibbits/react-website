@@ -1,5 +1,8 @@
 import "../styles/App.scss";
+import About from "./About";
 import Home from "./Home";
+import Work from "./Work";
+import Connect from "./Connect";
 
 import trees from "../assets/images/trees-overhead.jpg";
 
@@ -11,7 +14,7 @@ function App() {
   const size = 80;
   return (
     <main className="app-component">
-      <section className="home-container">
+      <section className="container home-container">
         <Home />
         <div className="box-fade">
           <ul className="icon-nav">
@@ -30,6 +33,9 @@ function App() {
           <img className="img" src={trees} alt="overhead shot of forest" />
         </div>
       </section>
+      <About />
+      <Work />
+      <Connect />
     </main>
   );
 }

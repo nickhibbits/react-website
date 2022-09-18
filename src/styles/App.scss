@@ -8,14 +8,30 @@
   // gap: 1.25rem;
 }
 
-.home-container {
+.container {
   display: grid;
+  position: relative;
+  align-items: center;
+  grid-column: 1 / 13;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    height: 1px;
+    width: 50%; /* or 100px */
+    border-bottom: 1px solid index.$clr-light;
+  }
+}
+
+.home-container {
+  background-image: url("../assets/images/trees-overhead.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   @include mediaQueries.desktop {
     grid-template-columns: 45vw 55vw;
     grid-template-rows: 100%;
   }
-  position: relative;
-  grid-column: 1 / 13;
 }
 
 .box-fade {
@@ -38,6 +54,13 @@
   }
 }
 
+.icon-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-row: 2 / 3;
+}
+
 .img {
   object-fit: fill;
   min-height: 100vh;
@@ -58,13 +81,26 @@
 }
 
 .info-wrapper {
-  // border: solid 1px orange;
   grid-column: 1 / 10;
+  margin: 1em;
 }
 
-.icon-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  grid-row: 2 / 3;
+.about-container {
+  background: linear-gradient(
+    180deg,
+    index.$bg-green 0%,
+    index.$clr-dark 79.69%
+  );
+}
+.work-container {
+  background: linear-gradient(
+    (180deg, index.$clr-dark 0%, index.$bg-blue 100%)
+  );
+}
+.connect-container {
+  background: linear-gradient(
+    180deg,
+    index.$bg-blue 57.81%,
+    index.$bg-green 100%
+  );
 }

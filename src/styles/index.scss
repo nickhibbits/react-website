@@ -15,6 +15,10 @@ $clr-dark: #000000;
   box-sizing: border-box;
 }
 
+* {
+  color: $clr-light;
+}
+
 h1,
 section,
 p {
@@ -36,7 +40,8 @@ ul {
 }
 
 body {
-  margin: 1em;
+  margin: 0%;
+  background-color: $clr-dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
