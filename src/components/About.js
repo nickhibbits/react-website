@@ -1,4 +1,5 @@
 import React from "react";
+import SkillsCard from "./SkillsCard";
 
 function About() {
   return (
@@ -19,6 +20,7 @@ function About() {
             Check out my work and let’s connect.
           </p>
         </section>
+        <SkillsCard />
       </div>
     </section>
   );

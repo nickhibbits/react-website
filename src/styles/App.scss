@@ -3,7 +3,7 @@
 
 .app-component {
   display: grid;
-  grid-template-rows: repeat(4, 100vh);
+  grid-template-rows: 100vh minmax(100vh, 150vh) 100vh 100vh;
   grid-template-columns: repeat(12, 1fr);
   // gap: 1.25rem;
 }
@@ -22,6 +22,7 @@
     width: 50%; /* or 100px */
     border-bottom: 1px solid index.$clr-light;
   }
+  min-height: 100vh;
 }
 
 .home-container {
@@ -87,7 +88,20 @@
 
 .info-wrapper {
   grid-column: 1 / 10;
+  margin: 0 1rem 7rem 1rem;
+}
+
+.connect-form {
   margin: 1em;
+}
+
+.connect-form > input {
+  margin-bottom: 1em;
+}
+
+.message-input {
+  min-height: 10rem;
+  width: clamp(20rem, 60vw, 35rem);
 }
 
 .about-container {

@@ -1,0 +1,21 @@
+// .skills-card-container {
+//   position: relative;
+// }
+
+.skills-card-component {
+  position: relative;
+  text-align: center;
+  border: solid 2px #ff0000;
+  background: linear-gradient(50.61deg, #000000 8.52%, #3d3d3d 89.54%);
+  min-height: 25rem;
+  max-width: 20rem;
+  border-radius: 10px;
+  // box-shadow: 2rem 2rem gradient(144.49deg, #f5fcff 0%, #046d31 91.67%);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    background: orange;
+  }
+}
