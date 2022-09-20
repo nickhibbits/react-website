@@ -5,7 +5,7 @@ function About() {
   return (
     <section className="container about-container">
       <div className="component about-component">
-        <section className="info-wrapper">
+        <section className="margin info-wrapper">
           <h1>About</h1>
           <p>
             My name’s Nick Hibbits. I’m a front-end focused web developer with

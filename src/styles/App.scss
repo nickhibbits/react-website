@@ -75,15 +75,22 @@
     gap: 1.25rem;
     min-height: 100vh;
   }
-  // border: solid 2px green;
 }
 
 .component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @include mediaQueries.desktop {
     margin: 0 13.125rem;
-    align-items: center;
+    // align-items: center;
     min-height: 100vh;
   }
+}
+
+.about-component {
+  position: relative;
+  z-index: 1;
 }
 
 .info-wrapper {

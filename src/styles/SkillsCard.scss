@@ -1,21 +1,56 @@
-// .skills-card-container {
-//   position: relative;
-// }
+@use "./index.scss";
 
 .skills-card-component {
   position: relative;
   text-align: center;
-  border: solid 2px #ff0000;
+  border: solid 2px index.$clr-light;
   background: linear-gradient(50.61deg, #000000 8.52%, #3d3d3d 89.54%);
-  min-height: 25rem;
-  max-width: 20rem;
-  border-radius: 10px;
-  // box-shadow: 2rem 2rem gradient(144.49deg, #f5fcff 0%, #046d31 91.67%);
+  min-height: 22rem;
+  width: 18rem;
+  border-radius: 25px;
+  margin: 1rem;
+  padding: 0.8rem;
   &::after {
     content: "";
     position: absolute;
-    top: 5rem;
-    left: 5rem;
-    background: orange;
+    top: 1rem;
+    right: 0.5rem;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(144.49deg, #f5fcff 0%, #046d31 91.67%);
+    border-radius: 25px;
+    z-index: -1;
   }
+}
+
+.skill-bars-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  justify-content: space-between;
+  height: 15rem;
+}
+
+.skills-card-title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.skill-bar-wrapper {
+  height: 1em;
+  display: flex;
+  gap: 3%;
+}
+
+.skill-bar {
+  background: linear-gradient(90deg, #00c3ac -8.89%, #089243 50.22%);
+}
+
+.skill-bar-level {
+  font-size: 1rem;
+}
+
+.skill-name {
+  text-align: start;
+  font-size: 1rem;
 }
