@@ -9,6 +9,13 @@ $bg-green: #046d31;
 $clr-light: #fff;
 $clr-dark: #000000;
 
+@mixin button-style {
+  background: linear-gradient(180deg, #079f47 0%, #005e28 100%);
+  border: 1px solid $clr-dark;
+  border-radius: 19px;
+  padding: 0.3rem 1rem;
+}
+
 *,
 *::before,
 *::after {
@@ -20,6 +27,7 @@ $clr-dark: #000000;
 }
 
 h1,
+h2,
 section,
 p {
   margin: 0%;
@@ -28,6 +36,11 @@ p {
 h1 {
   font-family: $font-family-main;
   font-size: clamp(3.5rem, 15vw, $font-size-main);
+}
+
+h2 {
+  font-size: 1rem;
+  font-family: $font-family-main;
 }
 
 p {
@@ -54,4 +67,8 @@ a {
 img {
   image-rendering: crisp-edges;
   max-width: 100%;
+}
+
+button {
+  @include button-style();
 }

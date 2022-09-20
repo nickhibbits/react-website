@@ -12,6 +12,7 @@ const projects = {
     type: "professional",
     basicDescription:
       "Studio Zoomies is a CRM web-application for photographers. Click to read more about my first job in tech as a Junior Software Developer. ",
+    id: 1,
   },
   bearsDen: {
     title: "The Bear's Den",
@@ -22,6 +23,7 @@ const projects = {
     type: "professional",
     basicDescription:
       "The Bear's Den is a chainsaw carving shop that I established e-commerce for. I also learned to handle a chainsaw!",
+    id: 2,
   },
   pollApp: {
     title: "Employee Poll App",
@@ -33,6 +35,7 @@ const projects = {
     type: "personal",
     basicDescription:
       "This app mimics an internal company polling program. Built with React, uses Redux for state management.",
+    id: 3,
   },
   bookApp: {
     title: "My Reads App",
@@ -44,6 +47,7 @@ const projects = {
     type: "personal",
     basicDescription:
       "A React application for tracking the progress of the books one's reading",
+    id: 4,
   },
 };
 

@@ -1,0 +1,21 @@
+.card-scroll-container {
+  display: flex;
+  width: 90vw;
+  gap: 2rem;
+  overflow-x: scroll;
+  margin: 1rem 0;
+}
+
+.work-card-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20rem;
+  min-width: 18rem;
+  border: solid 1px white;
+  border-radius: 15px;
+  padding: 1rem;
+}
