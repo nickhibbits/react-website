@@ -1,6 +1,5 @@
 .card-scroll-container {
   display: flex;
-  width: 90vw;
   gap: 2rem;
   overflow-x: scroll;
   margin: 1rem 0;
@@ -11,8 +10,9 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: 0.5em;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 20rem;
   min-width: 18rem;
   border: solid 1px white;
