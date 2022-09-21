@@ -1,4 +1,14 @@
 @use "./index.scss";
+@use "./mediaQueries.scss";
+
+// #skill-card-wrapper {
+//   @include mediaQueries.desktop {
+//     border: solid 2px purple;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//   }
+// }
 
 .skills-card-component {
   position: relative;

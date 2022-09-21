@@ -1,6 +1,7 @@
 // import React, { useEffect, useState } from "react";
-import SkillsCard from "./SkillsCard";
 import "../styles/index.scss";
+import "../styles/SkillsCard.scss";
+import SkillsCard from "./SkillsCard";
 import { useWindowCheck } from "../customHooks";
 
 function About() {
@@ -33,7 +34,14 @@ function About() {
             Check out my work and let’s connect.
           </p>
         </section>
-        <section className="skill-card-wrapper">
+        <section
+          id="skill-card-wrapper"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "row",
+          }}
+        >
           <SkillsCard />
         </section>
       </div>

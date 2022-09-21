@@ -1,3 +1,5 @@
+@use "./mediaQueries.scss";
+
 .card-scroll-container {
   display: flex;
   gap: 2rem;
@@ -6,6 +8,7 @@
 }
 
 .work-card-component {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -22,4 +25,11 @@
 
 .work-card-component > p {
   font-size: 0.8rem;
+}
+
+.buttons-wrapper {
+  @include mediaQueries.desktop {
+    position: absolute;
+    top: 9rem;
+  }
 }
