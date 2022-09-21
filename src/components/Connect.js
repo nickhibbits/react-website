@@ -1,9 +1,17 @@
 import React from "react";
+import { useWindowCheck } from "../customHooks";
 
 function Connect() {
+  const width = useWindowCheck();
   return (
     <div className="container connect-container">
-      <div className="component connect-component">
+      <div
+        className={
+          width > 1100
+            ? `component connect-component split`
+            : `component connect-component`
+        }
+      >
         <section className="info-wrapper">
           <h1>Connect</h1>
           <p>Something on your mind? Shoot me a message!</p>

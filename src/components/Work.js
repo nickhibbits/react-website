@@ -3,11 +3,20 @@ import projects from "../projects";
 import WorkCard from "./WorkCard";
 
 import "../styles/WorkCard.scss";
+import { useWindowCheck } from "../customHooks";
 
 function Work() {
+  const width = useWindowCheck();
+
   return (
     <div className="container work-container">
-      <div className="component work-component">
+      <div
+        className={
+          width > 1100
+            ? `component work-component split`
+            : `component work-component`
+        }
+      >
         <section className="info-wrapper">
           <h1>Work</h1>
           <p>

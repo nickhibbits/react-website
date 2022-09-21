@@ -6,16 +6,21 @@
   // flex-direction: column;
 
   display: grid;
-  grid-template-columns: repeat(12, minmax(1rem, 7rem));
-  grid-template-rows: 40rem 55rem 45rem 35rem;
+  grid-template-columns: repeat(12, minmax(1rem, 10rem));
+  grid-template-rows: 100vh 52rem 43rem 33rem;
 }
 
 .home-container {
   grid-area: 1 / 1 / 2 / 13;
+  position: relative;
   background-image: url("../assets/images/trees-overhead.jpg");
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.home-component > .info-wrapper:first-of-type {
+  margin-bottom: 0%;
 }
 
 .box-fade {
@@ -79,6 +84,7 @@
 // }
 
 .icon-nav {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

@@ -1,11 +1,23 @@
-import React from "react";
+// import React, { useEffect, useState } from "react";
 import SkillsCard from "./SkillsCard";
 import "../styles/index.scss";
+import { useWindowCheck } from "../customHooks";
 
 function About() {
+  const width = useWindowCheck();
+
   return (
-    <div className="container about-container">
-      <div className="component about-component">
+    <div
+      // className="container about-container"
+      className="container about-container"
+    >
+      <div
+        className={
+          width > 1100
+            ? `component about-component split`
+            : `component about-component`
+        }
+      >
         <section className="info-wrapper">
           <h1>About</h1>
           <p>
@@ -21,7 +33,9 @@ function About() {
             Check out my work and let’s connect.
           </p>
         </section>
-        <SkillsCard />
+        <section className="skill-card-wrapper">
+          <SkillsCard />
+        </section>
       </div>
     </div>
   );
