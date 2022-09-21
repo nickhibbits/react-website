@@ -6,7 +6,7 @@ import "../styles/WorkCard.scss";
 
 function Work() {
   return (
-    <section className="container work-container">
+    <div className="container work-container">
       <div className="component work-component">
         <section className="info-wrapper">
           <h1>Work</h1>
@@ -35,7 +35,7 @@ function Work() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 
 function Connect() {
   return (
-    <section className="container connect-container">
+    <div className="container connect-container">
       <div className="component connect-component">
         <section className="info-wrapper">
           <h1>Connect</h1>
@@ -15,7 +15,7 @@ function Connect() {
           <input type="text-area" className="message-input" />
         </form>
       </div>
-    </section>
+    </div>
   );
 }
 

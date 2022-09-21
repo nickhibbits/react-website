@@ -12,6 +12,7 @@ import { MdInfoOutline } from "react-icons/md";
 
 function App() {
   const size = 80;
+
   return (
     <main className="app-component">
       <section className="container home-container">
