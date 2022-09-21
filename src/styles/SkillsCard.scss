@@ -30,6 +30,10 @@
     background: linear-gradient(144.49deg, #f5fcff 0%, #046d31 91.67%);
     border-radius: 25px;
     z-index: -1;
+    @include mediaQueries.desktop {
+      top: 2rem;
+      right: 2rem;
+    }
   }
 }
 

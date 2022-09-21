@@ -15,3 +15,9 @@
     @content;
   }
 }
+
+@mixin bigScreen {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}

@@ -98,6 +98,9 @@ button {
   @include mediaQueries.desktop {
     margin: 0 13.25rem;
   }
+  @include mediaQueries.bigScreen {
+    margin: 0 25rem;
+  }
 }
 
 .info-wrapper {
