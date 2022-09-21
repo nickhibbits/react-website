@@ -1,9 +1,9 @@
-// @import "./mediaQueries.scss";
+@use "./mediaQueries.scss";
 
 $font-family-main: "Righteous", "cursive";
 $font-family-secondary: "Padauk", sans-serif;
-$font-size-main: 7.5rem;
-$font-size-secondary: 1.5rem;
+$font-size-main: 6rem;
+$font-size-secondary: 0.8rem;
 $bg-blue: #0200ab;
 $bg-green: #046d31;
 $clr-light: #fff;
@@ -45,7 +45,7 @@ h2 {
 
 p {
   font-family: $font-family-secondary;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, $font-size-secondary);
 }
 
 ul {
@@ -71,4 +71,44 @@ img {
 
 button {
   @include button-style();
+}
+
+.container {
+  display: grid;
+  position: relative;
+  align-items: center;
+  grid-column: 1 / 13;
+  grid-template-columns: subgrid;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 40vw;
+    right: 40vw;
+    bottom: 0;
+    height: 1px;
+    width: 20vw; /* or 100px */
+    border-bottom: 1px solid $clr-light;
+  }
+}
+
+.component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+
+  @include mediaQueries.tablet-large {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+  @include mediaQueries.desktop {
+    margin: 0 13.125rem;
+    // align-items: center;
+  }
+}
+
+.info-wrapper {
+  grid-column: 1 / 10;
+  margin-bottom: 4rem;
 }
