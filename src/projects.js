@@ -11,7 +11,7 @@ const projects = {
     link: "https://studiozoomies.com",
     type: "professional",
     basicDescription:
-      "Studio Zoomies is a CRM web-application for photographers. Click to read more about my first job in tech as a Junior Software Developer. ",
+      "Studio Zoomies is a CRM web-application for photographers. Click to read more about my first job in tech. ",
     id: 1,
   },
   bearsDen: {
