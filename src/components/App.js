@@ -9,29 +9,36 @@ import trees from "../assets/images/trees-overhead.jpg";
 import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { MdWorkOutline } from "react-icons/md";
 import { MdInfoOutline } from "react-icons/md";
+import { useWindowCheck } from "../customHooks";
 
 function App() {
-  const size = 30;
+  const width = useWindowCheck();
+  let size = width > 1100 ? 80 : 30;
 
   return (
     <main className="app-component">
-      <section className="container home-container">
+      <section className="container" id="home-container">
         <Home />
-        {/* <div className="box-fade"> */}
-        <ul className="icon-nav">
-          <li>
-            <MdInfoOutline size={size} color={"white"} />
-          </li>
-          <li>
-            <MdWorkOutline size={size} color={"white"} />
-          </li>
-          <li>
-            <MdOutlineConnectWithoutContact size={size} color={"white"} />
-          </li>
-        </ul>
-        {/* </div> */}
+        <div className="box-fade">
+          <ul className="icon-nav">
+            <li>
+              <MdInfoOutline size={size} color={"white"} />
+            </li>
+            <li>
+              <MdWorkOutline size={size} color={"white"} />
+            </li>
+            <li>
+              <MdOutlineConnectWithoutContact size={size} color={"white"} />
+            </li>
+          </ul>
+        </div>
         <div className="box-trees">
-          <img className="img" src={trees} alt="overhead shot of forest" />
+          <img
+            className="img"
+            src={trees}
+            alt="overhead shot of forest"
+            style={width > 1100 ? { display: "none" } : { display: "auto" }}
+          />
         </div>
       </section>
       <About />

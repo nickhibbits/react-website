@@ -3,7 +3,7 @@
 $font-family-main: "Righteous", "cursive";
 $font-family-secondary: "Padauk", sans-serif;
 $font-size-main: 6rem;
-$font-size-secondary: 0.8rem;
+$font-size-secondary: 1.3rem;
 $bg-blue: #0200ab;
 $bg-green: #046d31;
 $clr-light: #fff;
@@ -35,7 +35,7 @@ p {
 
 h1 {
   font-family: $font-family-main;
-  font-size: clamp(3.5rem, 15vw, $font-size-main);
+  font-size: clamp(3.5rem, 10vw, $font-size-main);
 }
 
 h2 {
@@ -45,7 +45,7 @@ h2 {
 
 p {
   font-family: $font-family-secondary;
-  font-size: clamp(1rem, 3vw, $font-size-secondary);
+  font-size: clamp(1rem, 2vw, $font-size-secondary);
 }
 
 ul {
@@ -109,14 +109,9 @@ button {
 }
 
 .split {
-  // border: solid 10px red;
   display: grid;
-  gap: 1em;
+  gap: 2em;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
-  // gap: 5rem;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-evenly;
 }
 
 .split > :nth-child(1) {

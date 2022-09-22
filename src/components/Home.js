@@ -1,8 +1,10 @@
 import React from "react";
+import { useWindowCheck } from "../customHooks";
 
 function Home() {
+  const width = useWindowCheck();
   return (
-    <div className="component home-component">
+    <div className={width < 1100 ? "component" : ""} id="home-component">
       <section className="info-wrapper">
         <h1>Hi, I'm Nick</h1>
         <p>
