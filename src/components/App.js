@@ -7,8 +7,6 @@ import Connect from "./Connect";
 
 import trees from "../assets/images/trees-overhead.jpg";
 
-import { ReactComponent as AbstractCircle } from "../assets/svgs/abstract-circle.svg";
-
 import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { MdWorkOutline } from "react-icons/md";
 import { MdInfoOutline } from "react-icons/md";
@@ -21,7 +19,6 @@ function App() {
   return (
     <main className="app-component">
       <section className="container" id="home-container">
-        <AbstractCircle />
         <Home />
         <div className="box-fade">
           <ul className="icon-nav">

@@ -85,13 +85,15 @@ button {
     right: 40vw;
     bottom: 0;
     height: 1px;
-    width: 20vw; /* or 100px */
+    width: 20vw;
     border-bottom: 1px solid $clr-light;
   }
 }
 
 .component {
   margin: 0 1rem;
+  position: relative;
+  z-index: 3;
   @include mediaQueries.tablet {
     margin: 0 2rem;
   }

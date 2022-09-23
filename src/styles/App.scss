@@ -10,9 +10,23 @@
   grid-template-rows: 100vh 50rem 43rem 33rem;
 }
 
+.svg-wrapper {
+  position: absolute;
+  z-index: 2;
+  transform: scale(0.4);
+  left: 0.5rem;
+  bottom: 4rem;
+  right: 28rem;
+  @include mediaQueries.desktop {
+    transform: scale(0.87);
+    top: 1rem;
+    bottom: 45rem;
+    left: 3rem;
+  }
+}
+
 #home-container {
   grid-area: 1 / 1 / 2 / 13;
-  position: relative;
   background-image: url("../assets/images/trees-overhead.jpg");
   background-position: right;
   background-size: cover;
@@ -51,18 +65,12 @@
     index.$bg-green 0%,
     index.$clr-dark 79.69%
   );
-  // background-image: url("../assets/svgs/abstract-circle.svg");
-  // background-repeat: no-repeat;
-  // background-size: 47rem;
-  // background-position: 30%;
 }
 
 .about-component {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  z-index: 1;
 }
 
 .work-container {

@@ -2,7 +2,9 @@
 import "../styles/index.scss";
 import "../styles/SkillsCard.scss";
 import SkillsCard from "./SkillsCard";
+
 import { useWindowCheck } from "../customHooks";
+import { ReactComponent as AbstractCircle } from "../assets/svgs/abstract-circle.svg";
 
 function About() {
   const width = useWindowCheck();
@@ -12,6 +14,9 @@ function About() {
       // className="container about-container"
       className="container about-container"
     >
+      <div className="svg-wrapper">
+        <AbstractCircle />
+      </div>
       <div
         className={
           width > 1100
