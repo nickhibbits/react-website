@@ -1,4 +1,5 @@
 import "../styles/App.scss";
+import "../styles/IconNav.scss";
 import About from "./About";
 import Home from "./Home";
 import Work from "./Work";
