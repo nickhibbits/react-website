@@ -13,7 +13,7 @@ import { useWindowCheck } from "../customHooks";
 
 function App() {
   const width = useWindowCheck();
-  let size = width > 1100 ? 80 : 30;
+  let size = width > 1100 ? 70 : 30;
 
   return (
     <main className="app-component">

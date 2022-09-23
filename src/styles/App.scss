@@ -7,7 +7,7 @@
 
   display: grid;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
-  grid-template-rows: 100vh 52rem 43rem 33rem;
+  grid-template-rows: 100vh 50rem 43rem 33rem;
 }
 
 #home-container {
@@ -30,9 +30,13 @@
   @include mediaQueries.desktop {
     position: relative;
     grid-row: 1 / 2;
-    grid-column: 1 / 8;
-    margin: 13.25rem;
+    grid-column: 1 / 9;
+    align-self: center;
+    margin-left: 12.5rem;
     z-index: 3;
+  }
+  @include mediaQueries.bigScreen {
+    margin-left: 17.9rem;
   }
 }
 
@@ -81,7 +85,7 @@
     display: grid;
     grid-row: 1 / 2;
     grid-column: 1 / 6;
-    grid-template-rows: 75% 25%;
+    grid-template-rows: 80% 20%;
     background: linear-gradient(
       135.68deg,
       index.$bg-blue 0.74%,

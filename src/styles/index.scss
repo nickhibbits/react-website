@@ -99,7 +99,7 @@ button {
     margin: 0 13.25rem;
   }
   @include mediaQueries.bigScreen {
-    margin: 0 25rem;
+    margin: 0 18rem;
   }
 }
 
@@ -110,16 +110,16 @@ button {
 
 .split {
   display: grid;
-  gap: 2em;
+  gap: 1em;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
 }
 
 .split > :nth-child(1) {
-  grid-column: 1 / 6;
+  grid-column: 1 / 7;
 }
 
 .split > :nth-child(2) {
-  grid-column: 7 / 13;
+  grid-column: 8 / 13;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
