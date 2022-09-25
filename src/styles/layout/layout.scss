@@ -5,6 +5,9 @@
   display: grid;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
   grid-template-rows: 100vh 50rem 43rem 33rem;
+  @include mediaQueries.desktop {
+    grid-template-rows: repeat(4, 100vh);
+  }
 }
 
 #home-container {

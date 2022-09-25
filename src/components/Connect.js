@@ -1,13 +1,18 @@
 import { useWindowCheck } from "../customHooks";
+import { ReactComponent as RingsSvg } from "../assets/svgs/rings.svg";
 
 import React from "react";
 
 import "../styles/components/Connect.scss";
+import "../styles/imageStyles/svg.scss";
 
 function Connect() {
   const width = useWindowCheck();
   return (
     <div className="container connect-container">
+      <div className="svg-wrapper rings-svg">
+        <RingsSvg />
+      </div>
       <div
         className={
           width > 1100

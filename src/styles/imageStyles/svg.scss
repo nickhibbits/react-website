@@ -6,9 +6,9 @@
 }
 
 .big-circle-svg {
-  transform: scale(0.4);
+  transform: scale(0.36);
   left: 0.5rem;
-  bottom: 4rem;
+  bottom: 8.5rem;
   right: 28rem;
   @include mediaQueries.desktop {
     transform: scale(0.87);
@@ -20,14 +20,23 @@
 
 .circles-svg {
   transform: scale(0.2);
-
   bottom: 4rem;
-
   @include mediaQueries.desktop {
     transform: scale(0.7);
     top: 2rem;
     bottom: 30rem;
     // left: 3rem;
     right: 5rem;
+  }
+}
+
+.rings-svg {
+  transform: scale(0.2);
+  @include mediaQueries.desktop {
+    transform: scale(0.76);
+    top: -2rem;
+    bottom: 100rem;
+    // left: 1rem;
+    right: 4rem;
   }
 }
