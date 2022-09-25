@@ -1,5 +1,6 @@
 import React from "react";
-import "../styles/SkillsCard.scss";
+
+import "../styles/components/SkillsCard.scss";
 
 function SkillsCard() {
   const skills = [

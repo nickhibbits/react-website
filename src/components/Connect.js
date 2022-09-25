@@ -1,5 +1,8 @@
-import React from "react";
 import { useWindowCheck } from "../customHooks";
+
+import React from "react";
+
+import "../styles/components/Connect.scss";
 
 function Connect() {
   const width = useWindowCheck();

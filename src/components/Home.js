@@ -1,5 +1,6 @@
-import React from "react";
 import { useWindowCheck } from "../customHooks";
+
+import React from "react";
 
 function Home() {
   const width = useWindowCheck();

@@ -1,15 +1,20 @@
+import { useWindowCheck } from "../customHooks";
+import { ReactComponent as CirclesSvg } from "../assets/svgs/abstract-dots.svg";
+
 import React from "react";
 import projects from "../projects";
 import WorkCard from "./WorkCard";
 
-import "../styles/WorkCard.scss";
-import { useWindowCheck } from "../customHooks";
+import "../styles/components/WorkCard.scss";
 
 function Work() {
   const width = useWindowCheck();
 
   return (
     <div className="container work-container">
+      <div className="svg-wrapper circles-svg">
+        <CirclesSvg />
+      </div>
       <div
         className={
           width > 1100

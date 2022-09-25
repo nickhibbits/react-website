@@ -1,0 +1,48 @@
+@use "./mediaQueries.scss";
+@use "../index.scss";
+
+.app-component {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(1rem, 10rem));
+  grid-template-rows: 100vh 50rem 43rem 33rem;
+}
+
+#home-container {
+  grid-area: 1 / 1 / 2 / 13;
+  background-image: url("../../assets/images/trees-overhead.jpg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include mediaQueries.desktop {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: subgrid;
+    // grid-template-columns: (12, minmax(1rem, 10rem));
+    background-image: none;
+  }
+}
+
+.about-container {
+  grid-area: 2 / 1 / 3 / 13;
+  background: linear-gradient(
+    180deg,
+    index.$bg-green 0%,
+    index.$clr-dark 79.69%
+  );
+}
+
+.work-container {
+  grid-area: 3 / 1 / 4 / 13;
+  background: linear-gradient(
+    (180deg, index.$clr-dark 0%, index.$bg-blue 100%)
+  );
+}
+
+.connect-container {
+  grid-area: 4 / 1 / 5 / 13;
+  background: linear-gradient(
+    180deg,
+    index.$bg-blue 57.81%,
+    index.$bg-green 100%
+  );
+}

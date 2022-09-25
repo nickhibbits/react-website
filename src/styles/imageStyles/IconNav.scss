@@ -1,0 +1,39 @@
+@use "../index.scss";
+@use "../layout/mediaQueries.scss";
+
+.icon-nav {
+  position: absolute;
+  min-width: 90%;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: index.$clr-dark;
+  border-radius: 25px;
+  border: solid 1px index.$clr-light;
+  margin: 1rem;
+  padding: 0.5rem;
+  @include mediaQueries.desktop {
+    position: relative;
+    bottom: 0;
+    border: none;
+    border-top: solid 1px index.$clr-light;
+    border-radius: 0;
+    grid-row: 2 / 3;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.icon-nav > * {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background: radial-gradient(50% 50% at 50% 50%, #046d31 0%, #000000 100%);
+    transform: scale(1.2);
+  }
+}

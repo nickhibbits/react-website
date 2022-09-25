@@ -1,5 +1,5 @@
-@use "./index.scss";
-@use "./mediaQueries.scss";
+@use "../index.scss";
+@use "../layout/mediaQueries.scss";
 
 #skill-card-wrapper {
   @include mediaQueries.desktop {

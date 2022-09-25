@@ -1,0 +1,33 @@
+@use "../layout/mediaQueries.scss";
+
+.svg-wrapper {
+  position: absolute;
+  z-index: 2;
+}
+
+.big-circle-svg {
+  transform: scale(0.4);
+  left: 0.5rem;
+  bottom: 4rem;
+  right: 28rem;
+  @include mediaQueries.desktop {
+    transform: scale(0.87);
+    top: 1rem;
+    bottom: 45rem;
+    left: 3rem;
+  }
+}
+
+.circles-svg {
+  transform: scale(0.2);
+
+  bottom: 4rem;
+
+  @include mediaQueries.desktop {
+    transform: scale(0.7);
+    top: 2rem;
+    bottom: 30rem;
+    // left: 3rem;
+    right: 5rem;
+  }
+}

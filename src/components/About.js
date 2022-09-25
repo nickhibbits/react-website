@@ -1,10 +1,11 @@
-// import React, { useEffect, useState } from "react";
-import "../styles/index.scss";
-import "../styles/SkillsCard.scss";
-import SkillsCard from "./SkillsCard";
-
 import { useWindowCheck } from "../customHooks";
-import { ReactComponent as AbstractCircle } from "../assets/svgs/abstract-circle.svg";
+import { ReactComponent as BigCircleSvg } from "../assets/svgs/abstract-circle.svg";
+
+import "../styles/index.scss";
+import "../styles/components/SkillsCard.scss";
+import "../styles/imageStyles/svg.scss";
+
+import SkillsCard from "./SkillsCard";
 
 function About() {
   const width = useWindowCheck();
@@ -14,8 +15,8 @@ function About() {
       // className="container about-container"
       className="container about-container"
     >
-      <div className="svg-wrapper">
-        <AbstractCircle />
+      <div className="svg-wrapper big-circle-svg">
+        <BigCircleSvg />
       </div>
       <div
         className={

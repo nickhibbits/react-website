@@ -1,16 +1,17 @@
-import "../styles/App.scss";
-import "../styles/IconNav.scss";
-import About from "./About";
-import Home from "./Home";
-import Work from "./Work";
-import Connect from "./Connect";
-
-import trees from "../assets/images/trees-overhead.jpg";
-
 import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { MdWorkOutline } from "react-icons/md";
 import { MdInfoOutline } from "react-icons/md";
 import { useWindowCheck } from "../customHooks";
+
+import About from "./About";
+import Home from "./Home";
+import Work from "./Work";
+import Connect from "./Connect";
+import trees from "../assets/images/trees-overhead.jpg";
+
+import "../styles/components/App.scss";
+import "../styles/imageStyles/IconNav.scss";
+import "../styles/layout/layout.scss";
 
 function App() {
   const width = useWindowCheck();

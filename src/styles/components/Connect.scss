@@ -1,0 +1,8 @@
+.connect-form > input {
+  margin-bottom: 1em;
+}
+
+.message-input {
+  min-height: 10rem;
+  width: clamp(20rem, 60vw, 35rem);
+}
