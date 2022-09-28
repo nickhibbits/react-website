@@ -1,22 +1,36 @@
 import { useWindowCheck } from "../customHooks";
 import { ReactComponent as CirclesSvg } from "../assets/svgs/abstract-dots.svg";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import projects from "../projects";
 import WorkCard from "./WorkCard";
 
 import "../styles/components/WorkCard.scss";
 
 function Work() {
+  // const [isActive, setIsActive] = useState(true);
   const [filteredProjects, setFilteredProjects] = useState(
     Object.values(projects).filter((project) => project.type === "professional")
   );
+
   const width = useWindowCheck();
-  const filterProjects = (type) => {
+
+  const handleClick = (e, type) => {
+    e.currentTarget.classList.toggle("active");
     setFilteredProjects(
       Object.values(projects).filter((project) => project.type === type)
     );
+    afterClick(e);
   };
+
+  const afterClick = (e) => {
+    console.log("afterClick event", e);
+    e.currentTarget.classList.toggle("active");
+  };
+
+  // useEffect(() => {
+  //   console.log("isActive", isActive);
+  // }, [isActive]);
 
   return (
     <div className="container work-container">
@@ -40,13 +54,13 @@ function Work() {
         <div className="buttons-wrapper">
           <button
             className="filter-button"
-            onClick={() => filterProjects("professional")}
+            onClick={(e) => handleClick(e, "professional")}
           >
             Professional
           </button>
           <button
             className="filter-button"
-            onClick={() => filterProjects("personal")}
+            onClick={(e) => handleClick(e, "personal")}
           >
             Personal
           </button>

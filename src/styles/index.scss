@@ -74,6 +74,9 @@ img {
 
 button {
   @include button-style();
+  &:active {
+    background-color: black;
+  }
 }
 
 .container {
