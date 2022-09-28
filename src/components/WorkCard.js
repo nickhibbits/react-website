@@ -6,8 +6,10 @@ function WorkCard({ title, description, imgSrc }) {
       className="work-card-component"
       style={{
         backgroundColor: "black",
-        opacity: "0.7",
-        backgroundImage: `url(${imgSrc})`,
+        backgroundImage: `linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ), url(${imgSrc})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
