@@ -18,7 +18,7 @@ function Work() {
       <div
         className={
           width > 1150
-            ? `component work-component split`
+            ? `component work-component work-split`
             : `component work-component`
         }
       >
@@ -29,11 +29,11 @@ function Work() {
             cards, and click each to learn more.
           </p>
         </section>
+        <div className="buttons-wrapper">
+          <button className="filter-button">Professional</button>
+          <button className="filter-button">Personal</button>
+        </div>
         <div className="work-cards-container">
-          <div className="buttons-wrapper">
-            <button className="filter-button">Professional</button>
-            <button className="filter-button">Personal</button>
-          </div>
           <div className="card-scroll-container">
             {Object.values(projects).map((project) => {
               console.log("imgSrc", project.imgSrc);

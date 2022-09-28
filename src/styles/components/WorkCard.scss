@@ -28,8 +28,34 @@
   font-size: 0.8rem;
 }
 
+.work-split {
+  position: relative;
+  display: grid;
+  gap: 1em;
+  align-items: center;
+  grid-template-rows: 0.1rem 1fr;
+  grid-template-columns: repeat(12, minmax(1rem, 10rem));
+}
+
+.work-split > :nth-child(1) {
+  grid-row: 2 / 3;
+  grid-column: 1 / 7;
+}
+
+.work-split > :nth-child(3) {
+  grid-row: 2 / 3;
+  grid-column: 8 / 13;
+}
+
 .buttons-wrapper {
   display: flex;
+  @include mediaQueries.desktop {
+    // position: absolute;
+    // right: 11.5rem;
+    // top: -2rem;
+    grid-row: 1 / 2;
+    grid-column: 8 / 13;
+  }
 }
 
 .buttons-wrapper :nth-child(1) {
