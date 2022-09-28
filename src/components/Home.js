@@ -5,7 +5,7 @@ import React from "react";
 function Home() {
   const width = useWindowCheck();
   return (
-    <div className={width < 1100 ? "component" : ""} id="home-component">
+    <div className={width < 1150 ? "component" : ""} id="home-component">
       <section className="info-wrapper">
         <h1>Hi, I'm Nick</h1>
         <p>

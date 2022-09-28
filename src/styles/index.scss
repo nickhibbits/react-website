@@ -81,11 +81,11 @@ button {
   &::before {
     content: "";
     position: absolute;
-    left: 40vw;
-    right: 40vw;
+    left: 45%;
+    right: 45%;
     bottom: 0;
     height: 1px;
-    width: 20vw;
+    width: 4rem;
     border-bottom: 1px solid $clr-light;
   }
 }

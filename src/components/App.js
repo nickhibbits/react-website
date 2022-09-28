@@ -15,7 +15,7 @@ import "../styles/layout/layout.scss";
 
 function App() {
   const width = useWindowCheck();
-  let size = width > 1100 ? 70 : 30;
+  let size = width > 1150 ? 70 : 30;
 
   return (
     <main className="app-component">
@@ -39,7 +39,7 @@ function App() {
             className="img"
             src={trees}
             alt="overhead shot of forest"
-            style={width > 1100 ? { display: "none" } : { display: "auto" }}
+            style={width > 1150 ? { display: "none" } : { display: "auto" }}
           />
         </div>
       </section>

@@ -15,7 +15,7 @@ function Connect() {
       </div>
       <div
         className={
-          width > 1100
+          width > 1150
             ? `component connect-component split`
             : `component connect-component`
         }
