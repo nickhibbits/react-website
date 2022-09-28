@@ -1,14 +1,22 @@
 import { useWindowCheck } from "../customHooks";
 import { ReactComponent as CirclesSvg } from "../assets/svgs/abstract-dots.svg";
 
-import React from "react";
+import React, { useState } from "react";
 import projects from "../projects";
 import WorkCard from "./WorkCard";
 
 import "../styles/components/WorkCard.scss";
 
 function Work() {
+  const [filteredProjects, setFilteredProjects] = useState(
+    Object.values(projects).filter((project) => project.type === "professional")
+  );
   const width = useWindowCheck();
+  const filterProjects = (type) => {
+    setFilteredProjects(
+      Object.values(projects).filter((project) => project.type === type)
+    );
+  };
 
   return (
     <div className="container work-container">
@@ -30,13 +38,22 @@ function Work() {
           </p>
         </section>
         <div className="buttons-wrapper">
-          <button className="filter-button">Professional</button>
-          <button className="filter-button">Personal</button>
+          <button
+            className="filter-button"
+            onClick={() => filterProjects("professional")}
+          >
+            Professional
+          </button>
+          <button
+            className="filter-button"
+            onClick={() => filterProjects("personal")}
+          >
+            Personal
+          </button>
         </div>
         <div className="work-cards-container">
           <div className="card-scroll-container">
-            {Object.values(projects).map((project) => {
-              console.log("imgSrc", project.imgSrc);
+            {filteredProjects.map((project) => {
               return (
                 <WorkCard
                   title={project.title}
