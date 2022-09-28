@@ -2,18 +2,14 @@
 @use "../layout/mediaQueries.scss";
 
 .icon-nav {
-  position: absolute;
+  display: none;
   min-width: 90%;
   bottom: 10px;
-  display: flex;
-  align-items: center;
   justify-content: space-evenly;
   background-color: index.$clr-dark;
-  border-radius: 25px;
-  border: solid 1px index.$clr-light;
-  margin: 1rem;
   padding: 0.5rem;
   @include mediaQueries.desktop {
+    display: flex;
     position: relative;
     bottom: 0;
     border: none;
@@ -34,6 +30,6 @@
   &:hover {
     cursor: pointer;
     background: radial-gradient(50% 50% at 50% 50%, #046d31 0%, #000000 100%);
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }

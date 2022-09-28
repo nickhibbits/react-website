@@ -40,9 +40,9 @@
     right: 4rem;
   }
   @include mediaQueries.bigScreen {
-    transform: scale(0.9);
+    transform: scale(0.8);
     top: -8rem;
-    bottom: 100rem;
+    bottom: 1rem;
     left: 1rem;
   }
 }

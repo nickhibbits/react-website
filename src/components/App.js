@@ -15,7 +15,7 @@ import "../styles/layout/layout.scss";
 
 function App() {
   const width = useWindowCheck();
-  let size = width > 1150 ? 70 : 30;
+  let size = width > 1150 ? 50 : 30;
 
   return (
     <main className="app-component">
