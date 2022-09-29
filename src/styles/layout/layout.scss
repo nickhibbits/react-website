@@ -20,7 +20,7 @@
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: subgrid;
-    grid-template-columns: (12, minmax(1rem, 10rem));
+    grid-template-columns: repeat(12, minmax(1rem, 10rem));
     background-image: none;
   }
 }

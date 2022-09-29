@@ -1,0 +1,10 @@
+@use "../layout/mediaQueries.scss";
+
+nav {
+  border: solid 2px red;
+  color: white;
+}
+
+.nav-wrapper {
+  display: flex;
+}

@@ -12,6 +12,7 @@ import trees from "../assets/images/trees-overhead.jpg";
 import "../styles/components/App.scss";
 import "../styles/imageStyles/IconNav.scss";
 import "../styles/layout/layout.scss";
+import Navbar from "./Navbar";
 
 function App() {
   const width = useWindowCheck();
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <main className="app-component">
+      <Navbar />
       <section className="container" id="home-container">
         <Home />
         <div className="box-fade">
