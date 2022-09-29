@@ -1,5 +1,5 @@
 @use "../layout/mediaQueries.scss";
-
+@use "../index.scss";
 .card-scroll-container {
   display: flex;
   gap: 2rem;
@@ -63,5 +63,5 @@
 }
 
 .active {
-  border: solid 2px red;
+  background: linear-gradient(180deg, #005e28 0%, #079f47 100%);
 }

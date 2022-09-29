@@ -1,36 +1,38 @@
 import { useWindowCheck } from "../customHooks";
 import { ReactComponent as CirclesSvg } from "../assets/svgs/abstract-dots.svg";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import projects from "../projects";
 import WorkCard from "./WorkCard";
 
 import "../styles/components/WorkCard.scss";
+import { useRef } from "react";
 
 function Work() {
-  // const [isActive, setIsActive] = useState(true);
   const [filteredProjects, setFilteredProjects] = useState(
     Object.values(projects).filter((project) => project.type === "professional")
   );
 
+  const professionalButton = useRef();
+  const personalButton = useRef();
+
   const width = useWindowCheck();
 
-  const handleClick = (e, type) => {
-    e.currentTarget.classList.toggle("active");
+  const handleClick = (type) => {
+    if (type === "professional") {
+      professionalButton.current.classList.add("active");
+      personalButton.current.classList.remove("active");
+    }
+
+    if (type === "personal") {
+      professionalButton.current.classList.remove("active");
+      personalButton.current.classList.add("active");
+    }
+
     setFilteredProjects(
       Object.values(projects).filter((project) => project.type === type)
     );
-    afterClick(e);
   };
-
-  const afterClick = (e) => {
-    console.log("afterClick event", e);
-    e.currentTarget.classList.toggle("active");
-  };
-
-  // useEffect(() => {
-  //   console.log("isActive", isActive);
-  // }, [isActive]);
 
   return (
     <div className="container work-container">
@@ -53,14 +55,16 @@ function Work() {
         </section>
         <div className="buttons-wrapper">
           <button
+            ref={professionalButton}
             className="filter-button"
-            onClick={(e) => handleClick(e, "professional")}
+            onClick={() => handleClick("professional")}
           >
             Professional
           </button>
           <button
+            ref={personalButton}
             className="filter-button"
-            onClick={(e) => handleClick(e, "personal")}
+            onClick={() => handleClick("personal")}
           >
             Personal
           </button>
