@@ -1,6 +1,9 @@
 @use "../index.scss";
 @use "../layout/mediaQueries.scss";
 
+.app-container {
+  position: relative;
+}
 #home-component {
   @include mediaQueries.desktop {
     position: relative;

@@ -19,35 +19,37 @@ function App() {
   let size = width > 1150 ? 50 : 30;
 
   return (
-    <main className="app-component">
+    <main className="app-container">
       <Navbar />
-      <section className="container" id="home-container">
-        <Home />
-        <div className="box-fade">
-          <ul className="icon-nav">
-            <li>
-              <MdInfoOutline size={size} color={"white"} />
-            </li>
-            <li>
-              <MdWorkOutline size={size} color={"white"} />
-            </li>
-            <li>
-              <MdOutlineConnectWithoutContact size={size} color={"white"} />
-            </li>
-          </ul>
-        </div>
-        <div className="box-trees">
-          <img
-            className="img"
-            src={trees}
-            alt="overhead shot of forest"
-            style={width > 1150 ? { display: "none" } : { display: "auto" }}
-          />
-        </div>
-      </section>
-      <About />
-      <Work />
-      <Connect />
+      <div className="app-component">
+        <section className="container" id="home-container">
+          <Home />
+          <div className="box-fade">
+            <ul className="icon-nav">
+              <li>
+                <MdInfoOutline size={size} color={"white"} />
+              </li>
+              <li>
+                <MdWorkOutline size={size} color={"white"} />
+              </li>
+              <li>
+                <MdOutlineConnectWithoutContact size={size} color={"white"} />
+              </li>
+            </ul>
+          </div>
+          <div className="box-trees">
+            <img
+              className="img"
+              src={trees}
+              alt="overhead shot of forest"
+              style={width > 1150 ? { display: "none" } : { display: "auto" }}
+            />
+          </div>
+        </section>
+        <About />
+        <Work />
+        <Connect />
+      </div>
     </main>
   );
 }
