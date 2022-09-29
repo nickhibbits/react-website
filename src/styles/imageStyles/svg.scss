@@ -16,6 +16,12 @@
     bottom: 45rem;
     left: 0;
   }
+  @include mediaQueries.bigScreen {
+    transform: scale(0.87);
+    top: 1rem;
+    bottom: 45rem;
+    left: 5rem;
+  }
 }
 
 .circles-svg {
@@ -27,6 +33,12 @@
     top: 2rem;
     bottom: 30rem;
     left: 33rem;
+  }
+  @include mediaQueries.bigScreen {
+    transform: scale(0.8);
+    top: 2rem;
+    bottom: 30rem;
+    left: 48rem;
   }
 }
 
