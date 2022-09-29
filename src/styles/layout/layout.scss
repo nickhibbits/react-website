@@ -4,7 +4,7 @@
 .app-component {
   display: grid;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
-  grid-template-rows: 100vh 50rem 43rem 33rem;
+  grid-template-rows: 100vh 48rem 38rem 29rem;
   @include mediaQueries.desktop {
     grid-template-rows: 100vh repeat(3, 50rem);
   }

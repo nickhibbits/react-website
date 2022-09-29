@@ -8,35 +8,37 @@
 .big-circle-svg {
   transform: scale(0.36);
   left: 0.5rem;
-  bottom: 8.5rem;
+  bottom: 7.5rem;
   right: 28rem;
   @include mediaQueries.desktop {
     transform: scale(0.87);
     top: 1rem;
     bottom: 45rem;
-    left: 3rem;
+    left: 0;
   }
 }
 
 .circles-svg {
-  transform: scale(0.2);
-  bottom: 4rem;
+  transform: scale(0.4);
+  left: -16rem;
+  bottom: -7rem;
   @include mediaQueries.desktop {
     transform: scale(0.7);
     top: 2rem;
     bottom: 30rem;
-    // left: 3rem;
-    right: 5rem;
+    left: 33rem;
   }
 }
 
 .rings-svg {
-  transform: scale(0.2);
+  transform: scale(0.3) rotate(270deg);
+  left: -34rem;
+  bottom: -18rem;
   @include mediaQueries.desktop {
     transform: scale(0.76);
-    top: -2rem;
+    top: -0.5rem;
     bottom: 100rem;
-    // left: 1rem;
+    left: -5rem;
     right: 4rem;
   }
   @include mediaQueries.bigScreen {
