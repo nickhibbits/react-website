@@ -1,8 +1,17 @@
+@use "../layout/mediaQueries.scss";
+
 .connect-form > input {
   margin-bottom: 1em;
 }
 
 .message-input {
   min-height: 10rem;
-  width: clamp(20rem, 60vw, 35rem);
+  width: clamp(20rem, 90vw, 30.5rem);
+  margin-bottom: 1em;
+  @include mediaQueries.desktop {
+    width: clamp(20rem, 60vw, 25rem);
+  }
+  @include mediaQueries.bigScreen {
+    width: clamp(20rem, 28vw, 65rem);
+  }
 }

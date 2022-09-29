@@ -28,7 +28,7 @@ function Connect() {
           <p className="subject">Subject</p>
           <input type="text" className="subject-input" />
           <p className="message">Message</p>
-          <input type="text-area" className="message-input" />
+          <textarea className="message-input" />
         </form>
       </div>
     </div>
