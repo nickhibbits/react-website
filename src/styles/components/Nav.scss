@@ -2,15 +2,19 @@
 @use "../index.scss";
 
 nav {
-  border: solid 2px red;
   color: white;
   position: fixed;
-  top: 0;
   z-index: 4;
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
-  // opacity: 0.8;
+  width: 100vw;
 }
 
 .nav-wrapper {
   display: flex;
+}
+
+@media (max-width: mediaQueries.$tablet) {
+  nav {
+    border: solid 2px red;
+  }
 }

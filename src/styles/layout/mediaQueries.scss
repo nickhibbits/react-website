@@ -1,23 +1,28 @@
+$tablet: 650px;
+$tablet-large: 850px;
+$desktop: 1150px;
+$bigScreen: 1600px;
+
 @mixin tablet {
-  @media (min-width: 650px) {
+  @media (min-width: $tablet) {
     @content;
   }
 }
 
 @mixin tablet-large {
-  @media (min-width: 850px) {
+  @media (min-width: $tablet-large) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop) {
     @content;
   }
 }
 
 @mixin bigScreen {
-  @media (min-width: 1600px) {
+  @media (min-width: $bigScreen) {
     @content;
   }
 }
