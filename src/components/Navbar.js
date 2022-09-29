@@ -7,28 +7,32 @@ function Navbar() {
     <nav>
       <ul className="nav-wrapper">
         <li className="nav-title">
-          <h2>Nick Hibbits</h2>
-        </li>
-        <li>
-          <a href="/" className="nav-link">
-            Home
+          <a href="/" className="nav-title-anchor">
+            <h2>Nick Hibbits</h2>
           </a>
         </li>
-        <li>
-          <a href="/" className="nav-link">
-            About
-          </a>
-        </li>
-        <li>
-          <a href="/" className="nav-link">
-            Work
-          </a>
-        </li>
-        <li>
-          <a href="/" className="nav-link">
-            Connect
-          </a>
-        </li>
+        <div className="nav-options-wrapper">
+          <li>
+            <a href="/" className="nav-link">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/" className="nav-link">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="/" className="nav-link">
+              Work
+            </a>
+          </li>
+          <li>
+            <a href="/" className="nav-link">
+              Connect
+            </a>
+          </li>
+        </div>
       </ul>
     </nav>
   );

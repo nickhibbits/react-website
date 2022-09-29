@@ -5,16 +5,59 @@ nav {
   color: white;
   position: fixed;
   z-index: 4;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
   width: 100vw;
+  background: rgb(0, 0, 0, 0.7);
+  backdrop-filter: blur(2em);
+  border-bottom: solid 0.1em index.$clr-light;
 }
 
 .nav-wrapper {
+  margin: 0 1rem;
+  position: relative;
+  z-index: 3;
+  padding: 0.7em 0.7em 0.7em 0;
+  @include mediaQueries.tablet {
+    margin: 0 2rem;
+  }
+  @include mediaQueries.desktop {
+    display: grid;
+    gap: 1.8em;
+    grid-template-columns: repeat(12, minmax(1rem, 10rem));
+    margin: 0 13.25rem;
+  }
+  @include mediaQueries.bigScreen {
+    margin: 0 18rem;
+  }
+}
+
+.nav-options-wrapper > li {
   display: flex;
+  align-items: center;
+}
+
+.nav-wrapper > li:nth-child(1) {
+  grid-column: 1 / 8;
+}
+
+.nav-options-wrapper {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 8 / 13;
 }
 
 @media (max-width: mediaQueries.$tablet) {
-  nav {
-    border: solid 2px red;
+  .nav-options-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    position: fixed;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    inset: 100% 0 20em 50%;
+    background: rgb(0, 0, 0, 0.7);
+    backdrop-filter: blur(2em);
+    padding: 10em 0 10em 0;
+    border: solid 0.1em index.$clr-light;
   }
 }

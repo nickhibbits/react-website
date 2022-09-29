@@ -1,5 +1,9 @@
 @use "../layout/mediaQueries.scss";
 @use "../index.scss";
+
+.work-container {
+  overflow-x: hidden;
+}
 .card-scroll-container {
   display: flex;
   gap: 2rem;
