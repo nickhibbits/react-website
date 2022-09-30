@@ -39,6 +39,10 @@ $clr-dark: #000000;
   color: $clr-light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 section,

@@ -42,22 +42,22 @@ function Navbar() {
           data-visible={false}
         >
           <li>
-            <a href="/" className="nav-link">
+            <a href="#home-container" className="nav-link">
               Home
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link">
+            <a href="#about-container" className="nav-link">
               About
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link">
+            <a href="#work-container" className="nav-link">
               Work
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link">
+            <a href="#connect-container" className="nav-link">
               Connect
             </a>
           </li>

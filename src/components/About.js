@@ -13,7 +13,8 @@ function About() {
   return (
     <div
       // className="container about-container"
-      className="container about-container"
+      className="container"
+      id="about-container"
     >
       <div className="svg-wrapper big-circle-svg">
         <BigCircleSvg />

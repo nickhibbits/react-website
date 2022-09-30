@@ -29,7 +29,7 @@
   }
 }
 
-.about-container {
+#about-container {
   grid-area: 2 / 1 / 3 / 13;
   background: linear-gradient(
     180deg,
@@ -38,7 +38,7 @@
   );
 }
 
-.work-container {
+#work-container {
   grid-area: 3 / 1 / 4 / 13;
   background: linear-gradient(
     (180deg, index.$clr-dark 0%, index.$bg-blue 100%)
@@ -46,7 +46,7 @@
   overflow-y: none;
 }
 
-.connect-container {
+#connect-container {
   grid-area: 4 / 1 / 5 / 13;
   background: linear-gradient(
     180deg,

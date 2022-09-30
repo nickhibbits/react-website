@@ -34,7 +34,7 @@ function Work() {
   };
 
   return (
-    <div className="container work-container">
+    <div className="container" id="work-container">
       <div className="svg-wrapper circles-svg">
         <CirclesSvg />
       </div>

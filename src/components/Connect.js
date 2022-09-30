@@ -9,7 +9,7 @@ import "../styles/imageStyles/svg.scss";
 function Connect() {
   const width = useWindowCheck();
   return (
-    <div className="container connect-container">
+    <div className="container" id="connect-container">
       <div className="svg-wrapper rings-svg">
         <RingsSvg />
       </div>
