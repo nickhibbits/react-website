@@ -2,6 +2,7 @@
 @use "../layout/mediaQueries.scss";
 
 #skill-card-wrapper {
+  z-index: 4;
   @include mediaQueries.desktop {
     grid-column: 7 / 13;
   }

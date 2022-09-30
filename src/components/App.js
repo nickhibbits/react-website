@@ -7,12 +7,12 @@ import About from "./About";
 import Home from "./Home";
 import Work from "./Work";
 import Connect from "./Connect";
+import Navbar from "./Navbar";
 import trees from "../assets/images/trees-overhead.jpg";
 
 import "../styles/components/App.scss";
 import "../styles/imageStyles/IconNav.scss";
 import "../styles/layout/layout.scss";
-import Navbar from "./Navbar";
 
 function App() {
   const width = useWindowCheck();

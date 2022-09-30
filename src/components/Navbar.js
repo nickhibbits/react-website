@@ -1,8 +1,24 @@
-import React from "react";
+import { MdOutlineClose } from "react-icons/md";
+import { MdOutlineMenu } from "react-icons/md";
+import { useRef, useState } from "react";
 
 import "../styles/components/Nav.scss";
 
 function Navbar() {
+  const [displayMenuIcon, setDisplayMenuIcon] = useState(true);
+  const navOptionsWrapper = useRef();
+
+  function toggleNavOptions() {
+    let visible = navOptionsWrapper.current.getAttribute("data-visible");
+    if (visible === "false") {
+      navOptionsWrapper.current.setAttribute("data-visible", true);
+      setDisplayMenuIcon(false);
+    } else if (visible === "true") {
+      navOptionsWrapper.current.setAttribute("data-visible", false);
+      setDisplayMenuIcon(true);
+    }
+  }
+
   return (
     <nav>
       <ul className="nav-wrapper">
@@ -11,7 +27,20 @@ function Navbar() {
             <h2>Nick Hibbits</h2>
           </a>
         </li>
-        <div className="nav-options-wrapper">
+
+        <div onClick={() => toggleNavOptions()} className="mobile-nav-toggle">
+          {displayMenuIcon ? (
+            <MdOutlineMenu size={40} />
+          ) : (
+            <MdOutlineClose size={40} />
+          )}
+        </div>
+
+        <div
+          ref={navOptionsWrapper}
+          className="nav-options-wrapper"
+          data-visible={false}
+        >
           <li>
             <a href="/" className="nav-link">
               Home

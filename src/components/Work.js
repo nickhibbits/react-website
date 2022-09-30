@@ -49,14 +49,14 @@ function Work() {
         <section className="info-wrapper">
           <h1>Work</h1>
           <p>
-            Collection of professional and personal projects. Scroll through the
-            cards, and click each to learn more.
+            Collection of professional contributions and personal projects.
+            Scroll through the cards, and click each to learn more.
           </p>
         </section>
         <div className="buttons-wrapper">
           <button
             ref={professionalButton}
-            className="filter-button"
+            className="filter-button active"
             onClick={() => handleClick("professional")}
           >
             Professional
