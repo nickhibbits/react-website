@@ -27,13 +27,19 @@ function App() {
           <div className="box-fade">
             <ul className="icon-nav">
               <li>
-                <MdInfoOutline size={size} color={"white"} />
+                <a href="#about-container">
+                  <MdInfoOutline size={size} color={"white"} />
+                </a>
               </li>
               <li>
-                <MdWorkOutline size={size} color={"white"} />
+                <a href="#work-container">
+                  <MdWorkOutline size={size} color={"white"} />
+                </a>
               </li>
               <li>
-                <MdOutlineConnectWithoutContact size={size} color={"white"} />
+                <a href="#connect-container">
+                  <MdOutlineConnectWithoutContact size={size} color={"white"} />
+                </a>
               </li>
             </ul>
           </div>

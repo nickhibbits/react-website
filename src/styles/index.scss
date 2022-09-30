@@ -63,6 +63,7 @@ h2 {
 p {
   font-family: $font-family-secondary;
   font-size: clamp(1rem, 2vw, $font-size-secondary);
+  line-height: 1.4em;
 }
 
 ul {
@@ -80,6 +81,7 @@ body {
 a {
   text-decoration: none;
   font-family: $font-family-secondary;
+  margin: 0;
 }
 
 img {
