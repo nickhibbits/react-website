@@ -57,7 +57,7 @@
 
 .buttons-wrapper {
   display: flex;
-  @include mediaQueries.desktop {
+  @include mediaQueries.tablet-large {
     // position: absolute;
     // right: 11.5rem;
     // top: -2rem;

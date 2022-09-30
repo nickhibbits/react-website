@@ -1,12 +1,11 @@
 import { useWindowCheck } from "../customHooks";
 import { ReactComponent as CirclesSvg } from "../assets/svgs/abstract-dots.svg";
+import { useRef, useState } from "react";
 
-import React, { useState } from "react";
 import projects from "../projects";
 import WorkCard from "./WorkCard";
 
 import "../styles/components/WorkCard.scss";
-import { useRef } from "react";
 
 function Work() {
   const [filteredProjects, setFilteredProjects] = useState(
@@ -41,7 +40,7 @@ function Work() {
       </div>
       <div
         className={
-          width > 1150
+          width > 850
             ? `component work-component work-split`
             : `component work-component`
         }

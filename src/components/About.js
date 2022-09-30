@@ -20,7 +20,7 @@ function About() {
       </div>
       <div
         className={
-          width > 1150
+          width > 850
             ? `component about-component split`
             : `component about-component`
         }

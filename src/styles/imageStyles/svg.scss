@@ -10,6 +10,18 @@
   left: 0.5rem;
   bottom: 7.5rem;
   right: 28rem;
+
+  @include mediaQueries.tablet {
+    transform: scale(0.6);
+    top: -5rem;
+    bottom: 20rem;
+  }
+  @include mediaQueries.tablet-large {
+    transform: scale(0.7);
+    top: -2rem;
+    bottom: 20rem;
+    left: -2em;
+  }
   @include mediaQueries.desktop {
     transform: scale(0.87);
     top: 1rem;
@@ -28,6 +40,18 @@
   transform: scale(0.4);
   left: -16rem;
   bottom: -7rem;
+  @include mediaQueries.tablet {
+    transform: scale(0.6);
+    bottom: -7rem;
+    left: -7em;
+  }
+  @include mediaQueries.tablet-large {
+    transform: scale(0.6);
+    right: -3em;
+    left: 13em;
+    top: 1em;
+    bottom: 20em;
+  }
   @include mediaQueries.desktop {
     transform: scale(0.7);
     top: 2rem;
@@ -46,6 +70,11 @@
   transform: scale(0.3) rotate(270deg);
   left: -34rem;
   bottom: -18rem;
+  @include mediaQueries.tablet {
+    transform: scale(0.4);
+    left: 0;
+    right: 30em;
+  }
   @include mediaQueries.desktop {
     transform: scale(0.76);
     top: -0.5rem;
