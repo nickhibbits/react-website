@@ -42,22 +42,38 @@ function Navbar() {
           data-visible={false}
         >
           <li>
-            <a href="#home-container" className="nav-link">
+            <a
+              href="#home-container"
+              className="nav-link"
+              onClick={() => toggleNavOptions()}
+            >
               Home
             </a>
           </li>
           <li>
-            <a href="#about-container" className="nav-link">
+            <a
+              href="#about-container"
+              className="nav-link"
+              onClick={() => toggleNavOptions()}
+            >
               About
             </a>
           </li>
           <li>
-            <a href="#work-container" className="nav-link">
+            <a
+              href="#work-container"
+              className="nav-link"
+              onClick={() => toggleNavOptions()}
+            >
               Work
             </a>
           </li>
           <li>
-            <a href="#connect-container" className="nav-link">
+            <a
+              href="#connect-container"
+              className="nav-link"
+              onClick={() => toggleNavOptions()}
+            >
               Connect
             </a>
           </li>
