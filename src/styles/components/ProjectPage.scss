@@ -1,0 +1,45 @@
+@use "../index.scss";
+@use "../layout/mediaQueries.scss";
+
+.project-page-container {
+  @include index.box-fade-gradient;
+  padding: 2em 0;
+  min-height: 100vh;
+  display: flex;
+}
+
+.project-page-component {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-page-title {
+  font-size: 3rem;
+  margin-bottom: 0.1em;
+  @include mediaQueries.tablet-large {
+    font-size: 3.7em;
+  }
+}
+
+.project-page-description {
+  margin-bottom: 1.8rem;
+}
+
+.links-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.links-wrapper > * > * {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    &:hover {
+      color: index.$bg-green-light;
+    }
+  }
+}
+
+.projct-page-image {
+  border-radius: 15px;
+}

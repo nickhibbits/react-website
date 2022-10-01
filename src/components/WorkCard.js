@@ -17,7 +17,7 @@ function WorkCard({ title, description, imgSrc }) {
     >
       <h2 className="card-title">{title}</h2>
       <p className="card-description">{description}</p>
-      <Link to={`/projects?name=${title}`}>
+      <Link to={`/projects/${title}`}>
         <button className="button">Read More</button>
       </Link>
     </div>

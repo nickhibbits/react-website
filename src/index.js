@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./components/App";
+import ProjectPage from "./components/ProjectPage";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

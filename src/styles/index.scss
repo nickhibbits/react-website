@@ -30,6 +30,10 @@ $clr-dark: #000000;
   }
 }
 
+@mixin box-fade-gradient {
+  background: linear-gradient(135.68deg, $bg-blue 0.74%, $clr-dark 34.34%);
+}
+
 *,
 *::before,
 *::after {
