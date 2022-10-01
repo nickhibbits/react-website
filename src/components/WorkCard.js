@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function WorkCard({ title, description, imgSrc }) {
   return (
@@ -16,7 +17,9 @@ function WorkCard({ title, description, imgSrc }) {
     >
       <h2 className="card-title">{title}</h2>
       <p className="card-description">{description}</p>
-      <button className="button">Read More</button>
+      <Link to={`/projects?name=${title}`}>
+        <button className="button">Read More</button>
+      </Link>
     </div>
   );
 }
