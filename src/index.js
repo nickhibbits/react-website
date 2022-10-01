@@ -11,7 +11,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" exact element={<App />} />
-      {/* <Route path="/projects/:name" element={<ProjectPage />} /> */}
+      <Route path="/projects/:name" element={<ProjectPage />} />
     </Routes>
   </BrowserRouter>
 );
