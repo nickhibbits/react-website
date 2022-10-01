@@ -43,7 +43,7 @@ function Connect() {
               href="https://www.instagram.com/nhibit"
               className="social-anchor"
             >
-              <FiInstagram size={size} style={{ color: "black" }} />
+              <FiInstagram size={size} />
             </a>
             <a
               href="https://www.github.com/nickhibbits"
@@ -52,7 +52,7 @@ function Connect() {
               <FiGithub size={size} />
             </a>
             <a
-              href="https://www.linkedin.com/nickhibbits"
+              href="https://www.linkedin.com/in/nicholas-hibbits/"
               className="social-anchor"
             >
               <FiLinkedin size={size} />

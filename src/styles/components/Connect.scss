@@ -1,4 +1,5 @@
 @use "../layout/mediaQueries.scss";
+@use "../index.scss";
 
 // .connect-form > input {
 //   margin-bottom: 1em;
@@ -31,13 +32,17 @@
 }
 
 .contact-wrapper > p {
-  margin-bottom: 0.6em;
+  margin-bottom: 0.4em;
 }
 
-.social-anchor {
+.socials-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+.social-anchor > * {
   margin-right: 0.2em;
   &:hover {
-    color: black;
-    cursor: pointer;
+    color: index.$bg-green-light;
   }
 }

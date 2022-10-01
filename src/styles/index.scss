@@ -6,11 +6,12 @@ $font-size-main: 6rem;
 $font-size-secondary: 1.3rem;
 $bg-blue: #0200ab;
 $bg-green: #046d31;
+$bg-green-light: #0fd05f;
 $clr-light: #fff;
 $clr-dark: #000000;
 
 @mixin button-style {
-  background: linear-gradient(180deg, #079f47 0%, #005e28 100%);
+  background: linear-gradient(180deg, $bg-green-light 0%, #005e28 100%);
   border: 0.5px solid $clr-dark;
   border-radius: 19px;
   padding: 0.3rem 1rem;
@@ -41,6 +42,7 @@ $clr-dark: #000000;
 
 html {
   scroll-behavior: smooth;
+  // scroll-padding-top: 50rem;
 }
 
 h1,
@@ -82,6 +84,10 @@ a {
   text-decoration: none;
   font-family: $font-family-secondary;
   margin: 0;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: $bg-green-light;
+  }
 }
 
 img {
