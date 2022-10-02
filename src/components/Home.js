@@ -11,9 +11,9 @@ function Home() {
         <p>
           Welcome to my website and personal playground. <br />
           <br />
-          Built using React and SCSS, I use this space to showcase my work, try
-          new techniques, and refine my understanding of various concepts I come
-          across in my time spent as a web developer.
+          Built using React and Sass I use this space to showcase my projects
+          and try out various concepts I come across in my time spent as a web
+          developer.
         </p>
       </section>
     </div>

@@ -38,6 +38,10 @@ function About() {
             are a pleasure to use.
             <br />
             <br />
+            Aside from programming I love being outdoors, producing electronic
+            music, and talking philosophy.
+            <br />
+            <br />
             Check out my work and let’s connect.
           </p>
         </section>
