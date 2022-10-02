@@ -5,7 +5,7 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
-  grid-template-rows: 100vh 55rem 42rem 29rem;
+  grid-template-rows: 100vh 56rem 42rem 29rem;
   @include mediaQueries.tablet-large {
     grid-template-rows: 100vh 40rem 38rem 29rem;
   }
