@@ -94,10 +94,10 @@ a {
   }
 }
 
-img {
-  image-rendering: crisp-edges;
-  max-width: 100%;
-}
+// img {
+//   image-rendering: crisp-edges;
+//   max-width: 100%;
+// }
 
 button {
   @include button-style();

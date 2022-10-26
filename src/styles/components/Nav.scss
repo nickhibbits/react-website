@@ -39,6 +39,20 @@ nav {
 
 .nav-wrapper > li:nth-child(1) {
   grid-column: 1 / 8;
+  // border: solid 2px red;
+  display: flex;
+}
+
+// .avatar-wrapper {
+//   height: 30px;
+//   width: 30px;
+//   // border: solid 2px green;
+// }
+
+.avatar {
+  height: auto;
+  width: 30px;
+  border-radius: 50%;
 }
 
 .nav-options-wrapper {

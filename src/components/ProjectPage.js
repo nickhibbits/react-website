@@ -53,7 +53,7 @@ function ProjectPage(props) {
           <h1 className="project-page-title">{projectTitle}</h1>
           <p className="project-page-description">{project.description}</p>
           <div className="links-wrapper">
-            <Link className="project-page-link" to={"/"}>
+            <Link className="project-page-link" to={"/#work-container"}>
               <p className="">Go back</p>
             </Link>
             <a href={project.link} className="project-page-link">
