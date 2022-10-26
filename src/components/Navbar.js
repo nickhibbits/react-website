@@ -27,13 +27,13 @@ function Navbar() {
           <a href="/" className="nav-title-anchor">
             <h2>Nick Hibbits</h2>
           </a>
-          {/* <div className="avatar-wrapper"> */}
-          <img
-            src={nickProfessional}
-            alt="nick-professional"
-            className="avatar"
-          />
-          {/* </div> */}
+          <div className="avatar-wrapper">
+            <img
+              src={nickProfessional}
+              alt="nick-professional"
+              className="avatar"
+            />
+          </div>
         </li>
 
         <div onClick={() => toggleNavOptions()} className="mobile-nav-toggle">
