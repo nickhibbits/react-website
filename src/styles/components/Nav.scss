@@ -10,20 +10,12 @@ nav {
   border-bottom: solid 0.1em index.$clr-light;
 }
 
-.nav-title {
-  border: solid 1px red;
-}
-
-._nav-options-component {
-  border: solid 1px green;
-  min-width: 100%;
-}
-
 .nav-wrapper {
   margin: 0 1rem;
   position: relative;
   z-index: 3;
-  padding: 0.7em 0 0.7em 0;
+  backdrop-filter: blur(0.3em);
+  -webkit-backdrop-filter: blur(0.3em);
   @include mediaQueries.tablet {
     margin: 0 2rem;
   }
@@ -40,7 +32,20 @@ nav {
   }
 }
 
-.nav-options-wrapper > li {
+.nav-title {
+  display: flex;
+  align-items: center;
+  // border: solid 1px red;
+  grid-column: 1 / 4;
+}
+
+.nav-options {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 8 / -1;
+}
+
+.nav-options-component > li {
   display: flex;
   align-items: center;
 }

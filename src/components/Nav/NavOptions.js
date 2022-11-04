@@ -6,7 +6,7 @@ function NavOptions({ toggleNavOptions, mobile }) {
   }
 
   return (
-    <ul className="nav-options-wrapper _nav-options-component">
+    <ul className="nav-options-component nav-options">
       <li>
         <a href="#home-container" className="nav-link" onClick={() => toggle()}>
           Home

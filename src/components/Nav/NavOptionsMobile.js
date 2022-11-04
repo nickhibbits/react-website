@@ -8,7 +8,7 @@ import nickProfessional from "../../assets/images/nick-professional.jpg";
 
 function NavOptionsMobile({ toggleNavOptions, displayMenuIcon }) {
   const navOptionsContainer = useRef();
-  let visible = navOptionsContainer.current.getAttribute("data-visible");
+  const visible = useRef();
   const width = useWindowCheck();
 
   useEffect(() => {
@@ -16,8 +16,12 @@ function NavOptionsMobile({ toggleNavOptions, displayMenuIcon }) {
       navOptionsContainer.current.setAttribute("data-visible", false);
   }, [width]);
 
+  useEffect(() => {
+    visible.current = navOptionsContainer.current.getAttribute("data-visible");
+  }, []);
+
   return (
-    <div className="nav-options-mobile-component _nav-options-component">
+    <div className="nav-options-mobile-component nav-options">
       <div
         onClick={() => toggleNavOptions(navOptionsContainer, visible)}
         className="mobile-nav-toggle"
@@ -31,7 +35,7 @@ function NavOptionsMobile({ toggleNavOptions, displayMenuIcon }) {
 
       <div
         className="nav-options-mobile-container"
-        data-visible={false}
+        data-visible={"false"}
         ref={navOptionsContainer}
       >
         <div className="nav-options-mobile-avatar-wrapper">
