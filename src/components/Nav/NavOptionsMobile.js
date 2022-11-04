@@ -18,7 +18,7 @@ function NavOptionsMobile({ toggleNavOptions, displayMenuIcon }) {
 
   useEffect(() => {
     visible.current = navOptionsContainer.current.getAttribute("data-visible");
-  }, []);
+  }, [displayMenuIcon]);
 
   return (
     <div className="nav-options-mobile-component nav-options">

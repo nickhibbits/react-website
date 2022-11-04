@@ -13,12 +13,16 @@ function Navbar() {
   // let visible = false;
 
   function toggleNavOptions(container, visible) {
-    console.log("toggle");
-    if (visible === "false" && width < 850) {
+    console.log("container", container);
+    console.log("visible", visible);
+    if (visible.current === "false" && width < 850) {
       container.current.setAttribute("data-visible", true);
+
+      // visible.current = !visible.current;
       setDisplayMenuIcon(false);
-    } else if (visible === "true" && width < 850) {
+    } else if (visible.current === "true" && width < 850) {
       container.current.setAttribute("data-visible", false);
+      // visible.current = !visible.current;
       setDisplayMenuIcon(true);
     }
   }
