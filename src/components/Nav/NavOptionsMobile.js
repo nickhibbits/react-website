@@ -17,7 +17,7 @@ function NavOptionsMobile({ toggleNavOptions, displayMenuIcon }) {
   }, [width]);
 
   return (
-    <div className="nav-options-mobile-component">
+    <div className="nav-options-mobile-component _nav-options-component">
       <div
         onClick={() => toggleNavOptions(navOptionsContainer, visible)}
         className="mobile-nav-toggle"
