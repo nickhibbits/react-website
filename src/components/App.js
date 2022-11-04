@@ -6,8 +6,8 @@ import { useWindowCheck } from "../customHooks";
 import About from "./About";
 import Home from "./Home";
 import Work from "./Work";
+import Navbar from "./Nav/Navbar";
 import Connect from "./Connect";
-import Navbar from "./Navbar";
 import trees from "../assets/images/trees-overhead.jpg";
 
 import "../styles/components/App.scss";
