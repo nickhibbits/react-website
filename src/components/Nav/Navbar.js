@@ -1,5 +1,5 @@
 import { useWindowCheck } from "../../customHooks";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "../../styles/components/Nav.scss";
 import nickProfessional from "../../assets/images/nick-professional.jpg";
@@ -13,22 +13,22 @@ function Navbar() {
   // let visible = false;
 
   function toggleNavOptions(container, visible) {
-    console.log("container", container);
-    console.log("visible", visible);
+    console.log(visible);
     if (visible.current === "false" && width < 850) {
       container.current.setAttribute("data-visible", true);
-
-      // visible.current = !visible.current;
       setDisplayMenuIcon(false);
     } else if (visible.current === "true" && width < 850) {
       container.current.setAttribute("data-visible", false);
-      // visible.current = !visible.current;
       setDisplayMenuIcon(true);
     }
   }
 
+  useEffect(() => {
+    width > 850 && setDisplayMenuIcon(true);
+  }, [width]);
+
   return (
-    <nav>
+    <nav on>
       <div className="nav-wrapper">
         <div className="nav-title">
           <a href="/" className="nav-title-anchor">

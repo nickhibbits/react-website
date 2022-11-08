@@ -1,8 +1,13 @@
 import React from "react";
 
-function NavOptions({ toggleNavOptions, mobile }) {
+function NavOptions({
+  toggleNavOptions,
+  mobile,
+  mobileContainerRef,
+  droorOpen,
+}) {
   function toggle() {
-    return mobile && toggleNavOptions();
+    return mobile && toggleNavOptions(mobileContainerRef, droorOpen);
   }
 
   return (

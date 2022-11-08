@@ -21,7 +21,7 @@ function NavOptionsMobile({ toggleNavOptions, displayMenuIcon }) {
   }, [displayMenuIcon]);
 
   return (
-    <div className="nav-options-mobile-component nav-options">
+    <div className="nav-options-mobile-component">
       <div
         onClick={() => toggleNavOptions(navOptionsContainer, visible)}
         className="mobile-nav-toggle"
@@ -46,7 +46,12 @@ function NavOptionsMobile({ toggleNavOptions, displayMenuIcon }) {
             style={width > 850 ? { display: "none" } : { display: "block" }}
           />
         </div>
-        <NavOptions mobile={true} />
+        <NavOptions
+          mobile={true}
+          toggleNavOptions={toggleNavOptions}
+          mobileContainerRef={navOptionsContainer}
+          droorOpen={visible}
+        />
       </div>
     </div>
   );
