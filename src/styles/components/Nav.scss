@@ -41,10 +41,18 @@ nav {
   grid-column: 1 / 5;
 }
 
-.nav-options {
+.nav-options-component {
   display: flex;
   justify-content: space-between;
   grid-column: 8 / -1;
+}
+
+.nav-options-component-mobile-on {
+  // border: solid 1px red;
+  font-size: 1.3em;
+  li {
+    justify-content: center;
+  }
 }
 
 .nav-options-component > li {

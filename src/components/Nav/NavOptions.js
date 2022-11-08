@@ -11,7 +11,13 @@ function NavOptions({
   }
 
   return (
-    <ul className="nav-options-component nav-options">
+    <ul
+      className={
+        mobile
+          ? "nav-options-component nav-options-component-mobile-on"
+          : "nav-options-component"
+      }
+    >
       <li>
         <a href="#home-container" className="nav-link" onClick={() => toggle()}>
           Home

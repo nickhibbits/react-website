@@ -13,7 +13,6 @@ function Navbar() {
   // let visible = false;
 
   function toggleNavOptions(container, visible) {
-    console.log(visible);
     if (visible.current === "false" && width < 850) {
       container.current.setAttribute("data-visible", true);
       setDisplayMenuIcon(false);
