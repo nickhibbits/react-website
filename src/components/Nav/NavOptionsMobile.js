@@ -1,20 +1,18 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { MdOutlineMenu } from "react-icons/md";
-import { useWindowCheck } from "../../customHooks";
 
 import NavOptions from "./NavOptions";
 import nickProfessional from "../../assets/images/nick-professional.jpg";
 
-function NavOptionsMobile({ toggleNavOptions, displayMenuIcon }) {
+function NavOptionsMobile({ toggleNavOptions, displayMenuIcon, navWidth }) {
   const navOptionsContainer = useRef();
   const visible = useRef();
-  const width = useWindowCheck();
 
   useEffect(() => {
-    width > 850 &&
+    navWidth >= 850 &&
       navOptionsContainer.current.setAttribute("data-visible", false);
-  }, [width]);
+  }, [navWidth]);
 
   useEffect(() => {
     visible.current = navOptionsContainer.current.getAttribute("data-visible");
@@ -43,11 +41,11 @@ function NavOptionsMobile({ toggleNavOptions, displayMenuIcon }) {
             src={nickProfessional}
             alt="nick-professional"
             className="nav-options-mobile-avatar"
-            style={width > 850 ? { display: "none" } : { display: "block" }}
+            style={navWidth > 850 ? { display: "none" } : { display: "block" }}
           />
         </div>
         <NavOptions
-          mobile={true}
+          mobile={navWidth < 850}
           toggleNavOptions={toggleNavOptions}
           mobileContainerRef={navOptionsContainer}
           droorOpen={visible}

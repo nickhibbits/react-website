@@ -1,31 +1,40 @@
-import { useWindowCheck } from "../../customHooks";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
-import "../../styles/components/Nav.scss";
 import nickProfessional from "../../assets/images/nick-professional.jpg";
 import NavOptions from "./NavOptions";
 import NavOptionsMobile from "./NavOptionsMobile";
 
+import "../../styles/components/Nav.scss";
+
 function Navbar() {
-  const width = useWindowCheck();
   const [displayMenuIcon, setDisplayMenuIcon] = useState(true);
+  const [navWidth, setNavWidth] = useState("");
+  const nav = useRef();
 
   function toggleNavOptions(container, visible) {
-    if (visible.current === "false" && width < 850) {
+    if (visible.current === "false" && navWidth < 850) {
       container.current.setAttribute("data-visible", "true");
       setDisplayMenuIcon(false);
-    } else if (visible.current === "true" && width < 850) {
+    } else if (visible.current === "true" && navWidth < 850) {
       container.current.setAttribute("data-visible", "false");
       setDisplayMenuIcon(true);
     }
   }
 
   useEffect(() => {
-    width >= 850 && setDisplayMenuIcon(true);
-  }, [width]);
+    navWidth >= 850 && setDisplayMenuIcon(true);
+  }, [navWidth]);
+
+  useEffect(() => {
+    const observer = new ResizeObserver((entries) => {
+      setNavWidth(entries[0].contentRect.width);
+    });
+
+    observer.observe(nav.current);
+  }, []);
 
   return (
-    <nav>
+    <nav ref={nav}>
       <div className="nav-wrapper">
         <div className="nav-title">
           <a href="/" className="nav-title-anchor">
@@ -39,12 +48,13 @@ function Navbar() {
             />
           </div>
         </div>
-        {width >= 850 ? (
+        {navWidth >= 850 ? (
           <NavOptions toggleNavOptions={toggleNavOptions} mobile={false} />
         ) : (
           <NavOptionsMobile
             toggleNavOptions={toggleNavOptions}
             displayMenuIcon={displayMenuIcon}
+            navWidth={navWidth}
           />
         )}
       </div>

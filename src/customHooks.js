@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useWindowCheck = (message = "yo") => {
-  console.log("message", message);
+export const useWindowCheck = () => {
   const [width, setWidth] = useState(window.innerWidth);
 
   const updateWidth = () => {
