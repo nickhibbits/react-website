@@ -50,6 +50,8 @@ nav {
 .nav-options-component-mobile-on {
   // border: solid 1px red;
   font-size: 1.3em;
+  flex-direction: column;
+  min-height: 12rem;
   li {
     justify-content: center;
   }

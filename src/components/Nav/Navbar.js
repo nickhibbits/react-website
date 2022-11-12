@@ -10,24 +10,22 @@ function Navbar() {
   const width = useWindowCheck();
   const [displayMenuIcon, setDisplayMenuIcon] = useState(true);
 
-  // let visible = false;
-
   function toggleNavOptions(container, visible) {
     if (visible.current === "false" && width < 850) {
-      container.current.setAttribute("data-visible", true);
+      container.current.setAttribute("data-visible", "true");
       setDisplayMenuIcon(false);
     } else if (visible.current === "true" && width < 850) {
-      container.current.setAttribute("data-visible", false);
+      container.current.setAttribute("data-visible", "false");
       setDisplayMenuIcon(true);
     }
   }
 
   useEffect(() => {
-    width > 850 && setDisplayMenuIcon(true);
+    width >= 850 && setDisplayMenuIcon(true);
   }, [width]);
 
   return (
-    <nav on>
+    <nav>
       <div className="nav-wrapper">
         <div className="nav-title">
           <a href="/" className="nav-title-anchor">
@@ -41,7 +39,7 @@ function Navbar() {
             />
           </div>
         </div>
-        {width > 850 ? (
+        {width >= 850 ? (
           <NavOptions toggleNavOptions={toggleNavOptions} mobile={false} />
         ) : (
           <NavOptionsMobile
