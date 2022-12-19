@@ -94,11 +94,6 @@ a {
   }
 }
 
-// img {
-//   image-rendering: crisp-edges;
-//   max-width: 100%;
-// }
-
 button {
   @include button-style();
   &:active {
@@ -111,28 +106,6 @@ button {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    left: 45%;
-    right: 45%;
-    bottom: 0;
-    height: 1px;
-    width: 10vw;
-    border-bottom: 1px solid $clr-light;
-  }
-  @include mediaQueries.tablet {
-    &::before {
-      content: "";
-      position: absolute;
-      left: 45%;
-      right: 45%;
-      bottom: 0;
-      height: 1px;
-      width: 6rem;
-      border-bottom: 1px solid $clr-light;
-    }
-  }
 }
 
 .component {
@@ -140,13 +113,13 @@ button {
   position: relative;
   // z-index: 3;
   @include mediaQueries.tablet {
-    margin: 0 2rem;
+    margin-inline: 2rem;
   }
   @include mediaQueries.desktop {
-    margin: 0 13.25rem;
+    margin-inline: 13.25rem;
   }
   @include mediaQueries.bigScreen {
-    margin: 0 18rem;
+    margin-inline: 18rem;
   }
 }
 
