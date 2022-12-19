@@ -2,6 +2,8 @@ import { useWindowCheck } from "../customHooks";
 import { ReactComponent as RingsSvg } from "../assets/svgs/rings.svg";
 import { FiInstagram, FiLinkedin } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
+// import { IconContext } from "react-icons";
+
 import React from "react";
 
 import "../styles/components/Connect.scss";
@@ -32,6 +34,8 @@ function Connect() {
             <a
               href="mailto:nicholashibbits@gmail.com"
               className="social-anchor"
+              data-type="email-link"
+              style={{ textDecoration: "underline" }}
             >
               nicholashibbits@gmail
             </a>
