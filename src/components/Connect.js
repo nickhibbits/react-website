@@ -42,6 +42,7 @@ function Connect() {
             <br />
             or checkout my socials below
           </p>
+
           <div className="socials-wrapper">
             <a
               href="https://www.instagram.com/nhibit"
@@ -63,12 +64,6 @@ function Connect() {
             </a>
           </div>
         </section>
-        {/* <form className="connect-form" action="">
-          <p className="subject">Subject</p>
-          <input type="text" className="subject-input" />
-          <p className="message">Message</p>
-          <textarea className="message-input" />
-        </form> */}
       </div>
     </div>
   );
