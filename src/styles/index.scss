@@ -1,18 +1,26 @@
 @use "./layout/mediaQueries.scss";
 
-$font-family-main: "Righteous", "cursive";
-$font-family-secondary: "Padauk", sans-serif;
-$font-size-main: 6rem;
-$font-size-secondary: 1.3rem;
-$bg-blue: #0200ab;
-$bg-green: #046d31;
-$bg-green-light: #0fd05f;
-$clr-light: #fff;
-$clr-dark: #000000;
+// Variables
+$ff-primary: "Righteous", "cursive";
+$ff-secondary: "Padauk", sans-serif;
+
+$blue: #0200ab;
+$green: #046d31;
+$green-light: #0fd05f;
+
+$clr-neutral-900: #000000;
+$clr-neutral-100: #fff;
+
+$fs-900: 6rem;
+$fs-400: 1.3rem;
+
+$bg-primary: $blue;
+$bg-secondary-200: $green;
+$bg-secondary-100: $green-light;
 
 @mixin button-style {
-  background: linear-gradient(180deg, $bg-green-light 0%, #005e28 100%);
-  border: 0.5px solid $clr-dark;
+  background: linear-gradient(180deg, $bg-secondary-100 0%, #005e28 100%);
+  border: 0.5px solid $clr-neutral-900;
   border-radius: 19px;
   padding: 0.3rem 1rem;
   &:hover {
@@ -22,7 +30,7 @@ $clr-dark: #000000;
 
 @mixin button-pressed {
   background: linear-gradient(180deg, #005e28 0%, #079f47#005e28 100%);
-  border: 1px solid $clr-dark;
+  border: 1px solid $clr-neutral-900;
   border-radius: 19px;
   padding: 0.3rem 1rem;
   &:hover {
@@ -31,9 +39,14 @@ $clr-dark: #000000;
 }
 
 @mixin box-fade-gradient {
-  background: linear-gradient(135.68deg, $bg-blue 0.74%, $clr-dark 34.34%);
+  background: linear-gradient(
+    135.68deg,
+    $bg-primary 0.74%,
+    $clr-neutral-900 34.34%
+  );
 }
 
+//resets
 *,
 *::before,
 *::after {
@@ -41,7 +54,7 @@ $clr-dark: #000000;
 }
 
 * {
-  color: $clr-light;
+  color: $clr-neutral-100;
 }
 
 html {
@@ -57,18 +70,18 @@ p {
 }
 
 h1 {
-  font-family: $font-family-main;
-  font-size: clamp(3.5rem, 10vw, $font-size-main);
+  font-family: $ff-primary;
+  font-size: clamp(3.5rem, 10vw, $fs-900);
 }
 
 h2 {
   font-size: 1.5rem;
-  font-family: $font-family-main;
+  font-family: $ff-primary;
 }
 
 p {
-  font-family: $font-family-secondary;
-  font-size: clamp(1rem, 2vw, $font-size-secondary);
+  font-family: $ff-secondary;
+  font-size: clamp(1rem, 2vw, $fs-400);
   line-height: 1.4em;
 }
 
@@ -79,18 +92,18 @@ ul {
 
 body {
   margin: 0%;
-  background-color: $clr-dark;
+  background-color: $clr-neutral-900;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   text-decoration: none;
-  font-family: $font-family-secondary;
+  font-family: $ff-secondary;
   margin: 0;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: $bg-green-light;
+    color: $bg-secondary-100;
   }
 }
 
