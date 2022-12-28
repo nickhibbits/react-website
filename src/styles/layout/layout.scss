@@ -2,8 +2,8 @@
 @use "../index.scss";
 
 .app-component {
-  position: relative;
   display: grid;
+  position: relative;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
   grid-template-rows: 100vh 56rem 42rem 29rem;
   @include mediaQueries.tablet-large {

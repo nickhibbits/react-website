@@ -3,9 +3,9 @@
 
 .project-page-container {
   @include index.box-fade-gradient;
+  display: flex;
   padding: 2em 0;
   min-height: 100vh;
-  display: flex;
 }
 
 .project-page-component {
@@ -27,8 +27,8 @@
 
 .links-wrapper {
   display: flex;
-  width: 100%;
   justify-content: space-between;
+  width: 100%;
 }
 
 .links-wrapper > * > * {

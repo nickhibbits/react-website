@@ -11,13 +11,13 @@
 .skills-card-component {
   position: relative;
   text-align: center;
+  padding: 0.8rem;
+  width: 18rem;
+  margin: 1rem 1rem 3rem 1rem;
+  min-height: 22rem;
   border: solid 2px index.$clr-neutral-100;
   background: linear-gradient(50.61deg, #000000 8.52%, #3d3d3d 89.54%);
-  min-height: 22rem;
-  width: 18rem;
   border-radius: 25px;
-  margin: 1rem 1rem 3rem 1rem;
-  padding: 0.8rem;
   &::after {
     content: "";
     position: absolute;
@@ -38,8 +38,8 @@
 .skill-bars-wrapper {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
   justify-content: space-between;
+  padding-left: 1rem;
   height: 15rem;
 }
 
@@ -49,9 +49,9 @@
 }
 
 .skill-bar-wrapper {
-  height: 1em;
   display: flex;
   gap: 3%;
+  height: 1em;
 }
 
 .skill-bar {
