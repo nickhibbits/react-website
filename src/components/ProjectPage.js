@@ -1,11 +1,11 @@
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { useWindowCheck } from "../customHooks";
 import projects from "../projects";
 
 import { ReactComponent as ZoomiesLogo } from "../assets/svgs/ZoomiesLogo.svg";
 
 import "../styles/index.scss";
 import "../styles/components/ProjectPage.scss";
-import { useWindowCheck } from "../customHooks";
 
 // import "../styles/ProjectPage.scss";
 
@@ -27,7 +27,7 @@ function ProjectPage(props) {
     (project) => project.title === projectTitle
   );
 
-  console.log("project", project);
+  console.log("width", width);
 
   return (
     <main className="project-page-container">
