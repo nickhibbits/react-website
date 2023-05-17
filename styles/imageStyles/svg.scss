@@ -1,0 +1,91 @@
+@use "../layout/mediaQueries.scss";
+
+.svg-wrapper {
+  position: absolute;
+  z-index: 2;
+}
+
+.big-circle-svg {
+  transform: scale(0.36);
+  left: 0.5rem;
+  bottom: 10.5rem;
+  right: 28rem;
+
+  @include mediaQueries.tablet {
+    transform: scale(0.6);
+    top: -5rem;
+    bottom: 20rem;
+  }
+  @include mediaQueries.tablet-large {
+    transform: scale(0.7);
+    top: -2rem;
+    bottom: 20rem;
+    left: -2em;
+  }
+  @include mediaQueries.desktop {
+    transform: scale(0.87);
+    top: 1rem;
+    bottom: 45rem;
+    left: 0;
+  }
+  @include mediaQueries.bigScreen {
+    transform: scale(0.87);
+    top: 1rem;
+    bottom: 45rem;
+    left: 5rem;
+  }
+}
+
+.circles-svg {
+  transform: scale(0.4);
+  left: -16rem;
+  bottom: -7rem;
+  @include mediaQueries.tablet {
+    transform: scale(0.6);
+    bottom: -7rem;
+    left: -7em;
+  }
+  @include mediaQueries.tablet-large {
+    transform: scale(0.6);
+    right: -3em;
+    left: 13em;
+    top: 1em;
+    bottom: 20em;
+  }
+  @include mediaQueries.desktop {
+    transform: scale(0.7);
+    top: 2rem;
+    bottom: 30rem;
+    left: 33rem;
+  }
+  @include mediaQueries.bigScreen {
+    transform: scale(0.8);
+    top: 2rem;
+    bottom: 30rem;
+    left: 48rem;
+  }
+}
+
+.rings-svg {
+  transform: scale(0.3) rotate(270deg);
+  left: -34rem;
+  bottom: -18rem;
+  @include mediaQueries.tablet {
+    transform: scale(0.4);
+    left: 0;
+    right: 30em;
+  }
+  @include mediaQueries.desktop {
+    transform: scale(0.76);
+    top: -0.5rem;
+    bottom: 100rem;
+    left: -5rem;
+    right: 4rem;
+  }
+  @include mediaQueries.bigScreen {
+    transform: scale(0.8);
+    top: -8rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+}

@@ -1,0 +1,49 @@
+@use "../index.scss";
+@use "../layout/mediaQueries.scss";
+
+.project-page-container {
+  @include index.box-fade-gradient;
+  display: flex;
+  padding: 2em 0;
+  min-height: 100vh;
+}
+
+.project-page-component {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-page-image {
+  max-width: 100%;
+}
+
+.project-page-title {
+  font-size: 3rem;
+  margin-bottom: 0.1em;
+  @include mediaQueries.tablet-large {
+    font-size: 3.7em;
+  }
+}
+
+.project-page-description {
+  margin-bottom: 1.8rem;
+}
+
+.links-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.links-wrapper > * > * {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    &:hover {
+      color: index.$bg-secondary-100;
+    }
+  }
+}
+
+.projct-page-image {
+  border-radius: 15px;
+}
