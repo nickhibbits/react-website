@@ -1,9 +1,11 @@
+"use client";
+
 import { useRef, useEffect } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { MdOutlineMenu } from "react-icons/md";
 
 import NavOptions from "./NavOptions";
-import nickProfessional from "../../assets/images/nick-professional.jpg";
+import nickProfessional from "$/public/images/nick-professional.jpg";
 import Image from "next/image";
 
 type NavOptionsMobileProps = {

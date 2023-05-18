@@ -1,4 +1,5 @@
 @use "$/styles/layout/mediaQueries.scss";
+@use "$/styles/mixins";
 
 .app_container {
   position: relative;
@@ -27,7 +28,7 @@
     z-index: 1;
     grid-row: 1 / 2;
     grid-column: 1 / 6;
-    @include index.box-fade-gradient;
+    @include mixins.box-fade-gradient;
   }
 }
 
@@ -39,7 +40,7 @@
     z-index: 1;
     grid-column: 6 / 13;
     grid-row: 1 / 2;
-    background-image: url("../../assets/images/trees-overhead.jpg");
+    background-image: url("/public/images/trees-overhead.jpg");
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;

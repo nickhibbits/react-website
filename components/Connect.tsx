@@ -1,3 +1,5 @@
+"use client";
+
 import { FiInstagram, FiLinkedin } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
 import { useWindowCheck } from "$/utils/customHooks";

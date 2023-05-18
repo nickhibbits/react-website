@@ -1,6 +1,6 @@
-import bearsDen from "./assets/images/Crowd-Front.JPG";
-import pollPhoto from "./assets/images/poll-photo.JPG";
-import bookPhoto from "./assets/images/books.jpg";
+import bearsDen from "$/public/images/Crowd-Front.jpg";
+import pollPhoto from "$/public/images/poll-photo.jpg";
+import bookPhoto from "$/public/images/books.jpg";
 
 const projects = {
   zoomies: {

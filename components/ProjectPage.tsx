@@ -1,3 +1,5 @@
+"use Client";
+
 import { useRouter } from "next/router";
 import { useWindowCheck } from "$/utils/customHooks";
 

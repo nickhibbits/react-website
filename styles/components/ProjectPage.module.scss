@@ -39,7 +39,7 @@
   transition: all 0.3s ease-in-out;
   &:hover {
     &:hover {
-      color: index.$bg-secondary-100;
+      color: variables.$bg-secondary-100;
     }
   }
 }

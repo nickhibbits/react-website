@@ -1,4 +1,5 @@
 @use "$/styles/layout/mediaQueries.scss";
+@use "$/styles/variables";
 
 .skill_card_wrapper {
   z-index: 4;
@@ -14,7 +15,7 @@
   width: 18rem;
   margin: 1rem 1rem 3rem 1rem;
   min-height: 22rem;
-  border: solid 2px index.$clr-neutral-100;
+  border: solid 2px variables.$clr-neutral-100;
   background: linear-gradient(50.61deg, #000000 8.52%, #3d3d3d 89.54%);
   border-radius: 25px;
   &::after {

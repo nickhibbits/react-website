@@ -1,6 +1,8 @@
+"use client";
+
 import { useState, useEffect, useRef } from "react";
 
-import nickProfessional from "../../assets/images/nick-professional.jpg";
+import nickProfessional from "$/public/images/nick-professional.jpg";
 import NavOptions from "./NavOptions";
 import NavOptionsMobile from "./NavOptionsMobile";
 
@@ -42,7 +44,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav ref={nav}>
+    <nav className={navStyles.nav} ref={nav}>
       <div className={navStyles.nav_wrapper}>
         <div className={navStyles.nav_title}>
           <Link href="/">

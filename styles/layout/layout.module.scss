@@ -1,4 +1,5 @@
 @use "$/styles/layout/mediaQueries.scss";
+@use "$/styles/variables";
 
 .app-component {
   display: grid;
@@ -15,7 +16,7 @@
 
 #home-container {
   grid-area: 1 / 1 / 2 / 13;
-  background-image: url("../../assets/images/trees-overhead.jpg");
+  background-image: url("/public/images/trees-overhead.jpg");
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
@@ -32,15 +33,15 @@
   grid-area: 2 / 1 / 3 / 13;
   background: linear-gradient(
     180deg,
-    index.$bg-secondary-200 0%,
-    index.$clr-neutral-900 79.69%
+    variables.$bg-secondary-200 0%,
+    variables.$clr-neutral-900 79.69%
   );
 }
 
 #work-container {
   grid-area: 3 / 1 / 4 / 13;
   background: linear-gradient(
-    (180deg, index.$clr-neutral-900 0%, index.$bg-primary 100%)
+    (180deg, variables.$clr-neutral-900 0%, variables.$bg-primary 100%)
   );
   overflow-y: none;
 }
@@ -49,8 +50,8 @@
   grid-area: 4 / 1 / 5 / 13;
   background: linear-gradient(
     180deg,
-    index.$bg-primary 57.81%,
-    index.$bg-secondary-200 100%
+    variables.$bg-primary 57.81%,
+    variables.$bg-secondary-200 100%
   );
 }
 

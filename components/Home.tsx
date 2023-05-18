@@ -1,9 +1,11 @@
+"use client";
+
 import { useWindowCheck } from "$/utils/customHooks";
 import React from "react";
 
 import layoutStyles from "$/styles/layout/layout.module.scss";
 
-function Home() {
+function _Home() {
   const width = useWindowCheck();
   return (
     <div
@@ -24,4 +26,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default _Home;

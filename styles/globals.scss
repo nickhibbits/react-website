@@ -1,5 +1,6 @@
 @use "$/styles/layout/mediaQueries.scss";
 @use "$/styles/mixins.scss";
+@use "$/styles/variables.scss";
 
 *,
 *::before,
@@ -8,7 +9,7 @@
 }
 
 * {
-  color: $clr-neutral-100;
+  color: variables.$clr-neutral-100;
 }
 
 html {
@@ -24,18 +25,18 @@ p {
 }
 
 h1 {
-  font-family: $ff-primary;
-  font-size: clamp(3.5rem, 10vw, $fs-900);
+  font-family: variables.$ff-primary;
+  font-size: clamp(3.5rem, 10vw, variables.$fs-900);
 }
 
 h2 {
   font-size: 1.5rem;
-  font-family: $ff-primary;
+  font-family: variables.$ff-primary;
 }
 
 p {
-  font-family: $ff-secondary;
-  font-size: clamp(1rem, 2vw, $fs-400);
+  font-family: variables.$ff-secondary;
+  font-size: clamp(1rem, 2vw, variables.$fs-400);
   line-height: 1.4em;
 }
 
@@ -46,7 +47,7 @@ ul {
 
 body {
   margin: 0%;
-  background-color: $clr-neutral-900;
+  background-color: variables.$clr-neutral-900;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -54,10 +55,10 @@ body {
 a {
   margin: 0;
   text-decoration: none;
-  font-family: $ff-secondary;
+  font-family: variables.$ff-secondary;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: $bg-secondary-100;
+    color: variables.$bg-secondary-100;
   }
 }
 
