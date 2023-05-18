@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../styles/components/SkillsCard.scss";
+import skillCardStyles from "$/styles/components/SkillsCard.module.scss";
 
 function SkillsCard() {
   const skills = [
@@ -31,19 +31,19 @@ function SkillsCard() {
     },
   ];
   return (
-    <section className="skills-card-component">
-      <p className="skills-card-title">skills</p>
-      <ul className="skill-bars-wrapper">
+    <section className={skillCardStyles.skills_card_component}>
+      <p className={skillCardStyles.skills_card_title}>skills</p>
+      <ul className={skillCardStyles.skill_bars_wrapper}>
         {skills.map((skill) => {
           return (
-            <li className="skill-wrapper" key={skill.id}>
-              <p className="skill-name">{skill.name}</p>
-              <div className="skill-bar-wrapper">
+            <li className={skillCardStyles.skill_wrapper} key={skill.id}>
+              <p className={skillCardStyles.skill_name}>{skill.name}</p>
+              <div className={skillCardStyles.skill_bar_wrapper}>
                 <div
-                  className="skill-bar"
+                  className={skillCardStyles.skill_bar}
                   style={{ width: `calc(${skill.level} * .9)` }}
                 />
-                <p className="skill-bar-level">{skill.level}</p>
+                <p className={skillCardStyles.skill_bar_level}>{skill.level}</p>
               </div>
             </li>
           );

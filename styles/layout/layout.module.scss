@@ -45,7 +45,7 @@
   overflow-y: none;
 }
 
-#connect-container {
+#connect_container {
   grid-area: 4 / 1 / 5 / 13;
   background: linear-gradient(
     180deg,
@@ -76,7 +76,7 @@
   }
 }
 
-.info-wrapper {
+.info_wrapper {
   margin-bottom: 2.5rem;
 }
 
@@ -100,4 +100,19 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.home_component > .info_wrapper:first-of-type {
+  margin-bottom: 0%;
+}
+
+.about_component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work_component {
+  position: relative;
+  z-index: 3;
 }

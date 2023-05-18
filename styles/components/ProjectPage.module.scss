@@ -1,23 +1,23 @@
 @use "$/styles/mixins.scss";
 @use "$/styles/layout/mediaQueries.scss";
 
-.project-page-container {
+.project_page_container {
   @include mixins.box-fade-gradient;
   display: flex;
   padding: 2em 0;
   min-height: 100vh;
 }
 
-.project-page-component {
+.project_page_component {
   display: flex;
   flex-direction: column;
 }
 
-.project-page-image {
+.project_page_image {
   max-width: 100%;
 }
 
-.project-page-title {
+.project_page_title {
   font-size: 3rem;
   margin-bottom: 0.1em;
   @include mediaQueries.tablet-large {
@@ -25,17 +25,17 @@
   }
 }
 
-.project-page-description {
+.project_page_description {
   margin-bottom: 1.8rem;
 }
 
-.links-wrapper {
+.links_wrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.links-wrapper > * > * {
+.links_wrapper > * > * {
   transition: all 0.3s ease-in-out;
   &:hover {
     &:hover {
@@ -44,6 +44,6 @@
   }
 }
 
-.projct-page-image {
+.projct_page_image {
   border-radius: 15px;
 }

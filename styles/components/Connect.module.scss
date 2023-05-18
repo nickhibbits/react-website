@@ -1,33 +1,33 @@
 @use "$/styles/layout/mediaQueries.scss";
 @use "$/styles/variables.scss";
 
-.socials-wrapper {
+.socials_wrapper {
   display: flex;
   flex-direction: row;
   // padding: 1rem;
 }
 
-.contact-wrapper {
+.contact_wrapper {
   position: relative;
   z-index: 9;
   // outline: solid 1px red;
   min-height: 7rem;
 }
 
-.contact-wrapper > p {
+.contact_wrapper > p {
   line-height: 1.2em;
 }
 
-.contact-wrapper > p {
+.contact_wrapper > p {
   margin-bottom: 0.4em;
 }
 
-.socials-wrapper {
+.socials_wrapper {
   position: relative;
   z-index: 10;
 }
 
-.social-anchor:not([data-type="email-link"]) {
+.social_anchor:not([data-type="email-link"]) {
   margin-right: 0.2em;
   transform: scale(1);
   padding: none;

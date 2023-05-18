@@ -1,11 +1,11 @@
 @use "$/styles/layout/mediaQueries.scss";
 
-.svg-wrapper {
+.svg_wrapper {
   position: absolute;
   z-index: 2;
 }
 
-.big-circle-svg {
+.big_circle_svg {
   transform: scale(0.36);
   left: 0.5rem;
   bottom: 10.5rem;
@@ -36,7 +36,7 @@
   }
 }
 
-.circles-svg {
+.circles_svg {
   transform: scale(0.4);
   left: -16rem;
   bottom: -7rem;
@@ -66,7 +66,7 @@
   }
 }
 
-.rings-svg {
+.rings_svg {
   transform: scale(0.3) rotate(270deg);
   left: -34rem;
   bottom: -18rem;

@@ -1,13 +1,13 @@
 @use "$/styles/layout/mediaQueries.scss";
 
-#skill-card-wrapper {
+.skill_card_wrapper {
   z-index: 4;
   @include mediaQueries.desktop {
     grid-column: 7 / 13;
   }
 }
 
-.skills-card-component {
+.skills_card_component {
   position: relative;
   text-align: center;
   padding: 0.8rem;
@@ -34,7 +34,7 @@
   }
 }
 
-.skill-bars-wrapper {
+.skill_bars_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,26 +42,26 @@
   height: 15rem;
 }
 
-.skills-card-title {
+.skills_card_title {
   text-transform: uppercase;
   font-size: 1.5rem;
 }
 
-.skill-bar-wrapper {
+.skill_bar_wrapper {
   display: flex;
   gap: 3%;
   height: 1em;
 }
 
-.skill-bar {
+.skill_bar {
   background: linear-gradient(90deg, #00c3ac -8.89%, #089243 50.22%);
 }
 
-.skill-bar-level {
+.skill_bar_level {
   font-size: 1rem;
 }
 
-.skill-name {
+.skill_name {
   text-align: start;
   font-size: 1rem;
 }

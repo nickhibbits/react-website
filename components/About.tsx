@@ -1,30 +1,27 @@
-import "../styles/index.scss";
-import "../styles/components/SkillsCard.scss";
-import "../styles/imageStyles/svg.scss";
-
 import SkillsCard from "./SkillsCard";
 import { useWindowCheck } from "$/utils/customHooks";
+
+import layoutStyles from "$/styles/layout/layout.module.scss";
+import svgStyles from "$/styles/imageStyles/svg.module.scss";
+import cardStyle from "$/styles/components/SkillsCard.module.scss";
 
 function About() {
   const width = useWindowCheck();
 
   return (
-    <div
-      // className="container about-container"
-      className="container"
-      id="about-container"
-    >
-      <div className="svg-wrapper big-circle-svg">
+    <div className={layoutStyles.container} id={layoutStyles.about_container}>
+      <div className={`${svgStyles.svg_wrapper} ${svgStyles.big_circle_svg}`}>
         <img src="/svgs/abstract-circle.svg" />
+        {/* svg component */}
       </div>
       <div
         className={
           width >= 850
-            ? `component about-component split`
-            : `component about-component`
+            ? `${layoutStyles.component} ${layoutStyles.about_component} ${layoutStyles.split}`
+            : `${layoutStyles.component} ${layoutStyles.about_component}`
         }
       >
-        <section className="info-wrapper">
+        <section className={layoutStyles.info_wrapper}>
           <h1>About</h1>
           <p>
             My name’s Nick Hibbits. I’m a front-end focused web developer with
@@ -44,7 +41,7 @@ function About() {
           </p>
         </section>
         <section
-          id="skill-card-wrapper"
+          id={cardStyle.skill_card_wrapper}
           style={{
             display: "flex",
             justifyContent: "center",

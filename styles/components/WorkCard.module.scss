@@ -1,9 +1,9 @@
 @use "$/styles/layout/mediaQueries.scss";
 
-.work-container {
+.work_container {
   overflow-x: hidden;
 }
-.card-scroll-container {
+.card_scroll_container {
   display: flex;
   gap: 2rem;
   margin: 1rem 0;
@@ -11,19 +11,19 @@
   max-width: 90vw;
 }
 
-.logo-container {
+.logo_container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-.logo-wrapper {
+.logo_wrapper {
   height: 150px;
   width: 150px;
 }
 
-.work-card-component {
+.work_card_component {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -40,11 +40,11 @@
   border-radius: 15px;
 }
 
-.work-card-component > p {
+.work_card_component > p {
   font-size: 0.8rem;
 }
 
-.work-split {
+.work_split {
   display: grid;
   grid-template-rows: 0.1rem 1fr;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
@@ -53,12 +53,12 @@
   position: relative;
 }
 
-.work-split > :nth-child(1) {
+.work_split > :nth-child(1) {
   grid-row: 2 / 3;
   grid-column: 1 / 7;
 }
 
-.work-split > :nth-child(3) {
+.work_split > :nth-child(3) {
   grid-row: 2 / 3;
   grid-column: 8 / 13;
   @include mediaQueries.bigScreen {
@@ -66,7 +66,7 @@
   }
 }
 
-.buttons-wrapper {
+.buttons_wrapper {
   display: flex;
   @include mediaQueries.tablet-large {
     grid-row: 1 / 2;

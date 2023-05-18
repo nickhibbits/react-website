@@ -1,39 +1,38 @@
-import { useWindowCheck } from "../customHooks";
-import { ReactComponent as RingsSvg } from "../assets/svgs/rings.svg";
 import { FiInstagram, FiLinkedin } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
-// import { IconContext } from "react-icons";
+import { useWindowCheck } from "$/utils/customHooks";
 
 import React from "react";
 
-import "../styles/components/Connect.scss";
-import "../styles/imageStyles/svg.scss";
+import layoutStyles from "$/styles/layout/layout.module.scss";
+import svgStyles from "$/styles/imageStyles/svg.module.scss";
+import connectStyles from "$/styles/components/Connect.module.scss";
 
 function Connect() {
   const size = 30;
   const width = useWindowCheck();
   return (
-    <div className="container" id="connect-container">
-      <div className="svg-wrapper rings-svg">
-        <RingsSvg />
+    <div className={layoutStyles.container} id={layoutStyles.connect_container}>
+      <div className={`${svgStyles.svg_wrapper} ${svgStyles.rings_svg}`}>
+        <img src="/svgs/rings.svg" alt="" />
       </div>
       <div
         className={
           width > 850
-            ? `component connect-component split`
-            : `component connect-component`
+            ? `${layoutStyles.component} ${layoutStyles.connect_component} ${layoutStyles.split}`
+            : `${layoutStyles.component} ${layoutStyles.connect_component}`
         }
       >
-        <section className="info-wrapper">
+        <section className={layoutStyles.info_wrapper}>
           <h1>Connect</h1>
           <p>Something on your mind? Shoot me a message!</p>
         </section>
-        <section className="contact-wrapper">
+        <section className={connectStyles.contact_wrapper}>
           <p>
             Reach me directly at&nbsp;
             <a
               href="mailto:nicholashibbits@gmail.com"
-              className="social-anchor"
+              className={connectStyles.social_anchor}
               data-type="email-link"
               style={{ textDecoration: "underline" }}
             >
@@ -43,22 +42,22 @@ function Connect() {
             or checkout my socials below
           </p>
 
-          <div className="socials-wrapper">
+          <div className={connectStyles.socials_wrapper}>
             <a
               href="https://www.instagram.com/nhibit"
-              className="social-anchor"
+              className={connectStyles.social_anchor}
             >
               <FiInstagram size={size} />
             </a>
             <a
               href="https://www.github.com/nickhibbits"
-              className="social-anchor"
+              className={connectStyles.social_anchor}
             >
               <FiGithub size={size} />
             </a>
             <a
               href="https://www.linkedin.com/in/nicholas-hibbits/"
-              className="social-anchor"
+              className={connectStyles.social_anchor}
             >
               <FiLinkedin size={size} />
             </a>

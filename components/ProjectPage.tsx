@@ -1,68 +1,60 @@
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import { useWindowCheck } from "../customHooks";
-import projects from "../projects";
+import { useRouter } from "next/router";
+import { useWindowCheck } from "$/utils/customHooks";
 
-import { ReactComponent as ZoomiesLogo } from "../assets/svgs/ZoomiesLogo.svg";
+import layoutStyles from "$/styles/layout/layout.module.scss";
+import projectPageStyles from "$/styles/components/ProjectPage.module.scss";
 
-import "../styles/index.scss";
-import "../styles/components/ProjectPage.scss";
+import projects from "$/constants/projects";
+import Link from "next/link";
 
 // import "../styles/ProjectPage.scss";
 
-const withRouter = (Component) => {
-  const ComponentWithRouterProp = (props) => {
-    let location = useLocation();
-    let params = useParams();
-    let navigate = useNavigate();
-    return <Component {...props} router={{ location, navigate, params }} />;
-  };
-
-  return ComponentWithRouterProp;
-};
-
-function ProjectPage(props) {
+function ProjectPage() {
   const width = useWindowCheck();
-  const projectTitle = props.router.params.name;
+  const router = useRouter();
+  const projectTitle = router.query.slug;
   const project = Object.values(projects).find(
     (project) => project.title === projectTitle
   );
 
-  console.log("width", width);
-
   return (
-    <main className="project-page-container">
+    <main className={projectPageStyles.project_page_container}>
       <div
         className={
-          width > 850 ? `component split` : `component project-page-component`
+          width > 850
+            ? `${layoutStyles.component} ${layoutStyles.split}`
+            : `${layoutStyles.component}  ${projectPageStyles.project_page_component}`
         }
       >
-        <div className="project-page-image-wrapper">
-          {project.title === "Studio Zoomies" ? (
-            <div className="project-page-logo-wrapper">
-              <ZoomiesLogo />
-            </div>
+        <div>
+          {project && project.title === "Studio Zoomies" ? (
+            <div>{/* zoomies logo with svg wrapper component */}</div>
           ) : (
             <img
-              src={project.imgSrc}
-              className="project-page-image"
-              alt={project.imgAlt}
+              src={project && project.imgSrc}
+              className={projectPageStyles.project_page_image}
+              alt={project && project.imgAlt}
             />
           )}
         </div>
-        <div className="project-page-profile">
-          <h1 className="project-page-title">{projectTitle}</h1>
-          <p className="project-page-description">{project.description}</p>
+        <div>
+          <h1 className={projectPageStyles.project_page_title}>
+            {projectTitle}
+          </h1>
+          <p className={projectPageStyles.project_page_description}>
+            {project && project.description}
+          </p>
           <div className="links-wrapper">
-            <Link className="project-page-link" to={"/#work-container"}>
-              <p className="">Go back</p>
+            <Link href={"/#work-container"}>
+              <p>Go back</p>
             </Link>
-            <a href={project.link} className="project-page-link">
-              {project.type === "personal" ? (
+            <Link href={project ? project.link : ""}>
+              {project && project.type === "personal" ? (
                 <p>Visit repository</p>
               ) : (
                 <p> See more</p>
               )}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -70,4 +62,4 @@ function ProjectPage(props) {
   );
 }
 
-export default withRouter(ProjectPage);
+export default ProjectPage;

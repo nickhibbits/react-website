@@ -1,32 +1,37 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { ReactComponent as ZoomiesLogo } from "../assets/svgs/ZoomiesLogo.svg";
+import Link from "next/link";
 
-function WorkCard({ title, description, imgSrc }) {
+import workCardStyles from "$/styles/components/WorkCard.module.scss";
+
+type WorkCardProps = {
+  title: string;
+  description: string;
+  imgSrc: string;
+};
+function WorkCard({ title, description, imgSrc }: WorkCardProps) {
   if (title === "Studio Zoomies") {
     return (
       <div
-        className="work-card-component"
+        className={workCardStyles.work_card_component}
         style={{
           backgroundColor: "black",
         }}
       >
-        <div className="logo-container">
-          <div className="logo-wrapper">
-            <ZoomiesLogo />
+        <div className={workCardStyles.logo_container}>
+          <div className={workCardStyles.logo_wrapper}>
+            {/* zoomies logo svg  */}
           </div>
         </div>
-        <h2 className="card-title">{title}</h2>
-        <p className="card-description">{description}</p>
-        <Link to={`/projects/${title}`}>
-          <button className="button">Read More</button>
+        <h2>{title}</h2>
+        <p>{description}</p>
+        <Link href={`/projects/${title}`}>
+          <button>Read More</button>
         </Link>
       </div>
     );
   } else {
     return (
       <div
-        className="work-card-component"
+        className={workCardStyles.work_card_component}
         style={{
           backgroundColor: "black",
           backgroundImage: `linear-gradient(
@@ -37,10 +42,10 @@ function WorkCard({ title, description, imgSrc }) {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h2 className="card-title">{title}</h2>
-        <p className="card-description">{description}</p>
-        <Link to={`/projects/${title}`}>
-          <button className="button">Read More</button>
+        <h2>{title}</h2>
+        <p>{description}</p>
+        <Link href={`/projects/${title}`}>
+          <button>Read More</button>
         </Link>
       </div>
     );

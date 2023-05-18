@@ -18,21 +18,6 @@
   }
 }
 
-.home-component > .info-wrapper:first-of-type {
-  margin-bottom: 0%;
-}
-
-.about-component {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.work-component {
-  position: relative;
-  z-index: 3;
-}
-
 .box-fade {
   display: auto;
   @include mediaQueries.desktop {

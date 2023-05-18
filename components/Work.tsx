@@ -1,31 +1,34 @@
-import { useWindowCheck } from "../customHooks";
-import { ReactComponent as CirclesSvg } from "../assets/svgs/abstract-dots.svg";
 import { useRef, useState } from "react";
+import { useWindowCheck } from "$/utils/customHooks";
 
-import projects from "../projects";
-import WorkCard from "./WorkCard";
+import projects from "$/constants/projects";
 
-import "../styles/components/WorkCard.scss";
+import workCardStyles from "$/styles/components/WorkCard.module.scss";
+import layoutStyles from "$/styles/layout/layout.module.scss";
+import svgStyles from "$/styles/imageStyles/svg.module.scss";
+import WorkCard from "$/components/WorkCard";
 
 function Work() {
   const [filteredProjects, setFilteredProjects] = useState(
     Object.values(projects).filter((project) => project.type === "professional")
   );
 
-  const professionalButton = useRef();
-  const personalButton = useRef();
+  const professionalButton = useRef<HTMLButtonElement>(null);
+  const personalButton = useRef<HTMLButtonElement>(null);
 
   const width = useWindowCheck();
 
-  const handleClick = (type) => {
-    if (type === "professional") {
-      professionalButton.current.classList.add("active");
-      personalButton.current.classList.remove("active");
-    }
+  const handleClick = (type: string) => {
+    if (professionalButton.current && personalButton.current) {
+      if (type === "professional") {
+        professionalButton.current.classList.add("active");
+        personalButton.current.classList.remove("active");
+      }
 
-    if (type === "personal") {
-      professionalButton.current.classList.remove("active");
-      personalButton.current.classList.add("active");
+      if (type === "personal") {
+        professionalButton.current.classList.remove("active");
+        personalButton.current.classList.add("active");
+      }
     }
 
     setFilteredProjects(
@@ -34,42 +37,38 @@ function Work() {
   };
 
   return (
-    <div className="container" id="work-container">
-      <div className="svg-wrapper circles-svg">
-        <CirclesSvg />
+    <div className={layoutStyles.container} id={workCardStyles.work_container}>
+      <div className={`${svgStyles.svg_wrapper} ${svgStyles.circles_svg}`}>
+        {/* svg component */}
       </div>
       <div
         className={
           width > 850
-            ? `component work-component work-split`
-            : `component work-component`
+            ? `${layoutStyles.component} ${layoutStyles.work_component} ${workCardStyles.work_split}`
+            : `${layoutStyles.component} ${layoutStyles.work_component}`
         }
       >
-        <section className="info-wrapper">
+        <section className={layoutStyles.info_wrapper}>
           <h1>Work</h1>
           <p>
             Collection of professional contributions and personal projects.
             Scroll through the cards, and click each to learn more.
           </p>
         </section>
-        <div className="buttons-wrapper">
+        <div className={workCardStyles.buttons_wrapper}>
           <button
             ref={professionalButton}
-            className="filter-button active"
+            className={workCardStyles.active}
             onClick={() => handleClick("professional")}
           >
             Professional
           </button>
-          <button
-            ref={personalButton}
-            className="filter-button"
-            onClick={() => handleClick("personal")}
-          >
+          <button ref={personalButton} onClick={() => handleClick("personal")}>
             Personal
           </button>
         </div>
-        <div className="work-cards-container">
-          <div className="card-scroll-container">
+        <div>
+          <div className={workCardStyles.card_scroll_container}>
             {filteredProjects.map((project) => {
               return (
                 <WorkCard
