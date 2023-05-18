@@ -1,0 +1,67 @@
+@use "$/styles/layout/mediaQueries.scss";
+
+#skill-card-wrapper {
+  z-index: 4;
+  @include mediaQueries.desktop {
+    grid-column: 7 / 13;
+  }
+}
+
+.skills-card-component {
+  position: relative;
+  text-align: center;
+  padding: 0.8rem;
+  width: 18rem;
+  margin: 1rem 1rem 3rem 1rem;
+  min-height: 22rem;
+  border: solid 2px index.$clr-neutral-100;
+  background: linear-gradient(50.61deg, #000000 8.52%, #3d3d3d 89.54%);
+  border-radius: 25px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(144.49deg, #f5fcff 0%, #046d31 91.67%);
+    border-radius: 25px;
+    z-index: -1;
+    @include mediaQueries.desktop {
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+}
+
+.skill-bars-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 1rem;
+  height: 15rem;
+}
+
+.skills-card-title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.skill-bar-wrapper {
+  display: flex;
+  gap: 3%;
+  height: 1em;
+}
+
+.skill-bar {
+  background: linear-gradient(90deg, #00c3ac -8.89%, #089243 50.22%);
+}
+
+.skill-bar-level {
+  font-size: 1rem;
+}
+
+.skill-name {
+  text-align: start;
+  font-size: 1rem;
+}

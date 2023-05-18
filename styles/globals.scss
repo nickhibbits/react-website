@@ -1,53 +1,6 @@
-@use "./layout/mediaQueries.scss";
+@use "$/styles/layout/mediaQueries.scss";
+@use "$/styles/mixins.scss";
 
-// Variables
-$ff-primary: "Righteous", "cursive";
-$ff-secondary: "Padauk", sans-serif;
-
-$blue: #0200ab;
-$green: #046d31;
-$green-light: #0fd05f;
-
-$clr-neutral-900: #000000;
-$clr-neutral-100: #fff;
-
-$fs-900: 6rem;
-$fs-500: 1.5rem;
-$fs-400: 1.3rem;
-
-$bg-primary: $blue;
-$bg-secondary-200: $green;
-$bg-secondary-100: $green-light;
-
-@mixin button-style {
-  padding: 0.3rem 1rem;
-  border: 0.5px solid $clr-neutral-900;
-  border-radius: 19px;
-  background: linear-gradient(180deg, $bg-secondary-100 0%, #005e28 100%);
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-@mixin button-pressed {
-  padding: 0.3rem 1rem;
-  border: 1px solid $clr-neutral-900;
-  border-radius: 19px;
-  background: linear-gradient(180deg, #005e28 0%, #079f47#005e28 100%);
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-@mixin box-fade-gradient {
-  background: linear-gradient(
-    135.68deg,
-    $bg-primary 0.74%,
-    $clr-neutral-900 34.34%
-  );
-}
-
-//resets
 *,
 *::before,
 *::after {
@@ -109,56 +62,8 @@ a {
 }
 
 button {
-  @include button-style();
+  @include mixins.button-style;
   &:active {
     background-color: black;
   }
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-.component {
-  margin: 0 1rem;
-  position: relative;
-  // z-index: 3;
-  @include mediaQueries.tablet {
-    margin-inline: 2rem;
-  }
-  @include mediaQueries.desktop {
-    margin-inline: 13.25rem;
-  }
-  @include mediaQueries.bigScreen {
-    margin-inline: 18rem;
-  }
-}
-
-.info-wrapper {
-  margin-bottom: 2.5rem;
-}
-
-// Consider how to combine all of this into a "split" mixin
-.split {
-  display: grid;
-  align-items: center;
-  gap: 1em;
-  grid-template-columns: repeat(12, minmax(1rem, 10rem));
-  // grid-template-columns: repeat(2, 50%);
-}
-
-.split > :nth-child(1) {
-  grid-column: 1 / 7;
-}
-
-.split > :nth-child(2) {
-  // border: solid 2px red;
-  position: relative;
-  grid-column: 8 / 13;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }

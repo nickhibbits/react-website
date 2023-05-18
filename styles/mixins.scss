@@ -1,0 +1,27 @@
+@mixin button-style {
+  padding: 0.3rem 1rem;
+  border: 0.5px solid $clr-neutral-900;
+  border-radius: 19px;
+  background: linear-gradient(180deg, $bg-secondary-100 0%, #005e28 100%);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin button-pressed {
+  padding: 0.3rem 1rem;
+  border: 1px solid $clr-neutral-900;
+  border-radius: 19px;
+  background: linear-gradient(180deg, #005e28 0%, #079f47#005e28 100%);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin box-fade-gradient {
+  background: linear-gradient(
+    135.68deg,
+    $bg-primary 0.74%,
+    $clr-neutral-900 34.34%
+  );
+}

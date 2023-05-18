@@ -1,0 +1,160 @@
+@use "$/styles/layout/mediaQueries.scss";
+
+nav {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  color: white;
+  background: rgb(0, 0, 0, 0.92);
+  border-bottom: solid 0.1em index.$clr-neutral-100;
+}
+
+.nav_wrapper {
+  position: relative;
+  margin: 0 1rem;
+  padding: 0.8rem 0;
+  z-index: 3;
+  // TODO resolve weird gradient at bottom of nav with blur enabled
+  // backdrop-filter: blur(0.45em);
+  // -webkit-backdrop-filter: blur(0.45em);
+  @include mediaQueries.tablet {
+    margin: 0 2rem;
+  }
+  @include mediaQueries.tablet-large {
+    display: grid;
+    gap: 1.8em;
+    grid-template-columns: repeat(12, minmax(1rem, 10rem));
+    padding: 0;
+  }
+  @include mediaQueries.desktop {
+    margin: 0 13.25rem;
+  }
+  @include mediaQueries.bigScreen {
+    margin: 0 18rem;
+  }
+}
+
+.nav_title {
+  display: flex;
+  align-items: center;
+  grid-column: 1 / 5;
+}
+
+.nav-options-component {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 8 / -1;
+}
+
+.nav-options-component-mobile-on {
+  font-size: 1.3em;
+  flex-direction: column;
+  min-height: 12rem;
+  li {
+    justify-content: center;
+  }
+}
+
+.nav-options-component > li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-wrapper > li:nth-child(1) {
+  display: flex;
+  grid-column: 1 / 8;
+}
+
+.avatar-wrapper {
+  display: flex;
+  padding-left: 0.5em;
+}
+
+.avatar {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.nav-options-mobile-avatar {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.nav-options-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.nav-options-mobile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10em 0 10em 0;
+  position: fixed;
+  // background: rgb(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(1em);
+  backdrop-filter: blur(1em);
+  min-height: 100vh;
+  transform: translateX(100%);
+  transition: transform 300ms ease-in;
+  // transition: display 100ms ease-in;
+
+  @include mediaQueries.tablet-large {
+    display: grid;
+    grid-template-columns: subgrid;
+    padding: 0;
+    position: relative;
+    background: rgb(0, 0, 0, 0.2);
+    backdrop-filter: blur(1em);
+    min-height: 0%;
+    transform: translateX(0);
+    grid-column: 8/13;
+  }
+}
+
+.nav-options-mobile-container[data-visible="true"] {
+  transform: translateX(0%);
+  inset: 0 0 0 20%;
+  @include mediaQueries.tablet {
+    inset: 0 0 0 40%;
+  }
+}
+
+.nav-options-mobile-container[data-visible="false"] {
+  opacity: 0;
+  @include mediaQueries.tablet-large {
+    opacity: 1;
+  }
+}
+
+@media (max-width: mediaQueries.$tablet-large) {
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    top: 0.5em;
+    right: 0em;
+    // left: 40em;
+    z-index: 9999;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .nav-options-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    font-size: 1.3em;
+  }
+}
