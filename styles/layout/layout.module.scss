@@ -1,7 +1,7 @@
 @use "$/styles/layout/mediaQueries.scss";
 @use "$/styles/variables";
 
-.app-component {
+.app_component {
   display: grid;
   position: relative;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));

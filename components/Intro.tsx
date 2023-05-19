@@ -6,7 +6,7 @@ import React from "react";
 import layoutStyles from "$/styles/layout/layout.module.scss";
 import appStyles from "$/styles/components/App.module.scss";
 
-function _Home() {
+function Intro() {
   const width = useWindowCheck();
   if (width) {
     return (
@@ -31,4 +31,4 @@ function _Home() {
   return null;
 }
 
-export default _Home;
+export default Intro;

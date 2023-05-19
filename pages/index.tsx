@@ -10,7 +10,7 @@ import layoutStyles from "$/styles/layout/layout.module.scss";
 import { useWindowCheck } from "$/utils/customHooks";
 import Image from "next/image";
 
-import _Home from "$/components/Home";
+import Intro from "$/components/Intro";
 import About from "$/components/About";
 import Work from "$/components/Work";
 import Connect from "$/components/Connect";
@@ -21,13 +21,13 @@ function Home() {
 
   if (size && width) {
     return (
-      <main className={appStyles.app_container}>
+      <div className={appStyles.app_container}>
         <div className={layoutStyles.app_component}>
           <section
             className={layoutStyles.container}
             id={layoutStyles.home_container}
           >
-            <_Home />
+            <Intro />
             <div className={appStyles.box_fade}>
               <ul className="icon-nav">
                 <li>
@@ -64,7 +64,7 @@ function Home() {
           <Work />
           <Connect />
         </div>
-      </main>
+      </div>
     );
   }
 }
