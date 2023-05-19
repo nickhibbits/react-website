@@ -5,7 +5,7 @@
   position: relative;
 }
 
-#home-component {
+#home_component {
   @include mediaQueries.desktop {
     position: relative;
     grid-row: 1 / 2;
@@ -19,7 +19,7 @@
   }
 }
 
-.box-fade {
+.box_fade {
   display: auto;
   @include mediaQueries.desktop {
     display: grid;
@@ -32,7 +32,7 @@
   }
 }
 
-.box-trees {
+.box_trees {
   display: none;
   @include mediaQueries.desktop {
     display: block;
