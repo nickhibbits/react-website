@@ -1,5 +1,3 @@
-"use client";
-
 import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { MdWorkOutline } from "react-icons/md";
 import { MdInfoOutline } from "react-icons/md";
