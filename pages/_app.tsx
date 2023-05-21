@@ -1,6 +1,7 @@
 import { AppProps } from "next/app";
 import { Padauk, Righteous } from "next/font/google";
 import "$/styles/globals.scss";
+import Navbar from "$/components/Nav/Navbar";
 
 const righteous = Righteous({ weight: "400", subsets: ["latin"] });
 const paduk = Padauk({ weight: "400", subsets: ["latin"] });
@@ -23,6 +24,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           }
         `}
       </style>
+      <Navbar />
       <Component {...pageProps} />
     </>
   );
