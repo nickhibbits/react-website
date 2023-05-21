@@ -2,6 +2,8 @@ import { navOptions } from "$/constants/navOptions";
 import React from "react";
 
 import navStyles from "$/styles/components/Nav.module.scss";
+import Link from "next/link";
+import { handleScroll } from "$/utils/helpers";
 
 type NavOptionProps = {
   toggleNavOptions: any;
@@ -31,12 +33,12 @@ function NavOptions({
       {navOptions.map((option: string) => {
         return (
           <li>
-            <a
+            <Link
               href={`#${option.toLowerCase()}_container`}
-              onClick={() => toggle()}
+              onClick={(e) => handleScroll(e, toggle)}
             >
               {option}
-            </a>
+            </Link>
           </li>
         );
       })}

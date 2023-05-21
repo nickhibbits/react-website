@@ -12,7 +12,10 @@ function About() {
 
   if (width) {
     return (
-      <div className={layoutStyles.container} id={layoutStyles.about_container}>
+      <div
+        className={`${layoutStyles.container} ${layoutStyles.about_container}`}
+        id="about_container"
+      >
         <div className={`${svgStyles.svg_wrapper} ${svgStyles.big_circle_svg}`}>
           <img src="/svgs/abstract-circle.svg" />
           {/* svg component */}

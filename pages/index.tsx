@@ -32,17 +32,17 @@ function Home() {
             <div className={appStyles.box_fade}>
               <ul className={imageStyles.icon_nav}>
                 <li>
-                  <a href="#about-container">
+                  <a href="#about_container">
                     <MdInfoOutline size={size} color={"white"} />
                   </a>
                 </li>
                 <li>
-                  <a href="#work-container">
+                  <a href="#work_container">
                     <MdWorkOutline size={size} color={"white"} />
                   </a>
                 </li>
                 <li>
-                  <a href="#connect-container">
+                  <a href="#connect_container">
                     <MdOutlineConnectWithoutContact
                       size={size}
                       color={"white"}
