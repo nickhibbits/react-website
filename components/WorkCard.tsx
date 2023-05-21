@@ -1,13 +1,16 @@
 import Link from "next/link";
 
 import workCardStyles from "$/styles/components/WorkCard.module.scss";
+import Image, { StaticImageData } from "next/image";
 
 type WorkCardProps = {
   title: string;
   description: string;
-  imgSrc: string;
+  imgSrc: StaticImageData | null;
 };
+
 function WorkCard({ title, description, imgSrc }: WorkCardProps) {
+  console.log("imgSrc", imgSrc);
   if (title === "Studio Zoomies") {
     return (
       <div
@@ -18,6 +21,7 @@ function WorkCard({ title, description, imgSrc }: WorkCardProps) {
       >
         <div className={workCardStyles.logo_container}>
           <div className={workCardStyles.logo_wrapper}>
+            <img src="/svgs/ZoomiesLogo.svg" />
             {/* zoomies logo svg  */}
           </div>
         </div>
@@ -28,28 +32,35 @@ function WorkCard({ title, description, imgSrc }: WorkCardProps) {
         </Link>
       </div>
     );
-  } else {
+  }
+
+  if (imgSrc) {
+    console.log("🔴", imgSrc);
     return (
-      <div
-        className={workCardStyles.work_card_component}
-        style={{
-          backgroundColor: "black",
-          backgroundImage: `linear-gradient(
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0.5)
-        ), url(${imgSrc})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <Link href={`/projects/${title}`}>
-          <button>Read More</button>
-        </Link>
+      <div className={workCardStyles.work_card_component}>
+        <div className={workCardStyles.work_card_info_wrapper}>
+          <h2>{title}</h2>
+          <p>{description}</p>
+          <Link href={`/projects/${title}`}>
+            <button>Read More</button>
+          </Link>
+        </div>
+        <Image
+          className={workCardStyles.image}
+          src={imgSrc}
+          alt="image description"
+          fill={true}
+          style={{
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+        <div className={workCardStyles.overlay}></div>
       </div>
     );
   }
+
+  return null;
 }
 
 export default WorkCard;

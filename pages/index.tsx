@@ -51,13 +51,20 @@ function Home() {
                 </li>
               </ul>
             </div>
-            <div className={appStyles.box_trees}>
-              {/* add height and width... ? */}
+            <div
+              className={appStyles.box_trees}
+              style={{ position: "relative" }}
+            >
               <Image
                 className="img"
                 src={trees}
                 alt="overhead shot of forest"
-                style={width > 850 ? { display: "none" } : { display: "auto" }}
+                fill={true}
+                style={{
+                  objectFit: "cover",
+                  transform: "scale(1.4)",
+                  objectPosition: "right",
+                }}
               />
             </div>
           </section>

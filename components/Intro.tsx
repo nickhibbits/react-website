@@ -1,5 +1,3 @@
-"use client";
-
 import { useWindowCheck } from "$/utils/customHooks";
 import React from "react";
 

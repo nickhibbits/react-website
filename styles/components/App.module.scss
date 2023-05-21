@@ -36,13 +36,9 @@
   display: none;
   @include mediaQueries.desktop {
     display: block;
-    position: relative;
     z-index: 1;
     grid-column: 6 / 13;
     grid-row: 1 / 2;
-    background-image: url("/public/images/trees-overhead.jpg");
-    background-position: right;
-    background-size: cover;
-    background-repeat: no-repeat;
+    overflow: hidden;
   }
 }
