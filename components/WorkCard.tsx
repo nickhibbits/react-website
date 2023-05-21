@@ -19,17 +19,19 @@ function WorkCard({ title, description, imgSrc }: WorkCardProps) {
           backgroundColor: "black",
         }}
       >
-        <div className={workCardStyles.logo_container}>
-          <div className={workCardStyles.logo_wrapper}>
+        <div className={workCardStyles.svg_container}>
+          <div className={workCardStyles.svg_wrapper}>
             <img src="/svgs/ZoomiesLogo.svg" />
             {/* zoomies logo svg  */}
           </div>
         </div>
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <Link href={`/projects/${title}`}>
-          <button>Read More</button>
-        </Link>
+        <div className={workCardStyles.work_card_info_wrapper}>
+          <h2>{title}</h2>
+          <p>{description}</p>
+          <Link href={`/projects/${title}`}>
+            <button>Read More</button>
+          </Link>
+        </div>
       </div>
     );
   }

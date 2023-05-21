@@ -1,6 +1,6 @@
-const bearsDen = "/images/Crowd-Front.jpg";
-const pollPhoto = "/images/poll-photo.jpg";
-const bookPhoto = "/images/books.jpg";
+const bearsDen = "/images/Crowd-Front-min.jpg";
+const pollPhoto = "/images/poll-photo-min.jpg";
+const bookPhoto = "/images/books-min.jpg";
 
 const projects = {
   zoomies: {

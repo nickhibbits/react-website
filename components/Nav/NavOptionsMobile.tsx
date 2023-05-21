@@ -5,7 +5,7 @@ import { MdOutlineClose } from "react-icons/md";
 import { MdOutlineMenu } from "react-icons/md";
 
 import NavOptions from "./NavOptions";
-import nickProfessional from "$/public/images/nick-professional.jpg";
+import nickProfessional from "$/public/images/nick-professional-min.jpg";
 import Image from "next/image";
 
 type NavOptionsMobileProps = {

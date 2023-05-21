@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-import nickProfessional from "$/public/images/nick-professional.jpg";
+import nickProfessional from "$/public/images/nick-professional-min.jpg";
 import NavOptions from "./NavOptions";
 import NavOptionsMobile from "./NavOptionsMobile";
 

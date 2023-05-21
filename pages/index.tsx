@@ -2,7 +2,7 @@ import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { MdWorkOutline } from "react-icons/md";
 import { MdInfoOutline } from "react-icons/md";
 
-import trees from "$/public/images/trees-overhead.jpg";
+import trees from "$/public/images/trees-overhead-min.jpg";
 
 import appStyles from "$/styles/components/App.module.scss";
 import layoutStyles from "$/styles/layout/layout.module.scss";

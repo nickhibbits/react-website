@@ -9,32 +9,11 @@ import svgStyles from "$/styles/imageStyles/svg.module.scss";
 import WorkCard from "$/components/WorkCard";
 
 function Work() {
-  const [filteredProjects, setFilteredProjects] = useState(
-    Object.values(projects).filter((project) => project.type === "professional")
+  const filteredProjects = Object.values(projects).filter(
+    (project) => project.type === "professional"
   );
 
-  const professionalButton = useRef<HTMLButtonElement>(null);
-  const personalButton = useRef<HTMLButtonElement>(null);
-
   const width = useWindowCheck();
-
-  const handleClick = (type: string) => {
-    if (professionalButton.current && personalButton.current) {
-      if (type === "professional") {
-        professionalButton.current.classList.add("active");
-        personalButton.current.classList.remove("active");
-      }
-
-      if (type === "personal") {
-        professionalButton.current.classList.remove("active");
-        personalButton.current.classList.add("active");
-      }
-    }
-
-    setFilteredProjects(
-      Object.values(projects).filter((project) => project.type === type)
-    );
-  };
 
   if (width) {
     return (
@@ -57,21 +36,6 @@ function Work() {
               Scroll through the cards, and click each to learn more.
             </p>
           </section>
-          <div className={workCardStyles.buttons_wrapper}>
-            <button
-              ref={professionalButton}
-              className={workCardStyles.active}
-              onClick={() => handleClick("professional")}
-            >
-              Professional
-            </button>
-            <button
-              ref={personalButton}
-              onClick={() => handleClick("personal")}
-            >
-              Personal
-            </button>
-          </div>
           <div>
             <div className={workCardStyles.card_scroll_container}>
               {filteredProjects.map((project) => {

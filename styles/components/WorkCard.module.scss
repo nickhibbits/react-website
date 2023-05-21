@@ -11,18 +11,6 @@
   max-width: 90vw;
 }
 
-.logo_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.logo_wrapper {
-  height: 150px;
-  width: 150px;
-}
-
 .work_card_component {
   display: flex;
   flex-direction: column;
@@ -35,11 +23,29 @@
   max-width: 18rem;
   border: solid 1px rgb(102, 101, 101);
   border-radius: 15px;
+
+  & > :first-child {
+    padding-right: 1rem;
+  }
+}
+
+.svg_container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.svg_wrapper {
+  position: absolute;
+  top: 3%;
+  height: 150px;
+  width: 150px;
 }
 
 .work_split {
   display: grid;
-  grid-template-rows: 0.1rem 1fr;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
   align-items: center;
   gap: 1em;
@@ -47,12 +53,10 @@
 }
 
 .work_split > :nth-child(1) {
-  grid-row: 2 / 3;
   grid-column: 1 / 7;
 }
 
-.work_split > :nth-child(3) {
-  grid-row: 2 / 3;
+.work_split > :nth-child(2) {
   grid-column: 8 / 13;
   @include mediaQueries.bigScreen {
     grid-column: 8 / 12;
@@ -81,20 +85,4 @@
   p {
     font-size: 0.8rem;
   }
-}
-
-.buttons_wrapper {
-  display: flex;
-  @include mediaQueries.tablet-large {
-    grid-row: 1 / 2;
-    grid-column: 8 / 13;
-  }
-}
-
-.buttons-wrapper :nth-child(1) {
-  margin-right: 0.5rem;
-}
-
-.active {
-  background: linear-gradient(180deg, #005e28 0%, #079f47 100%);
 }
