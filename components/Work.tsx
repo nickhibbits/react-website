@@ -17,7 +17,10 @@ function Work() {
 
   if (width) {
     return (
-      <div className={layoutStyles.container} id={layoutStyles.work_container}>
+      <div
+        className={`${layoutStyles.container} ${layoutStyles.work_container}`}
+        id="work_container"
+      >
         <div className={`${svgStyles.svg_wrapper} ${svgStyles.circles_svg}`}>
           <img src="/svgs/abstract-dots.svg" />
           {/* svg component */}

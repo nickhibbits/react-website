@@ -12,7 +12,10 @@ function Connect() {
   const size = 30;
   const width = useWindowCheck();
   return (
-    <div className={layoutStyles.container} id={layoutStyles.connect_container}>
+    <div
+      className={`${layoutStyles.container} ${layoutStyles.connect_container}`}
+      id="connect_container"
+    >
       <div className={`${svgStyles.svg_wrapper} ${svgStyles.rings_svg}`}>
         <img src="/svgs/rings.svg" alt="" />
       </div>

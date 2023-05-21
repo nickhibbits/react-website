@@ -1,6 +1,7 @@
 import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { MdWorkOutline } from "react-icons/md";
 import { MdInfoOutline } from "react-icons/md";
+import { handleScroll } from "$/utils/helpers";
 
 import trees from "$/public/images/trees-overhead-min.jpg";
 
@@ -15,6 +16,7 @@ import Intro from "$/components/Intro";
 import About from "$/components/About";
 import Work from "$/components/Work";
 import Connect from "$/components/Connect";
+import Link from "next/link";
 
 function Home() {
   const width = useWindowCheck();
@@ -24,30 +26,33 @@ function Home() {
     return (
       <div className={appStyles.app_container}>
         <div className={layoutStyles.app_component}>
-          <section
-            className={layoutStyles.container}
-            id={layoutStyles.home_container}
-          >
+          <section className={layoutStyles.home_container} id="home_container">
             <Intro />
             <div className={appStyles.box_fade}>
               <ul className={imageStyles.icon_nav}>
                 <li>
-                  <a href="#about_container">
+                  <Link
+                    href="#about_container"
+                    onClick={(e) => handleScroll(e)}
+                  >
                     <MdInfoOutline size={size} color={"white"} />
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#work_container">
+                  <Link href="#work_container" onClick={(e) => handleScroll(e)}>
                     <MdWorkOutline size={size} color={"white"} />
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#connect_container">
+                  <Link
+                    href="#connect_container"
+                    onClick={(e) => handleScroll(e)}
+                  >
                     <MdOutlineConnectWithoutContact
                       size={size}
                       color={"white"}
                     />
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

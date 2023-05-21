@@ -1,6 +1,6 @@
 export function handleScroll(
   e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-  callback: any
+  callback?: any
 ) {
   e.preventDefault();
 
@@ -12,5 +12,7 @@ export function handleScroll(
     behavior: "smooth",
   });
 
-  callback();
+  if (callback) {
+    callback();
+  }
 }

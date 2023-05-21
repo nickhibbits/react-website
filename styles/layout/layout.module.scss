@@ -14,9 +14,8 @@
   }
 }
 
-#home_container {
+.home_container {
   grid-area: 1 / 1 / 2 / 13;
-  background-image: url("/public/images/trees-overhead-min.jpg");
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,7 +37,7 @@
   );
 }
 
-#work_container {
+.work_container {
   grid-area: 3 / 1 / 4 / 13;
   background: linear-gradient(
     (180deg, variables.$clr-neutral-900 0%, variables.$bg-primary 100%)
@@ -46,7 +45,7 @@
   overflow-y: none;
 }
 
-#connect_container {
+.connect_container {
   grid-area: 4 / 1 / 5 / 13;
   background: linear-gradient(
     180deg,
