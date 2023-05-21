@@ -1,7 +1,7 @@
 @use "$/styles/variables.scss";
 @use "$/styles/layout/mediaQueries.scss";
 
-.icon-nav {
+.icon_nav {
   display: none;
   justify-content: space-evenly;
   padding: 0.5rem;
@@ -21,7 +21,7 @@
   }
 }
 
-.icon-nav > * {
+.icon_nav > * {
   display: flex;
   align-items: center;
   padding: 2rem;

@@ -1,5 +1,6 @@
 import { AppProps } from "next/app";
 import { Padauk, Righteous } from "next/font/google";
+import "$/styles/globals.scss";
 
 const righteous = Righteous({ weight: "400", subsets: ["latin"] });
 const paduk = Padauk({ weight: "400", subsets: ["latin"] });

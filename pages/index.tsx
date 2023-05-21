@@ -6,6 +6,7 @@ import trees from "$/public/images/trees-overhead.jpg";
 
 import appStyles from "$/styles/components/App.module.scss";
 import layoutStyles from "$/styles/layout/layout.module.scss";
+import imageStyles from "$/styles/imageStyles/IconNav.module.scss";
 
 import { useWindowCheck } from "$/utils/customHooks";
 import Image from "next/image";
@@ -29,7 +30,7 @@ function Home() {
           >
             <Intro />
             <div className={appStyles.box_fade}>
-              <ul className="icon-nav">
+              <ul className={imageStyles.icon_nav}>
                 <li>
                   <a href="#about-container">
                     <MdInfoOutline size={size} color={"white"} />
