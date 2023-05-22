@@ -6,17 +6,17 @@
 }
 
 #home_component {
-  @include mediaQueries.desktop {
-    position: relative;
-    grid-row: 1 / 2;
-    grid-column: 1 / 8;
-    align-self: center;
-    margin-left: 12.5rem;
-    z-index: 3;
-  }
-  @include mediaQueries.bigScreen {
-    margin-left: 17.9rem;
-  }
+  // @include mediaQueries.desktop {
+  //   position: relative;
+  //   grid-row: 1 / 2;
+  //   grid-column: 1 / 8;
+  //   align-self: center;
+  //   margin-left: 12.5rem;
+  //   z-index: 3;
+  // }
+  // @include mediaQueries.bigScreen {
+  //   margin-left: 17.9rem;
+  // }
 }
 
 .box_fade {
@@ -32,10 +32,35 @@
   }
 }
 
+.intro_wrapper {
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 4;
+
+  @include mediaQueries.desktop {
+    position: relative;
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    align-self: center;
+    margin-left: 12.5rem;
+    z-index: 3;
+  }
+  @include mediaQueries.bigScreen {
+    margin-left: 17.9rem;
+  }
+}
+
 .box_trees {
-  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 83.3vh;
+  z-index: 3;
   @include mediaQueries.desktop {
     display: block;
+    width: auto;
+    height: auto;
     z-index: 1;
     grid-column: 6 / 13;
     grid-row: 1 / 2;

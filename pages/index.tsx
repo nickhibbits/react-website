@@ -27,7 +27,9 @@ function Home() {
       <div className={appStyles.app_container}>
         <div className={layoutStyles.app_component}>
           <section className={layoutStyles.home_container} id="home_container">
-            <Intro />
+            <div className={appStyles.intro_wrapper}>
+              <Intro />
+            </div>
             <div className={appStyles.box_fade}>
               <ul className={imageStyles.icon_nav}>
                 <li>
@@ -56,6 +58,7 @@ function Home() {
                 </li>
               </ul>
             </div>
+
             <div
               className={appStyles.box_trees}
               style={{ position: "relative" }}

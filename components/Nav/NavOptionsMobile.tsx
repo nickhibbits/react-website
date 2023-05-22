@@ -50,12 +50,12 @@ function NavOptionsMobile({
         ref={navOptionsContainer}
       >
         <div className="nav-options-mobile-avatar-wrapper">
-          <Image
+          {/* <Image
             src={nickProfessional}
             alt="nick-professional"
             className="nav-options-mobile-avatar"
             style={navWidth > 850 ? { display: "none" } : { display: "block" }}
-          />
+          /> */}
         </div>
         <NavOptions
           mobile={navWidth < 850}

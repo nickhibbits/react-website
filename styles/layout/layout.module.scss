@@ -16,15 +16,15 @@
 
 .home_container {
   grid-area: 1 / 1 / 2 / 13;
-  background-position: right;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+
   @include mediaQueries.desktop {
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: subgrid;
     grid-template-columns: repeat(12, minmax(1rem, 10rem));
-    background-image: none;
+    align-items: normal;
+    position: relative;
   }
 }
 
@@ -64,7 +64,7 @@
 .component {
   margin: 0 1rem;
   position: relative;
-  // z-index: 3;
+  z-index: 3;
   @include mediaQueries.tablet {
     margin-inline: 2rem;
   }

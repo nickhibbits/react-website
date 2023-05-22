@@ -2,7 +2,7 @@
 @use "$/styles/variables";
 
 .skill_card_wrapper {
-  z-index: 4;
+  // z-index: 5;
   @include mediaQueries.desktop {
     grid-column: 7 / 13;
   }
