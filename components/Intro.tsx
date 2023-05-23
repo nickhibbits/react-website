@@ -8,18 +8,12 @@ function Intro() {
   const width = useWindowCheck();
   if (width) {
     return (
-      <div
-        className={width < 1150 ? `${layoutStyles.component}` : ""}
-        id={appStyles.home_component}
-      >
+      <div className={width < 1150 ? `${layoutStyles.component}` : ""}>
         <section className={layoutStyles.info_wrapper}>
           <h1>Hi, I'm Nick</h1>
           <p>
-            Welcome to my website and personal playground. <br />
-            <br />
-            Built using React and Sass I use this space to showcase my projects
-            and try out various concepts I come across in my time spent as a web
-            developer.
+            Programmer • Sound Enthusiast • Forest Dweller
+            {/* <br /> <br /> Checkout my work and other links below */}
           </p>
         </section>
       </div>
