@@ -76,7 +76,7 @@
   border-radius: 50%;
 }
 
-.nav_options-_obile_avatar {
+.nav_options_mobile_avatar {
   height: 80px;
   width: 80px;
   object-fit: cover;
@@ -107,6 +107,7 @@
   // transition: display 100ms ease-in;
 
   &[data-visible="true"] {
+    border-left: solid 2px variables.$clr-neutral-100;
     transform: translateX(0%);
     inset: 0 0 0 20%;
     @include mediaQueries.tablet {

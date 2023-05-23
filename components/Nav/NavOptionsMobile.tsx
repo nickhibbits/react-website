@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef, useEffect } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { MdOutlineMenu } from "react-icons/md";
@@ -7,6 +5,8 @@ import { MdOutlineMenu } from "react-icons/md";
 import NavOptions from "./NavOptions";
 import nickProfessional from "$/public/images/nick-professional-min.jpg";
 import Image from "next/image";
+
+import navStyles from "$/styles/components/Nav.module.scss";
 
 type NavOptionsMobileProps = {
   toggleNavOptions: any;
@@ -35,7 +35,7 @@ function NavOptionsMobile({
     <div className="nav-options-mobile-component">
       <div
         onClick={() => toggleNavOptions(navOptionsContainer, visible)}
-        className="mobile-nav-toggle"
+        className={navStyles.mobile_nav_toggle}
       >
         {displayMenuIcon ? (
           <MdOutlineMenu size={40} />
@@ -45,17 +45,17 @@ function NavOptionsMobile({
       </div>
 
       <div
-        className="nav-options-mobile-container"
+        className={navStyles.nav_options_mobile_container}
         data-visible={"false"}
         ref={navOptionsContainer}
       >
-        <div className="nav-options-mobile-avatar-wrapper">
-          {/* <Image
+        <div className={navStyles.nav_options_mobile_avatar_wrapper}>
+          <Image
             src={nickProfessional}
             alt="nick-professional"
-            className="nav-options-mobile-avatar"
+            className={navStyles.nav_options_mobile_avatar}
             style={navWidth > 850 ? { display: "none" } : { display: "block" }}
-          /> */}
+          />
         </div>
         <NavOptions
           mobile={navWidth < 850}

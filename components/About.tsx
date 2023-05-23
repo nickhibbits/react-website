@@ -1,5 +1,3 @@
-"use client";
-
 import SkillsCard from "./SkillsCard";
 import { useWindowCheck } from "$/utils/customHooks";
 
