@@ -30,9 +30,9 @@ function NavOptions({
           : `${navStyles.nav_options_component}`
       }
     >
-      {navOptions.map((option: string) => {
+      {navOptions.map((option: string, index: number) => {
         return (
-          <li>
+          <li key={index}>
             <Link
               href={`#${option.toLowerCase()}_container`}
               onClick={(e) => handleScroll(e, toggle)}

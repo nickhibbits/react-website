@@ -1,88 +1,32 @@
-import { MdOutlineConnectWithoutContact } from "react-icons/md";
-import { MdWorkOutline } from "react-icons/md";
-import { MdInfoOutline } from "react-icons/md";
-import { handleScroll } from "$/utils/helpers";
-
-import trees from "$/public/images/trees-overhead-min.jpg";
-
-import appStyles from "$/styles/components/App.module.scss";
-import layoutStyles from "$/styles/layout/layout.module.scss";
-import imageStyles from "$/styles/imageStyles/IconNav.module.scss";
-
-import { useWindowCheck } from "$/utils/customHooks";
-import Image from "next/image";
-
 import Intro from "$/components/Intro";
 import About from "$/components/About";
 import Work from "$/components/Work";
 import Connect from "$/components/Connect";
-import Link from "next/link";
+import IconNav from "$/components/IconNav";
+
+import appStyles from "$/styles/components/App.module.scss";
+import layoutStyles from "$/styles/layout/layout.module.scss";
+import ImageTransition from "$/components/ImageTransition";
 
 function Home() {
-  const width = useWindowCheck();
-  let size = width ? (width > 850 ? 50 : 30) : null;
-
-  if (size && width) {
-    return (
-      <div className={appStyles.app_container}>
-        <div className={layoutStyles.app_component}>
-          <section className={layoutStyles.home_container} id="home_container">
-            <div className={appStyles.intro_wrapper}>
-              <Intro />
-            </div>
-            <div className={appStyles.box_fade}>
-              <ul className={imageStyles.icon_nav}>
-                <li>
-                  <Link
-                    href="#about_container"
-                    onClick={(e) => handleScroll(e)}
-                  >
-                    <MdInfoOutline size={size} color={"white"} />
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#work_container" onClick={(e) => handleScroll(e)}>
-                    <MdWorkOutline size={size} color={"white"} />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#connect_container"
-                    onClick={(e) => handleScroll(e)}
-                  >
-                    <MdOutlineConnectWithoutContact
-                      size={size}
-                      color={"white"}
-                    />
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div
-              className={appStyles.box_trees}
-              style={{ position: "relative" }}
-            >
-              <Image
-                className="img"
-                src={trees}
-                alt="overhead shot of forest"
-                fill={true}
-                style={{
-                  objectFit: "cover",
-                  transform: "scale(1.4)",
-                  objectPosition: "right",
-                }}
-              />
-            </div>
-          </section>
-          <About />
-          <Work />
-          <Connect />
-        </div>
+  return (
+    <div className={appStyles.app_container}>
+      <div className={layoutStyles.app_component}>
+        <section className={layoutStyles.home_container} id="home_container">
+          <div className={appStyles.intro_wrapper}>
+            <Intro />
+          </div>
+          <div className={appStyles.box_fade}>
+            <IconNav />
+          </div>
+          <ImageTransition />
+        </section>
+        <About />
+        <Work />
+        <Connect />
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Home;
