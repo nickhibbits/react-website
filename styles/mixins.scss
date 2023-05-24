@@ -9,6 +9,7 @@
     variables.$bg-secondary-100 0%,
     #005e28 100%
   );
+
   &:hover {
     cursor: pointer;
   }
@@ -24,10 +25,11 @@
   }
 }
 
-@mixin box-fade-gradient {
-  background: linear-gradient(
-    135.68deg,
-    variables.$bg-primary 0.74%,
-    variables.$clr-neutral-900 34.34%
-  );
-}
+// @mixin box-fade-gradient {
+//   animation: fade 3s infinite;
+//   // background-image: linear-gradient(
+//   //   135.68deg,
+//   //   variables.$bg-primary 0.74%,
+//   //   variables.$clr-neutral-900 34.34%
+//   // );
+// }

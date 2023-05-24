@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 export const useWindowCheck = () => {
-  // if (typeof window !== "undefined") {
   const [width, setWidth] = useState(0);
 
   const updateWidth = () => {
@@ -18,5 +17,4 @@ export const useWindowCheck = () => {
   }, []);
 
   return width;
-  // }
 };

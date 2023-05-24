@@ -58,13 +58,14 @@ function Navbar() {
         </div>
         {navWidth && navWidth >= 850 ? (
           <NavOptions toggleNavOptions={toggleNavOptions} mobile={false} />
-        ) : (
+        ) : null}
+        {navWidth && navWidth <= 850 ? (
           <NavOptionsMobile
             toggleNavOptions={toggleNavOptions}
             displayMenuIcon={displayMenuIcon}
             navWidth={navWidth}
           />
-        )}
+        ) : null}
       </div>
     </nav>
   );
