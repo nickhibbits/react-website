@@ -5,61 +5,28 @@
 $colorAmount: 8%;
 $darkSpace: 60%;
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .app_container {
   position: relative;
 }
 
 .box_fade {
-  display: auto;
-  position: relative;
-  background-image: linear-gradient(
-    135.68deg,
-    variables.$bg-primary 0.74%,
-    variables.$clr-neutral-900 34.34%
-  );
-  animation: fade 6s infinite;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(
+  @include mixins.fade_animation(
+    linear-gradient(
+      135.68deg,
+      variables.$bg-primary 0.74%,
+      variables.$clr-neutral-900 34.34%
+    ),
+    linear-gradient(
       135.68deg,
       #49ec08 $colorAmount,
       variables.$clr-neutral-900 $darkSpace
-    );
-    animation: fade 6s infinite 2s;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(
+    ),
+    linear-gradient(
       135.68deg,
       #ec5b08 $colorAmount,
       variables.$clr-neutral-900 $darkSpace
-    );
-    animation: fade 6s infinite 4s;
-  }
+    )
+  );
 
   @include mediaQueries.desktop {
     display: grid;
@@ -88,21 +55,5 @@ $darkSpace: 60%;
   }
   @include mediaQueries.bigScreen {
     margin-left: 17.9rem;
-  }
-}
-
-.box_trees {
-  position: absolute;
-  width: 100vw;
-  height: 83.3vh;
-  z-index: 3;
-  @include mediaQueries.desktop {
-    display: block;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    grid-column: 6 / 13;
-    grid-row: 1 / 2;
-    overflow: hidden;
   }
 }

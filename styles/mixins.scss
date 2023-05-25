@@ -1,4 +1,5 @@
 @use "$/styles/variables";
+@use "$/styles/animations";
 
 @mixin button-style {
   padding: 0.3rem 1rem;
@@ -25,11 +26,31 @@
   }
 }
 
-// @mixin box-fade-gradient {
-//   animation: fade 3s infinite;
-//   // background-image: linear-gradient(
-//   //   135.68deg,
-//   //   variables.$bg-primary 0.74%,
-//   //   variables.$clr-neutral-900 34.34%
-//   // );
-// }
+// ANIMATIONS
+@mixin layer_position_cover {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin fade_animation($bg1: auto, $bg2: auto, $bg3: auto) {
+  display: auto;
+  position: relative;
+  background-image: $bg1;
+  animation: fade 6s infinite;
+
+  &::before {
+    @include layer_position_cover;
+    background-image: $bg2;
+    animation: fade 6s infinite 2s;
+  }
+
+  &::after {
+    @include layer_position_cover;
+    background-image: $bg3;
+    animation: fade 6s infinite 4s;
+  }
+}
