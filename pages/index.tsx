@@ -16,9 +16,7 @@ function Home() {
           <div className={appStyles.intro_wrapper}>
             <Intro />
           </div>
-          <div className={appStyles.box_fade}>
-            <IconNav />
-          </div>
+          <div className={appStyles.box_fade}>{/* <IconNav /> */}</div>
           <ImageTransition />
         </section>
         <About />

@@ -1,0 +1,26 @@
+@use "$/styles/animations";
+@use "$/styles/layout/mediaQueries.scss";
+
+.image_transition_container {
+  position: absolute;
+  width: 100vw;
+  height: 83.3vh;
+
+  & .img:nth-child(1) {
+    animation: fade 6s infinite 0s;
+  }
+
+  & .img:nth-child(2) {
+    animation: fade 6s infinite 2s;
+  }
+
+  @include mediaQueries.desktop {
+    display: block;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    grid-column: 6 / 13;
+    grid-row: 1 / 2;
+    overflow: hidden;
+  }
+}
