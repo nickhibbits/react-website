@@ -1,5 +1,6 @@
-import trees from "$/public/images/trees-overhead-min.jpg";
-import dials from "$/public/images/Dials.jpg";
+import treesImage from "$/public/images/trees-overhead-min.jpg";
+import dialsImage from "$/public/images/Dials.jpg";
+import codeImage from "$/public/images/code-image.jpg";
 
 import Image from "next/image";
 
@@ -13,8 +14,8 @@ function ImageTransition() {
     >
       <Image
         className={imageStyles.img}
-        src={trees}
-        alt="overhead shot of forest"
+        src={treesImage}
+        alt="overhead forest shot"
         fill={true}
         style={{
           objectFit: "cover",
@@ -24,12 +25,22 @@ function ImageTransition() {
       />
       <Image
         className={imageStyles.img}
-        src={dials}
+        src={dialsImage}
         alt="sound eq dials"
         fill={true}
         style={{
           objectFit: "contain",
-          transform: "scale(3.8)",
+          transform: "scale(3.7)",
+        }}
+      />
+      <Image
+        className={imageStyles.img}
+        src={codeImage}
+        alt="code"
+        fill={true}
+        style={{
+          objectFit: "cover",
+          transform: "scale(1.4)",
         }}
       />
     </div>
