@@ -4,7 +4,7 @@ import { MdInfoOutline } from "react-icons/md";
 import { handleScroll } from "$/utils/helpers";
 import { useWindowCheck } from "$/utils/customHooks";
 
-import imageStyles from "$/styles/imageStyles/IconNav.module.scss";
+import iconNavStyles from "$/styles/imageStyles/IconNav.module.scss";
 
 import Link from "next/link";
 import React from "react";
@@ -15,7 +15,7 @@ function IconNav() {
 
   if (size) {
     return (
-      <ul className={imageStyles.icon_nav}>
+      <ul className={iconNavStyles.icon_nav}>
         <li>
           <Link href="#about_container" onClick={(e) => handleScroll(e)}>
             <MdInfoOutline size={size} color={"white"} />

@@ -9,24 +9,38 @@ $darkSpace: 60%;
   position: relative;
 }
 
-.box_fade {
-  @include mixins.fade_animation(
-    linear-gradient(
-      135.68deg,
-      variables.$bg-primary 0.74%,
-      variables.$clr-neutral-900 34.34%
-    ),
-    linear-gradient(
-      135.68deg,
-      #49ec08 $colorAmount,
-      variables.$clr-neutral-900 $darkSpace
-    ),
-    linear-gradient(
-      135.68deg,
-      #ec5b08 $colorAmount,
-      variables.$clr-neutral-900 $darkSpace
-    )
-  );
+.color_fade_container {
+  position: relative;
+
+  .color_fade_box {
+    &:nth-child(1) {
+      @include mixins.layer_position_cover;
+      background-image: linear-gradient(
+        135.68deg,
+        variables.$bg-primary $colorAmount,
+        variables.$clr-neutral-900 $darkSpace
+      );
+      z-index: 11;
+    }
+    &:nth-child(2) {
+      @include mixins.layer_position_cover;
+      background-image: linear-gradient(
+        135.68deg,
+        #ec5b08 $colorAmount,
+        variables.$clr-neutral-900 $darkSpace
+      );
+      z-index: 8;
+    }
+    &:nth-child(3) {
+      @include mixins.layer_position_cover;
+      background-image: linear-gradient(
+        135.68deg,
+        #49ec08 $colorAmount,
+        variables.$clr-neutral-900 $darkSpace
+      );
+      z-index: 10;
+    }
+  }
 
   @include mediaQueries.desktop {
     display: grid;
