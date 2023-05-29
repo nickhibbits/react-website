@@ -83,7 +83,8 @@
     display: flex;
     font-family: variables.$ff-secondary;
     font-size: clamp(1rem, 2vw, variables.$fs-400);
-    line-height: 1.4em;
+    // line-height: 1.4em;
+    margin: 0;
 
     & * {
       margin-right: 0.5rem;

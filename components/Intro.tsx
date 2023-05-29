@@ -7,36 +7,54 @@ import appStyles from "$/styles/components/App.module.scss";
 import { TransitionProps } from "$/types";
 
 //TODO add hover effect with synced title and image
-function Intro({ animationSequecence, transition }: TransitionProps) {
+function Intro({
+  animationSequecence,
+  transition,
+  greetingComplete,
+  updateGreeting,
+}: { greetingComplete: boolean; updateGreeting: any } & TransitionProps) {
   const width = useWindowCheck();
   if (width) {
     return (
       <div className={width < 1150 ? `${layoutStyles.component}` : ""}>
         <section className={layoutStyles.info_wrapper}>
-          <h1>Hi, I'm Nick</h1>
-          <ul className={layoutStyles.title_list}>
-            <motion.li
-              animate={animationSequecence}
-              transition={transition(0).titleSibling}
-              className={appStyles.color_fade_box}
+          {greetingComplete ? (
+            <>
+              <h1>Hi, I'm Nick</h1>
+              <ul className={layoutStyles.title_list}>
+                <motion.li
+                  animate={animationSequecence}
+                  transition={transition(0).title}
+                  className={appStyles.color_fade_box}
+                >
+                  Programmer
+                </motion.li>
+                <motion.li
+                  animate={animationSequecence}
+                  transition={transition(1).title}
+                  className={appStyles.color_fade_box}
+                >
+                  • Sound Enthusiast
+                </motion.li>
+                <motion.li
+                  animate={animationSequecence}
+                  transition={transition(2).title}
+                  className={appStyles.color_fade_box}
+                >
+                  • Forest Dweller
+                </motion.li>
+              </ul>
+            </>
+          ) : (
+            <motion.h1
+              animate={{ opacity: [0, 1] }}
+              transition={{ ease: "easeOut", duration: 1 }}
+              onAnimationComplete={() => updateGreeting(true)}
+              style={{ paddingBottom: "25px" }}
             >
-              Programmer
-            </motion.li>
-            <motion.li
-              animate={animationSequecence}
-              transition={transition(1).titleSibling}
-              className={appStyles.color_fade_box}
-            >
-              • Sound Enthusiast
-            </motion.li>
-            <motion.li
-              animate={animationSequecence}
-              transition={transition(2).titleSibling}
-              className={appStyles.color_fade_box}
-            >
-              • Forest Dweller
-            </motion.li>
-          </ul>
+              Hi, I'm Nick
+            </motion.h1>
+          )}
         </section>
       </div>
     );

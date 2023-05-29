@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useLayoutEffect } from "react";
+import { motion } from "framer-motion";
 
 import nickProfessional from "$/public/images/nick-professional-min.jpg";
 import NavOptions from "./NavOptions";
@@ -42,7 +43,12 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={navStyles.nav} ref={nav}>
+    <motion.nav
+      animate={{ opacity: [0, 1] }}
+      transition={{ duration: 1 }}
+      className={navStyles.nav}
+      ref={nav}
+    >
       <div className={navStyles.nav_wrapper}>
         <div className={navStyles.nav_title}>
           <Link href="/">
@@ -67,7 +73,7 @@ function Navbar() {
           />
         ) : null}
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 

@@ -11,9 +11,11 @@ import ImageTransition from "$/components/ImageTransition";
 import { useWindowCheck } from "$/utils/customHooks";
 
 import ColorFadeTransition from "$/components/ColorFadeTransition";
+import { useState } from "react";
 
-function Home() {
+function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const width = useWindowCheck();
+  const [greetingComplete, setGreetingComplete] = useState(false);
 
   const opacitySequence = {
     imageBase: { opacity: [0, 1, 1, 1, 0, 1] },
@@ -22,10 +24,9 @@ function Home() {
   };
   const transition = (delay: number) => {
     return {
-      imageBase: { duration: 5, delay },
-      imageSibling: { duration: 5, delay },
-      titleGroup: { duration: 5, delay },
-      titleSibling: { duration: 2, delay },
+      imageBase: { duration: 3, delay },
+      imageSibling: { duration: 3, delay },
+      title: { duration: 2, delay },
     };
   };
 
@@ -38,20 +39,27 @@ function Home() {
               <Intro
                 animationSequecence={opacitySequence.title}
                 transition={transition}
+                greetingComplete={greetingComplete}
+                updateGreeting={setGreetingComplete}
               />
             </div>
 
-            <ColorFadeTransition
-              animationSequecence={opacitySequence}
-              transition={transition}
-            />
+            {greetingComplete === true ? (
+              <>
+                <ColorFadeTransition
+                  animationSequecence={opacitySequence}
+                  transition={transition}
+                />
 
-            {/* <IconNav /> */}
+                {/* <IconNav /> */}
 
-            <ImageTransition
-              animationSequecence={opacitySequence}
-              transition={transition}
-            />
+                <ImageTransition
+                  animationSequecence={opacitySequence}
+                  transition={transition}
+                  updateIntroComplete={updateIntroComplete}
+                />
+              </>
+            ) : null}
           </section>
           <About />
           <Work />

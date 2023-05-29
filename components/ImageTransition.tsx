@@ -9,7 +9,11 @@ import Image from "next/image";
 import imageStyles from "$/styles/imageStyles/ImageTransitions.module.scss";
 import { TransitionProps } from "$/types";
 
-function ImageTransition({ animationSequecence, transition }: TransitionProps) {
+function ImageTransition({
+  animationSequecence,
+  transition,
+  updateIntroComplete,
+}: { updateIntroComplete: any } & TransitionProps) {
   return (
     <div
       className={imageStyles.image_transition_container}
@@ -36,6 +40,7 @@ function ImageTransition({ animationSequecence, transition }: TransitionProps) {
         animate={animationSequecence.imageSibling}
         transition={transition(1).imageSibling}
         className={imageStyles.image_wrapper}
+        onAnimationComplete={() => updateIntroComplete(true)}
       >
         <Image
           className={imageStyles.img}
