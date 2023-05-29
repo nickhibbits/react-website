@@ -1,4 +1,4 @@
-// import Intro from "$/components/Intro";
+import Intro from "$/components/Intro";
 import About from "$/components/About";
 import Work from "$/components/Work";
 import Connect from "$/components/Connect";
@@ -6,28 +6,27 @@ import Connect from "$/components/Connect";
 
 import appStyles from "$/styles/components/App.module.scss";
 import layoutStyles from "$/styles/layout/layout.module.scss";
-// import ImageTransition from "$/components/ImageTransition";
-import { useAnimation } from "framer-motion";
+import ImageTransition from "$/components/ImageTransition";
+
 import { useWindowCheck } from "$/utils/customHooks";
-import treesImage from "$/public/images/trees-overhead-min.jpg";
-import dialsImage from "$/public/images/Dials.jpg";
-import codeImage from "$/public/images/code-image.jpg";
 
-import { motion } from "framer-motion";
-
-import Image from "next/image";
-
-import imageStyles from "$/styles/imageStyles/ImageTransitions.module.scss";
+import ColorFadeTransition from "$/components/ColorFadeTransition";
 
 function Home() {
   const width = useWindowCheck();
 
   const opacitySequence = {
-    base: { opacity: [0, 1, 1, 1, 0, 1] },
-    sibling: { opacity: [0, 1, 1, 0, 0] },
+    imageBase: { opacity: [0, 1, 1, 1, 0, 1] },
+    imageSibling: { opacity: [0, 1, 1, 1, 0] },
+    title: { opacity: [0, 1, 1] },
   };
   const transition = (delay: number) => {
-    return { base: { duration: 5, delay }, sibling: { duration: 5, delay } };
+    return {
+      imageBase: { duration: 5, delay },
+      imageSibling: { duration: 5, delay },
+      titleGroup: { duration: 5, delay },
+      titleSibling: { duration: 2, delay },
+    };
   };
 
   if (width) {
@@ -36,91 +35,23 @@ function Home() {
         <div className={layoutStyles.app_component}>
           <section className={layoutStyles.home_container} id="home_container">
             <div className={appStyles.intro_wrapper}>
-              {/* <Intro /> */}
-              <div className={width < 1150 ? `${layoutStyles.component}` : ""}>
-                <section className={layoutStyles.info_wrapper}>
-                  <h1>Hi, I'm Nick</h1>
-                  <p>Programmer • Sound Enthusiast • Forest Dweller</p>
-                </section>
-              </div>
+              <Intro
+                animationSequecence={opacitySequence.title}
+                transition={transition}
+              />
             </div>
 
-            <div className={appStyles.color_fade_container}>
-              <motion.div
-                animate={opacitySequence.base}
-                transition={transition(0).base}
-                className={appStyles.color_fade_box}
-              />
-              <motion.div
-                animate={opacitySequence.sibling}
-                transition={transition(1).sibling}
-                className={appStyles.color_fade_box}
-              />
-              <motion.div
-                animate={opacitySequence.sibling}
-                transition={transition(2).sibling}
-                className={appStyles.color_fade_box}
-              />
-              {/* <IconNav /> */}
-            </div>
+            <ColorFadeTransition
+              animationSequecence={opacitySequence}
+              transition={transition}
+            />
 
-            {/* <ImageTransition /> */}
-            <div
-              className={imageStyles.image_transition_container}
-              style={{ position: "relative" }}
-            >
-              <motion.div
-                animate={opacitySequence.base}
-                transition={transition(0).base}
-                className={imageStyles.image_wrapper}
-              >
-                <Image
-                  className={imageStyles.img}
-                  src={codeImage}
-                  alt="code"
-                  fill={true}
-                  style={{
-                    objectFit: "cover",
-                    transform: "scale(1.4)",
-                  }}
-                />
-              </motion.div>
+            {/* <IconNav /> */}
 
-              <motion.div
-                animate={opacitySequence.sibling}
-                transition={transition(1).sibling}
-                className={imageStyles.image_wrapper}
-              >
-                <Image
-                  className={imageStyles.img}
-                  src={dialsImage}
-                  alt="sound eq dials"
-                  fill={true}
-                  style={{
-                    objectFit: "contain",
-                    transform: "scale(3.7)",
-                  }}
-                />
-              </motion.div>
-
-              <motion.div
-                animate={opacitySequence.sibling}
-                transition={transition(2).sibling}
-                className={imageStyles.image_wrapper}
-              >
-                <Image
-                  className={imageStyles.img}
-                  src={treesImage}
-                  alt="overhead forest shot"
-                  fill={true}
-                  style={{
-                    objectFit: "cover",
-                    transform: "scale(1.4)",
-                    objectPosition: "right",
-                  }}
-                />
-              </motion.div>
-            </div>
+            <ImageTransition
+              animationSequecence={opacitySequence}
+              transition={transition}
+            />
           </section>
           <About />
           <Work />

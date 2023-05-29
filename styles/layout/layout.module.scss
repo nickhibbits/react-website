@@ -78,6 +78,17 @@
 
 .info_wrapper {
   margin-bottom: 2.5rem;
+
+  .title_list {
+    display: flex;
+    font-family: variables.$ff-secondary;
+    font-size: clamp(1rem, 2vw, variables.$fs-400);
+    line-height: 1.4em;
+
+    & * {
+      margin-right: 0.5rem;
+    }
+  }
 }
 
 // Consider how to combine all of this into a "split" mixin
