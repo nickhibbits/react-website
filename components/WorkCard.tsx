@@ -10,7 +10,6 @@ type WorkCardProps = {
 };
 
 function WorkCard({ title, description, imgSrc }: WorkCardProps) {
-  console.log("imgSrc", imgSrc);
   if (title === "Studio Zoomies") {
     return (
       <div
@@ -37,7 +36,6 @@ function WorkCard({ title, description, imgSrc }: WorkCardProps) {
   }
 
   if (imgSrc) {
-    console.log("🔴", imgSrc);
     return (
       <div className={workCardStyles.work_card_component}>
         <div className={workCardStyles.work_card_info_wrapper}>

@@ -23,6 +23,7 @@ function ImageTransition({
         animate={animationSequecence.imageBase}
         transition={transition(0).imageBase}
         className={imageStyles.image_wrapper}
+        style={{ opacity: 0 }}
       >
         <Image
           className={imageStyles.img}
@@ -40,6 +41,7 @@ function ImageTransition({
         animate={animationSequecence.imageSibling}
         transition={transition(1).imageSibling}
         className={imageStyles.image_wrapper}
+        style={{ opacity: 0 }}
         onAnimationComplete={() => updateIntroComplete(true)}
       >
         <Image
@@ -58,6 +60,7 @@ function ImageTransition({
         animate={animationSequecence.imageSibling}
         transition={transition(2).imageSibling}
         className={imageStyles.image_wrapper}
+        style={{ opacity: 0 }}
       >
         <Image
           className={imageStyles.img}

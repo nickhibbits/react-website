@@ -26,6 +26,7 @@ function Intro({
                   animate={animationSequecence}
                   transition={transition(0).title}
                   className={appStyles.color_fade_box}
+                  style={{ opacity: 0 }}
                 >
                   Programmer
                 </motion.li>
@@ -33,6 +34,7 @@ function Intro({
                   animate={animationSequecence}
                   transition={transition(1).title}
                   className={appStyles.color_fade_box}
+                  style={{ opacity: 0 }}
                 >
                   • Sound Enthusiast
                 </motion.li>
@@ -40,6 +42,7 @@ function Intro({
                   animate={animationSequecence}
                   transition={transition(2).title}
                   className={appStyles.color_fade_box}
+                  style={{ opacity: 0 }}
                 >
                   • Forest Dweller
                 </motion.li>
@@ -49,7 +52,7 @@ function Intro({
             <motion.h1
               animate={{ opacity: [0, 1] }}
               transition={{ ease: "easeOut", duration: 1 }}
-              onAnimationComplete={() => updateGreeting(true)}
+              onAnimationComplete={() => updateGreeting()}
               style={{ paddingBottom: "25px" }}
             >
               Hi, I'm Nick

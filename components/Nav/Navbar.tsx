@@ -47,6 +47,7 @@ function Navbar() {
       animate={{ opacity: [0, 1] }}
       transition={{ duration: 1 }}
       className={navStyles.nav}
+      style={{ opacity: 0 }}
       ref={nav}
     >
       <div className={navStyles.nav_wrapper}>

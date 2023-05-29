@@ -11,7 +11,7 @@ import ImageTransition from "$/components/ImageTransition";
 import { useWindowCheck } from "$/utils/customHooks";
 
 import ColorFadeTransition from "$/components/ColorFadeTransition";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const width = useWindowCheck();
@@ -30,6 +30,14 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
     };
   };
 
+  const handleUpdateGreeting = () => {
+    setGreetingComplete(true);
+  };
+
+  useEffect(() => {
+    console.log("🟣 greetingComplete", greetingComplete);
+  }, [greetingComplete]);
+
   if (width) {
     return (
       <div className={appStyles.app_container}>
@@ -40,11 +48,11 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
                 animationSequecence={opacitySequence.title}
                 transition={transition}
                 greetingComplete={greetingComplete}
-                updateGreeting={setGreetingComplete}
+                updateGreeting={handleUpdateGreeting}
               />
             </div>
 
-            {greetingComplete === true ? (
+            {greetingComplete ? (
               <>
                 <ColorFadeTransition
                   animationSequecence={opacitySequence}

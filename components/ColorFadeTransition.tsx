@@ -15,16 +15,19 @@ function ColorFadeTransition({
         animate={animationSequecence.imageBase}
         transition={transition(0).imageBase}
         className={appStyles.color_fade_box}
+        style={{ opacity: 0 }}
       />
       <motion.div
         animate={animationSequecence.imageSibling}
         transition={transition(1).imageSibling}
         className={appStyles.color_fade_box}
+        style={{ opacity: 0 }}
       />
       <motion.div
         animate={animationSequecence.imageSibling}
         transition={transition(2).imageSibling}
         className={appStyles.color_fade_box}
+        style={{ opacity: 0 }}
       />
     </div>
   );
