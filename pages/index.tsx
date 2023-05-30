@@ -18,11 +18,12 @@ import { useAnimation, useAnimationControls } from "framer-motion";
 function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const width = useWindowCheck();
   const [greetingComplete, setGreetingComplete] = useState(false);
+  const [previousHover, setPreviousHover] = useState("programmer");
 
   const image1stSiblingControls = useAnimation();
   const image2ndSiblingControls = useAnimation();
   const image3rdSiblingControls = useAnimation();
-  // const colorControls = useAnimation();
+
   const title1Controls = useAnimation();
   const title2Controls = useAnimation();
   const title3Controls = useAnimation();
@@ -30,20 +31,6 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const handleUpdateGreeting = () => {
     setGreetingComplete(true);
   };
-
-  // const handleHoverState = (title: string) => {
-  //   switch (title) {
-  //     case "programmer":
-  //       break;
-
-  //     case "forest":
-  //       break;
-
-  //     default:
-  //       "sound";
-  //       break;
-  //   }
-  // };
 
   useEffect(() => {
     title1Controls.start(opacitySequenceVariants.title1);
@@ -60,6 +47,79 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
     );
   }, [greetingComplete]);
 
+  const handleHover = (title: string, previousTitle: string) => {
+    console.log("Hover 🟢", title);
+    console.log("previous ", previousTitle);
+
+    const hideImage = ["programmer", "sound", "forest"].find((value) => {
+      const imageToHide = value !== title && value !== previousTitle;
+
+      console.log("imageToHide", imageToHide);
+      return imageToHide;
+    });
+
+    console.log("hideImage", hideImage);
+
+    switch (hideImage) {
+      case "programmer":
+        image1stSiblingControls.start(opacitySequenceVariants.hideImage);
+
+        break;
+
+      case "sound":
+        image2ndSiblingControls.start(opacitySequenceVariants.hideImage);
+
+        break;
+      case "forest":
+        image3rdSiblingControls.start(opacitySequenceVariants.hideImage);
+
+        break;
+    }
+
+    switch (previousTitle) {
+      case "programmer":
+        image1stSiblingControls.start(opacitySequenceVariants.fadeImage);
+        break;
+      case "sound":
+        image2ndSiblingControls.start(opacitySequenceVariants.fadeImage);
+        break;
+      case "forest":
+        image3rdSiblingControls.start(opacitySequenceVariants.fadeImage);
+        break;
+    }
+
+    switch (title) {
+      case "programmer":
+        title1Controls.start(opacitySequenceVariants.titleFadeIn);
+        title2Controls.start(opacitySequenceVariants.titleFadeOut);
+        title3Controls.start(opacitySequenceVariants.titleFadeOut);
+        image1stSiblingControls.start(opacitySequenceVariants.imageHover);
+        // image2ndSiblingControls.start(opacitySequenceVariants.fadeImage);
+        // image3rdSiblingControls.start(opacitySequenceVariants.fadeImage);
+        break;
+
+      case "sound":
+        title2Controls.start(opacitySequenceVariants.titleFadeIn);
+        title1Controls.start(opacitySequenceVariants.titleFadeOut);
+        title3Controls.start(opacitySequenceVariants.titleFadeOut);
+        image2ndSiblingControls.start(opacitySequenceVariants.imageHover);
+        // image3rdSiblingControls.start(opacitySequenceVariants.fadeImage);
+        // image1stSiblingControls.start(opacitySequenceVariants.fadeImage);
+        break;
+
+      case "forest":
+        title3Controls.start(opacitySequenceVariants.titleFadeIn);
+        title1Controls.start(opacitySequenceVariants.titleFadeOut);
+        title2Controls.start(opacitySequenceVariants.titleFadeOut);
+        image3rdSiblingControls.start(opacitySequenceVariants.imageHover);
+        // image1stSiblingControls.start(opacitySequenceVariants.fadeImage);
+        // image2ndSiblingControls.start(opacitySequenceVariants.fadeImage);
+        break;
+    }
+
+    setPreviousHover(title);
+  };
+
   if (width) {
     return (
       <div className={appStyles.app_container}>
@@ -72,6 +132,8 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
                 title3Controls={title3Controls}
                 greetingComplete={greetingComplete}
                 updateGreeting={handleUpdateGreeting}
+                handleHover={handleHover}
+                previousHover={previousHover}
               />
             </div>
 

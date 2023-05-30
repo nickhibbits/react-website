@@ -29,9 +29,7 @@ function ImageTransition({
       style={{ position: "relative" }}
     >
       <motion.div
-        // animate={animationSequecence.imageBaseInitial}
         animate={image1stSiblingControls}
-        // variants={variants}
         className={imageStyles.image_wrapper}
         style={{ opacity: 0 }}
       >
@@ -48,9 +46,7 @@ function ImageTransition({
       </motion.div>
 
       <motion.div
-        // animate={animationSequecence.image1stSiblingInitial}
         animate={image2ndSiblingControls}
-        // variants={variants}
         className={imageStyles.image_wrapper}
         style={{ opacity: 0 }}
         onAnimationComplete={() => updateIntroComplete(true)}
@@ -68,9 +64,7 @@ function ImageTransition({
       </motion.div>
 
       <motion.div
-        // animate={animationSequecence.image2ndSiblingInitial}
         animate={image3rdSiblingControls}
-        // variants={variants}
         className={imageStyles.image_wrapper}
         style={{ opacity: 0 }}
       >

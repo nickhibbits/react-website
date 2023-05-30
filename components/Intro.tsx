@@ -15,13 +15,16 @@ function Intro({
   title3Controls,
   greetingComplete,
   updateGreeting,
-}: // handleHoverState,
-{
+  handleHover,
+  previousHover,
+}: {
   title1Controls: any;
   title2Controls: any;
   title3Controls: any;
   greetingComplete: any;
   updateGreeting: any;
+  handleHover: any;
+  previousHover: string;
 }) {
   const width = useWindowCheck();
   if (width) {
@@ -37,7 +40,7 @@ function Intro({
                   className={appStyles.color_fade_box}
                   style={{ opacity: 0 }}
                   // variants={opacitySequenceVariants}
-                  // onHoverStart={() => handleHoverState("programmer")}
+                  onHoverStart={() => handleHover("programmer", previousHover)}
                 >
                   Programmer
                 </motion.li>
@@ -46,7 +49,7 @@ function Intro({
                   className={appStyles.color_fade_box}
                   style={{ opacity: 0 }}
                   // variants={opacitySequenceVariants}
-                  // onHoverStart={() => handleHoverState("sound")}
+                  onHoverStart={() => handleHover("sound", previousHover)}
                 >
                   • Sound Enthusiast
                 </motion.li>
@@ -55,7 +58,7 @@ function Intro({
                   className={appStyles.color_fade_box}
                   style={{ opacity: 0 }}
                   // variants={opacitySequenceVariants}
-                  // onHoverStart={() => handleHoverState("forest")}
+                  onHoverStart={() => handleHover("forest", previousHover)}
                 >
                   • Forest Dweller
                 </motion.li>
