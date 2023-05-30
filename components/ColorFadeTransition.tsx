@@ -4,30 +4,28 @@ import appStyles from "$/styles/components/App.module.scss";
 import { TransitionProps } from "$/types";
 
 import { motion } from "framer-motion";
+import { opacitySequenceVariants } from "$/constants/animations";
 
-function ColorFadeTransition({
-  animationSequecence,
-  transition,
-}: TransitionProps) {
+function ColorFadeTransition({ animationSequecence }: TransitionProps) {
   return (
     <div className={appStyles.color_fade_container}>
       <motion.div
-        animate={animationSequecence.imageBase}
-        transition={transition(0).imageBase}
+        animate={animationSequecence.imageBaseInitial}
         className={appStyles.color_fade_box}
         style={{ opacity: 0 }}
+        variants={opacitySequenceVariants}
       />
       <motion.div
-        animate={animationSequecence.imageSibling}
-        transition={transition(1).imageSibling}
+        animate={animationSequecence.image1stSiblingInitial}
         className={appStyles.color_fade_box}
         style={{ opacity: 0 }}
+        variants={opacitySequenceVariants}
       />
       <motion.div
-        animate={animationSequecence.imageSibling}
-        transition={transition(2).imageSibling}
+        animate={animationSequecence.image2ndSiblingInitial}
         className={appStyles.color_fade_box}
         style={{ opacity: 0 }}
+        variants={opacitySequenceVariants}
       />
     </div>
   );

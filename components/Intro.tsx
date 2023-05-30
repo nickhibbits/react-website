@@ -5,14 +5,19 @@ import React from "react";
 import layoutStyles from "$/styles/layout/layout.module.scss";
 import appStyles from "$/styles/components/App.module.scss";
 import { TransitionProps } from "$/types";
+import { opacitySequenceVariants } from "$/constants/animations";
 
 //TODO add hover effect with synced title and image
 function Intro({
   animationSequecence,
-  transition,
   greetingComplete,
   updateGreeting,
-}: { greetingComplete: boolean; updateGreeting: any } & TransitionProps) {
+}: // handleHoverState,
+{
+  greetingComplete: boolean;
+  updateGreeting: any;
+  // handleHoverState: any;
+} & TransitionProps) {
   const width = useWindowCheck();
   if (width) {
     return (
@@ -23,26 +28,29 @@ function Intro({
               <h1>Hi, I'm Nick</h1>
               <ul className={layoutStyles.title_list}>
                 <motion.li
-                  animate={animationSequecence}
-                  transition={transition(0).title}
+                  animate={animationSequecence.title1}
                   className={appStyles.color_fade_box}
                   style={{ opacity: 0 }}
+                  variants={opacitySequenceVariants}
+                  // onHoverStart={() => handleHoverState("programmer")}
                 >
                   Programmer
                 </motion.li>
                 <motion.li
-                  animate={animationSequecence}
-                  transition={transition(1).title}
+                  animate={animationSequecence.title2}
                   className={appStyles.color_fade_box}
                   style={{ opacity: 0 }}
+                  variants={opacitySequenceVariants}
+                  // onHoverStart={() => handleHoverState("sound")}
                 >
                   • Sound Enthusiast
                 </motion.li>
                 <motion.li
-                  animate={animationSequecence}
-                  transition={transition(2).title}
+                  animate={animationSequecence.title3}
                   className={appStyles.color_fade_box}
                   style={{ opacity: 0 }}
+                  variants={opacitySequenceVariants}
+                  // onHoverStart={() => handleHoverState("forest")}
                 >
                   • Forest Dweller
                 </motion.li>

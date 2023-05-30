@@ -11,7 +11,6 @@ import { TransitionProps } from "$/types";
 
 function ImageTransition({
   animationSequecence,
-  transition,
   updateIntroComplete,
 }: { updateIntroComplete: any } & TransitionProps) {
   return (
@@ -20,8 +19,7 @@ function ImageTransition({
       style={{ position: "relative" }}
     >
       <motion.div
-        animate={animationSequecence.imageBase}
-        transition={transition(0).imageBase}
+        animate={animationSequecence.imageBaseInitial}
         className={imageStyles.image_wrapper}
         style={{ opacity: 0 }}
       >
@@ -38,8 +36,7 @@ function ImageTransition({
       </motion.div>
 
       <motion.div
-        animate={animationSequecence.imageSibling}
-        transition={transition(1).imageSibling}
+        animate={animationSequecence.image1stSiblingInitial}
         className={imageStyles.image_wrapper}
         style={{ opacity: 0 }}
         onAnimationComplete={() => updateIntroComplete(true)}
@@ -57,8 +54,7 @@ function ImageTransition({
       </motion.div>
 
       <motion.div
-        animate={animationSequecence.imageSibling}
-        transition={transition(2).imageSibling}
+        animate={animationSequecence.image2ndSiblingInitial}
         className={imageStyles.image_wrapper}
         style={{ opacity: 0 }}
       >

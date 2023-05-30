@@ -12,31 +12,34 @@ import { useWindowCheck } from "$/utils/customHooks";
 
 import ColorFadeTransition from "$/components/ColorFadeTransition";
 import { useEffect, useState } from "react";
+import { opacitySequenceVariants, transition } from "$/constants/animations";
+import { useAnimation } from "framer-motion";
 
 function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const width = useWindowCheck();
   const [greetingComplete, setGreetingComplete] = useState(false);
 
-  const opacitySequence = {
-    imageBase: { opacity: [0, 1, 1, 1, 0, 1] },
-    imageSibling: { opacity: [0, 1, 1, 1, 0] },
-    title: { opacity: [0, 1, 1] },
-  };
-  const transition = (delay: number) => {
-    return {
-      imageBase: { duration: 3, delay },
-      imageSibling: { duration: 3, delay },
-      title: { duration: 2, delay },
-    };
-  };
+  const imageControls = useAnimation();
+  const colorControls = useAnimation();
+  const titleControls = useAnimation();
 
   const handleUpdateGreeting = () => {
     setGreetingComplete(true);
   };
 
-  useEffect(() => {
-    console.log("🟣 greetingComplete", greetingComplete);
-  }, [greetingComplete]);
+  // const handleHoverState = (title: string) => {
+  //   switch (title) {
+  //     case "programmer":
+  //       break;
+
+  //     case "forest":
+  //       break;
+
+  //     default:
+  //       "sound";
+  //       break;
+  //   }
+  // };
 
   if (width) {
     return (
@@ -45,25 +48,23 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
           <section className={layoutStyles.home_container} id="home_container">
             <div className={appStyles.intro_wrapper}>
               <Intro
-                animationSequecence={opacitySequence.title}
-                transition={transition}
+                animationSequecence={opacitySequenceVariants}
                 greetingComplete={greetingComplete}
                 updateGreeting={handleUpdateGreeting}
+                // handleHoverState={handleHoverState}
               />
             </div>
 
             {greetingComplete ? (
               <>
                 <ColorFadeTransition
-                  animationSequecence={opacitySequence}
-                  transition={transition}
+                  animationSequecence={opacitySequenceVariants}
                 />
 
                 {/* <IconNav /> */}
 
                 <ImageTransition
-                  animationSequecence={opacitySequence}
-                  transition={transition}
+                  animationSequecence={opacitySequenceVariants}
                   updateIntroComplete={updateIntroComplete}
                 />
               </>
