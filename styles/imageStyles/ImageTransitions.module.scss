@@ -2,9 +2,9 @@
 @use "$/styles/layout/mediaQueries.scss";
 
 .image_transition_container {
-  // position: absolute;
-  // width: 100vw;
-  // height: 83.3vh;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
 
   // & .img:nth-child(1) {
   //   animation: fade 6s infinite 0s;

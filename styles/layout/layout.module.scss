@@ -1,6 +1,8 @@
 @use "$/styles/layout/mediaQueries.scss";
 @use "$/styles/variables";
 
+$n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' class='iconify iconify--emojione-monotone' preserveAspectRatio='xMidYMid meet'%3E%3Cpath d='M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2zm11.762 44.508h-6.061L25.889 25.92v20.588h-5.65V17.492h6.357l11.518 20.231V17.492h5.648v29.016z' fill='%23000000'%3E%3C/path%3E%3C/svg%3E";
+
 .app_component {
   display: grid;
   position: relative;
@@ -78,6 +80,16 @@
 
 .info_wrapper {
   margin-bottom: 2.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem 2.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(3px);
+
+  @include mediaQueries.desktop {
+    background: none;
+    padding: none;
+    backdrop-filter: none;
+  }
 
   .title_list {
     display: flex;
@@ -88,6 +100,9 @@
 
     & * {
       margin-right: 0.5rem;
+      &:hover {
+        cursor: url("#{$n-cursor}");
+      }
     }
   }
 }
@@ -98,7 +113,6 @@
   align-items: center;
   gap: 1em;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
-  // grid-template-columns: repeat(2, 50%);
 }
 
 .split > :nth-child(1) {
@@ -106,7 +120,6 @@
 }
 
 .split > :nth-child(2) {
-  // border: solid 2px red;
   position: relative;
   grid-column: 8 / 13;
   display: flex;
@@ -117,12 +130,6 @@
 .home_component > .info_wrapper:first-of-type {
   margin-bottom: 0%;
 }
-
-// .about_component {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
 
 .work_component {
   position: relative;

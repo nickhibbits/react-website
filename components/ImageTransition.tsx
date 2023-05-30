@@ -7,8 +7,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import imageStyles from "$/styles/imageStyles/ImageTransitions.module.scss";
-import { TransitionProps } from "$/types";
-import { opacitySequenceVariants } from "$/constants/animations";
+import { useWindowCheck } from "$/utils/customHooks";
 
 function ImageTransition({
   image1stSiblingControls,
@@ -23,6 +22,8 @@ function ImageTransition({
   // variants: any;
   updateIntroComplete: any;
 }) {
+  const width = useWindowCheck();
+
   return (
     <div
       className={imageStyles.image_transition_container}
@@ -56,10 +57,17 @@ function ImageTransition({
           src={synthImage}
           alt="sound eq dials"
           fill={true}
-          style={{
-            objectFit: "contain",
-            transform: "scale(1.5)",
-          }}
+          style={
+            width > 715
+              ? {
+                  objectFit: "contain",
+                  transform: "scale(1.5)",
+                }
+              : {
+                  objectFit: "contain",
+                  transform: "scale(2.9)",
+                }
+          }
         />
       </motion.div>
 

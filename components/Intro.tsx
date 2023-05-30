@@ -37,28 +37,31 @@ function Intro({
               <ul className={layoutStyles.title_list}>
                 <motion.li
                   animate={title1Controls}
-                  className={appStyles.color_fade_box}
+                  className={layoutStyles.title}
                   style={{ opacity: 0 }}
                   // variants={opacitySequenceVariants}
                   onHoverStart={() => handleHover("programmer", previousHover)}
+                  onTap={() => handleHover("programmer", previousHover)}
                 >
                   Programmer
                 </motion.li>
                 <motion.li
                   animate={title2Controls}
-                  className={appStyles.color_fade_box}
+                  className={layoutStyles.title}
                   style={{ opacity: 0 }}
                   // variants={opacitySequenceVariants}
                   onHoverStart={() => handleHover("sound", previousHover)}
+                  onTap={() => handleHover("sound", previousHover)}
                 >
                   • Sound Enthusiast
                 </motion.li>
                 <motion.li
                   animate={title3Controls}
-                  className={appStyles.color_fade_box}
+                  className={layoutStyles.title}
                   style={{ opacity: 0 }}
                   // variants={opacitySequenceVariants}
                   onHoverStart={() => handleHover("forest", previousHover)}
+                  onTap={() => handleHover("forest", previousHover)}
                 >
                   • Forest Dweller
                 </motion.li>

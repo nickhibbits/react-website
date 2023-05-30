@@ -8,15 +8,12 @@ import appStyles from "$/styles/components/App.module.scss";
 import layoutStyles from "$/styles/layout/layout.module.scss";
 import ImageTransition from "$/components/ImageTransition";
 
-import { useWindowCheck } from "$/utils/customHooks";
-
 import ColorFadeTransition from "$/components/ColorFadeTransition";
 import { useEffect, useState } from "react";
 import { opacitySequenceVariants, transition } from "$/constants/animations";
 import { useAnimation, useAnimationControls } from "framer-motion";
 
 function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
-  const width = useWindowCheck();
   const [greetingComplete, setGreetingComplete] = useState(false);
   const [previousHover, setPreviousHover] = useState("programmer");
 
@@ -51,6 +48,10 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
     console.log("Hover 🟢", title);
     console.log("previous ", previousTitle);
 
+    if (previousTitle === title) {
+      return;
+    }
+
     const hideImage = ["programmer", "sound", "forest"].find((value) => {
       const imageToHide = value !== title && value !== previousTitle;
 
@@ -63,15 +64,18 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
     switch (hideImage) {
       case "programmer":
         image1stSiblingControls.start(opacitySequenceVariants.hideImage);
+        title1Controls.start(opacitySequenceVariants.hideTitle);
 
         break;
 
       case "sound":
         image2ndSiblingControls.start(opacitySequenceVariants.hideImage);
+        title2Controls.start(opacitySequenceVariants.hideTitle);
 
         break;
       case "forest":
         image3rdSiblingControls.start(opacitySequenceVariants.hideImage);
+        title3Controls.start(opacitySequenceVariants.hideTitle);
 
         break;
     }
@@ -79,20 +83,21 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
     switch (previousTitle) {
       case "programmer":
         image1stSiblingControls.start(opacitySequenceVariants.fadeImage);
+        title1Controls.start(opacitySequenceVariants.titleFadeOut);
         break;
       case "sound":
         image2ndSiblingControls.start(opacitySequenceVariants.fadeImage);
+        title2Controls.start(opacitySequenceVariants.titleFadeOut);
         break;
       case "forest":
         image3rdSiblingControls.start(opacitySequenceVariants.fadeImage);
+        title3Controls.start(opacitySequenceVariants.titleFadeOut);
         break;
     }
 
     switch (title) {
       case "programmer":
         title1Controls.start(opacitySequenceVariants.titleFadeIn);
-        title2Controls.start(opacitySequenceVariants.titleFadeOut);
-        title3Controls.start(opacitySequenceVariants.titleFadeOut);
         image1stSiblingControls.start(opacitySequenceVariants.imageHover);
         // image2ndSiblingControls.start(opacitySequenceVariants.fadeImage);
         // image3rdSiblingControls.start(opacitySequenceVariants.fadeImage);
@@ -100,8 +105,6 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
 
       case "sound":
         title2Controls.start(opacitySequenceVariants.titleFadeIn);
-        title1Controls.start(opacitySequenceVariants.titleFadeOut);
-        title3Controls.start(opacitySequenceVariants.titleFadeOut);
         image2ndSiblingControls.start(opacitySequenceVariants.imageHover);
         // image3rdSiblingControls.start(opacitySequenceVariants.fadeImage);
         // image1stSiblingControls.start(opacitySequenceVariants.fadeImage);
@@ -109,8 +112,6 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
 
       case "forest":
         title3Controls.start(opacitySequenceVariants.titleFadeIn);
-        title1Controls.start(opacitySequenceVariants.titleFadeOut);
-        title2Controls.start(opacitySequenceVariants.titleFadeOut);
         image3rdSiblingControls.start(opacitySequenceVariants.imageHover);
         // image1stSiblingControls.start(opacitySequenceVariants.fadeImage);
         // image2ndSiblingControls.start(opacitySequenceVariants.fadeImage);
@@ -120,49 +121,47 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
     setPreviousHover(title);
   };
 
-  if (width) {
-    return (
-      <div className={appStyles.app_container}>
-        <div className={layoutStyles.app_component}>
-          <section className={layoutStyles.home_container} id="home_container">
-            <div className={appStyles.intro_wrapper}>
-              <Intro
-                title1Controls={title1Controls}
-                title2Controls={title2Controls}
-                title3Controls={title3Controls}
-                greetingComplete={greetingComplete}
-                updateGreeting={handleUpdateGreeting}
-                handleHover={handleHover}
-                previousHover={previousHover}
+  return (
+    <div className={appStyles.app_container}>
+      <div className={layoutStyles.app_component}>
+        <section className={layoutStyles.home_container} id="home_container">
+          <div className={appStyles.intro_wrapper}>
+            <Intro
+              title1Controls={title1Controls}
+              title2Controls={title2Controls}
+              title3Controls={title3Controls}
+              greetingComplete={greetingComplete}
+              updateGreeting={handleUpdateGreeting}
+              handleHover={handleHover}
+              previousHover={previousHover}
+            />
+          </div>
+
+          {greetingComplete ? (
+            <>
+              <ColorFadeTransition
+                image1stSiblingControls={image1stSiblingControls}
+                image2ndSiblingControls={image2ndSiblingControls}
+                image3rdSiblingControls={image3rdSiblingControls}
               />
-            </div>
 
-            {greetingComplete ? (
-              <>
-                <ColorFadeTransition
-                  image1stSiblingControls={image1stSiblingControls}
-                  image2ndSiblingControls={image2ndSiblingControls}
-                  image3rdSiblingControls={image3rdSiblingControls}
-                />
+              {/* <IconNav /> */}
 
-                {/* <IconNav /> */}
-
-                <ImageTransition
-                  image1stSiblingControls={image1stSiblingControls}
-                  image2ndSiblingControls={image2ndSiblingControls}
-                  image3rdSiblingControls={image3rdSiblingControls}
-                  updateIntroComplete={updateIntroComplete}
-                />
-              </>
-            ) : null}
-          </section>
-          <About />
-          <Work />
-          <Connect />
-        </div>
+              <ImageTransition
+                image1stSiblingControls={image1stSiblingControls}
+                image2ndSiblingControls={image2ndSiblingControls}
+                image3rdSiblingControls={image3rdSiblingControls}
+                updateIntroComplete={updateIntroComplete}
+              />
+            </>
+          ) : null}
+        </section>
+        <About />
+        <Work />
+        <Connect />
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Home;
