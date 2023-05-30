@@ -7,21 +7,24 @@ export const transition = (delay: number) => {
 };
 
 export const opacitySequenceVariants = {
-  imageBaseInitial: {
+  image1stSiblingInitial: {
     opacity: [0, 1, 1, 1, 0, 1],
     transition: { ...transition(0).imageBaseInitial },
   },
-  image1stSiblingInitial: {
+  image2ndSiblingInitial: {
     opacity: [0, 1, 1, 1, 0],
     transition: { ...transition(1).imageSiblingInitial },
   },
-  image2ndSiblingInitial: {
+  image3rdSiblingInitial: {
     opacity: [0, 1, 1, 1, 0],
     transition: { ...transition(2).imageSiblingInitial },
   },
-  // imageHover: { opacity: [0, 1] },
+  imageHover: {
+    opacity: [0, 1],
+    transition: { ...transition(0).imageBaseInitial },
+  },
   title1: { opacity: [0, 1, 1], transition: { ...transition(0).title } },
   title2: { opacity: [0, 1, 1], transition: { ...transition(1).title } },
   title3: { opacity: [0, 1, 1], transition: { ...transition(2).title } },
-  // titleHover: { scale: 1.2 },
+  titleHover: { scale: 1.2, transition: { ...transition(0).title } },
 };

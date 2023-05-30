@@ -8,18 +8,30 @@ import Image from "next/image";
 
 import imageStyles from "$/styles/imageStyles/ImageTransitions.module.scss";
 import { TransitionProps } from "$/types";
+import { opacitySequenceVariants } from "$/constants/animations";
 
 function ImageTransition({
-  animationSequecence,
+  image1stSiblingControls,
+  image2ndSiblingControls,
+  image3rdSiblingControls,
+  // variants,
   updateIntroComplete,
-}: { updateIntroComplete: any } & TransitionProps) {
+}: {
+  image1stSiblingControls: any;
+  image2ndSiblingControls: any;
+  image3rdSiblingControls: any;
+  // variants: any;
+  updateIntroComplete: any;
+}) {
   return (
     <div
       className={imageStyles.image_transition_container}
       style={{ position: "relative" }}
     >
       <motion.div
-        animate={animationSequecence.imageBaseInitial}
+        // animate={animationSequecence.imageBaseInitial}
+        animate={image1stSiblingControls}
+        // variants={variants}
         className={imageStyles.image_wrapper}
         style={{ opacity: 0 }}
       >
@@ -36,7 +48,9 @@ function ImageTransition({
       </motion.div>
 
       <motion.div
-        animate={animationSequecence.image1stSiblingInitial}
+        // animate={animationSequecence.image1stSiblingInitial}
+        animate={image2ndSiblingControls}
+        // variants={variants}
         className={imageStyles.image_wrapper}
         style={{ opacity: 0 }}
         onAnimationComplete={() => updateIntroComplete(true)}
@@ -54,7 +68,9 @@ function ImageTransition({
       </motion.div>
 
       <motion.div
-        animate={animationSequecence.image2ndSiblingInitial}
+        // animate={animationSequecence.image2ndSiblingInitial}
+        animate={image3rdSiblingControls}
+        // variants={variants}
         className={imageStyles.image_wrapper}
         style={{ opacity: 0 }}
       >

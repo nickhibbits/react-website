@@ -9,15 +9,20 @@ import { opacitySequenceVariants } from "$/constants/animations";
 
 //TODO add hover effect with synced title and image
 function Intro({
-  animationSequecence,
+  // animationSequecence,
+  title1Controls,
+  title2Controls,
+  title3Controls,
   greetingComplete,
   updateGreeting,
 }: // handleHoverState,
 {
-  greetingComplete: boolean;
+  title1Controls: any;
+  title2Controls: any;
+  title3Controls: any;
+  greetingComplete: any;
   updateGreeting: any;
-  // handleHoverState: any;
-} & TransitionProps) {
+}) {
   const width = useWindowCheck();
   if (width) {
     return (
@@ -28,28 +33,28 @@ function Intro({
               <h1>Hi, I'm Nick</h1>
               <ul className={layoutStyles.title_list}>
                 <motion.li
-                  animate={animationSequecence.title1}
+                  animate={title1Controls}
                   className={appStyles.color_fade_box}
                   style={{ opacity: 0 }}
-                  variants={opacitySequenceVariants}
+                  // variants={opacitySequenceVariants}
                   // onHoverStart={() => handleHoverState("programmer")}
                 >
                   Programmer
                 </motion.li>
                 <motion.li
-                  animate={animationSequecence.title2}
+                  animate={title2Controls}
                   className={appStyles.color_fade_box}
                   style={{ opacity: 0 }}
-                  variants={opacitySequenceVariants}
+                  // variants={opacitySequenceVariants}
                   // onHoverStart={() => handleHoverState("sound")}
                 >
                   • Sound Enthusiast
                 </motion.li>
                 <motion.li
-                  animate={animationSequecence.title3}
+                  animate={title3Controls}
                   className={appStyles.color_fade_box}
                   style={{ opacity: 0 }}
-                  variants={opacitySequenceVariants}
+                  // variants={opacitySequenceVariants}
                   // onHoverStart={() => handleHoverState("forest")}
                 >
                   • Forest Dweller

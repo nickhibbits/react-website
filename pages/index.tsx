@@ -13,15 +13,19 @@ import { useWindowCheck } from "$/utils/customHooks";
 import ColorFadeTransition from "$/components/ColorFadeTransition";
 import { useEffect, useState } from "react";
 import { opacitySequenceVariants, transition } from "$/constants/animations";
-import { useAnimation } from "framer-motion";
+import { useAnimation, useAnimationControls } from "framer-motion";
 
 function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const width = useWindowCheck();
   const [greetingComplete, setGreetingComplete] = useState(false);
 
-  const imageControls = useAnimation();
-  const colorControls = useAnimation();
-  const titleControls = useAnimation();
+  const image1stSiblingControls = useAnimation();
+  const image2ndSiblingControls = useAnimation();
+  const image3rdSiblingControls = useAnimation();
+  // const colorControls = useAnimation();
+  const title1Controls = useAnimation();
+  const title2Controls = useAnimation();
+  const title3Controls = useAnimation();
 
   const handleUpdateGreeting = () => {
     setGreetingComplete(true);
@@ -41,6 +45,21 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   //   }
   // };
 
+  useEffect(() => {
+    title1Controls.start(opacitySequenceVariants.title1);
+    image1stSiblingControls.start(
+      opacitySequenceVariants.image1stSiblingInitial
+    );
+    title2Controls.start(opacitySequenceVariants.title2);
+    image2ndSiblingControls.start(
+      opacitySequenceVariants.image2ndSiblingInitial
+    );
+    title3Controls.start(opacitySequenceVariants.title3);
+    image3rdSiblingControls.start(
+      opacitySequenceVariants.image3rdSiblingInitial
+    );
+  }, [greetingComplete]);
+
   if (width) {
     return (
       <div className={appStyles.app_container}>
@@ -48,23 +67,28 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
           <section className={layoutStyles.home_container} id="home_container">
             <div className={appStyles.intro_wrapper}>
               <Intro
-                animationSequecence={opacitySequenceVariants}
+                title1Controls={title1Controls}
+                title2Controls={title2Controls}
+                title3Controls={title3Controls}
                 greetingComplete={greetingComplete}
                 updateGreeting={handleUpdateGreeting}
-                // handleHoverState={handleHoverState}
               />
             </div>
 
             {greetingComplete ? (
               <>
                 <ColorFadeTransition
-                  animationSequecence={opacitySequenceVariants}
+                  image1stSiblingControls={image1stSiblingControls}
+                  image2ndSiblingControls={image2ndSiblingControls}
+                  image3rdSiblingControls={image3rdSiblingControls}
                 />
 
                 {/* <IconNav /> */}
 
                 <ImageTransition
-                  animationSequecence={opacitySequenceVariants}
+                  image1stSiblingControls={image1stSiblingControls}
+                  image2ndSiblingControls={image2ndSiblingControls}
+                  image3rdSiblingControls={image3rdSiblingControls}
                   updateIntroComplete={updateIntroComplete}
                 />
               </>
