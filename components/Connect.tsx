@@ -20,7 +20,7 @@ function Connect() {
         id="connect_container"
       >
         <div className={`${svgStyles.svg_wrapper} ${svgStyles.rings_svg}`}>
-          <Parallax speed={20}>
+          <Parallax speed={-2}>
             <img src="/svgs/rings.svg" alt="" />
           </Parallax>
         </div>

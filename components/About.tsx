@@ -17,7 +17,7 @@ function About() {
         id="about_container"
       >
         <div className={`${svgStyles.svg_wrapper} ${svgStyles.big_circle_svg}`}>
-          <Parallax speed={20}>
+          <Parallax speed={12}>
             <img src="/svgs/abstract-circle.svg" />
           </Parallax>
           {/* svg component */}

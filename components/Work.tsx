@@ -23,7 +23,7 @@ function Work() {
         id="work_container"
       >
         <div className={`${svgStyles.svg_wrapper} ${svgStyles.circles_svg}`}>
-          <Parallax speed={15}>
+          <Parallax speed={-5}>
             <img src="/svgs/abstract-dots.svg" />
           </Parallax>
         </div>
