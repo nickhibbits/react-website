@@ -33,7 +33,7 @@ function Connect() {
         >
           <section className={layoutStyles.info_wrapper}>
             <h1>Connect</h1>
-            <p>Something on your mind? Shoot me a message!</p>
+            <p>Something on your mind?</p>
           </section>
           <section className={connectStyles.contact_wrapper}>
             <p>

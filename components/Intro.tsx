@@ -30,7 +30,9 @@ function Intro({
   if (width) {
     return (
       <div className={width < 1150 ? `${layoutStyles.component}` : ""}>
-        <section className={layoutStyles.info_wrapper}>
+        <section
+          className={`${layoutStyles.info_wrapper} ${layoutStyles.intro_wrapper}`}
+        >
           {greetingComplete ? (
             <>
               <h1>Hi, I'm Nick</h1>

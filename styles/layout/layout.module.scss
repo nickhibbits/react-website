@@ -19,6 +19,7 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
 .home_container {
   grid-area: 1 / 1 / 2 / 13;
   position: relative;
+  overflow: hidden;
 
   @include mediaQueries.desktop {
     display: grid;
@@ -61,6 +62,16 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
   flex-direction: column;
   justify-content: center;
   position: relative;
+  // overflow-x: hidden;
+  overflow-y: visible;
+
+  &.connect_container {
+    overflow-y: hidden;
+
+    @include mediaQueries.desktop {
+      overflow-y: visible;
+    }
+  }
 }
 
 .component {
@@ -77,13 +88,26 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
     margin-inline: 18rem;
   }
 }
-
-.info_wrapper {
+.intro_wrapper {
   margin-bottom: 2.5rem;
   background: rgba(0, 0, 0, 0.7);
-  padding: 1rem 2.5rem;
+  padding: 1rem;
   border-radius: 15px;
   backdrop-filter: blur(3px);
+
+  li {
+    font-size: cclamp(1rem, 2vw, variables.$fs-400);
+  }
+}
+
+.info_wrapper {
+  .intro_wrapper {
+    margin-bottom: 2.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+  }
 
   @include mediaQueries.desktop {
     background: none;
@@ -94,7 +118,7 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
   .title_list {
     display: flex;
     font-family: variables.$ff-secondary;
-    font-size: clamp(1rem, 2vw, variables.$fs-400);
+    font-size: clamp(0.85rem, 2.8vw, variables.$fs-400);
     // line-height: 1.4em;
     margin: 0;
 

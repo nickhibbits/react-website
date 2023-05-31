@@ -32,8 +32,8 @@ function About() {
           <section className={layoutStyles.info_wrapper}>
             <h1>About</h1>
             <p>
-              My name’s Nick Hibbits. I’m a front-end focused software developer
-              with experience working at a startup as well as managing
+              My name’s Nick Hibbits. I’m a front-end focused web and software
+              developer with experience working at a startup as well as managing
               e-commerce for a small business.
               <br />
               <br />

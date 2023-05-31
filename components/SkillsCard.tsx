@@ -5,28 +5,28 @@ import skillCardStyles from "$/styles/components/SkillsCard.module.scss";
 function SkillsCard() {
   const skills = [
     {
-      name: "HTML5",
+      name: "HTML",
       level: "90%",
       id: 1,
     },
     {
-      name: "CSS3",
+      name: "CSS, Scss",
       level: "90%",
       id: 2,
     },
     {
-      name: "JavaScript",
+      name: "JavaScript, TypeScript",
       level: "90%",
       id: 3,
     },
     {
-      name: "React",
+      name: "React.js, Next.js",
       level: "85%",
       id: 4,
     },
     {
       name: "REST APIs",
-      level: "80%",
+      level: "85%",
       id: 5,
     },
   ];
