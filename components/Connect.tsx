@@ -7,6 +7,7 @@ import React from "react";
 import layoutStyles from "$/styles/layout/layout.module.scss";
 import svgStyles from "$/styles/imageStyles/svg.module.scss";
 import connectStyles from "$/styles/components/Connect.module.scss";
+import { Parallax } from "react-scroll-parallax";
 
 function Connect() {
   const size = 30;
@@ -19,7 +20,9 @@ function Connect() {
         id="connect_container"
       >
         <div className={`${svgStyles.svg_wrapper} ${svgStyles.rings_svg}`}>
-          <img src="/svgs/rings.svg" alt="" />
+          <Parallax speed={20}>
+            <img src="/svgs/rings.svg" alt="" />
+          </Parallax>
         </div>
         <div
           className={

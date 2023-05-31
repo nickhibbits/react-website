@@ -12,6 +12,7 @@ import ColorFadeTransition from "$/components/ColorFadeTransition";
 import { useEffect, useState } from "react";
 import { opacitySequenceVariants, transition } from "$/constants/animations";
 import { useAnimation, useAnimationControls } from "framer-motion";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const [greetingComplete, setGreetingComplete] = useState(false);
@@ -156,9 +157,17 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
             </>
           ) : null}
         </section>
-        <About />
-        <Work />
-        <Connect />
+        <ParallaxProvider scrollAxis="vertical">
+          <About />
+        </ParallaxProvider>
+
+        <ParallaxProvider scrollAxis="vertical">
+          <Work />
+        </ParallaxProvider>
+
+        <ParallaxProvider scrollAxis="vertical">
+          <Connect />
+        </ParallaxProvider>
       </div>
     </div>
   );

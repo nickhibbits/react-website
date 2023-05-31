@@ -7,6 +7,7 @@ import workCardStyles from "$/styles/components/WorkCard.module.scss";
 import layoutStyles from "$/styles/layout/layout.module.scss";
 import svgStyles from "$/styles/imageStyles/svg.module.scss";
 import WorkCard from "$/components/WorkCard";
+import { Parallax } from "react-scroll-parallax";
 
 function Work() {
   const filteredProjects = Object.values(projects).filter(
@@ -22,8 +23,9 @@ function Work() {
         id="work_container"
       >
         <div className={`${svgStyles.svg_wrapper} ${svgStyles.circles_svg}`}>
-          <img src="/svgs/abstract-dots.svg" />
-          {/* svg component */}
+          <Parallax speed={15}>
+            <img src="/svgs/abstract-dots.svg" />
+          </Parallax>
         </div>
         <div
           className={

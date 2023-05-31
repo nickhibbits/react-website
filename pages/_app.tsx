@@ -3,7 +3,7 @@ import { Padauk, Righteous } from "next/font/google";
 import "$/styles/globals.scss";
 import Navbar from "$/components/Nav/Navbar";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const righteous = Righteous({ weight: "400", subsets: ["latin"] });
 const paduk = Padauk({ weight: "400", subsets: ["latin"] });
@@ -29,6 +29,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         `}
       </style>
       {introComplete ? <Navbar /> : null}
+
       <Component {...pageProps} updateIntroComplete={updateIntroComplete} />
     </>
   );

@@ -4,6 +4,8 @@ import { useWindowCheck } from "$/utils/customHooks";
 import layoutStyles from "$/styles/layout/layout.module.scss";
 import svgStyles from "$/styles/imageStyles/svg.module.scss";
 import cardStyle from "$/styles/components/SkillsCard.module.scss";
+import { Parallax, useParallax } from "react-scroll-parallax";
+// import { useRef } from "react";
 
 function About() {
   const width = useWindowCheck();
@@ -15,7 +17,9 @@ function About() {
         id="about_container"
       >
         <div className={`${svgStyles.svg_wrapper} ${svgStyles.big_circle_svg}`}>
-          <img src="/svgs/abstract-circle.svg" />
+          <Parallax speed={20}>
+            <img src="/svgs/abstract-circle.svg" />
+          </Parallax>
           {/* svg component */}
         </div>
         <div
