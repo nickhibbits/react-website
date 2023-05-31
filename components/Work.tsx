@@ -8,6 +8,7 @@ import layoutStyles from "$/styles/layout/layout.module.scss";
 import svgStyles from "$/styles/imageStyles/svg.module.scss";
 import WorkCard from "$/components/WorkCard";
 import { Parallax } from "react-scroll-parallax";
+import Image from "next/image";
 
 function Work() {
   const filteredProjects = Object.values(projects).filter(
@@ -37,13 +38,26 @@ function Work() {
           <section className={layoutStyles.info_wrapper}>
             <h1>Work</h1>
             <p>
-              Collection of professional contributions and personal projects.
-              Scroll through the cards, and click each to learn more.
+              Professional contributions listed here. Hover the logos to learn
+              more. To view personal projects, follow the link to my github
+              below.
             </p>
           </section>
           <div>
             <div className={workCardStyles.card_scroll_container}>
-              {filteredProjects.map((project) => {
+              <Image
+                height={100}
+                width={100}
+                src="/svgs/ZoomiesLogo.svg"
+                alt=""
+              />
+              <Image
+                height={100}
+                width={100}
+                src="/svgs/chainsaw-svgrepo-com.svg"
+                alt=""
+              />
+              {/* {filteredProjects.map((project) => {
                 return (
                   <WorkCard
                     title={project.title}
@@ -52,7 +66,7 @@ function Work() {
                     key={project.id}
                   />
                 );
-              })}
+              })} */}
             </div>
           </div>
         </div>

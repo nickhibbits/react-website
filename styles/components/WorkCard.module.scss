@@ -9,6 +9,10 @@
   margin: 1rem 0;
   overflow-x: scroll;
   max-width: 90vw;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  border-radius: 15px;
+  // padding: 10rem;
 }
 
 .work_card_component {
