@@ -23,9 +23,10 @@ function NavOptionsMobile({
   const visible = useRef<any>(null);
 
   useEffect(() => {
-    navWidth >= 850 &&
-      navOptionsContainer.current.setAttribute("data-visible", false);
-  }, [navWidth]);
+    // if (navWidth >= 850)
+    // navWidth >= 850 &&
+    navOptionsContainer.current.setAttribute("data-visible", false);
+  }, []);
 
   useEffect(() => {
     visible.current = navOptionsContainer.current.getAttribute("data-visible");
@@ -57,12 +58,14 @@ function NavOptionsMobile({
             style={navWidth > 850 ? { display: "none" } : { display: "block" }}
           />
         </div>
+        {/* {navOptionsContainer.current.getAttribute("data-visible") == true && ( */}
         <NavOptions
           mobile={navWidth < 850}
           toggleNavOptions={toggleNavOptions}
           mobileContainerRef={navOptionsContainer}
           droorOpen={visible}
         />
+        {/* // )} */}
       </div>
     </div>
   );

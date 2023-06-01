@@ -65,7 +65,7 @@ function ImageTransition({
                 }
               : {
                   objectFit: "contain",
-                  transform: "scale(2.9)",
+                  transform: "scale(3.25)",
                 }
           }
         />

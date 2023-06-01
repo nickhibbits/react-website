@@ -39,9 +39,9 @@ function Work() {
             <h1>Work</h1>
             <p>
               Professional contributions and projects of which I've been a part.
-              Project websites are linked to images.
+              Project websites are linked to images below.
               <br /> <br /> To view personal projects, follow the link to my
-              github below.
+              Github in Connect.
             </p>
           </section>
           <div>
