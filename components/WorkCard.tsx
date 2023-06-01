@@ -4,7 +4,7 @@ import workCardStyles from "$/styles/components/WorkCard.module.scss";
 import Image, { StaticImageData } from "next/image";
 
 type WorkCardProps = {
-  title: string;
+  title: string | null;
   description: string;
   imgSrc: StaticImageData | string;
   siteLink: string;
