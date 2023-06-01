@@ -8,6 +8,7 @@ import NavOptionsMobile from "./NavOptionsMobile";
 import navStyles from "$/styles/components/Nav.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { handleScroll } from "$/utils/helpers";
 
 function Navbar() {
   const [displayMenuIcon, setDisplayMenuIcon] = useState(true);
@@ -52,7 +53,7 @@ function Navbar() {
     >
       <div className={navStyles.nav_wrapper}>
         <div className={navStyles.nav_title}>
-          <Link href="/">
+          <Link href="#home_container" onClick={(e) => handleScroll(e)}>
             <h2>Nick Hibbits</h2>
           </Link>
           <div className={navStyles.avatar_wrapper}>

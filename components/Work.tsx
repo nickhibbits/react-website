@@ -62,14 +62,16 @@ function Work() {
                 return ( */}
               <WorkCard
                 title={"The Bear's Den"}
-                description={"Chainsaw carving shop - E-Comm, Web Development"}
+                description={"Chainsaw carving shop - E-Comm, Web Developer"}
                 imgSrc={"/svgs/chainsaw-svgrepo-com.svg"}
+                siteLink={"https://www.thebearsdentahoe.com/"}
                 key={1}
               />
               <WorkCard
                 title={"Studio Zoomies"}
                 description={"CRM for photographers - Software Developer"}
                 imgSrc={"/svgs/ZoomiesLogo.svg"}
+                siteLink={"https://www.studiozoomies.com/home"}
                 key={2}
               />
               {/* // ); */}

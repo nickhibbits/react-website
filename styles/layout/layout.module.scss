@@ -12,7 +12,7 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
     grid-template-rows: 100vh 40rem 38rem 29rem;
   }
   @include mediaQueries.desktop {
-    grid-template-rows: max(100vh, 45rem) repeat(3, 50rem);
+    grid-template-rows: max(100vh, 45rem) 53rem repeat(2, 50rem);
   }
 }
 
