@@ -6,12 +6,12 @@ function SkillsCard() {
   const skills = [
     {
       name: "HTML",
-      level: "90%",
+      level: "95%",
       id: 1,
     },
     {
       name: "CSS, Scss",
-      level: "90%",
+      level: "95%",
       id: 2,
     },
     {
@@ -25,7 +25,7 @@ function SkillsCard() {
       id: 4,
     },
     {
-      name: "REST APIs",
+      name: "Node.js, REST APIs",
       level: "85%",
       id: 5,
     },

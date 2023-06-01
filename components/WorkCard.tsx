@@ -6,61 +6,26 @@ import Image, { StaticImageData } from "next/image";
 type WorkCardProps = {
   title: string;
   description: string;
-  imgSrc: StaticImageData | null;
+  imgSrc: StaticImageData | string;
 };
 
 function WorkCard({ title, description, imgSrc }: WorkCardProps) {
-  if (title === "Studio Zoomies") {
-    return (
-      <div
-        className={workCardStyles.work_card_component}
-        style={{
-          backgroundColor: "black",
-        }}
-      >
-        <div className={workCardStyles.svg_container}>
-          <div className={workCardStyles.svg_wrapper}>
-            <img src="/svgs/ZoomiesLogo.svg" />
-            {/* zoomies logo svg  */}
-          </div>
-        </div>
-        <div className={workCardStyles.work_card_info_wrapper}>
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <Link href={`/projects/${title}`}>
-            <button>Read More</button>
-          </Link>
-        </div>
+  return (
+    <div className={workCardStyles.work_card_component}>
+      <div className={workCardStyles.svg_container}>
+        {/* <div className={workCardStyles.svg_wrapper}> */}
+        <Image height={80} width={80} src={imgSrc} alt="" />
+        {/* </div> */}
       </div>
-    );
-  }
-
-  if (imgSrc) {
-    return (
-      <div className={workCardStyles.work_card_component}>
-        <div className={workCardStyles.work_card_info_wrapper}>
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <Link href={`/projects/${title}`}>
+      <div className={workCardStyles.work_card_info_wrapper}>
+        <p>{title}</p>
+        <p>{description}</p>
+        {/* <Link href={`/projects/${title}`}>
             <button>Read More</button>
-          </Link>
-        </div>
-        <Image
-          className={workCardStyles.image}
-          src={imgSrc}
-          alt="image description"
-          fill={true}
-          style={{
-            objectFit: "cover",
-            borderRadius: "15px",
-          }}
-        />
-        <div className={workCardStyles.overlay}></div>
+          </Link> */}
       </div>
-    );
-  }
-
-  return null;
+    </div>
+  );
 }
 
 export default WorkCard;

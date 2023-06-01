@@ -46,7 +46,7 @@ function Work() {
           </section>
           <div>
             <div className={workCardStyles.card_scroll_container}>
-              <Image
+              {/* <Image
                 height={180}
                 width={180}
                 src="/svgs/ZoomiesLogo.svg"
@@ -57,17 +57,23 @@ function Work() {
                 width={180}
                 src="/svgs/chainsaw-svgrepo-com.svg"
                 alt=""
-              />
+              /> */}
               {/* {filteredProjects.map((project) => {
-                return (
-                  <WorkCard
-                    title={project.title}
-                    description={project.basicDescription}
-                    imgSrc={project.imgSrc}
-                    key={project.id}
-                  />
-                );
-              })} */}
+                return ( */}
+              <WorkCard
+                title={"The Bear's Den"}
+                description={"Chainsaw carving shop - E-Comm, Web Development"}
+                imgSrc={"/svgs/chainsaw-svgrepo-com.svg"}
+                key={1}
+              />
+              <WorkCard
+                title={"Studio Zoomies"}
+                description={"CRM for photographers - Software Developer"}
+                imgSrc={"/svgs/ZoomiesLogo.svg"}
+                key={2}
+              />
+              {/* // ); */}
+              {/* })} */}
             </div>
           </div>
         </div>
