@@ -31,18 +31,18 @@ function About() {
         >
           <section className={layoutStyles.info_wrapper}>
             <h1>About</h1>
-            <p>
+            <p className={layoutStyles.about_text}>
               My name’s Nick Hibbits. I’m a front-end focused web and software
-              developer with experience working at a startup as well as managing
-              e-commerce for a small business.
+              developer with experience working at a startup as well as
+              initiating and managing e-commerce for a small business.
               <br />
               <br />
               I love building sleek digital experiences that make a statement
               and are a pleasure to use.
               <br />
               <br />
-              I'm also an avid electronic music producer, and fresh air
-              fanataic.
+              When I'm not coding, I'm deep into producing electronic music, or
+              likewise in the woods in my home here in South Lake Tahoe, CA.
               <br />
               <br />
               Check out my work and let’s connect.

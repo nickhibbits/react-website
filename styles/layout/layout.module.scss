@@ -7,7 +7,7 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
   display: grid;
   position: relative;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
-  grid-template-rows: 100vh 56rem 42rem 29rem;
+  grid-template-rows: 100vh 53rem 50rem 30rem;
   @include mediaQueries.tablet-large {
     grid-template-rows: 100vh 40rem 38rem 29rem;
   }
@@ -62,14 +62,14 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
   flex-direction: column;
   justify-content: center;
   position: relative;
-  // overflow-x: hidden;
-  overflow-y: visible;
+  overflow: hidden;
+  // overflow-y: visible;
 
   &.connect_container {
     overflow-y: hidden;
 
     @include mediaQueries.desktop {
-      overflow-y: visible;
+      overflow-y: hidden;
     }
   }
 }
@@ -107,6 +107,10 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
     padding: 1rem 2.5rem;
     border-radius: 15px;
     backdrop-filter: blur(3px);
+  }
+
+  .about_text {
+    margin-bottom: 2rem;
   }
 
   @include mediaQueries.desktop {

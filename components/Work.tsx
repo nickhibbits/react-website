@@ -24,7 +24,7 @@ function Work() {
         id="work_container"
       >
         <div className={`${svgStyles.svg_wrapper} ${svgStyles.circles_svg}`}>
-          <Parallax speed={-5}>
+          <Parallax speed={-8}>
             <img src="/svgs/abstract-dots.svg" />
           </Parallax>
         </div>
@@ -38,22 +38,23 @@ function Work() {
           <section className={layoutStyles.info_wrapper}>
             <h1>Work</h1>
             <p>
-              Professional contributions listed here. Hover the logos to learn
-              more. To view personal projects, follow the link to my github
-              below.
+              Professional contributions and projects of which I've been a part.
+              Project websites are linked to images.
+              <br /> <br /> To view personal projects, follow the link to my
+              github below.
             </p>
           </section>
           <div>
             <div className={workCardStyles.card_scroll_container}>
               <Image
-                height={100}
-                width={100}
+                height={180}
+                width={180}
                 src="/svgs/ZoomiesLogo.svg"
                 alt=""
               />
               <Image
-                height={100}
-                width={100}
+                height={180}
+                width={180}
                 src="/svgs/chainsaw-svgrepo-com.svg"
                 alt=""
               />

@@ -20,7 +20,7 @@ function Connect() {
         id="connect_container"
       >
         <div className={`${svgStyles.svg_wrapper} ${svgStyles.rings_svg}`}>
-          <Parallax speed={-2}>
+          <Parallax speed={25}>
             <img src="/svgs/rings.svg" alt="" />
           </Parallax>
         </div>
@@ -37,6 +37,7 @@ function Connect() {
           </section>
           <section className={connectStyles.contact_wrapper}>
             <p>
+              <br />
               Reach me directly at&nbsp;
               <a
                 href="mailto:nicholashibbits@gmail.com"

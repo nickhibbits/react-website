@@ -40,7 +40,7 @@
 .circles_svg {
   transform: scale(0.72);
   left: -12rem;
-  bottom: -7rem;
+  bottom: -2rem;
   @include mediaQueries.tablet {
     transform: scale(0.72);
     bottom: -10rem;
@@ -56,7 +56,7 @@
   @include mediaQueries.desktop {
     transform: scale(0.7);
     top: 2rem;
-    bottom: 30rem;
+    bottom: 28rem;
     left: 33rem;
   }
   @include mediaQueries.bigScreen {
@@ -68,16 +68,17 @@
 }
 
 .rings_svg {
-  transform: scale(0.5) rotate(180deg);
+  transform: scale(0.45) rotate(200deg);
   bottom: -28rem;
+  left: -30rem;
   @include mediaQueries.tablet {
     transform: scale(0.5) rotate(290deg);
     right: -18em;
   }
   @include mediaQueries.desktop {
     transform: scale(0.76);
-    top: -0.5rem;
-    bottom: 100rem;
+    top: -1rem;
+    // bottom: 1rem;
     left: -5rem;
     right: 4rem;
   }
