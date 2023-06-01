@@ -16,7 +16,7 @@ function ProjectPage() {
   const project = Object.values(projects).find(
     (project) => project.title === projectTitle
   );
-  let duff;
+  let duf;
 
   return (
     <main className={projectPageStyles.project_page_container}>
