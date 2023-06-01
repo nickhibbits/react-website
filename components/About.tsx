@@ -1,10 +1,12 @@
 import SkillsCard from "./SkillsCard";
 import { useWindowCheck } from "$/utils/customHooks";
+import abstractCircleSvg from "$/public/svgs/abstract-circle.svg";
 
 import layoutStyles from "$/styles/layout/layout.module.scss";
 import svgStyles from "$/styles/imageStyles/svg.module.scss";
 import cardStyle from "$/styles/components/SkillsCard.module.scss";
-import { Parallax, useParallax } from "react-scroll-parallax";
+import { Parallax } from "react-scroll-parallax";
+import Image from "next/image";
 // import { useRef } from "react";
 
 function About() {
@@ -18,9 +20,8 @@ function About() {
       >
         <div className={`${svgStyles.svg_wrapper} ${svgStyles.big_circle_svg}`}>
           <Parallax speed={12}>
-            <img src="/svgs/abstract-circle.svg" />
+            <Image alt="abstract Circle" src={abstractCircleSvg} />
           </Parallax>
-          {/* svg component */}
         </div>
         <div
           className={
@@ -32,8 +33,8 @@ function About() {
           <section className={layoutStyles.info_wrapper}>
             <h1>About</h1>
             <p className={layoutStyles.about_text}>
-              My name’s Nick Hibbits. I’m a front-end focused web and software
-              developer with experience working at a startup as well as
+              My name&apos;s Nick Hibbits. I&apos;m a front-end focused web and
+              software developer with experience working at a startup as well as
               initiating and managing e-commerce for a small business.
               <br />
               <br />
@@ -41,11 +42,12 @@ function About() {
               and are a pleasure to use.
               <br />
               <br />
-              When I'm not coding, I'm deep into producing electronic music, or
-              likewise in the woods in my home here in South Lake Tahoe, CA.
+              When I&apos;m not coding, I&apos;m deep into producing electronic
+              music, or likewise in the woods in my home here in South Lake
+              Tahoe, CA.
               <br />
               <br />
-              Check out my work and let’s connect.
+              Check out my work and let&apos;s connect.
             </p>
           </section>
           <section

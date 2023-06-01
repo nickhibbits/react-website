@@ -43,7 +43,15 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
     image3rdSiblingControls.start(
       opacitySequenceVariants.image3rdSiblingInitial
     );
-  }, [greetingComplete]);
+  }, [
+    greetingComplete,
+    image1stSiblingControls,
+    image2ndSiblingControls,
+    image3rdSiblingControls,
+    title1Controls,
+    title2Controls,
+    title3Controls,
+  ]);
 
   const handleHover = (title: string, previousTitle: string) => {
     console.log("Hover 🟢", title);

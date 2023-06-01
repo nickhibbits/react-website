@@ -25,7 +25,12 @@ function Work() {
       >
         <div className={`${svgStyles.svg_wrapper} ${svgStyles.circles_svg}`}>
           <Parallax speed={-8}>
-            <img src="/svgs/abstract-dots.svg" />
+            <Image
+              src="/svgs/abstract-dots.svg"
+              alt=""
+              width={840}
+              height={864}
+            />
           </Parallax>
         </div>
         <div
@@ -38,8 +43,8 @@ function Work() {
           <section className={layoutStyles.info_wrapper}>
             <h1>Work</h1>
             <p>
-              Professional contributions and projects of which I've been a part.
-              Project websites are linked to images below.
+              Professional contributions and projects of which I&apos;ve been a
+              part. Project websites are linked to images below.
               <br /> <br /> To view personal projects, follow the link to my
               Github in Connect.
             </p>

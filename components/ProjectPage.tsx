@@ -29,13 +29,12 @@ function ProjectPage() {
         <div>
           {project && project.title === "Studio Zoomies" ? (
             <div>{/* zoomies logo with svg wrapper component */}</div>
-          ) : (
-            <img
-              src={project && project.imgSrc}
-              className={projectPageStyles.project_page_image}
-              alt={project && project.imgAlt}
-            />
-          )}
+          ) : // <img
+          //   src={project && project.imgSrc}
+          //   className={projectPageStyles.project_page_image}
+          //   alt={project && project.imgAlt}
+          // />
+          null}
         </div>
         <div>
           <h1 className={projectPageStyles.project_page_title}>

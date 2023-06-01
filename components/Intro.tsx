@@ -35,7 +35,7 @@ function Intro({
         >
           {greetingComplete ? (
             <>
-              <h1>Hi, I'm Nick</h1>
+              <h1>Hi, I&apos;m Nick</h1>
               <ul className={layoutStyles.title_list}>
                 <motion.li
                   animate={title1Controls}
@@ -76,7 +76,7 @@ function Intro({
               onAnimationComplete={() => updateGreeting()}
               style={{ paddingBottom: "25px" }}
             >
-              Hi, I'm Nick
+              Hi, I&apos;m Nick
             </motion.h1>
           )}
         </section>
