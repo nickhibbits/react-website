@@ -36,11 +36,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </style>
       {introComplete ? <Navbar /> : null}
 
-      {loading ? (
+      {/* {loading ? (
         <div className="">Loading</div>
-      ) : (
-        <Component {...pageProps} updateIntroComplete={updateIntroComplete} />
-      )}
+      ) : ( */}
+      <Component {...pageProps} updateIntroComplete={updateIntroComplete} />
+      {/* ) */}
+      {/* } */}
     </>
   );
 }

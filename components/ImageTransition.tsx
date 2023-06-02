@@ -43,6 +43,7 @@ function ImageTransition({
             objectFit: "cover",
             transform: "scale(1.4)",
           }}
+          priority
         />
       </motion.div>
 
@@ -68,6 +69,7 @@ function ImageTransition({
                   transform: "scale(3.25)",
                 }
           }
+          priority
         />
       </motion.div>
 
@@ -86,6 +88,7 @@ function ImageTransition({
             transform: "scale(1)",
             objectPosition: "right",
           }}
+          priority
         />
       </motion.div>
     </div>
