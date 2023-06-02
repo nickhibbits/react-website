@@ -13,13 +13,11 @@ function ImageTransition({
   image1stSiblingControls,
   image2ndSiblingControls,
   image3rdSiblingControls,
-  // variants,
   updateIntroComplete,
 }: {
   image1stSiblingControls: any;
   image2ndSiblingControls: any;
   image3rdSiblingControls: any;
-  // variants: any;
   updateIntroComplete: any;
 }) {
   const width = useWindowCheck();
@@ -43,7 +41,7 @@ function ImageTransition({
             objectFit: "cover",
             transform: "scale(1.4)",
           }}
-          priority
+          unoptimized={true}
         />
       </motion.div>
 
@@ -69,7 +67,7 @@ function ImageTransition({
                   transform: "scale(3.25)",
                 }
           }
-          priority
+          unoptimized={true}
         />
       </motion.div>
 
@@ -89,6 +87,7 @@ function ImageTransition({
             objectPosition: "right",
           }}
           priority
+          unoptimized={true}
         />
       </motion.div>
     </div>

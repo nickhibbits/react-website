@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import { opacitySequenceVariants, transition } from "$/constants/animations";
 import { useAnimation, useAnimationControls } from "framer-motion";
 import { ParallaxProvider } from "react-scroll-parallax";
+import ImageLoad from "$/components/ImageLoad";
 
 function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const [greetingComplete, setGreetingComplete] = useState(false);
@@ -30,16 +31,6 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const handleUpdateGreeting = () => {
     console.log("here");
     setGreetingComplete(true);
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      handleLoad();
-    }, 5000);
-  }, []);
-
-  const handleLoad = () => {
-    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -145,7 +136,10 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   return (
     <>
       {isLoading ? (
-        <div className="">Loading</div>
+        <>
+          <div>Loading</div>
+          <ImageLoad updateIsLoading={() => setIsLoading(false)} />
+        </>
       ) : (
         <div className={appStyles.app_container}>
           <div className={layoutStyles.app_component}>
