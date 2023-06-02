@@ -14,12 +14,12 @@ export const opacitySequenceVariants = {
     transition: { ...transition(0).imageBaseInitial },
   },
   image2ndSiblingInitial: {
-    opacity: [0, 1, 1, 1, 0],
-    transition: { ...transition(1).imageSiblingInitial },
+    opacity: [0, 1, 1, 1, 1, 0],
+    transition: { ...transition(1.2).imageSiblingInitial },
   },
   image3rdSiblingInitial: {
-    opacity: [0, 1, 1, 1, 0],
-    transition: { ...transition(2).imageSiblingInitial },
+    opacity: [0, 1, 1, 1, 0, 0],
+    transition: { ...transition(3).imageSiblingInitial },
   },
   imageHover: {
     opacity: [0, 1],
@@ -33,8 +33,8 @@ export const opacitySequenceVariants = {
     opacity: 0,
   },
   title1: { opacity: [0, 1, 1], transition: { ...transition(0).title } },
-  title2: { opacity: [0, 1, 1], transition: { ...transition(1).title } },
-  title3: { opacity: [0, 1, 1], transition: { ...transition(2).title } },
+  title2: { opacity: [0, 1, 1], transition: { ...transition(1.2).title } },
+  title3: { opacity: [0, 1, 1], transition: { ...transition(3).title } },
   titleFadeOut: {
     opacity: [1, 0.5],
     transition: { ...transition(0).titleHover },
