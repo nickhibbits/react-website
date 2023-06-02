@@ -14,6 +14,7 @@ import { opacitySequenceVariants, transition } from "$/constants/animations";
 import { useAnimation, useAnimationControls } from "framer-motion";
 import { ParallaxProvider } from "react-scroll-parallax";
 import ImageLoad from "$/components/ImageLoad";
+import Loader from "$/components/Loader";
 
 function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const [greetingComplete, setGreetingComplete] = useState(false);
@@ -137,7 +138,7 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
     <>
       {isLoading ? (
         <>
-          <div>Loading</div>
+          <Loader />
           <ImageLoad updateIsLoading={() => setIsLoading(false)} />
         </>
       ) : (

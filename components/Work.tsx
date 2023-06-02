@@ -45,8 +45,8 @@ function Work() {
             <p>
               Professional contributions and projects of which I&apos;ve been a
               part. Websites are linked to the tiles.
-              <br /> <br /> For more cool stuff I'm working on, follow the link
-              to my Github in Connect.
+              <br /> <br /> For more cool stuff, follow the link to my Github in
+              Connect.
             </p>
           </section>
           <div>

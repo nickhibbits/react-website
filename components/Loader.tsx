@@ -1,0 +1,13 @@
+import React from "react";
+import loaderStyles from "$/styles/components/Loader.module.scss";
+
+function Loader() {
+  return (
+    <div className={loaderStyles.loader_component}>
+      <span className={loaderStyles.loader}></span>
+      <div>Loading...</div>
+    </div>
+  );
+}
+
+export default Loader;
