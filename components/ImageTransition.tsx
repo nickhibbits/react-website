@@ -68,6 +68,7 @@ function ImageTransition({
                 }
           }
           unoptimized={true}
+          priority
         />
       </motion.div>
 
