@@ -1,7 +1,7 @@
 export const transition = (delay: number) => {
   return {
-    imageBaseInitial: { duration: 3, delay },
-    imageSiblingInitial: { duration: 3, delay },
+    imageBaseInitial: { duration: 4, delay },
+    imageSiblingInitial: { duration: 4, delay },
     title: { duration: 2, delay },
     titleHover: { duration: 0.5, delay },
     imageHover: { duration: 1, delay },

@@ -67,8 +67,8 @@ function ImageTransition({
                   transform: "scale(3.25)",
                 }
           }
-          unoptimized={true}
           priority
+          unoptimized={true}
         />
       </motion.div>
 
