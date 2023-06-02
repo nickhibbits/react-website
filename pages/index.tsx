@@ -28,14 +28,14 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const title3Controls = useAnimation();
 
   const handleUpdateGreeting = () => {
+    console.log("here");
     setGreetingComplete(true);
   };
 
   useEffect(() => {
-    window.addEventListener("load", handleLoad);
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
+    setTimeout(() => {
+      handleLoad();
+    }, 5000);
   }, []);
 
   const handleLoad = () => {
@@ -142,59 +142,64 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
     setPreviousHover(title);
   };
 
-  {
-    isLoading ? (
-      <div className="">Loading</div>
-    ) : (
-      <div className={appStyles.app_container}>
-        <div className={layoutStyles.app_component}>
-          <section className={layoutStyles.home_container} id="home_container">
-            <div className={appStyles.intro_wrapper}>
-              <Intro
-                title1Controls={title1Controls}
-                title2Controls={title2Controls}
-                title3Controls={title3Controls}
-                greetingComplete={greetingComplete}
-                updateGreeting={handleUpdateGreeting}
-                handleHover={handleHover}
-                previousHover={previousHover}
-              />
-            </div>
-
-            {greetingComplete ? (
-              <>
-                <ColorFadeTransition
-                  image1stSiblingControls={image1stSiblingControls}
-                  image2ndSiblingControls={image2ndSiblingControls}
-                  image3rdSiblingControls={image3rdSiblingControls}
+  return (
+    <>
+      {isLoading ? (
+        <div className="">Loading</div>
+      ) : (
+        <div className={appStyles.app_container}>
+          <div className={layoutStyles.app_component}>
+            <section
+              className={layoutStyles.home_container}
+              id="home_container"
+            >
+              <div className={appStyles.intro_wrapper}>
+                <Intro
+                  title1Controls={title1Controls}
+                  title2Controls={title2Controls}
+                  title3Controls={title3Controls}
+                  greetingComplete={greetingComplete}
+                  updateGreeting={handleUpdateGreeting}
+                  handleHover={handleHover}
+                  previousHover={previousHover}
                 />
+              </div>
 
-                {/* <IconNav /> */}
+              {greetingComplete ? (
+                <>
+                  <ColorFadeTransition
+                    image1stSiblingControls={image1stSiblingControls}
+                    image2ndSiblingControls={image2ndSiblingControls}
+                    image3rdSiblingControls={image3rdSiblingControls}
+                  />
 
-                <ImageTransition
-                  image1stSiblingControls={image1stSiblingControls}
-                  image2ndSiblingControls={image2ndSiblingControls}
-                  image3rdSiblingControls={image3rdSiblingControls}
-                  updateIntroComplete={updateIntroComplete}
-                />
-              </>
-            ) : null}
-          </section>
-          <ParallaxProvider scrollAxis="vertical">
-            <About />
-          </ParallaxProvider>
+                  {/* <IconNav /> */}
 
-          <ParallaxProvider scrollAxis="vertical">
-            <Work />
-          </ParallaxProvider>
+                  <ImageTransition
+                    image1stSiblingControls={image1stSiblingControls}
+                    image2ndSiblingControls={image2ndSiblingControls}
+                    image3rdSiblingControls={image3rdSiblingControls}
+                    updateIntroComplete={updateIntroComplete}
+                  />
+                </>
+              ) : null}
+            </section>
+            <ParallaxProvider scrollAxis="vertical">
+              <About />
+            </ParallaxProvider>
 
-          <ParallaxProvider scrollAxis="vertical">
-            <Connect />
-          </ParallaxProvider>
+            <ParallaxProvider scrollAxis="vertical">
+              <Work />
+            </ParallaxProvider>
+
+            <ParallaxProvider scrollAxis="vertical">
+              <Connect />
+            </ParallaxProvider>
+          </div>
         </div>
-      </div>
-    );
-  }
+      )}
+    </>
+  );
 }
 
 export default Home;
