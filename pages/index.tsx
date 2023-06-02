@@ -17,6 +17,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const [greetingComplete, setGreetingComplete] = useState(false);
   const [previousHover, setPreviousHover] = useState("programmer");
+  const [isLoading, setIsLoading] = useState(true);
 
   const image1stSiblingControls = useAnimation();
   const image2ndSiblingControls = useAnimation();
@@ -28,6 +29,17 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
 
   const handleUpdateGreeting = () => {
     setGreetingComplete(true);
+  };
+
+  useEffect(() => {
+    window.addEventListener("load", handleLoad);
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+
+  const handleLoad = () => {
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -130,55 +142,59 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
     setPreviousHover(title);
   };
 
-  return (
-    <div className={appStyles.app_container}>
-      <div className={layoutStyles.app_component}>
-        <section className={layoutStyles.home_container} id="home_container">
-          <div className={appStyles.intro_wrapper}>
-            <Intro
-              title1Controls={title1Controls}
-              title2Controls={title2Controls}
-              title3Controls={title3Controls}
-              greetingComplete={greetingComplete}
-              updateGreeting={handleUpdateGreeting}
-              handleHover={handleHover}
-              previousHover={previousHover}
-            />
-          </div>
-
-          {greetingComplete ? (
-            <>
-              <ColorFadeTransition
-                image1stSiblingControls={image1stSiblingControls}
-                image2ndSiblingControls={image2ndSiblingControls}
-                image3rdSiblingControls={image3rdSiblingControls}
+  {
+    isLoading ? (
+      <div className="">Loading</div>
+    ) : (
+      <div className={appStyles.app_container}>
+        <div className={layoutStyles.app_component}>
+          <section className={layoutStyles.home_container} id="home_container">
+            <div className={appStyles.intro_wrapper}>
+              <Intro
+                title1Controls={title1Controls}
+                title2Controls={title2Controls}
+                title3Controls={title3Controls}
+                greetingComplete={greetingComplete}
+                updateGreeting={handleUpdateGreeting}
+                handleHover={handleHover}
+                previousHover={previousHover}
               />
+            </div>
 
-              {/* <IconNav /> */}
+            {greetingComplete ? (
+              <>
+                <ColorFadeTransition
+                  image1stSiblingControls={image1stSiblingControls}
+                  image2ndSiblingControls={image2ndSiblingControls}
+                  image3rdSiblingControls={image3rdSiblingControls}
+                />
 
-              <ImageTransition
-                image1stSiblingControls={image1stSiblingControls}
-                image2ndSiblingControls={image2ndSiblingControls}
-                image3rdSiblingControls={image3rdSiblingControls}
-                updateIntroComplete={updateIntroComplete}
-              />
-            </>
-          ) : null}
-        </section>
-        <ParallaxProvider scrollAxis="vertical">
-          <About />
-        </ParallaxProvider>
+                {/* <IconNav /> */}
 
-        <ParallaxProvider scrollAxis="vertical">
-          <Work />
-        </ParallaxProvider>
+                <ImageTransition
+                  image1stSiblingControls={image1stSiblingControls}
+                  image2ndSiblingControls={image2ndSiblingControls}
+                  image3rdSiblingControls={image3rdSiblingControls}
+                  updateIntroComplete={updateIntroComplete}
+                />
+              </>
+            ) : null}
+          </section>
+          <ParallaxProvider scrollAxis="vertical">
+            <About />
+          </ParallaxProvider>
 
-        <ParallaxProvider scrollAxis="vertical">
-          <Connect />
-        </ParallaxProvider>
+          <ParallaxProvider scrollAxis="vertical">
+            <Work />
+          </ParallaxProvider>
+
+          <ParallaxProvider scrollAxis="vertical">
+            <Connect />
+          </ParallaxProvider>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Home;
