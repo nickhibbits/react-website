@@ -43,7 +43,7 @@ function About() {
               <br />
               <br />
               When I&apos;m not coding, I&apos;m deep into producing electronic
-              music, or likewise in the woods in my home here in South Lake
+              music -- or likewise in the woods, here at home in South Lake
               Tahoe, CA.
               <br />
               <br />

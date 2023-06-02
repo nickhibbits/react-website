@@ -44,9 +44,9 @@ function Work() {
             <h1>Work</h1>
             <p>
               Professional contributions and projects of which I&apos;ve been a
-              part. Project websites are linked to images below.
-              <br /> <br /> To view personal projects, follow the link to my
-              Github in Connect.
+              part. Websites are linked to the tiles.
+              <br /> <br /> For more cool stuff I'm working on, follow the link
+              to my Github in Connect.
             </p>
           </section>
           <div>
@@ -67,14 +67,14 @@ function Work() {
                 return ( */}
               <WorkCard
                 title={"The Bear's Den"}
-                description={"Chainsaw carving shop - E-Comm, Web Developer"}
+                description={"Chainsaw carving shop, - E-Comm / Web Developer"}
                 imgSrc={"/svgs/chainsaw-svgrepo-com.svg"}
                 siteLink={"https://www.thebearsdentahoe.com/"}
                 key={1}
               />
               <WorkCard
                 title={"Studio Zoomies"}
-                description={"CRM for photographers - Software Developer"}
+                description={"Photography CRM startup, - Software Developer"}
                 imgSrc={"/svgs/ZoomiesLogo.svg"}
                 siteLink={"https://www.studiozoomies.com/home"}
                 key={2}

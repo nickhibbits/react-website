@@ -9,13 +9,6 @@ const paduk = Padauk({ weight: "400", subsets: ["latin"] });
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [introComplete, updateIntroComplete] = useState(false);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3500);
-  }, []);
 
   return (
     <>
@@ -35,13 +28,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         `}
       </style>
       {introComplete ? <Navbar /> : null}
-
-      {/* {loading ? (
-        <div className="">Loading</div>
-      ) : ( */}
       <Component {...pageProps} updateIntroComplete={updateIntroComplete} />
-      {/* ) */}
-      {/* } */}
     </>
   );
 }

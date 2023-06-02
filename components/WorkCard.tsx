@@ -11,6 +11,8 @@ type WorkCardProps = {
 };
 
 function WorkCard({ title, description, imgSrc, siteLink }: WorkCardProps) {
+  const portions = description.split(",");
+
   return (
     <a href={siteLink} className={workCardStyles.work_card_component}>
       <div className={workCardStyles.svg_container}>
@@ -18,7 +20,9 @@ function WorkCard({ title, description, imgSrc, siteLink }: WorkCardProps) {
       </div>
       <div className={workCardStyles.work_card_info_wrapper}>
         <p>{title}</p>
-        <p>{description}</p>
+        <p>
+          {portions[0]} <br /> <em>{portions[1]}</em>
+        </p>
       </div>
     </a>
   );
