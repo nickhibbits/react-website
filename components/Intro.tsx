@@ -35,7 +35,7 @@ function Intro({
         >
           {greetingComplete ? (
             <>
-              <h1>Hi, I&apos;m Nick.</h1>
+              <h1>Hi, I&apos;m Nick</h1>
               <ul className={layoutStyles.title_list}>
                 <motion.li
                   animate={title1Controls}
