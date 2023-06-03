@@ -6,11 +6,10 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  height: 100vh;
+  height: 97vh;
   width: 100vw;
 
   p {
-    margin-top: 0.8rem;
     animation: 1.8s fade linear infinite;
   }
 }
@@ -22,6 +21,7 @@
   width: 10rem;
   height: 10rem;
   color: variables.$blue-light;
+  margin-bottom: 1.5rem;
 }
 .loader:before,
 .loader:after {

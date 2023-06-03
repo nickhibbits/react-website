@@ -7,7 +7,10 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
   display: grid;
   position: relative;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
-  grid-template-rows: 100vh 55rem 50rem 30rem;
+  grid-template-rows: 98vh 55rem 50rem 30rem;
+  @include mediaQueries.tablet {
+    grid-template-rows: 100vh 55rem 50rem 30rem;
+  }
   @include mediaQueries.tablet-large {
     grid-template-rows: 100vh 40rem 38rem 29rem;
   }
@@ -104,7 +107,7 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
   }
 
   li {
-    font-size: clamp(12px, variables.$fs-300, 3vw);
+    font-size: clamp(12.2px, variables.$fs-300, 3vw);
     @include mediaQueries.tablet {
       font-size: clamp(18px, 1.7vw, variables.$fs-500);
     }
