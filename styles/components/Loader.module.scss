@@ -8,14 +8,19 @@
   gap: 0.5rem;
   height: 100vh;
   width: 100vw;
+
+  p {
+    margin-top: 0.8rem;
+    animation: 1.8s fade linear infinite;
+  }
 }
 
 .loader {
   transform: rotateZ(45deg);
   perspective: 1000px;
   border-radius: 50%;
-  width: 8rem;
-  height: 8rem;
+  width: 10rem;
+  height: 10rem;
   color: variables.$blue-light;
 }
 .loader:before,
@@ -28,13 +33,27 @@
   width: inherit;
   height: inherit;
   border-radius: 50%;
-  transform: rotateX(70deg);
+  transform: rotateX(70deg) scale(1.3);
   animation: 1s spin linear infinite;
 }
 .loader:after {
   color: variables.$green-light;
   transform: rotateY(70deg);
   animation-delay: 0.4s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
 }
 
 @keyframes rotate {

@@ -5,7 +5,7 @@ function Loader() {
   return (
     <div className={loaderStyles.loader_component}>
       <span className={loaderStyles.loader}></span>
-      <div>Loading...</div>
+      <p>Loading...</p>
     </div>
   );
 }

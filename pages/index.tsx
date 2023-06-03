@@ -136,7 +136,7 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
 
   return (
     <>
-      {isLoading ? (
+      {true ? (
         <>
           <Loader />
           <ImageLoad updateIsLoading={() => setIsLoading(false)} />
