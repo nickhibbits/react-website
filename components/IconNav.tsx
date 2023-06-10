@@ -2,7 +2,7 @@ import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import { MdWorkOutline } from "react-icons/md";
 import { MdInfoOutline } from "react-icons/md";
 import { handleScroll } from "$/utils/helpers";
-import { useWindowCheck } from "$/utils/customHooks";
+import { useWindowCheck } from "$/utils/customHooks/useWindowCheck";
 
 import iconNavStyles from "$/styles/imageStyles/IconNav.module.scss";
 

@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useWindowCheck } from "$/utils/customHooks";
+import { useWindowCheck } from "$/utils/customHooks/useWindowCheck";
 
 import layoutStyles from "$/styles/layout/layout.module.scss";
 import projectPageStyles from "$/styles/components/ProjectPage.module.scss";

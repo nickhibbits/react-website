@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { useWindowCheck } from "$/utils/customHooks";
+import { useWindowCheck } from "$/utils/customHooks/useWindowCheck";
 
 import projects from "$/constants/projects";
 

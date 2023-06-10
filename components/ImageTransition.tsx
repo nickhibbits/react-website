@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import imageStyles from "$/styles/imageStyles/ImageTransitions.module.scss";
-import { useWindowCheck } from "$/utils/customHooks";
+import { useWindowCheck } from "$/utils/customHooks/useWindowCheck";
 
 function ImageTransition({
   image1stSiblingControls,

@@ -1,6 +1,6 @@
 import { FiInstagram, FiLinkedin } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
-import { useWindowCheck } from "$/utils/customHooks";
+import { useWindowCheck } from "$/utils/customHooks/useWindowCheck";
 
 import React from "react";
 

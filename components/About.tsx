@@ -1,5 +1,5 @@
 import SkillsCard from "./SkillsCard";
-import { useWindowCheck } from "$/utils/customHooks";
+import { useWindowCheck } from "$/utils/customHooks/useWindowCheck";
 import abstractCircleSvg from "$/public/svgs/abstract-circle.svg";
 
 import layoutStyles from "$/styles/layout/layout.module.scss";

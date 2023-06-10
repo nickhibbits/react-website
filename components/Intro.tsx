@@ -1,4 +1,4 @@
-import { useWindowCheck } from "$/utils/customHooks";
+import { useWindowCheck } from "$/utils/customHooks/useWindowCheck";
 import { motion, useAnimate } from "framer-motion";
 import React from "react";
 
