@@ -66,19 +66,20 @@ function Work() {
               {/* {filteredProjects.map((project) => {
                 return ( */}
               <WorkCard
-                title={"The Bear's Den"}
-                description={"Chainsaw carving shop, - E-Comm / Web Developer"}
-                imgSrc={"/svgs/chainsaw-svgrepo-com.svg"}
-                siteLink={"https://www.thebearsdentahoe.com/"}
-                key={1}
-              />
-              <WorkCard
                 title={"Studio Zoomies"}
                 description={"Photography CRM startup, - Software Developer"}
                 imgSrc={"/svgs/ZoomiesLogo.svg"}
                 siteLink={"https://www.studiozoomies.com/home"}
                 key={2}
               />
+              <WorkCard
+                title={"The Bear's Den"}
+                description={"Chainsaw carving shop, - E-Comm / Web Developer"}
+                imgSrc={"/svgs/chainsaw-svgrepo-com.svg"}
+                siteLink={"https://www.thebearsdentahoe.com/"}
+                key={1}
+              />
+
               {/* // ); */}
               {/* })} */}
             </div>
