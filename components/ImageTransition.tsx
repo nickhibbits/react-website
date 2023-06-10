@@ -56,6 +56,7 @@ function ImageTransition({
           src={synthImage}
           alt="sound eq dials"
           fill={true}
+          quality={85}
           style={
             width > 715
               ? {
