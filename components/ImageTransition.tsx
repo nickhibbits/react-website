@@ -1,6 +1,6 @@
-import treesImage from "$/public/images/_trees-overhead-min-1.jpg";
-import synthImage from "$/public/images/_synthesizer.jpg";
-import codeImage from "$/public/images/_code-image.jpg";
+import treesImage from "$/public/images/_trees-overhead-min-3.jpg";
+import synthImage from "$/public/images/_synthesizer-2.jpg";
+import codeImage from "$/public/images/_code-image-2.jpg";
 
 import { motion } from "framer-motion";
 
@@ -56,16 +56,16 @@ function ImageTransition({
           src={synthImage}
           alt="sound eq dials"
           fill={true}
-          quality={85}
+          quality={100}
           style={
             width > 715
               ? {
                   objectFit: "contain",
-                  transform: "scale(1.8)",
+                  transform: "scale(2.1)",
                 }
               : {
                   objectFit: "contain",
-                  transform: "scale(3.25)",
+                  transform: "scale(4)",
                 }
           }
         />
