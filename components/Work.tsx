@@ -51,20 +51,6 @@ function Work() {
           </section>
           <div>
             <div className={workCardStyles.card_scroll_container}>
-              {/* <Image
-                height={180}
-                width={180}
-                src="/svgs/ZoomiesLogo.svg"
-                alt=""
-              />
-              <Image
-                height={180}
-                width={180}
-                src="/svgs/chainsaw-svgrepo-com.svg"
-                alt=""
-              /> */}
-              {/* {filteredProjects.map((project) => {
-                return ( */}
               <WorkCard
                 title={"Studio Zoomies"}
                 description={"Photography CRM startup, - Software Developer"}
@@ -79,9 +65,6 @@ function Work() {
                 siteLink={"https://www.thebearsdentahoe.com/"}
                 key={1}
               />
-
-              {/* // ); */}
-              {/* })} */}
             </div>
           </div>
         </div>

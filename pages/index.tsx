@@ -30,7 +30,6 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const title3Controls = useAnimation();
 
   const handleUpdateGreeting = () => {
-    console.log("here");
     setGreetingComplete(true);
   };
 
