@@ -139,7 +139,7 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
           <ImageLoad updateIsLoading={() => setIsLoading(false)} />
         </>
       ) :  */}
-      (
+
       <div className={appStyles.app_container}>
         <div className={layoutStyles.app_component}>
           <section className={layoutStyles.home_container} id="home_container">
@@ -185,7 +185,7 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
           </ParallaxProvider>
         </div>
       </div>
-      ){/* } */}
+      {/* } */}
     </>
   );
 }
