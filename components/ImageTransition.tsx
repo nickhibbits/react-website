@@ -60,15 +60,13 @@ function ImageTransition({
             width > 715
               ? {
                   objectFit: "contain",
-                  transform: "scale(1.5)",
+                  transform: "scale(1.8)",
                 }
               : {
                   objectFit: "contain",
                   transform: "scale(3.25)",
                 }
           }
-          priority
-          unoptimized={true}
         />
       </motion.div>
 
@@ -87,8 +85,6 @@ function ImageTransition({
             transform: "scale(1)",
             objectPosition: "right",
           }}
-          priority
-          unoptimized={true}
         />
       </motion.div>
     </div>

@@ -58,8 +58,8 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   ]);
 
   const handleHover = (title: string, previousTitle: string) => {
-    console.log("Hover 🟢", title);
-    console.log("previous ", previousTitle);
+    // console.log("Hover 🟢", title);
+    // console.log("previous ", previousTitle);
 
     if (previousTitle === title) {
       return;
@@ -68,11 +68,11 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
     const hideImage = ["programmer", "sound", "forest"].find((value) => {
       const imageToHide = value !== title && value !== previousTitle;
 
-      console.log("imageToHide", imageToHide);
+      // console.log("imageToHide", imageToHide);
       return imageToHide;
     });
 
-    console.log("hideImage", hideImage);
+    // console.log("hideImage", hideImage);
 
     switch (hideImage) {
       case "programmer":
@@ -112,22 +112,19 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
       case "programmer":
         title1Controls.start(opacitySequenceVariants.titleFadeIn);
         image1stSiblingControls.start(opacitySequenceVariants.imageHover);
-        // image2ndSiblingControls.start(opacitySequenceVariants.fadeImage);
-        // image3rdSiblingControls.start(opacitySequenceVariants.fadeImage);
+
         break;
 
       case "sound":
         title2Controls.start(opacitySequenceVariants.titleFadeIn);
         image2ndSiblingControls.start(opacitySequenceVariants.imageHover);
-        // image3rdSiblingControls.start(opacitySequenceVariants.fadeImage);
-        // image1stSiblingControls.start(opacitySequenceVariants.fadeImage);
+
         break;
 
       case "forest":
         title3Controls.start(opacitySequenceVariants.titleFadeIn);
         image3rdSiblingControls.start(opacitySequenceVariants.imageHover);
-        // image1stSiblingControls.start(opacitySequenceVariants.fadeImage);
-        // image2ndSiblingControls.start(opacitySequenceVariants.fadeImage);
+
         break;
     }
 
@@ -136,63 +133,59 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
 
   return (
     <>
-      {!isLoading ? (
+      {/* {!isLoading ? (
         <>
           <Loader />
           <ImageLoad updateIsLoading={() => setIsLoading(false)} />
         </>
-      ) : (
-        <div className={appStyles.app_container}>
-          <div className={layoutStyles.app_component}>
-            <section
-              className={layoutStyles.home_container}
-              id="home_container"
-            >
-              <div className={appStyles.intro_wrapper}>
-                <Intro
-                  title1Controls={title1Controls}
-                  title2Controls={title2Controls}
-                  title3Controls={title3Controls}
-                  greetingComplete={greetingComplete}
-                  updateGreeting={handleUpdateGreeting}
-                  handleHover={handleHover}
-                  previousHover={previousHover}
+      ) :  */}
+      (
+      <div className={appStyles.app_container}>
+        <div className={layoutStyles.app_component}>
+          <section className={layoutStyles.home_container} id="home_container">
+            <div className={appStyles.intro_wrapper}>
+              <Intro
+                title1Controls={title1Controls}
+                title2Controls={title2Controls}
+                title3Controls={title3Controls}
+                greetingComplete={greetingComplete}
+                updateGreeting={handleUpdateGreeting}
+                handleHover={handleHover}
+                previousHover={previousHover}
+              />
+            </div>
+
+            {greetingComplete ? (
+              <>
+                <ColorFadeTransition
+                  image1stSiblingControls={image1stSiblingControls}
+                  image2ndSiblingControls={image2ndSiblingControls}
+                  image3rdSiblingControls={image3rdSiblingControls}
                 />
-              </div>
 
-              {greetingComplete ? (
-                <>
-                  <ColorFadeTransition
-                    image1stSiblingControls={image1stSiblingControls}
-                    image2ndSiblingControls={image2ndSiblingControls}
-                    image3rdSiblingControls={image3rdSiblingControls}
-                  />
+                <ImageTransition
+                  image1stSiblingControls={image1stSiblingControls}
+                  image2ndSiblingControls={image2ndSiblingControls}
+                  image3rdSiblingControls={image3rdSiblingControls}
+                  updateIntroComplete={updateIntroComplete}
+                />
+              </>
+            ) : null}
+          </section>
+          <ParallaxProvider scrollAxis="vertical">
+            <About />
+          </ParallaxProvider>
 
-                  {/* <IconNav /> */}
+          <ParallaxProvider scrollAxis="vertical">
+            <Work />
+          </ParallaxProvider>
 
-                  <ImageTransition
-                    image1stSiblingControls={image1stSiblingControls}
-                    image2ndSiblingControls={image2ndSiblingControls}
-                    image3rdSiblingControls={image3rdSiblingControls}
-                    updateIntroComplete={updateIntroComplete}
-                  />
-                </>
-              ) : null}
-            </section>
-            <ParallaxProvider scrollAxis="vertical">
-              <About />
-            </ParallaxProvider>
-
-            <ParallaxProvider scrollAxis="vertical">
-              <Work />
-            </ParallaxProvider>
-
-            <ParallaxProvider scrollAxis="vertical">
-              <Connect />
-            </ParallaxProvider>
-          </div>
+          <ParallaxProvider scrollAxis="vertical">
+            <Connect />
+          </ParallaxProvider>
         </div>
-      )}
+      </div>
+      ){/* } */}
     </>
   );
 }

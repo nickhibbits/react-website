@@ -22,12 +22,15 @@ function ImageLoad({ updateIsLoading }: { updateIsLoading: any }) {
   const [loadingStatuses, setLoadingStatuses] = useState(loadingStatus);
 
   useEffect(() => {
-    console.log("🟣 loading status updated", loadingStatuses);
+    // console.log("🟣 loading status updated", loadingStatuses);
     if (Object.values(loadingStatuses).every((v) => v === true)) {
       updateIsLoading(false);
-      console.log("🟢 all images loaded", loadingStatuses);
+      // console.log("🟢 all images loaded", loadingStatuses);
     }
   }, [loadingStatuses]);
+
+  const height = 500;
+  const width = 500;
 
   return (
     <div style={{ opacity: "0" }}>
@@ -35,36 +38,42 @@ function ImageLoad({ updateIsLoading }: { updateIsLoading: any }) {
         src={codeImage}
         alt="code"
         fill={true}
-        unoptimized={true}
-        onLoadingComplete={() =>
-          setLoadingStatuses((statuses) => {
-            return { ...statuses, codeLoaded: true };
-          })
-        }
+        height={height}
+        width={width}
+
+        // onLoadingComplete={() =>
+        //   setLoadingStatuses((statuses) => {
+        //     return { ...statuses, codeLoaded: true };
+        //   })
+        // }
       />
 
       <Image
         src={synthImage}
         alt="sound eq dials"
         fill={true}
-        unoptimized={true}
-        onLoadingComplete={() =>
-          setLoadingStatuses((statuses) => {
-            return { ...statuses, dialsLoaded: true };
-          })
-        }
+        height={height}
+        width={width}
+
+        // onLoadingComplete={() =>
+        //   setLoadingStatuses((statuses) => {
+        //     return { ...statuses, dialsLoaded: true };
+        //   })
+        // }
       />
       <Image
         src={treesImage}
         alt="overhead forest shot"
         fill={true}
-        priority
-        unoptimized={true}
-        onLoadingComplete={() =>
-          setLoadingStatuses((statuses) => {
-            return { ...statuses, treesLoaded: true };
-          })
-        }
+        height={height}
+        width={width}
+
+        // priority
+        // onLoadingComplete={() =>
+        //   setLoadingStatuses((statuses) => {
+        //     return { ...statuses, treesLoaded: true };
+        //   })
+        // }
       />
     </div>
   );
