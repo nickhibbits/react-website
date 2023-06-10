@@ -1,6 +1,6 @@
-import treesImage from "$/public/images/trees-overhead-min.jpg";
-import synthImage from "$/public/images/synthesizer.jpg";
-import codeImage from "$/public/images/code-image.jpg";
+import treesImage from "$/public/images/_trees-overhead-min-1.jpg";
+import synthImage from "$/public/images/_synthesizer.jpg";
+import codeImage from "$/public/images/_code-image.jpg";
 
 import { motion } from "framer-motion";
 
@@ -82,7 +82,6 @@ function ImageTransition({
           fill={true}
           style={{
             objectFit: "cover",
-            transform: "scale(1)",
             objectPosition: "right",
           }}
         />
