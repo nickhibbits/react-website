@@ -1,6 +1,6 @@
 import treesImage from "$/public/images/_trees-overhead-min-3.jpg";
 import synthImage from "$/public/images/_synthesizer-2.jpg";
-import codeImage from "$/public/images/_code-image-2.jpg";
+import codeImage from "$/public/images/_code-image-3.jpg";
 
 import { motion } from "framer-motion";
 
@@ -39,6 +39,7 @@ function ImageTransition({
           fill={true}
           style={{
             objectFit: "cover",
+            objectPosition: "20% 50%",
             transform: "scale(1.4)",
           }}
           unoptimized={true}
@@ -56,7 +57,6 @@ function ImageTransition({
           src={synthImage}
           alt="sound eq dials"
           fill={true}
-          quality={100}
           style={
             width > 715
               ? {
