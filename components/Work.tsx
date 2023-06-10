@@ -51,27 +51,6 @@ function Work() {
           </section>
           <div>
             <div className={workCardStyles.card_scroll_container}>
-              {/* <Image
-                height={180}
-                width={180}
-                src="/svgs/ZoomiesLogo.svg"
-                alt=""
-              />
-              <Image
-                height={180}
-                width={180}
-                src="/svgs/chainsaw-svgrepo-com.svg"
-                alt=""
-              /> */}
-              {/* {filteredProjects.map((project) => {
-                return ( */}
-              <WorkCard
-                title={"The Bear's Den"}
-                description={"Chainsaw carving shop, - E-Comm / Web Developer"}
-                imgSrc={"/svgs/chainsaw-svgrepo-com.svg"}
-                siteLink={"https://www.thebearsdentahoe.com/"}
-                key={1}
-              />
               <WorkCard
                 title={"Studio Zoomies"}
                 description={"Photography CRM startup, - Software Developer"}
@@ -79,8 +58,13 @@ function Work() {
                 siteLink={"https://www.studiozoomies.com/home"}
                 key={2}
               />
-              {/* // ); */}
-              {/* })} */}
+              <WorkCard
+                title={"The Bear's Den"}
+                description={"Chainsaw carving shop, - E-Comm / Web Developer"}
+                imgSrc={"/svgs/chainsaw-svgrepo-com.svg"}
+                siteLink={"https://www.thebearsdentahoe.com/"}
+                key={1}
+              />
             </div>
           </div>
         </div>

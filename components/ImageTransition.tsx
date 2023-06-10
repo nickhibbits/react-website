@@ -1,6 +1,6 @@
-import treesImage from "$/public/images/trees-overhead-min.jpg";
-import synthImage from "$/public/images/synthesizer.jpg";
-import codeImage from "$/public/images/code-image.jpg";
+import treesImage from "$/public/images/_trees-overhead-min-3.jpg";
+import synthImage from "$/public/images/_synthesizer-2.jpg";
+import codeImage from "$/public/images/_code-image-3.jpg";
 
 import { motion } from "framer-motion";
 
@@ -39,6 +39,7 @@ function ImageTransition({
           fill={true}
           style={{
             objectFit: "cover",
+            objectPosition: "20% 50%",
             transform: "scale(1.4)",
           }}
           unoptimized={true}
@@ -60,11 +61,11 @@ function ImageTransition({
             width > 715
               ? {
                   objectFit: "contain",
-                  transform: "scale(1.8)",
+                  transform: "scale(2.1)",
                 }
               : {
                   objectFit: "contain",
-                  transform: "scale(3.25)",
+                  transform: "scale(4)",
                 }
           }
         />
@@ -82,7 +83,6 @@ function ImageTransition({
           fill={true}
           style={{
             objectFit: "cover",
-            transform: "scale(1)",
             objectPosition: "right",
           }}
         />

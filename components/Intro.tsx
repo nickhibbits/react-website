@@ -41,7 +41,6 @@ function Intro({
                   animate={title1Controls}
                   className={layoutStyles.title}
                   style={{ opacity: 0 }}
-                  // variants={opacitySequenceVariants}
                   onHoverStart={() => handleHover("programmer", previousHover)}
                   onTap={() => handleHover("programmer", previousHover)}
                 >
@@ -51,7 +50,6 @@ function Intro({
                   animate={title2Controls}
                   className={layoutStyles.title}
                   style={{ opacity: 0 }}
-                  // variants={opacitySequenceVariants}
                   onHoverStart={() => handleHover("sound", previousHover)}
                   onTap={() => handleHover("sound", previousHover)}
                 >
@@ -61,7 +59,6 @@ function Intro({
                   animate={title3Controls}
                   className={layoutStyles.title}
                   style={{ opacity: 0 }}
-                  // variants={opacitySequenceVariants}
                   onHoverStart={() => handleHover("forest", previousHover)}
                   onTap={() => handleHover("forest", previousHover)}
                 >

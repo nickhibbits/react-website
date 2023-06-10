@@ -10,11 +10,11 @@ import ImageTransition from "$/components/ImageTransition";
 
 import ColorFadeTransition from "$/components/ColorFadeTransition";
 import { useEffect, useState } from "react";
-import { opacitySequenceVariants, transition } from "$/constants/animations";
-import { useAnimation, useAnimationControls } from "framer-motion";
+import { opacitySequenceVariants } from "$/constants/animations";
+import { useAnimation } from "framer-motion";
 import { ParallaxProvider } from "react-scroll-parallax";
-import ImageLoad from "$/components/ImageLoad";
-import Loader from "$/components/Loader";
+// import ImageLoad from "$/components/ImageLoad";
+// import Loader from "$/components/Loader";
 
 function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const [greetingComplete, setGreetingComplete] = useState(false);
@@ -30,7 +30,6 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
   const title3Controls = useAnimation();
 
   const handleUpdateGreeting = () => {
-    console.log("here");
     setGreetingComplete(true);
   };
 
@@ -139,7 +138,7 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
           <ImageLoad updateIsLoading={() => setIsLoading(false)} />
         </>
       ) :  */}
-      (
+
       <div className={appStyles.app_container}>
         <div className={layoutStyles.app_component}>
           <section className={layoutStyles.home_container} id="home_container">
@@ -185,7 +184,7 @@ function Home({ updateIntroComplete }: { updateIntroComplete: any }) {
           </ParallaxProvider>
         </div>
       </div>
-      ){/* } */}
+      {/* } */}
     </>
   );
 }

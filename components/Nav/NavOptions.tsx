@@ -12,8 +12,8 @@ type NavOptionProps = {
   droorOpen?: any;
 };
 
-const resumeLink =
-  "https://docs.google.com/document/d/1LAUPQnsrAT2VF9PTtzbKjegGxBC90gg1yf5DALrAnc8/edit?usp=sharing";
+const resumeLink = "./resume";
+// "https://docs.google.com/document/d/1LAUPQnsrAT2VF9PTtzbKjegGxBC90gg1yf5DALrAnc8/edit?usp=sharing";
 
 function NavOptions({
   toggleNavOptions,
