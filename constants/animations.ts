@@ -43,8 +43,8 @@ export const opacitySequenceVariants = {
     opacity: [0.5, 1],
     transition: { ...transition(0).titleHover },
   },
-
   hideTitle: {
     opacity: 0.5,
   },
 };
+

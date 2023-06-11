@@ -3,13 +3,8 @@ import { motion, useAnimate } from "framer-motion";
 import React from "react";
 
 import layoutStyles from "$/styles/layout/layout.module.scss";
-import appStyles from "$/styles/components/App.module.scss";
-import { TransitionProps } from "$/types";
-import { opacitySequenceVariants } from "$/constants/animations";
 
-//TODO add hover effect with synced title and image
 function Intro({
-  // animationSequecence,
   title1Controls,
   title2Controls,
   title3Controls,

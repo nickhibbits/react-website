@@ -7,7 +7,6 @@ import svgStyles from "$/styles/imageStyles/svg.module.scss";
 import cardStyle from "$/styles/components/SkillsCard.module.scss";
 import { Parallax } from "react-scroll-parallax";
 import Image from "next/image";
-// import { useRef } from "react";
 
 function About() {
   const width = useWindowCheck();
