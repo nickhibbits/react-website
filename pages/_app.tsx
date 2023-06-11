@@ -1,15 +1,12 @@
 import { AppProps } from "next/app";
 import { Padauk, Righteous } from "next/font/google";
+
 import "$/styles/globals.scss";
-import Navbar from "$/components/Nav/Navbar";
-import { useEffect, useState } from "react";
 
 const righteous = Righteous({ weight: "400", subsets: ["latin"] });
 const paduk = Padauk({ weight: "400", subsets: ["latin"] });
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const [introComplete, updateIntroComplete] = useState(false);
-
   return (
     <>
       <style jsx global>
@@ -27,8 +24,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           }
         `}
       </style>
-      {introComplete ? <Navbar /> : null}
-      <Component {...pageProps} updateIntroComplete={updateIntroComplete} />
+
+      <Component {...pageProps} />
     </>
   );
 }
