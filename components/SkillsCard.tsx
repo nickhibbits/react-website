@@ -16,12 +16,12 @@ function SkillsCard() {
     },
     {
       name: "JavaScript, TypeScript",
-      level: "90%",
+      level: "95%",
       id: 3,
     },
     {
       name: "React.js, Next.js",
-      level: "85%",
+      level: "90%",
       id: 4,
     },
     {
