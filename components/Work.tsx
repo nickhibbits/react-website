@@ -71,7 +71,7 @@ function Work() {
                   "Personal site, - Built in Next.js; deployed with Vercel"
                 }
                 imgSrc={"/svgs/website-click-svgrepo-com.svg"}
-                siteLink={"https://www.thebearsdentahoe.com/"}
+                siteLink={"https://github.com/nickhibbits/react-website"}
                 key={3}
               />
             </div>

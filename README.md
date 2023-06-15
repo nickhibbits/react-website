@@ -1,38 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [nickhibbits.com](https://nickhibbits.com)
+
+This repository contains the source code and assets for my personal portfolio website. The website showcases my skills, projects, and achievements. It serves as a hub for potential clients, employers, and collaborators to learn more about me and my work.
+
+##Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Contact](#contact)
+
+## Features
+
+- Responsive design for optimal viewing experience on various devices.
+- Sections for showcasing skills, projects, experience, and contact information.
+- Interactive elements and animations to engage users and provide a seamless browsing experience.
+- Clean and intuitive user interface to ensure easy navigation.
+- Integration with social media platforms for easy sharing and networking.
+
+## Technologies Used
+
+- HTML5
+- [Sass](https://sass-lang.com/)
+- [Next.js](https://nextjs.org/)
+- [Framer Motion](https://www.framer.com/motion/)
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy of this portfolio website up and running on your machine, follow the instructions below.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Web browser (e.g., Chrome, Firefox, Safari)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Clone the repository to your local machine using the following command:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   ```shell
+   git clone https://github.com/nickhibbits/react-website.git
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Navigate to the project directory
 
-## Learn More
+   ```shell
+   cd react-website
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Install dependencies and spin up the dev server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```shell
+   npm i
+   nm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. Go to localhost:3000 in the browser
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Email: nicholashibbits@gmail.com
+- Website: [nickhibbits.com](https://nickhibbits.com)
+- LinkedIn: [Nicholas Hibbits](https://www.linkedin.com/in/nicholas-hibbits/)
