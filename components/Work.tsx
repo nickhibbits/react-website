@@ -49,7 +49,7 @@ function Work() {
               Connect.
             </p>
           </section>
-          <div>
+          <div style={{ display: "grid" }}>
             <div className={workCardStyles.card_scroll_container}>
               <WorkCard
                 title={"Studio Zoomies"}
@@ -64,6 +64,15 @@ function Work() {
                 imgSrc={"/svgs/chainsaw-svgrepo-com.svg"}
                 siteLink={"https://www.thebearsdentahoe.com/"}
                 key={1}
+              />
+              <WorkCard
+                title={"nickhibbits.com"}
+                description={
+                  "Personal site, - Built in Next.js; deployed with Vercel"
+                }
+                imgSrc={"/svgs/website-click-svgrepo-com.svg"}
+                siteLink={"https://www.thebearsdentahoe.com/"}
+                key={3}
               />
             </div>
           </div>
