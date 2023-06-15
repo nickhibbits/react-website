@@ -2,13 +2,13 @@
 
 This repository contains the source code and assets for my personal portfolio website. The website showcases my skills, projects, and achievements. It serves as a hub for potential clients, employers, and collaborators to learn more about me and my work.
 
-##Table of Contents
+## Table of Contents
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
 - [Contact](#contact)
 
 ## Features
@@ -21,9 +21,8 @@ This repository contains the source code and assets for my personal portfolio we
 
 ## Technologies Used
 
-- HTML5
-- [Sass](https://sass-lang.com/)
 - [Next.js](https://nextjs.org/)
+- [Sass](https://sass-lang.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 
 ## Getting Started
