@@ -33,8 +33,8 @@ export const opacitySequenceVariants = {
     opacity: 0,
   },
   title1: { opacity: [0, 1, 1], transition: { ...transition(0).title } },
-  title2: { opacity: [0, 1, 1], transition: { ...transition(1.5).title } },
-  title3: { opacity: [0, 1, 1], transition: { ...transition(3).title } },
+  title2: { opacity: [0, 1, 1, 0.5], transition: { ...transition(1.5).title } },
+  title3: { opacity: [0, 1, 1, 0.5], transition: { ...transition(3).title } },
   titleFadeOut: {
     opacity: [1, 0.5],
     transition: { ...transition(0).titleHover },
@@ -47,4 +47,3 @@ export const opacitySequenceVariants = {
     opacity: 0.5,
   },
 };
-

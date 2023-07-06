@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import workCardStyles from "$/styles/components/WorkCard.module.scss";
 import Image, { StaticImageData } from "next/image";
 

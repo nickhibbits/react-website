@@ -1,5 +1,3 @@
-import React from "react";
-
 import skillCardStyles from "$/styles/components/SkillsCard.module.scss";
 
 function SkillsCard() {
@@ -10,7 +8,7 @@ function SkillsCard() {
       id: 1,
     },
     {
-      name: "CSS, Scss",
+      name: "CSS, Sass",
       level: "95%",
       id: 2,
     },

@@ -52,8 +52,17 @@ function Work() {
           <div style={{ display: "grid" }}>
             <div className={workCardStyles.card_scroll_container}>
               <WorkCard
+                title={"nickhibbits.com"}
+                description={
+                  "Personal site, - Built in Next.js; deployed with Vercel"
+                }
+                imgSrc={"/svgs/website-click-svgrepo-com.svg"}
+                siteLink={"https://github.com/nickhibbits/react-website"}
+                key={3}
+              />
+              <WorkCard
                 title={"Studio Zoomies"}
-                description={"Photography CRM startup, - Software Developer"}
+                description={"Photography CRM startup, - Application Developer"}
                 imgSrc={"/svgs/ZoomiesLogo.svg"}
                 siteLink={"https://www.studiozoomies.com/home"}
                 key={2}
@@ -64,15 +73,6 @@ function Work() {
                 imgSrc={"/svgs/chainsaw-svgrepo-com.svg"}
                 siteLink={"https://www.thebearsdentahoe.com/"}
                 key={1}
-              />
-              <WorkCard
-                title={"nickhibbits.com"}
-                description={
-                  "Personal site, - Built in Next.js; deployed with Vercel"
-                }
-                imgSrc={"/svgs/website-click-svgrepo-com.svg"}
-                siteLink={"https://github.com/nickhibbits/react-website"}
-                key={3}
               />
             </div>
           </div>
