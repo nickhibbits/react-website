@@ -16,7 +16,7 @@ export const useHoverAnimation = (
       return imageToHide;
     });
 
-    console.log("hideImage", hideImage);
+    // console.log("hideImage", hideImage);
 
     switch (hideImage) {
       case "programmer":

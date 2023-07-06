@@ -49,7 +49,7 @@ function Connect() {
                 nicholashibbits@gmail
               </a>
               <br />
-              or checkout my socials below
+              or checkout my socials below.
             </p>
 
             <div className={connectStyles.socials_wrapper}>
