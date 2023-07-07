@@ -3,6 +3,14 @@
 .work_container {
   overflow-x: hidden;
 }
+
+.container_wrapper {
+  margin-top: 1rem;
+  @include mediaQueries.tablet-large {
+    margin-top: 0;
+  }
+}
+
 .card_scroll_container {
   display: grid;
   grid-auto-flow: row;

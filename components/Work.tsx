@@ -1,4 +1,3 @@
-import { useRef, useState } from "react";
 import { useWindowCheck } from "$/utils/customHooks/useWindowCheck";
 
 import projects from "$/constants/projects";
@@ -49,7 +48,10 @@ function Work() {
               Connect.
             </p>
           </section>
-          <div style={{ display: "grid" }}>
+          <div
+            className={workCardStyles.container_wrapper}
+            style={{ display: "grid" }}
+          >
             <div className={workCardStyles.card_scroll_container}>
               <WorkCard
                 title={"nickhibbits.com"}
