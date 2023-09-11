@@ -2,8 +2,6 @@ import { FiInstagram, FiLinkedin } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
 import { useWindowCheck } from "$/utils/customHooks/useWindowCheck";
 
-import React from "react";
-
 import layoutStyles from "$/styles/layout/layout.module.scss";
 import svgStyles from "$/styles/imageStyles/svg.module.scss";
 import connectStyles from "$/styles/components/Connect.module.scss";

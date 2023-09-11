@@ -1,6 +1,5 @@
 import { useWindowCheck } from "$/utils/customHooks/useWindowCheck";
 import { motion } from "framer-motion";
-import React from "react";
 
 import layoutStyles from "$/styles/layout/layout.module.scss";
 

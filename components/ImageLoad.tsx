@@ -3,7 +3,7 @@ import synthImage from "$/public/images/synthesizer.jpg";
 import codeImage from "$/public/images/code-image.jpg";
 
 import Image from "next/image";
-import React from "react";
+
 import { useEffect, useState } from "react";
 
 type LoadingStatuses = {

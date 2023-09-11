@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { useInitialAnimation } from "$/utils/customHooks/useInitialAnimation";
 import { useHoverAnimation } from "$/utils/customHooks/useHoverAnimation";

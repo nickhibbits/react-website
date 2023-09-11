@@ -1,4 +1,3 @@
-import React from "react";
 import loaderStyles from "$/styles/components/Loader.module.scss";
 
 function Loader() {

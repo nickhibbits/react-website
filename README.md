@@ -1,6 +1,6 @@
 # [nickhibbits.com](https://nickhibbits.com)
 
-This repository contains the source code and assets for my personal portfolio website. The website showcases my skills, projects, and achievements. It serves as a hub for potential clients, employers, and collaborators to learn more about me and my work.
+Source code for my portfolio website. Showcases experience via skills, projects, and achievements.
 
 ## Table of Contents
 
@@ -21,8 +21,8 @@ This repository contains the source code and assets for my personal portfolio we
 
 ## Technologies Used
 
-- [Next.js](https://nextjs.org/)
-- [Sass](https://sass-lang.com/)
+- [Next](https://nextjs.org/)
+- [SCSS](https://sass-lang.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 
 ## Getting Started

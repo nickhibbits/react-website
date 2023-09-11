@@ -1,5 +1,4 @@
 import { navOptions } from "$/constants/navOptions";
-import React from "react";
 
 import navStyles from "$/styles/components/Nav.module.scss";
 import Link from "next/link";

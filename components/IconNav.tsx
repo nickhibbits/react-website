@@ -7,7 +7,6 @@ import { useWindowCheck } from "$/utils/customHooks/useWindowCheck";
 import iconNavStyles from "$/styles/imageStyles/IconNav.module.scss";
 
 import Link from "next/link";
-import React from "react";
 
 function IconNav() {
   const width = useWindowCheck();

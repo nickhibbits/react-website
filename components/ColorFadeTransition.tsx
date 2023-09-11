@@ -1,5 +1,3 @@
-import React from "react";
-
 import appStyles from "$/styles/components/App.module.scss";
 import { TransitionProps } from "$/types";
 
