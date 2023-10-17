@@ -4,12 +4,12 @@ function SkillsCard() {
   const skills = [
     {
       name: "HTML",
-      level: "95%",
+      level: "100%",
       id: 1,
     },
     {
-      name: "CSS, Sass",
-      level: "95%",
+      name: "CSS, SCSS",
+      level: "100%",
       id: 2,
     },
     {
@@ -19,12 +19,12 @@ function SkillsCard() {
     },
     {
       name: "React.js, Next.js",
-      level: "90%",
+      level: "95%",
       id: 4,
     },
     {
       name: "Node.js, REST APIs",
-      level: "85%",
+      level: "90%",
       id: 5,
     },
   ];
@@ -39,7 +39,7 @@ function SkillsCard() {
               <div className={skillCardStyles.skill_bar_wrapper}>
                 <div
                   className={skillCardStyles.skill_bar}
-                  style={{ width: `calc(${skill.level} * .9)` }}
+                  style={{ width: `calc(${skill.level} * .85)` }}
                 />
                 <p className={skillCardStyles.skill_bar_level}>{skill.level}</p>
               </div>
