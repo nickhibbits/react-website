@@ -19,7 +19,7 @@ const projects = {
     description: `The Bear's Den is a chainsaw carving shop in South Lake Tahoe. Starting out as a carver, I began speaking with the owner about taking the business more online. Soon I was managing e-commerce for the business.\nMy experience has entailed building a website with a CMS, creating and maintaing an Etsy shop and social media channels, studying SEO and performing cross-platform integration to expand reach.`,
     imgAlt: "The Bear's Den",
     imgSrc: bearsDen,
-    link: "https://thebearsdentahoe.com",
+    link: "http://www.etsy.com/shop/TheBearsDenTahoe",
     type: "professional",
     basicDescription:
       "The Bear's Den is a chainsaw carving shop that I established e-commerce for. I also learned to handle a chainsaw!",

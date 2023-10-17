@@ -73,7 +73,7 @@ function Work() {
                 title={"The Bear's Den"}
                 description={"Chainsaw carving shop, - E-Comm / Web Developer"}
                 imgSrc={"/svgs/chainsaw-svgrepo-com.svg"}
-                siteLink={"https://www.thebearsdentahoe.com/"}
+                siteLink={"http://www.etsy.com/shop/TheBearsDenTahoe"}
                 key={1}
               />
             </div>
