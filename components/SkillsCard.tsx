@@ -17,7 +17,7 @@ function SkillsCard() {
       "React.js",
       "Next.js",
     ],
-    Back: ["Node.js", "Express.js", "RESTful APIs", "NoSQL Databases", "AWS"],
+    Back: ["Node.js", "Express.js", "RESTfulAPIs", "NoSQL", "AWS"],
     Other: ["Git", "Jira", "Bitbucket", "Figma", "SEO", "CMS", "Squarespace"],
   };
 
@@ -33,7 +33,7 @@ function SkillsCard() {
               <p className={styles.skill_category_title}>{category}</p>
               <ul className={styles.skill_category_list}>
                 {skills[category as keyof Skills].map((skill) => (
-                  <li key={skill}>{skill}</li>
+                  <li key={skill}>{skill},</li>
                 ))}
               </ul>
             </div>
