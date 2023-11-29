@@ -1,52 +1,43 @@
-import skillCardStyles from "$/styles/components/SkillsCard.module.scss";
+import styles from "$/styles/components/SkillsCard.module.scss";
+
+type Skills = {
+  front: string[];
+  back: string[];
+  other: string[];
+};
 
 function SkillsCard() {
-  const skills = [
-    {
-      name: "HTML",
-      level: "100%",
-      id: 1,
-    },
-    {
-      name: "CSS, SCSS",
-      level: "100%",
-      id: 2,
-    },
-    {
-      name: "JavaScript, TypeScript",
-      level: "95%",
-      id: 3,
-    },
-    {
-      name: "React.js, Next.js",
-      level: "95%",
-      id: 4,
-    },
-    {
-      name: "Node.js, REST APIs",
-      level: "90%",
-      id: 5,
-    },
-  ];
+  const skills: Skills = {
+    Front: [
+      "HTML",
+      "CSS",
+      "SCSS",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+    ],
+    Back: ["Node.js", "Express.js", "RESTful APIs", "NoSQL Databases", "AWS"],
+    Other: ["Git", "Jira", "Bitbucket", "Figma", "SEO", "CMS", "Squarespace"],
+  };
+
+  Object.keys(skills)[0];
+
   return (
-    <section className={skillCardStyles.skills_card_component}>
-      <p className={skillCardStyles.skills_card_title}>skills</p>
-      <ul className={skillCardStyles.skill_bars_wrapper}>
-        {skills.map((skill) => {
-          return (
-            <li className={skillCardStyles.skill_wrapper} key={skill.id}>
-              <p className={skillCardStyles.skill_name}>{skill.name}</p>
-              <div className={skillCardStyles.skill_bar_wrapper}>
-                <div
-                  className={skillCardStyles.skill_bar}
-                  style={{ width: `calc(${skill.level} * .85)` }}
-                />
-                <p className={skillCardStyles.skill_bar_level}>{skill.level}</p>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+    <section className={styles.skills_card_component}>
+      <p className={styles.skills_card_title}>skills</p>
+      {Object.keys(skills).map((category, i) => {
+        return (
+          <div className={styles.skill_category}>
+            <p className={styles.skill_category_title}>{category}</p>
+            <ul className={styles.skill_category_list}>
+              {skills[category as keyof Skills].map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
     </section>
   );
 }
