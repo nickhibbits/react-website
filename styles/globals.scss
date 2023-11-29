@@ -28,7 +28,7 @@ p {
 
 h1 {
   font-family: variables.$ff-primary;
-  font-size: clamp(3.5rem, 15vw, variables.$fs-900);
+  font-size: clamp(3.5rem, 15dvw, variables.$fs-900);
 }
 
 h2 {
@@ -38,7 +38,7 @@ h2 {
 
 p {
   font-family: variables.$ff-secondary;
-  font-size: clamp(1rem, 2vw, variables.$fs-400);
+  font-size: clamp(1rem, 2dvw, variables.$fs-400);
   line-height: 1.5em;
 }
 

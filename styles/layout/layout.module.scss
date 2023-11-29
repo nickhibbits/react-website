@@ -7,19 +7,19 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
   display: grid;
   position: relative;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
-  grid-template-rows: 98vh 55rem 50rem 30rem;
+  grid-template-rows: 98dvh 55rem 50rem 30rem;
   @include mediaQueries.tablet {
-    grid-template-rows: 100vh 55rem 50rem 30rem;
+    grid-template-rows: 100dvh 55rem 50rem 30rem;
   }
   @include mediaQueries.tablet-large {
-    grid-template-rows: 100vh 40rem 38rem 29rem;
+    grid-template-rows: 100dvh 40rem 38rem 29rem;
   }
   @include mediaQueries.desktop {
-    grid-template-rows: max(100vh, 45rem) 53rem repeat(2, 50rem);
+    grid-template-rows: max(100dvh, 45rem) 53rem repeat(2, 50rem);
   }
 
   @include mediaQueries.bigScreen {
-    grid-template-rows: max(100vh, 45rem) 53rem repeat(2, 50rem);
+    grid-template-rows: max(100dvh, 45rem) 53rem repeat(2, 50rem);
   }
 }
 
@@ -107,9 +107,9 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
   }
 
   li {
-    font-size: clamp(12.3px, variables.$fs-300, 3vw);
+    font-size: clamp(12.3px, variables.$fs-300, 3dvw);
     @include mediaQueries.tablet {
-      font-size: clamp(18px, 1.7vw, variables.$fs-500);
+      font-size: clamp(18px, 1.7dvw, variables.$fs-500);
     }
     font-weight: 700;
   }
@@ -132,7 +132,7 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
   .title_list {
     display: flex;
     font-family: variables.$ff-secondary;
-    // font-size: clamp(0.5rem, 2vw, variables.$fs-400);
+    // font-size: clamp(0.5rem, 2dvw, variables.$fs-400);
     // line-height: 1.4em;
     margin: 0;
 

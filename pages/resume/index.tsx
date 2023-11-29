@@ -1,6 +1,6 @@
 function PDFViewer() {
   return (
-    <div style={{ width: "100%", height: "100vh" }}>
+    <div style={{ width: "100%", height: "100dvh" }}>
       <embed
         src="/pdf/Nicholas_Hibbits_Resume_01.pdf"
         type="application/pdf"
