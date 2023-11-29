@@ -55,18 +55,25 @@ function Work() {
             <div className={workCardStyles.card_scroll_container}>
               <WorkCard
                 title={"nickhibbits.com"}
-                description={
-                  "Personal site, - Built in Next.js; deployed with Vercel"
-                }
+                description={"Portfolio site, - Built in Next.js"}
                 imgSrc={"/svgs/website-click-svgrepo-com.svg"}
                 siteLink={"https://github.com/nickhibbits/react-website"}
-                key={3}
+                key={4}
               />
               <WorkCard
                 title={"Studio Zoomies"}
-                description={"Photography CRM startup, - Application Developer"}
+                description={"Photography CRM startup, - Software Developer"}
                 imgSrc={"/svgs/ZoomiesLogo.svg"}
                 siteLink={"https://www.studiozoomies.com/home"}
+                key={3}
+              />
+              <WorkCard
+                title={"Meditation App"}
+                description={
+                  "Full stack web application, - Built in Next.js with MongoDB"
+                }
+                imgSrc={"/svgs/meditation-round-svgrepo-com.svg"}
+                siteLink={"https://github.com/nickhibbits/meditation_app"}
                 key={2}
               />
               <WorkCard
