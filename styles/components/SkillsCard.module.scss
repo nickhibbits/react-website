@@ -45,12 +45,16 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+
   &::after {
     content: "";
     position: absolute;
-    // width: 4rem;
-    // height: 4rem;
-    // background-color: red;
+    height: 2px;
+    background-color: rgba(white, 0.2);
+    width: 73%;
+    margin-left: 15px;
+    top: 18%;
+    left: 18%;
   }
 
   &_wrapper {
@@ -59,6 +63,10 @@
     gap: 1.5rem;
 
     // justify-content: space-between;
+  }
+
+  &_title {
+    font-size: variables.$fs-400;
   }
 
   &_list {

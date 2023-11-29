@@ -3,7 +3,7 @@ import styles from "$/styles/components/SkillsCard.module.scss";
 type Skills = {
   Front: string[];
   Back: string[];
-  Other: string[];
+  Misc: string[];
 };
 
 function SkillsCard() {
@@ -18,7 +18,7 @@ function SkillsCard() {
       "Next.js",
     ],
     Back: ["Node.js", "Express.js", "RESTfulAPIs", "NoSQL", "AWS"],
-    Other: ["Git", "Jira", "Bitbucket", "Figma", "SEO", "CMS", "Squarespace"],
+    Misc: ["Git", "Jira", "Bitbucket", "Figma", "SEO", "CMS", "Squarespace"],
   };
 
   Object.keys(skills)[0];
