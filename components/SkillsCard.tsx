@@ -29,7 +29,7 @@ function SkillsCard() {
       <div className={styles.skill_category_wrapper}>
         {Object.keys(skills).map((category, i) => {
           return (
-            <div className={styles.skill_category}>
+            <div className={styles.skill_category} key={i}>
               <p className={styles.skill_category_title}>{category}</p>
               <ul className={styles.skill_category_list}>
                 {skills[category as keyof Skills].map((skill) => (
