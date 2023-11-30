@@ -27,14 +27,21 @@ function SkillsCard() {
     <section className={styles.skills_card_component}>
       <p className={styles.skills_card_title}>skills</p>
       <div className={styles.skill_category_wrapper}>
-        {Object.keys(skills).map((category, i) => {
+        {Object.keys(skills).map((category, keyIndex) => {
           return (
-            <div className={styles.skill_category} key={i}>
+            <div className={styles.skill_category} key={keyIndex}>
               <p className={styles.skill_category_title}>{category}</p>
               <ul className={styles.skill_category_list}>
-                {skills[category as keyof Skills].map((skill) => (
-                  <li key={skill}>{skill},</li>
-                ))}
+                {skills[category as keyof Skills].map((skill, skillIndex) => {
+                  return (
+                    <li key={skill}>
+                      {skillIndex ===
+                      skills[category as keyof Skills].length - 1
+                        ? `${skill}`
+                        : `${skill},`}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           );
