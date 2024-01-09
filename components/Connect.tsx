@@ -1,3 +1,6 @@
+import { Righteous } from "next/font/google";
+export const righteous = Righteous({ weight: "400", subsets: ["latin"] });
+
 import { FiInstagram, FiLinkedin } from "react-icons/fi";
 import { FiGithub } from "react-icons/fi";
 
@@ -17,7 +20,7 @@ function Connect() {
         className={`${layoutStyles.component} ${layoutStyles.connect_component}`}
       >
         <section className={layoutStyles.info_wrapper}>
-          <h1>Connect</h1>
+          <h1 className={righteous.className}>Connect</h1>
           <p>Something on your mind?</p>
         </section>
         <section className={connectStyles.contact_wrapper}>

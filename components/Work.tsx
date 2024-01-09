@@ -1,9 +1,13 @@
+import { Righteous } from "next/font/google";
+
 import projects from "$/constants/projects";
 
 import workCardStyles from "$/styles/components/WorkCard.module.scss";
 import layoutStyles from "$/styles/layout/layout.module.scss";
 
 import WorkCard from "$/components/WorkCard";
+
+export const righteous = Righteous({ weight: "400", subsets: ["latin"] });
 
 function Work() {
   const filteredProjects = Object.values(projects).filter(
@@ -19,7 +23,7 @@ function Work() {
         className={`${layoutStyles.component} ${layoutStyles.work_component}`}
       >
         <section className={layoutStyles.info_wrapper}>
-          <h1>Work</h1>
+          <h1 className={righteous.className}>Work</h1>
           <p>
             Professional contributions and projects of which I&apos;ve been a
             part. Websites are linked to the tiles.
