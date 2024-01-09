@@ -20,7 +20,7 @@ function Work() {
       id="work_container"
     >
       <div
-        className={`${layoutStyles.component} ${layoutStyles.work_component}`}
+        className={`${layoutStyles.component} ${layoutStyles.work_component} ${layoutStyles.split}`}
       >
         <section className={layoutStyles.info_wrapper}>
           <h1 className={righteous.className}>Work</h1>

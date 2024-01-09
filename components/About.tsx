@@ -13,7 +13,10 @@ function About() {
       className={`${layoutStyles.container} ${layoutStyles.about_container}`}
       id="about_container"
     >
-      <div className={layoutStyles.component}>
+      <div
+        className={`
+      ${layoutStyles.component} ${layoutStyles.split}`}
+      >
         <section className={layoutStyles.info_wrapper}>
           <h1 className={righteous.className}>About</h1>
           <p className={layoutStyles.about_text}>
