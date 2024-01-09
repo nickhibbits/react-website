@@ -26,7 +26,10 @@ p {
 }
 
 h1 {
-  font-size: clamp(3.5rem, 15dvw, variables.$fs-900);
+  font-size: min(17dvw, 5rem);
+  @include mediaQueries.tablet {
+    font-size: min(15dvw, 7rem);
+  }
 }
 
 h2 {
@@ -34,7 +37,7 @@ h2 {
 }
 
 p {
-  font-size: clamp(1rem, 2dvw, variables.$fs-400);
+  font-size: min(1.3rem, 4.8vw);
   line-height: 1.5em;
 }
 

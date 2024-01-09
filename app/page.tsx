@@ -1,6 +1,6 @@
 import About from "$/components/About";
 import Connect from "$/components/Connect";
-import Intro from "$/components/Intro";
+import Intro from "$/components/Intro/Intro";
 
 import Work from "$/components/Work";
 
@@ -12,7 +12,11 @@ function Home() {
     <>
       <div className={appStyles.app_container}>
         <div className={layoutStyles.app_component}>
-          <Intro />
+          <div className={layoutStyles.home_container}>
+            <div className={layoutStyles.intro_wrapper}>
+              <Intro />
+            </div>
+          </div>
           <About />
           <Work />
           <Connect />

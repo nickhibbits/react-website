@@ -31,7 +31,6 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
   @include mediaQueries.desktop {
     display: grid;
     grid-template-rows: 100%;
-    grid-template-columns: subgrid;
     grid-template-columns: repeat(12, minmax(1rem, 10rem));
     align-items: normal;
     position: relative;
@@ -101,44 +100,6 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
 
   @include mediaQueries.tablet {
     padding: 1rem;
-  }
-
-  li {
-    font-size: clamp(12.3px, variables.$fs-300, 3dvw);
-    @include mediaQueries.tablet {
-      font-size: clamp(18px, 1.7dvw, variables.$fs-500);
-    }
-    font-weight: 700;
-  }
-
-  @include mediaQueries.desktop {
-    h1 {
-      min-width: 110%;
-    }
-    background: none;
-    padding: 0px;
-    backdrop-filter: none;
-  }
-}
-
-.info_wrapper {
-  .about_text {
-    padding-bottom: 4rem;
-  }
-
-  .title_list {
-    display: flex;
-
-    // font-size: clamp(0.5rem, 2dvw, variables.$fs-400);
-    // line-height: 1.4em;
-    margin: 0;
-
-    & * {
-      margin-right: 0.4rem;
-      &:hover {
-        cursor: url("#{$n-cursor}");
-      }
-    }
   }
 }
 
