@@ -9,49 +9,6 @@ $darkSpace: 60%;
   position: relative;
 }
 
-.color_fade_container {
-  position: relative;
-
-  .color_fade_box {
-    &:nth-child(1) {
-      @include mixins.layer_position_cover;
-      background-image: linear-gradient(
-        135.68deg,
-        variables.$bg-primary $colorAmount,
-        variables.$clr-neutral-900 $darkSpace
-      );
-      // z-index: 3;
-    }
-    &:nth-child(2) {
-      @include mixins.layer_position_cover;
-      background-image: linear-gradient(
-        135.68deg,
-        #ec5b08 $colorAmount,
-        variables.$clr-neutral-900 $darkSpace
-      );
-      // z-index: 2;
-    }
-    &:nth-child(3) {
-      @include mixins.layer_position_cover;
-      background-image: linear-gradient(
-        135.68deg,
-        #49ec08 $colorAmount,
-        variables.$clr-neutral-900 $darkSpace
-      );
-      // z-index: 1;
-    }
-  }
-
-  @include mediaQueries.desktop {
-    display: grid;
-    grid-template-rows: 85% 15%;
-    position: relative;
-    z-index: 1;
-    grid-row: 1 / 2;
-    grid-column: 1 / 6;
-  }
-}
-
 .intro_wrapper {
   position: absolute;
   height: 100dvh;
