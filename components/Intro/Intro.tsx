@@ -8,7 +8,6 @@ export const righteous = Righteous({ weight: "400", subsets: ["latin"] });
 function Intro() {
   return (
     <div className={`${layoutStyles.component} ${appStyles.intro_wrapper}`}>
-      {/* <div className={`${layoutStyles.component}`}> */}
       <section className={layoutStyles.info_wrapper}>
         <h1 className={righteous.className}>Hi, I&apos;m Nick</h1>
         <p className={introStyles.sub_title}>Web Engineer</p>

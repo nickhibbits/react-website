@@ -18,9 +18,8 @@ $darkSpace: 60%;
   @include mediaQueries.desktop {
     position: relative;
     grid-row: 1 / 2;
-    grid-column: 1 / 8;
+    grid-column: 1 / 10;
     align-self: center;
-    margin-left: 12.5rem;
     z-index: 3;
   }
   @include mediaQueries.bigScreen {

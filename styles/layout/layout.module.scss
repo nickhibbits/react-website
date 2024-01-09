@@ -92,16 +92,6 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
     margin-inline: 18rem;
   }
 }
-.intro_wrapper {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 0.5rem;
-  border-radius: 15px;
-  backdrop-filter: blur(3px);
-
-  @include mediaQueries.tablet {
-    padding: 1rem;
-  }
-}
 
 // Consider how to combine all of this into a "split" mixin
 .split {

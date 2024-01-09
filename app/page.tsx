@@ -13,9 +13,7 @@ function Home() {
       <div className={appStyles.app_container}>
         <div className={layoutStyles.app_component}>
           <div className={layoutStyles.home_container}>
-            <div className={layoutStyles.intro_wrapper}>
-              <Intro />
-            </div>
+            <Intro />
           </div>
           <About />
           <Work />
