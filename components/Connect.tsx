@@ -63,8 +63,6 @@ function Connect() {
       </div>
     </div>
   );
-
-  return null;
 }
 
 export default Connect;

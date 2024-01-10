@@ -15,14 +15,18 @@ $darkSpace: 60%;
   align-items: center;
   z-index: 4;
 
-  @include mediaQueries.desktop {
+  @include mediaQueries.tablet-large {
     position: relative;
     grid-row: 1 / 2;
-    grid-column: 1 / 10;
+    grid-column: 1 / 11;
     align-self: center;
     z-index: 3;
   }
-  @include mediaQueries.bigScreen {
-    margin-left: 17.9rem;
+  @include mediaQueries.desktop {
+    position: relative;
+    grid-row: 1 / 2;
+    grid-column: 1 / 11;
+    align-self: center;
+    z-index: 3;
   }
 }

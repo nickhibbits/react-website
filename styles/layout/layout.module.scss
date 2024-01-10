@@ -1,13 +1,11 @@
 @use "$/styles/layout/mediaQueries.scss";
 @use "$/styles/variables";
 
-$n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' aria-hidden='true' role='img' class='iconify iconify--emojione-monotone' preserveAspectRatio='xMidYMid meet'%3E%3Cpath d='M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2zm11.762 44.508h-6.061L25.889 25.92v20.588h-5.65V17.492h6.357l11.518 20.231V17.492h5.648v29.016z' fill='%23000000'%3E%3C/path%3E%3C/svg%3E";
-
 .app_component {
   display: grid;
   position: relative;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
-  grid-template-rows: 100dvh 80rem 60rem 35rem;
+  grid-template-rows: 100dvh repeat(2, 85rem) 50rem;
   @include mediaQueries.tablet {
     grid-template-rows: 100dvh 67rem 80rem 30rem;
   }
@@ -15,11 +13,11 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
     grid-template-rows: 100dvh 85rem 80rem 35rem;
   }
   @include mediaQueries.desktop {
-    grid-template-rows: max(100dvh, 45rem) 53rem repeat(2, 50rem);
+    grid-template-rows: 100dvh 100rem 100rem 60rem;
   }
 
   @include mediaQueries.bigScreen {
-    grid-template-rows: max(100dvh, 45rem) 53rem repeat(2, 50rem);
+    grid-template-rows: 100dvh 100rem 100rem 60rem;
   }
 }
 
@@ -43,32 +41,11 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
 
 .work_container {
   grid-area: 3 / 1 / 4 / 13;
-
-  overflow-y: none;
-}
-
-.connect_container {
-  grid-area: 4 / 1 / 5 / 13;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  // overflow-y: visible;
-
-  &.connect_container {
-    overflow-y: hidden;
-
-    @include mediaQueries.desktop {
-      overflow-y: hidden;
-    }
-  }
-}
-
-.about_container {
   justify-content: flex-start;
   padding-top: 3rem;
 
@@ -76,6 +53,11 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
     padding-top: 0;
     justify-content: center;
   }
+}
+
+.connect_container {
+  grid-area: 4 / 1 / 5 / 13;
+  justify-content: center;
 }
 
 .component {
@@ -92,29 +74,22 @@ $n-cursor: "data:image/svg+xml,%3Csvg width='25px' height='25px' viewBox='0 0 64
   }
 }
 
-// Consider how to combine all of this into a "split" mixin
-
 .split {
-  display: grid;
-  align-items: center;
-  gap: 3rem;
-  grid-template-columns: repeat(12, minmax(1rem, 10rem));
+  display: flex;
+  flex-direction: column;
+  // gap: 5rem;
+  @include mediaQueries.desktop {
+    display: grid;
+    align-items: center;
+    gap: 3rem;
+    grid-template-columns: repeat(12, minmax(1rem, 10rem));
 
-  :nth-child(1) {
-    grid-column: 1 / 7;
+    :nth-child(1) {
+      grid-column: 1 / 7;
+    }
+
+    :nth-child(2) {
+      grid-column: 8 / 13;
+    }
   }
-
-  :nth-child(2) {
-    position: relative;
-    grid-column: 8 / 13;
-  }
-}
-
-.home_component > .info_wrapper:first-of-type {
-  margin-bottom: 0%;
-}
-
-.work_component {
-  position: relative;
-  z-index: 3;
 }
