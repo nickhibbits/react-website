@@ -15,12 +15,9 @@ function Work() {
   );
 
   return (
-    <div
-      className={`${layoutStyles.container} ${layoutStyles.work_container}`}
-      id="work_container"
-    >
+    <div className={`${layoutStyles.container} ${layoutStyles.work_container}`}>
       <div
-        className={`${layoutStyles.component} ${layoutStyles.work_component} ${layoutStyles.split}`}
+        className={`${layoutStyles.component} ${layoutStyles.work_component} ${layoutStyles.work_split}`}
       >
         <section className={layoutStyles.info_wrapper}>
           <h1 className={righteous.className}>Work</h1>
