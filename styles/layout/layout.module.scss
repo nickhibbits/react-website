@@ -5,12 +5,12 @@
   display: grid;
   position: relative;
   grid-template-columns: repeat(12, minmax(1rem, 10rem));
-  grid-template-rows: 100dvh repeat(2, 85rem) 50rem;
+  grid-template-rows: 140dvh repeat(2, 105rem) 50rem;
   @include mediaQueries.tablet {
-    grid-template-rows: 100dvh 67rem 80rem 30rem;
+    grid-template-rows: 150dvh repeat(2, 100rem) 50rem;
   }
   @include mediaQueries.tablet-large {
-    grid-template-rows: 100dvh 85rem 80rem 35rem;
+    grid-template-rows: 150dvh repeat(2, 100rem) 50rem;
   }
   @include mediaQueries.desktop {
     grid-template-rows: 100dvh 100rem 100rem 60rem;
@@ -61,8 +61,7 @@
 }
 
 .component {
-  padding: 0 1rem;
-  position: relative;
+  padding-inline: 1rem;
   @include mediaQueries.tablet {
     padding-inline: 2rem;
   }
@@ -77,8 +76,8 @@
 .split {
   display: flex;
   flex-direction: column;
-  // gap: 5rem;
-  @include mediaQueries.desktop {
+  gap: 5rem;
+  @include mediaQueries.tablet-large {
     display: grid;
     align-items: center;
     gap: 3rem;
@@ -92,4 +91,8 @@
       grid-column: 8 / 13;
     }
   }
+}
+
+.connect_component {
+  gap: 0rem;
 }

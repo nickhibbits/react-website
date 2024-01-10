@@ -10,14 +10,10 @@ import WorkCard from "$/components/WorkCard";
 export const righteous = Righteous({ weight: "400", subsets: ["latin"] });
 
 function Work() {
-  const filteredProjects = Object.values(projects).filter(
-    (project) => project.type === "professional"
-  );
-
   return (
     <div className={`${layoutStyles.container} ${layoutStyles.work_container}`}>
       <div
-        className={`${layoutStyles.component} ${layoutStyles.work_component} ${layoutStyles.work_split}`}
+        className={`${layoutStyles.component} ${layoutStyles.work_component} ${layoutStyles.split}`}
       >
         <section className={layoutStyles.info_wrapper}>
           <h1 className={righteous.className}>Work</h1>
@@ -28,10 +24,7 @@ function Work() {
             Connect.
           </p>
         </section>
-        <div
-          className={workCardStyles.container_wrapper}
-          style={{ display: "grid" }}
-        >
+        <div className={workCardStyles.container_wrapper}>
           <div className={workCardStyles.card_scroll_container}>
             <WorkCard
               title={"nickhibbits.com"}

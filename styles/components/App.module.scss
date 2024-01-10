@@ -9,24 +9,20 @@ $darkSpace: 60%;
 }
 
 .intro_wrapper {
-  position: absolute;
   height: 100dvh;
   display: flex;
   align-items: center;
-  z-index: 4;
 
   @include mediaQueries.tablet-large {
     position: relative;
     grid-row: 1 / 2;
     grid-column: 1 / 11;
     align-self: center;
-    z-index: 3;
   }
   @include mediaQueries.desktop {
     position: relative;
     grid-row: 1 / 2;
     grid-column: 1 / 11;
     align-self: center;
-    z-index: 3;
   }
 }
