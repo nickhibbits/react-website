@@ -1,10 +1,11 @@
 import { Righteous } from "next/font/google";
 
-import SkillsCard from "./SkillsCard";
+import SkillsCard from "./SkillsCard/SkillsCard";
 
 import layoutStyles from "$/styles/layout/layout.module.scss";
 
-import cardStyle from "$/styles/components/SkillsCard.module.scss";
+import cardStyle from "$/components/SkillsCard/SkillsCard.module.scss";
+
 export const righteous = Righteous({ weight: "400", subsets: ["latin"] });
 
 function About() {

@@ -1,4 +1,4 @@
-import styles from "$/styles/components/SkillsCard.module.scss";
+import styles from "$/components/SkillsCard/SkillsCard.module.scss";
 
 type Skills = {
   Front: string[];

@@ -14,8 +14,6 @@ function Intro() {
       </section>
     </div>
   );
-
-  return null;
 }
 
 export default Intro;
