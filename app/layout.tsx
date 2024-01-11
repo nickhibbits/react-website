@@ -16,14 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${paduk.className}`}>
-        <header>
+        <header className="header">
           <Navbar />
           <NavbarMobile />
         </header>
-        <main>
-          {/* <Navbar /> */}
-          {children}
-        </main>
+        <main className="main">{children}</main>
       </body>
     </html>
   );
