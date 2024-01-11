@@ -60,7 +60,7 @@
   justify-content: center;
 }
 
-.component {
+.padding_wrapper {
   padding-inline: 1rem;
   @include mediaQueries.tablet {
     padding-inline: 2rem;

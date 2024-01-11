@@ -12,11 +12,11 @@ function About() {
   return (
     <div
       className={`${layoutStyles.container} ${layoutStyles.about_container}`}
-      id="about_container"
+      id="about"
     >
       <div
         className={`
-      ${layoutStyles.component} ${layoutStyles.split}`}
+      ${layoutStyles.padding_wrapper} ${layoutStyles.split}`}
       >
         <section className={layoutStyles.info_wrapper}>
           <h1 className={righteous.className}>About</h1>
@@ -51,8 +51,6 @@ function About() {
       </div>
     </div>
   );
-
-  return null;
 }
 
 export default About;
