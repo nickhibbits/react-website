@@ -1,5 +1,8 @@
 import { Padauk } from "next/font/google";
 
+import Navbar from "$/components/Navbars/Navbar/Navbar";
+import NavbarMobile from "$/components/Navbars/NavbarMobile/NavbarMobile";
+
 // import Navbar from "$/components/Nav/Navbar";
 export const paduk = Padauk({ weight: "400", subsets: ["latin"] });
 
@@ -13,6 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${paduk.className}`}>
+        <header>
+          <Navbar />
+          <NavbarMobile />
+        </header>
         <main>
           {/* <Navbar /> */}
           {children}

@@ -1,3 +1,25 @@
+@use "$/styles/layout/mediaQueries.scss";
+@use "$/styles/variables.scss";
+
+.intro_wrapper {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+
+  @include mediaQueries.tablet-large {
+    position: relative;
+    grid-row: 1 / 2;
+    grid-column: 1 / 11;
+    align-self: center;
+  }
+  @include mediaQueries.desktop {
+    position: relative;
+    grid-row: 1 / 2;
+    grid-column: 1 / 11;
+    align-self: center;
+  }
+}
+
 .sub_title {
   font-size: max(1.8rem, 3dvh);
 }

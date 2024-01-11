@@ -1,0 +1,11 @@
+@use "$/styles/layout/mediaQueries.scss";
+
+.nav {
+  height: 3rem;
+  background-color: green;
+  display: none;
+
+  @include mediaQueries.tablet-large {
+    display: block;
+  }
+}
