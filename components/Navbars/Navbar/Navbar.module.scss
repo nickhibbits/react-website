@@ -1,11 +1,20 @@
 @use "$/styles/layout/mediaQueries.scss";
+@use "$/components/Navbars/navbarMixins.scss";
 
 .nav {
-  height: 3rem;
-  background-color: green;
+  @include navbarMixins.primaryStyle(green);
   display: none;
 
   @include mediaQueries.tablet-large {
     display: block;
   }
+}
+
+.options_wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5rem;
 }

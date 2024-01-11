@@ -1,9 +1,8 @@
 @use "$/styles/layout/mediaQueries.scss";
+@use "$/components/Navbars/navbarMixins.scss";
 
 .nav {
-  height: 3rem;
-  background-color: red;
-
+  @include navbarMixins.primaryStyle(red);
   @include mediaQueries.tablet-large {
     display: none;
   }
