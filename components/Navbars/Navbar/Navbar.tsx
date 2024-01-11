@@ -1,6 +1,7 @@
+import { navOptions } from "$/constants/navOptions";
+
 import navbarStyles from "$/components/Navbars/Navbar/Navbar.module.scss";
 import layoutStyles from "$/styles/layout/layout.module.scss";
-import { navOptions } from "$/constants/navOptions";
 import Link from "next/link";
 
 function Navbar() {
