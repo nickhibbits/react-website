@@ -32,6 +32,7 @@
     grid-template-columns: repeat(12, minmax(1rem, 10rem));
     align-items: normal;
     position: relative;
+    height: calc(100dvh - variables.$nav-height);
   }
 }
 

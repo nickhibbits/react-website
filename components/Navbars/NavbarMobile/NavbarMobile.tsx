@@ -36,7 +36,11 @@ function NavbarMobile() {
             {navOptions.map((option, i) => {
               if (option !== "Resume") {
                 return (
-                  <li className={navbarMobileStyles.option} key={i}>
+                  <li
+                    className={navbarMobileStyles.option}
+                    key={i}
+                    onClick={() => setMenuOpen(false)}
+                  >
                     <a href={`#${option.toLowerCase()}`}>{option}</a>
                   </li>
                 );
