@@ -2,7 +2,7 @@
 @use "$/styles/variables.scss";
 
 .intro_wrapper {
-  height: 100dvh;
+  height: calc(100dvh - variables.$nav-height);
   display: flex;
   align-items: center;
 

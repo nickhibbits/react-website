@@ -1,7 +1,7 @@
 @use "$/styles/variables.scss";
 
 @mixin primaryStyle($bg-color) {
-  height: 3rem;
+  height: variables.$nav-height;
   background-color: $bg-color;
   font-size: variables.$fs-350;
 }

@@ -1,5 +1,6 @@
 @use "$/styles/layout/mediaQueries.scss";
 @use "$/components/Navbars/navbarMixins.scss";
+@use "$/styles/variables.scss";
 
 .nav {
   @include navbarMixins.primaryStyle(red);
@@ -25,16 +26,21 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    height: 3rem;
+    height: variables.$nav-height;
   }
 }
 
 .options_container {
   position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 30%;
+  inset: 0 0 0 15%;
   background-color: blue;
   z-index: 3;
+
+  @include mediaQueries.tablet {
+    inset: 0 0 0 30%;
+  }
+
+  @include mediaQueries.tablet-large {
+    display: none;
+  }
 }

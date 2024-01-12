@@ -11,12 +11,10 @@ export const righteous = Righteous({ weight: "400", subsets: ["latin"] });
 
 function Work() {
   return (
-    <div
-      className={`${layoutStyles.container} ${layoutStyles.work_container}`}
-      id="work"
-    >
+    <div className={`${layoutStyles.container} ${layoutStyles.work_container}`}>
       <div
         className={`${layoutStyles.padding_wrapper} ${layoutStyles.work_component} ${layoutStyles.split}`}
+        id="work"
       >
         <section className={layoutStyles.info_wrapper}>
           <h1 className={righteous.className}>Work</h1>

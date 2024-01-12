@@ -13,11 +13,11 @@
     grid-template-rows: 150dvh repeat(2, 100rem) 50rem;
   }
   @include mediaQueries.desktop {
-    grid-template-rows: 100dvh 100rem 100rem 60rem;
+    grid-template-rows: 100dvh 100rem 100rem 58rem;
   }
 
   @include mediaQueries.bigScreen {
-    grid-template-rows: 100dvh 100rem 100rem 60rem;
+    grid-template-rows: 100dvh 100rem 100rem 58rem;
   }
 }
 
@@ -93,6 +93,24 @@
   }
 }
 
+.about_component {
+  padding-top: variables.$nav-height;
+  @include mediaQueries.tablet-large {
+    padding-top: calc(4rem + variables.$nav-height);
+  }
+}
+
+.work_component {
+  padding-top: variables.$nav-height;
+  @include mediaQueries.tablet-large {
+    padding-top: calc(4rem + variables.$nav-height);
+  }
+}
+
 .connect_component {
   gap: 0rem;
+  padding-top: variables.$nav-height;
+  @include mediaQueries.tablet-large {
+    padding-top: calc(4rem + variables.$nav-height);
+  }
 }

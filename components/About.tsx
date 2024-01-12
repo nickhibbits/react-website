@@ -12,11 +12,12 @@ function About() {
   return (
     <div
       className={`${layoutStyles.container} ${layoutStyles.about_container}`}
-      id="about"
+      // id="about"
     >
       <div
         className={`
-      ${layoutStyles.padding_wrapper} ${layoutStyles.split}`}
+      ${layoutStyles.padding_wrapper} ${layoutStyles.split} ${layoutStyles.about_component}`}
+        id="about"
       >
         <section className={layoutStyles.info_wrapper}>
           <h1 className={righteous.className}>About</h1>

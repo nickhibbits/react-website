@@ -14,10 +14,10 @@ function Connect() {
   return (
     <div
       className={`${layoutStyles.container} ${layoutStyles.connect_container}`}
-      id="connect"
     >
       <div
         className={`${layoutStyles.padding_wrapper} ${layoutStyles.connect_component} ${layoutStyles.split}`}
+        id="connect"
       >
         <section className={layoutStyles.info_wrapper}>
           <h1 className={righteous.className}>Connect</h1>
