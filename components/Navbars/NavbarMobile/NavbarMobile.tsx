@@ -1,6 +1,6 @@
 "use client";
 
-import { navOptions } from "$/constants/navOptions";
+import { navOptions } from "$/components/Navbars/navOptions";
 import { useState } from "react";
 
 import navbarMobileStyles from "$/components/Navbars/NavbarMobile/NavbarMobile.module.scss";

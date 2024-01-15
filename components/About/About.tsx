@@ -1,6 +1,6 @@
 import { Righteous } from "next/font/google";
 
-import SkillsCard from "./SkillsCard/SkillsCard";
+import SkillsCard from "../SkillsCard/SkillsCard";
 
 import layoutStyles from "$/styles/layout/layout.module.scss";
 

@@ -1,8 +1,8 @@
-import About from "$/components/About";
-import Connect from "$/components/Connect";
+import About from "$/components/About/About";
+import Connect from "$/components/Connect/Connect";
 import Intro from "$/components/Intro/Intro";
 
-import Work from "$/components/Work";
+import Work from "$/components/Work/Work";
 
 import layoutStyles from "$/styles/layout/layout.module.scss";
 

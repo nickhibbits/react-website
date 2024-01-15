@@ -1,4 +1,4 @@
-import workCardStyles from "$/styles/components/WorkCard.module.scss";
+import workCardStyles from "$/components/Work/WorkCard.module.scss";
 import Image, { StaticImageData } from "next/image";
 
 type WorkCardProps = {

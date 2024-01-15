@@ -1,4 +1,4 @@
-import { navOptions } from "$/constants/navOptions";
+import { navOptions } from "$/components/Navbars/navOptions";
 
 import navbarStyles from "$/components/Navbars/Navbar/Navbar.module.scss";
 import layoutStyles from "$/styles/layout/layout.module.scss";

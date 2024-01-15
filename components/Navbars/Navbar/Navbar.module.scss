@@ -2,7 +2,7 @@
 @use "$/components/Navbars/navbarMixins.scss";
 
 .nav {
-  @include navbarMixins.primaryStyle(green);
+  @include navbarMixins.primaryStyle;
   display: none;
 
   @include mediaQueries.tablet-large {

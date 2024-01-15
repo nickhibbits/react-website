@@ -1,9 +1,10 @@
 @use "$/styles/layout/mediaQueries.scss";
 @use "$/components/Navbars/navbarMixins.scss";
 @use "$/styles/variables.scss";
+@use "$/styles/glassmorphism.scss";
 
 .nav {
-  @include navbarMixins.primaryStyle(red);
+  @include navbarMixins.primaryStyle;
   display: relative;
 
   @include mediaQueries.tablet-large {
@@ -33,7 +34,8 @@
 .options_container {
   position: fixed;
   inset: 0 0 0 15%;
-  background-color: blue;
+
+  @include glassmorphism.glassmorphismBase;
   z-index: 3;
 
   @include mediaQueries.tablet {
@@ -43,4 +45,13 @@
   @include mediaQueries.tablet-large {
     display: none;
   }
+}
+
+.options_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  font-size: variables.$fs-400;
 }

@@ -1,11 +1,9 @@
 import { Righteous } from "next/font/google";
 
-import projects from "$/constants/projects";
-
-import workCardStyles from "$/styles/components/WorkCard.module.scss";
+import workCardStyles from "$/components/Work/WorkCard.module.scss";
 import layoutStyles from "$/styles/layout/layout.module.scss";
 
-import WorkCard from "$/components/WorkCard";
+import WorkCard from "$/components/Work/WorkCard";
 
 export const righteous = Righteous({ weight: "400", subsets: ["latin"] });
 
