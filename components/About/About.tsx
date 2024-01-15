@@ -22,18 +22,8 @@ function About() {
         <section className={layoutStyles.info_wrapper}>
           <h1 className={righteous.className}>About</h1>
           <p className={layoutStyles.about_text}>
-            My name&apos;s Nick Hibbits. I&apos;m a full stack web developer
-            with experience working at a startup as well as managing e-commerce
-            for a small business.
-            <br />
-            <br />
-            I love building sleek digital experiences that make a statement and
-            are a pleasure to use.
-            <br />
-            <br />
-            When I&apos;m not coding, I&apos;m deep into producing electronic
-            music, or likewise in the woods, here at home in South Lake Tahoe,
-            CA.
+            My name&apos;s Nick Hibbits. I build sleek digital experiences that
+            make a statement and are a pleasure to use.
             <br />
             <br />
             Check out my work and let&apos;s connect.

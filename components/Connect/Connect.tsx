@@ -41,12 +41,6 @@ function Connect() {
 
           <div className={connectStyles.socials_wrapper}>
             <a
-              href="https://www.instagram.com/nhibit"
-              className={connectStyles.social_anchor}
-            >
-              <FiInstagram size={size} />
-            </a>
-            <a
               href="https://www.github.com/nickhibbits"
               className={connectStyles.social_anchor}
             >
