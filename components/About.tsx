@@ -32,7 +32,7 @@ function About() {
           <section className={layoutStyles.info_wrapper}>
             <h1>About</h1>
             <p className={layoutStyles.about_text}>
-              My name&apos;s Nick Hibbits. I&apos;m a full stack web developer
+              My name&apos;s Nick Hibbits. I&apos;m a front end web developer
               with experience working at a startup as well as managing
               e-commerce for a small business.
               <br />
